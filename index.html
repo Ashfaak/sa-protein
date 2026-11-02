@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇿🇦 South Africa Protein Powder Database — Whey, Plant, Casein & Collagen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0b0f17; color: #e6edf3; font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .glass-card { background: #131924; border: 1px solid rgba(48, 54, 61, 0.75); transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease; }
+    .glass-card:hover { border-color: rgba(56, 139, 253, 0.55); transform: translateY(-2px); box-shadow: 0 10px 28px -10px rgba(0, 0, 0, 0.65); }
+    .badge-retailer-clicks { background: rgba(0, 114, 206, 0.16); color: #38bdf8; border: 1px solid rgba(0, 114, 206, 0.35); }
+    .badge-retailer-dischem { background: rgba(0, 132, 61, 0.16); color: #4ade80; border: 1px solid rgba(0, 132, 61, 0.35); }
+    .badge-retailer-takealot { background: rgba(11, 114, 231, 0.16); color: #60a5fa; border: 1px solid rgba(11, 114, 231, 0.35); }
+    .badge-retailer-amazon { background: rgba(255, 153, 0, 0.16); color: #fbbf24; border: 1px solid rgba(255, 153, 0, 0.35); }
+    .badge-retailer-nutritech { background: rgba(220, 38, 38, 0.16); color: #f87171; border: 1px solid rgba(220, 38, 38, 0.35); }
+    .badge-diaas-elite { background: rgba(234, 179, 8, 0.14); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.35); }
+    .badge-diaas-high { background: rgba(59, 130, 246, 0.14); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); }
+    .badge-diaas-good { background: rgba(168, 85, 247, 0.14); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
+    .badge-diaas-moderate { background: rgba(249, 115, 22, 0.14); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.35); }
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #0b0f17; }
+    ::-webkit-scrollbar-thumb { background: #293241; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3d495d; }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0b0f17]">
+
+  <!-- Top Navigation & Live Discount Bar -->
+  <header class="border-b border-gray-800/80 bg-[#111621]/95 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-[1400px] mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center text-base shadow-md shadow-emerald-500/15">
+          <i class="fa-solid fa-dumbbell text-white"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-base font-bold text-white tracking-tight">SA Protein Finder</h1>
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-950/90 text-emerald-400 border border-emerald-800/70 font-medium">Whey • Plant • Casein • Collagen</span>
+          </div>
+          <p class="text-[11px] text-gray-400">Verified Ingredients, DIAAS Bioavailability & Cost-per-Gram across SA Retailers</p>
+        </div>
+      </div>
+
+      <!-- Header Right Status / Badge -->
+      <div class="flex items-center gap-2">
+        <span id="clicksStaffActiveBadge" class="hidden text-[11px] px-2.5 py-1 rounded-lg bg-sky-950/90 text-sky-300 border border-sky-800/60 font-medium">
+          <i class="fa-solid fa-id-card text-sky-400 mr-1"></i> Clicks Staff Discount Active (-13%)
+        </span>
+        <span class="text-[11px] px-2.5 py-1 bg-[#131924] border border-gray-800/80 rounded-lg text-gray-400 font-medium hidden sm:inline-flex items-center gap-1.5" title="Database prices and formulation data last verified">
+          <i class="fa-regular fa-calendar-check text-emerald-400 text-xs"></i>
+          <span>Updated: <b class="text-gray-200 font-semibold" id="lastUpdatedDate">2 Nov 2026</b></span>
+        </span>
+        <span id="productCounter" class="text-[11px] px-2.5 py-1 bg-gray-800/80 rounded-lg text-gray-400 font-mono hidden sm:inline-block">Loading...</span>
+      </div>
+
+    </div>
+
+    <!-- Quick Category Tabs Bar (One-Click Filtering for All Protein Sources) -->
+    <div class="border-t border-gray-800/60 bg-[#0d121b]">
+      <div class="max-w-[1400px] mx-auto px-4 py-1.5 flex items-center gap-1.5 overflow-x-auto no-scrollbar" id="quickCategoryTabs">
+        <button onclick="selectQuickCategory('ALL')" data-cat="ALL" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-emerald-600 text-white shadow-sm">
+          All
+        </button>
+        <button onclick="selectQuickCategory('Whey Blend')" data-cat="Whey Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Whey Blends
+        </button>
+        <button onclick="selectQuickCategory('Whey Isolate')" data-cat="Whey Isolate" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Isolate
+        </button>
+        <button onclick="selectQuickCategory('Plant / Vegan Protein')" data-cat="Plant / Vegan Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Plant / Vegan
+        </button>
+        <button onclick="selectQuickCategory('Casein / Milk Protein')" data-cat="Casein / Milk Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Casein
+        </button>
+        <button onclick="selectQuickCategory('Collagen / Beef / Broth')" data-cat="Collagen / Beef / Broth" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Beef & Collagen
+        </button>
+        <button onclick="selectQuickCategory('Clear Whey / Protein Water')" data-cat="Clear Whey / Protein Water" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Clear Whey
+        </button>
+        <button onclick="selectQuickCategory('Multi-Source / Meal Blend')" data-cat="Multi-Source / Meal Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Multi-Source
+        </button>
+        <button onclick="selectQuickCategory('Hardcore / All-in-One')" data-cat="Hardcore / All-in-One" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Anabolic
+        </button>
+        <button onclick="selectQuickCategory('Diet / Lean Whey')" data-cat="Diet / Lean Whey" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+          Diet / Lean
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace Container -->
+  <div class="max-w-[1400px] mx-auto w-full px-4 py-5 flex-1 flex flex-col lg:flex-row gap-5">
+
+    <!-- Streamlined Left Sidebar -->
+    <aside class="w-full lg:w-64 flex-shrink-0 space-y-3.5">
+      
+      <!-- Search Input -->
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-500 text-xs"></i>
+        <input type="text" id="searchInput" placeholder="Search brand, product, ingredient..." 
+               class="w-full bg-[#131924] border border-gray-800 rounded-xl pl-8 pr-8 py-2 text-xs text-gray-200 placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition"
+               oninput="applyFilters()">
+        <button onclick="document.getElementById('searchInput').value=''; applyFilters();" class="absolute right-2.5 top-2 text-gray-500 hover:text-gray-300 text-xs" title="Clear search">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Primary Controls Card: Sort, Brand, Budget -->
+      <div class="bg-[#131924] p-3.5 rounded-xl border border-gray-800/80 space-y-3.5">
+        <div>
+          <label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 block mb-1.5">Sort Order</label>
+          <select id="sortSelect" onchange="applyFilters()" 
+                  class="w-full bg-[#0b0f17] border border-gray-800 rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-emerald-500 font-medium">
+            <option value="cost_per_g_asc">🏆 Best Value: Lowest R / g Protein</option>
+            <option value="diaas_desc">🧬 Highest Quality (DIAAS Score)</option>
+            <option value="protein_pct_desc">⚡ Highest Protein Purity (%)</option>
+            <option value="price_asc">🏷️ Lowest Tub Price (ZAR)</option>
+            <option value="protein_per_serving_desc">🏋️ Most Protein / Scoop (g)</option>
+            <option value="rating_desc">⭐ Highest Customer Rating</option>
+            <option value="size_desc">📦 Largest Container (g)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 block mb-1.5">Brand</label>
+          <select id="brandSelect" onchange="applyFilters()" 
+                  class="w-full bg-[#0b0f17] border border-gray-800 rounded-lg px-2.5 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-emerald-500">
+            <option value="ALL">All Brands</option>
+          </select>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between text-[11px] mb-1">
+            <span class="font-semibold uppercase tracking-wider text-gray-400">Max Price</span>
+            <span id="priceVal" class="font-mono text-emerald-400 font-bold">R 4,500</span>
+          </div>
+          <input type="range" id="priceRange" min="200" max="4500" step="50" value="4500" 
+                 oninput="document.getElementById('priceVal').innerText = 'R ' + Number(this.value).toLocaleString(); applyFilters()" 
+                 class="w-full accent-emerald-500 cursor-pointer h-1.5 bg-gray-800 rounded-lg">
+        </div>
+      </div>
+
+      <!-- Compact Retailer Filter -->
+      <div class="bg-[#131924] p-3.5 rounded-xl border border-gray-800/80 space-y-2">
+        <div class="flex items-center justify-between">
+          <label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400">Retailers</label>
+          <button onclick="clearFilterGroup('retailer')" class="text-[10px] text-gray-500 hover:text-gray-300">Select All</button>
+        </div>
+        <div class="grid grid-cols-1 gap-1.5 text-xs" id="retailerFilters">
+          <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="Takealot" checked onchange="applyFilters()" class="accent-blue-500 rounded">
+            <span>Takealot</span>
+          </label>
+          <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="Dis-Chem" checked onchange="applyFilters()" class="accent-emerald-500 rounded">
+            <span>Dis-Chem</span>
+          </label>
+          <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="Clicks" checked onchange="applyFilters()" class="accent-sky-500 rounded">
+            <span>Clicks</span>
+          </label>
+          <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="Amazon ZA" checked onchange="applyFilters()" class="accent-amber-500 rounded">
+            <span>Amazon ZA</span>
+          </label>
+          <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="Nutritech Direct" checked onchange="applyFilters()" class="accent-red-500 rounded">
+            <span>Brand Direct</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Collapsible Quality & Type Filters (Keeps Sidebar Uncluttered) -->
+      <details class="bg-[#131924] rounded-xl border border-gray-800/80 group">
+        <summary class="p-3.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400 cursor-pointer flex items-center justify-between hover:text-gray-200">
+          <span><i class="fa-solid fa-dna text-amber-400 mr-1.5"></i> DIAAS Quality Tiers</span>
+          <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i>
+        </summary>
+        <div class="px-3.5 pb-3.5 pt-1 space-y-1.5 text-xs border-t border-gray-800/60" id="diaasFilters">
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="elite" checked onchange="applyFilters()" class="accent-amber-500 rounded">
+            <span>🏆 Elite (1.28+): Isolates & Casein</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="excellent" checked onchange="applyFilters()" class="accent-blue-400 rounded">
+            <span>⭐ Excellent (1.20–1.27): 100% Whey</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="very_high" checked onchange="applyFilters()" class="accent-purple-400 rounded">
+            <span>⚡ Very High (1.15–1.19): WPC & NiHPRO</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="good" checked onchange="applyFilters()" class="accent-emerald-400 rounded">
+            <span>💪 Good (1.00–1.14): Hybrids & Mass</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white">
+            <input type="checkbox" value="moderate" checked onchange="applyFilters()" class="accent-orange-400 rounded">
+            <span>🌱 Plant / Wheat / Collagen (< 1.00)</span>
+          </label>
+        </div>
+      </details>
+
+      <details class="bg-[#131924] rounded-xl border border-gray-800/80 group">
+        <summary class="p-3.5 text-[11px] font-semibold uppercase tracking-wider text-gray-400 cursor-pointer flex items-center justify-between hover:text-gray-200">
+          <span><i class="fa-solid fa-flask text-purple-400 mr-1.5"></i> Detailed Protein Types</span>
+          <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i>
+        </summary>
+        <div class="px-3.5 pb-3.5 pt-1 space-y-1.5 text-xs border-t border-gray-800/60" id="typeFilters">
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Blend (WPC+WPI)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Isolate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Isolate (WPI)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Concentrate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Concentrate (WPC)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Clear Whey / Protein Water" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Clear Whey & Protein Water</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Plant / Vegan Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Plant / Vegan Protein</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Casein / Milk Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Casein & Milk Protein</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Collagen / Beef / Broth" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Beef, Bone Broth & Collagen</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Multi-Source / Meal Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Multi-Source / Timed Blend</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Hardcore / All-in-One" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Hardcore / Anabolic (+Creatine)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Diet / Lean Whey" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Diet / Lean Whey</label>
+        </div>
+      </details>
+
+      <!-- Reset Button -->
+      <button onclick="resetAllFilters()" class="w-full py-2 px-3 rounded-xl bg-[#131924] hover:bg-gray-800 border border-gray-800 text-xs font-medium text-gray-400 hover:text-white transition flex items-center justify-center gap-1.5">
+        <i class="fa-solid fa-rotate-left text-[10px]"></i> Reset All Filters
+      </button>
+
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col min-w-0">
+
+      <!-- Clean Single-Line Toolbar -->
+      <div class="mb-4 bg-[#131924] border border-gray-800/80 rounded-xl px-3 py-2 flex flex-wrap items-center justify-between gap-2">
+        
+        <!-- View Switcher: Product Lines vs Individual Tubs vs Compact Table -->
+        <div class="flex items-center gap-1 bg-[#0b0f17] p-1 rounded-lg border border-gray-800/80">
+          <button id="viewGroupedBtn" onclick="setViewMode('grouped')" class="px-3 py-1 rounded-md text-xs font-semibold transition flex items-center gap-1.5 bg-emerald-600 text-white">
+            <i class="fa-solid fa-layer-group text-[10px]"></i> Product Lines
+            <span id="groupedCountBadge" class="px-1.5 py-0.2 rounded-full bg-black/30 text-[10px] font-mono">0</span>
+          </button>
+          <button id="viewIndividualBtn" onclick="setViewMode('individual')" class="px-3 py-1 rounded-md text-xs font-medium text-gray-400 hover:text-white transition flex items-center gap-1.5">
+            <i class="fa-solid fa-boxes-stacked text-[10px]"></i> All Tubs
+            <span id="individualCountBadge" class="px-1.5 py-0.2 rounded-full bg-gray-800 text-[10px] font-mono">0</span>
+          </button>
+          <button id="viewTableBtn" onclick="setViewMode('table')" class="px-3 py-1 rounded-md text-xs font-medium text-gray-400 hover:text-white transition flex items-center gap-1.5">
+            <i class="fa-solid fa-table-list text-[10px]"></i> Compact Table
+          </button>
+        </div>
+
+        <!-- Right side: Results summary + Group Sections -->
+        <div class="flex items-center gap-3">
+          <span id="resultsCount" class="text-xs text-gray-400 font-medium hidden sm:inline">0 Products</span>
+          <div class="flex items-center gap-1.5">
+            <span class="text-[11px] text-gray-500">Group by:</span>
+            <select id="sectionGroupingSelect" onchange="setSectionGrouping(this.value)" class="bg-[#0b0f17] border border-gray-800 rounded-lg px-2.5 py-1 text-xs text-gray-300 focus:outline-none focus:border-emerald-500 cursor-pointer">
+              <option value="none">None (Continuous)</option>
+              <option value="brand">Brand</option>
+              <option value="type">Protein Type</option>
+              <option value="size">Tub Size</option>
+              <option value="retailer">Retailer</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Products Container -->
+      <div id="productsContainer" class="flex-1">
+        <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="noResults" class="hidden p-12 text-center text-gray-500 bg-[#131924] rounded-2xl border border-gray-800/60">
+        <i class="fa-solid fa-box-open text-3xl mb-2 text-gray-600"></i>
+        <p class="text-sm font-semibold text-gray-300">No protein powders match your active filters.</p>
+        <button onclick="resetAllFilters()" class="mt-3 px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold transition">Reset Filters</button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Comparison Drawer (Sticky Bottom) -->
+  <div id="comparisonDrawer" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-[#161d2a]/95 border border-blue-500/50 rounded-2xl p-3 shadow-2xl flex items-center gap-4 max-w-2xl w-[92%] backdrop-blur-md">
+    <div class="flex-1 flex items-center gap-2 overflow-x-auto" id="comparisonThumbs"></div>
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <button onclick="openComparisonModal()" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold shadow transition">
+        Compare (<span id="compareCount">0</span>/4)
+      </button>
+      <button onclick="clearComparison()" class="p-1.5 text-gray-400 hover:text-white text-xs">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Side-by-Side Comparison Modal -->
+  <div id="comparisonModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this) closeComparisonModal()">
+    <div class="bg-[#131924] border border-gray-700 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <h2 class="text-base font-bold text-white flex items-center gap-2">
+          <i class="fa-solid fa-scale-balanced text-blue-400"></i> Side-by-Side Protein Comparison
+        </h2>
+        <button onclick="closeComparisonModal()" class="text-gray-400 hover:text-white p-1.5">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div id="comparisonTableWrapper" class="overflow-x-auto"></div>
+    </div>
+  </div>
+
+  <!-- Product Detail Modal -->
+  <div id="detailModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this) closeDetailModal()">
+    <div class="bg-[#131924] border border-gray-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-4 shadow-2xl">
+      
+      <div class="flex items-center justify-between border-b border-gray-800 pb-3">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span id="modalRetailerBadge" class="text-xs px-2.5 py-0.5 rounded-full font-semibold"></span>
+          <span id="modalDiaasBadge" class="text-xs px-2.5 py-0.5 rounded-full font-semibold"></span>
+        </div>
+        <button onclick="closeDetailModal()" class="text-gray-400 hover:text-white p-1.5">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <h3 id="modalTitle" class="text-base font-bold text-white leading-snug"></h3>
+
+      <!-- Core Stats Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 bg-[#0b0f17] p-3 rounded-xl border border-gray-800/80 text-center">
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase">Price</div>
+          <div id="modalPrice" class="text-sm font-bold text-emerald-400 mt-0.5"></div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase">Cost / g Prot</div>
+          <div id="modalCostPerG" class="text-sm font-bold text-blue-400 mt-0.5"></div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase">Purity (%)</div>
+          <div id="modalProteinPct" class="text-sm font-bold text-purple-400 mt-0.5"></div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase">Prot / Scoop</div>
+          <div id="modalProteinPerServ" class="text-sm font-bold text-amber-400 mt-0.5"></div>
+        </div>
+        <div>
+          <div class="text-[10px] text-gray-500 uppercase">Carbs / Fat</div>
+          <div id="modalCarbsFat" class="text-sm font-bold text-cyan-400 mt-0.5"></div>
+        </div>
+      </div>
+
+      <!-- Protein Quality & Digestibility Breakdown (DIAAS & PDCAAS) -->
+      <div class="bg-amber-950/15 border border-amber-900/40 rounded-xl p-3.5 space-y-1.5">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-dna"></i> Bioavailability & Amino Acid Quality
+          </span>
+          <span id="modalDiaasScoreDisplay" class="text-xs font-bold text-amber-300 px-2 py-0.5 rounded bg-amber-900/40"></span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-xs">
+          <div><span class="text-gray-400">DIAAS: </span><b id="modalDiaasScoreVal" class="text-gray-200"></b></div>
+          <div><span class="text-gray-400">PDCAAS: </span><b id="modalPdcaasVal" class="text-gray-200"></b></div>
+        </div>
+        <p id="modalQualitySummary" class="text-xs text-gray-300 leading-relaxed pt-1"></p>
+      </div>
+
+      <!-- Discount & Voucher Status Section -->
+      <div id="modalPromoSection" class="bg-blue-950/20 border border-blue-900/40 rounded-xl p-3 text-xs space-y-1">
+        <div class="flex items-center justify-between text-blue-300 font-bold">
+          <span id="modalPromoTitle"><i class="fa-solid fa-tag"></i> Active Discount & Promotions</span>
+          <span id="modalPromoCodeBadge" class="px-2 py-0.5 rounded bg-blue-900/60 text-blue-200 font-mono"></span>
+        </div>
+        <p id="modalPromoDesc" class="text-gray-300 text-[11px]"></p>
+      </div>
+
+      <!-- Ingredients & Specifications -->
+      <div class="space-y-2.5 text-xs leading-relaxed">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <div class="bg-[#0b0f17] p-2.5 rounded-lg border border-gray-800/70">
+            <span class="font-semibold text-gray-400 block text-[10px] uppercase">Flavour</span>
+            <span id="modalFlavor" class="text-gray-200 font-medium"></span>
+          </div>
+          <div class="bg-[#0b0f17] p-2.5 rounded-lg border border-gray-800/70">
+            <span class="font-semibold text-gray-400 block text-[10px] uppercase">Serving & Container</span>
+            <span id="modalServingInfo" class="text-gray-200 font-medium"></span>
+          </div>
+          <div class="bg-[#0b0f17] p-2.5 rounded-lg border border-gray-800/70">
+            <span class="font-semibold text-gray-400 block text-[10px] uppercase">Digestive Enzymes / Actives</span>
+            <span id="modalEnzymes" class="text-gray-200 font-medium"></span>
+          </div>
+          <div class="bg-[#0b0f17] p-2.5 rounded-lg border border-gray-800/70">
+            <span class="font-semibold text-gray-400 block text-[10px] uppercase">Sweetener System</span>
+            <span id="modalSweetener" class="text-gray-200 font-medium"></span>
+          </div>
+        </div>
+        <div>
+          <span class="font-semibold text-gray-400 block mb-1 text-[10px] uppercase">Verified Manufacturer Ingredients</span>
+          <p id="modalIngredients" class="p-3 bg-[#0b0f17] rounded-xl text-gray-300 font-mono text-[11px] border border-gray-800 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="pt-3 border-t border-gray-800 flex justify-end gap-2">
+        <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs font-semibold transition">Close</button>
+        <a id="modalBuyLink" href="#" target="_blank" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-2">
+          View on Retailer <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Load Embedded Data Script -->
+  <script src="data/products_data.js"></script>
+
+  <!-- Application Logic -->
+  <script>
+    let rawProducts = [];
+    let currentViewMode = 'grouped'; // 'grouped' | 'individual' | 'table'
+    let currentSectionGrouping = 'none'; // 'none' | 'brand' | 'type' | 'size' | 'retailer'
+    let activeSizeSelections = {}; // lineKey -> selectedSizeG
+    let lastFilteredProducts = [];
+    let clicksDiscountEnabled = false;
+    let amazonPromoEnabled = false;
+    let dischemRewardsEnabled = false;
+    let comparisonList = [];
+
+    function checkUrlParameters() {
+      const params = new URLSearchParams(window.location.search);
+      const clicks = params.get('clicks');
+      const staff = params.get('staff');
+      if (
+        (params.has('clicks') && (clicks === null || clicks === '' || clicks.toLowerCase() === 'true' || clicks === '1' || clicks === '13')) ||
+        (params.has('staff') && (staff === null || staff === '' || staff.toLowerCase() === 'true' || staff === '1'))
+      ) {
+        clicksDiscountEnabled = true;
+        const badge = document.getElementById('clicksStaffActiveBadge');
+        if (badge) badge.classList.remove('hidden');
+      }
+      if (params.get('amazon') === 'true' || params.get('amazon') === '1') {
+        amazonPromoEnabled = true;
+      }
+      if (params.get('dischem') === 'true' || params.get('dischem') === '1') {
+        dischemRewardsEnabled = true;
+      }
+    }
+
+    async function loadData() {
+      checkUrlParameters();
+      if (window.EMBEDDED_PROTEINS && Array.isArray(window.EMBEDDED_PROTEINS)) {
+        rawProducts = window.EMBEDDED_PROTEINS;
+        populateBrandFilter();
+        applyFilters();
+        return;
+      }
+      try {
+        const res = await fetch('data/proteins.json');
+        if (res.ok) rawProducts = await res.json();
+      } catch (e) {
+        console.error("Error loading products via fetch:", e);
+      }
+      populateBrandFilter();
+      applyFilters();
+    }
+
+    function populateBrandFilter() {
+      const brandSelect = document.getElementById('brandSelect');
+      if (!brandSelect) return;
+      const counts = {};
+      for (const p of rawProducts) {
+        counts[p.brand] = (counts[p.brand] || 0) + 1;
+      }
+      const sortedBrands = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+      let html = `<option value="ALL">All Brands (${rawProducts.length} Tubs)</option>`;
+      for (const [brand, count] of sortedBrands) {
+        html += `<option value="${brand}">${brand} (${count})</option>`;
+      }
+      brandSelect.innerHTML = html;
+    }
+
+    function selectQuickCategory(cat) {
+      const checkboxes = document.querySelectorAll('#typeFilters input');
+      checkboxes.forEach(cb => {
+        cb.checked = (cat === 'ALL') ? true : (cb.value === cat);
+      });
+      syncQuickPills(cat);
+      applyFilters();
+    }
+
+    function syncQuickPills(forcedCat = null) {
+      const checkboxes = Array.from(document.querySelectorAll('#typeFilters input'));
+      const checked = checkboxes.filter(cb => cb.checked).map(cb => cb.value);
+      let activeCat = forcedCat;
+      if (!activeCat) {
+        if (checked.length === checkboxes.length) activeCat = 'ALL';
+        else if (checked.length === 1) activeCat = checked[0];
+        else activeCat = 'CUSTOM';
+      }
+      document.querySelectorAll('#quickCategoryTabs .cat-pill').forEach(btn => {
+        const c = btn.getAttribute('data-cat');
+        if (c === activeCat) {
+          btn.className = "cat-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-emerald-600 text-white shadow-sm";
+        } else {
+          btn.className = "cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800";
+        }
+      });
+    }
+
+    function setViewMode(mode) {
+      currentViewMode = mode;
+      const gBtn = document.getElementById('viewGroupedBtn');
+      const iBtn = document.getElementById('viewIndividualBtn');
+      const tBtn = document.getElementById('viewTableBtn');
+      const activeCls = "px-3 py-1 rounded-md text-xs font-semibold transition flex items-center gap-1.5 bg-emerald-600 text-white";
+      const inactiveCls = "px-3 py-1 rounded-md text-xs font-medium text-gray-400 hover:text-white transition flex items-center gap-1.5";
+      gBtn.className = mode === 'grouped' ? activeCls : inactiveCls;
+      iBtn.className = mode === 'individual' ? activeCls : inactiveCls;
+      tBtn.className = mode === 'table' ? activeCls : inactiveCls;
+      applyFilters();
+    }
+
+    function setSectionGrouping(grouping) {
+      currentSectionGrouping = grouping;
+      applyFilters();
+    }
+
+    function selectCardSize(groupKey, sizeG) {
+      activeSizeSelections[groupKey] = sizeG;
+      applyFilters();
+    }
+
+    function toggleDiscounts() {
+      applyFilters();
+    }
+
+    function getProductPricing(p) {
+      let isDiscounted = false;
+      let finalPrice = p.price_zar;
+      let discountLabel = null;
+
+      if (clicksDiscountEnabled && p.retailer === 'Clicks') {
+        finalPrice = p.discounted_price_zar;
+        isDiscounted = true;
+        discountLabel = 'Clicks Staff -13%';
+      } else if (amazonPromoEnabled && p.retailer === 'Amazon ZA' && p.price_zar >= 350) {
+        finalPrice = round2(p.price_zar * 0.90);
+        isDiscounted = true;
+        discountLabel = 'AMAZONNEW -10%';
+      } else if (dischemRewardsEnabled && p.retailer === 'Dis-Chem') {
+        finalPrice = round2(p.price_zar * 0.90);
+        isDiscounted = true;
+        discountLabel = 'Better Rewards -10%';
+      }
+
+      const totalProtein = p.total_protein_g || 1;
+      const servings = p.servings_count || 1;
+      const costPerG = round2(finalPrice / totalProtein);
+      const costPerServ = round2(finalPrice / servings);
+      const savingsZAR = round2(p.price_zar - finalPrice);
+
+      return { isDiscounted, finalPrice, costPerG, costPerServ, savingsZAR, discountLabel };
+    }
+
+    function round2(num) {
+      return Math.round((num + Number.EPSILON) * 100) / 100;
+    }
+
+    function groupProductsByLine(products) {
+      const groups = {};
+      for (const p of products) {
+        const lineKey = p.product_line || p.title;
+        if (!groups[lineKey]) {
+          groups[lineKey] = {
+            key: lineKey,
+            product_line: p.product_line || p.title,
+            brand: p.brand,
+            type: p.type,
+            diaas_score: p.diaas_score || 1.22,
+            diaas_rating: p.diaas_rating || '⭐ Excellent',
+            diaas_category: p.diaas_category || p.type,
+            pdcaas_score: p.pdcaas_score || 1.00,
+            quality_summary: p.quality_summary,
+            protein_percentage: p.protein_percentage,
+            ingredients: p.ingredients,
+            digestive_enzymes: p.digestive_enzymes,
+            sweetener: p.sweetener,
+            rating: p.rating || 4.5,
+            review_count: p.review_count || 15,
+            items: [],
+            sizes: {},
+            flavors: new Set(),
+            retailers: new Set()
+          };
+        }
+        const g = groups[lineKey];
+        g.items.push(p);
+        g.flavors.add(p.flavor);
+        g.retailers.add(p.retailer);
+
+        const sG = p.container_size_g || 1000;
+        if (!g.sizes[sG]) g.sizes[sG] = [];
+        g.sizes[sG].push(p);
+      }
+
+      const list = Object.values(groups);
+      for (const g of list) {
+        let bestCost = Infinity;
+        let bestSize = null;
+        for (const [sG, items] of Object.entries(g.sizes)) {
+          for (const item of items) {
+            const pr = getProductPricing(item);
+            if (pr.costPerG < bestCost) {
+              bestCost = pr.costPerG;
+              bestSize = Number(sG);
+            }
+          }
+        }
+        g.bestCostPerG = bestCost;
+        g.bestSize = bestSize;
+        g.bestSizeLabel = bestSize >= 1000 ? (bestSize / 1000) + 'kg' : bestSize + 'g';
+      }
+      return list;
+    }
+
+    function applyFilters() {
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      const sort = document.getElementById('sortSelect').value;
+      const maxPrice = parseFloat(document.getElementById('priceRange').value);
+      const brandFilter = document.getElementById('brandSelect').value;
+
+      const checkedRetailers = Array.from(document.querySelectorAll('#retailerFilters input:checked')).map(el => el.value);
+      const checkedTypes = Array.from(document.querySelectorAll('#typeFilters input:checked')).map(el => el.value);
+      const checkedDiaas = Array.from(document.querySelectorAll('#diaasFilters input:checked')).map(el => el.value);
+
+      let filtered = rawProducts.filter(p => {
+        if (!checkedRetailers.includes(p.retailer)) return false;
+        if (!checkedTypes.includes(p.type)) return false;
+        if (brandFilter !== 'ALL' && p.brand !== brandFilter) return false;
+
+        const dScore = p.diaas_score || 1.20;
+        let dTier = 'moderate';
+        if (dScore >= 1.28) dTier = 'elite';
+        else if (dScore >= 1.20) dTier = 'excellent';
+        else if (dScore >= 1.15) dTier = 'very_high';
+        else if (dScore >= 1.00) dTier = 'good';
+        if (!checkedDiaas.includes(dTier)) return false;
+
+        const pricing = getProductPricing(p);
+        if (pricing.finalPrice > maxPrice) return false;
+
+        if (search) {
+          const matchTarget = `${p.title} ${p.brand} ${p.product_line || ''} ${p.flavor} ${p.type} ${p.diaas_category || ''} ${p.digestive_enzymes || ''} ${p.sweetener || ''} ${p.ingredients || ''}`.toLowerCase();
+          if (!matchTarget.includes(search)) return false;
+        }
+        return true;
+      });
+
+      lastFilteredProducts = filtered;
+      renderProducts(filtered, sort);
+    }
+
+    function renderProducts(products, sort) {
+      const container = document.getElementById('productsContainer');
+      const counter = document.getElementById('productCounter');
+      const resCount = document.getElementById('resultsCount');
+      const noResults = document.getElementById('noResults');
+      const groupedBadge = document.getElementById('groupedCountBadge');
+      const individualBadge = document.getElementById('individualCountBadge');
+
+      const groupedLines = groupProductsByLine(products);
+
+      counter.innerText = `${rawProducts.length} Powders Indexed`;
+      if (groupedBadge) groupedBadge.innerText = groupedLines.length;
+      if (individualBadge) individualBadge.innerText = products.length;
+
+      if (currentViewMode === 'grouped') {
+        resCount.innerText = `${groupedLines.length} Product Lines (${products.length} Tubs)`;
+      } else {
+        resCount.innerText = `${products.length} Tubs`;
+      }
+
+      if (products.length === 0) {
+        container.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+
+      if (currentViewMode === 'table') {
+        renderCompactTable(products, sort);
+        return;
+      }
+
+      if (currentViewMode === 'grouped') {
+        groupedLines.sort((a, b) => {
+          if (sort === 'cost_per_g_asc') return a.bestCostPerG - b.bestCostPerG;
+          if (sort === 'diaas_desc') return (b.diaas_score || 1.2) - (a.diaas_score || 1.2);
+          if (sort === 'protein_pct_desc') return b.protein_percentage - a.protein_percentage;
+          if (sort === 'rating_desc') return b.rating - a.rating;
+          if (sort === 'size_desc') return (b.bestSize || 0) - (a.bestSize || 0);
+          if (sort === 'price_asc') {
+            const minA = Math.min(...a.items.map(i => getProductPricing(i).finalPrice));
+            const minB = Math.min(...b.items.map(i => getProductPricing(i).finalPrice));
+            return minA - minB;
+          }
+          if (sort === 'protein_per_serving_desc') {
+            return (b.items[0]?.protein_per_serving_g || 0) - (a.items[0]?.protein_per_serving_g || 0);
+          }
+          return 0;
+        });
+
+        if (currentSectionGrouping === 'none') {
+          container.innerHTML = `
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
+              ${groupedLines.map(renderGroupedCard).join('')}
+            </div>
+          `;
+        } else {
+          renderSectionedView(groupedLines, true);
+        }
+      } else {
+        products.sort((a, b) => {
+          const prA = getProductPricing(a);
+          const prB = getProductPricing(b);
+          if (sort === 'cost_per_g_asc') return prA.costPerG - prB.costPerG;
+          if (sort === 'diaas_desc') return (b.diaas_score || 1.2) - (a.diaas_score || 1.2);
+          if (sort === 'price_asc') return prA.finalPrice - prB.finalPrice;
+          if (sort === 'protein_pct_desc') return b.protein_percentage - a.protein_percentage;
+          if (sort === 'protein_per_serving_desc') return b.protein_per_serving_g - a.protein_per_serving_g;
+          if (sort === 'rating_desc') return b.rating - a.rating;
+          if (sort === 'size_desc') return b.container_size_g - a.container_size_g;
+          return 0;
+        });
+
+        if (currentSectionGrouping === 'none') {
+          container.innerHTML = `
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
+              ${products.map(renderIndividualCard).join('')}
+            </div>
+          `;
+        } else {
+          renderSectionedView(products, false);
+        }
+      }
+    }
+
+    function renderCompactTable(products, sort) {
+      const container = document.getElementById('productsContainer');
+      const sorted = [...products].sort((a, b) => {
+        const prA = getProductPricing(a);
+        const prB = getProductPricing(b);
+        if (sort === 'cost_per_g_asc') return prA.costPerG - prB.costPerG;
+        if (sort === 'diaas_desc') return (b.diaas_score || 1.2) - (a.diaas_score || 1.2);
+        if (sort === 'price_asc') return prA.finalPrice - prB.finalPrice;
+        if (sort === 'protein_pct_desc') return b.protein_percentage - a.protein_percentage;
+        if (sort === 'protein_per_serving_desc') return b.protein_per_serving_g - a.protein_per_serving_g;
+        return 0;
+      });
+
+      const rows = sorted.map(p => {
+        const pr = getProductPricing(p);
+        const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
+        const isCompared = comparisonList.some(item => item.id === p.id);
+        return `
+          <tr class="border-b border-gray-800/60 hover:bg-gray-800/30 transition text-xs">
+            <td class="py-2.5 px-3">
+              <input type="checkbox" onchange="toggleCompare('${p.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded cursor-pointer">
+            </td>
+            <td class="py-2.5 px-3">
+              <div class="font-bold text-white hover:text-blue-400 cursor-pointer" onclick="openDetailModal('${p.id}')">${p.product_line || p.title}</div>
+              <div class="text-[11px] text-gray-500">${p.brand} • ${p.flavor}</div>
+            </td>
+            <td class="py-2.5 px-3 text-gray-300 whitespace-nowrap">${p.type}</td>
+            <td class="py-2.5 px-3 font-mono font-semibold text-amber-300 whitespace-nowrap">${(p.diaas_score || 1.22).toFixed(2)}</td>
+            <td class="py-2.5 px-3 text-gray-300 whitespace-nowrap">${sLabel}</td>
+            <td class="py-2.5 px-3 text-purple-300 font-semibold whitespace-nowrap">${p.protein_per_serving_g}g <span class="text-gray-500 font-normal">(${p.protein_percentage}%)</span></td>
+            <td class="py-2.5 px-3 font-mono font-bold text-emerald-400 whitespace-nowrap">R ${pr.costPerG.toFixed(2)}/g</td>
+            <td class="py-2.5 px-3 font-mono font-bold text-white whitespace-nowrap">R ${pr.finalPrice.toFixed(0)}</td>
+            <td class="py-2.5 px-3 whitespace-nowrap"><span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300">${p.retailer}</span></td>
+            <td class="py-2.5 px-3 text-right whitespace-nowrap">
+              <button onclick="openDetailModal('${p.id}')" class="px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded text-[11px] mr-1">Specs</button>
+              <a href="${p.url}" target="_blank" class="px-2 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px]"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="bg-[#131924] border border-gray-800/80 rounded-xl overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-gray-800 text-[10px] uppercase tracking-wider text-gray-400 bg-[#0b0f17]/60">
+                <th class="py-2.5 px-3 w-8">Cmp</th>
+                <th class="py-2.5 px-3">Product & Flavour</th>
+                <th class="py-2.5 px-3">Category</th>
+                <th class="py-2.5 px-3">DIAAS</th>
+                <th class="py-2.5 px-3">Size</th>
+                <th class="py-2.5 px-3">Prot / Scoop</th>
+                <th class="py-2.5 px-3">Cost / g</th>
+                <th class="py-2.5 px-3">Price</th>
+                <th class="py-2.5 px-3">Store</th>
+                <th class="py-2.5 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function renderSectionedView(items, isGrouped) {
+      const container = document.getElementById('productsContainer');
+      const sections = {};
+
+      for (const item of items) {
+        let secKey = 'Other';
+        if (currentSectionGrouping === 'brand') secKey = item.brand;
+        else if (currentSectionGrouping === 'type') secKey = item.type;
+        else if (currentSectionGrouping === 'size') {
+          const s = isGrouped ? (item.bestSize || 1000) : (item.container_size_g || 1000);
+          if (s >= 2500) secKey = 'Bulk Value Packs (2.5kg – 4.5kg)';
+          else if (s >= 1500) secKey = 'Large Tubs (1.5kg – 2.3kg)';
+          else secKey = 'Standard & Compact Tubs (< 1.5kg)';
+        } else if (currentSectionGrouping === 'retailer') {
+          secKey = isGrouped ? (Array.from(item.retailers)[0] || 'Multiple Retailers') : item.retailer;
+        }
+        if (!sections[secKey]) sections[secKey] = [];
+        sections[secKey].push(item);
+      }
+
+      const sortedSections = Object.entries(sections).sort((a, b) => b[1].length - a[1].length);
+      container.innerHTML = sortedSections.map(([title, list]) => `
+        <div class="mb-7">
+          <div class="flex items-center gap-2 pb-2 mb-3 border-b border-gray-800/80">
+            <h2 class="text-xs font-bold text-white uppercase tracking-wider">${title}</h2>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 font-mono">${list.length}</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
+            ${list.map(it => isGrouped ? renderGroupedCard(it) : renderIndividualCard(it)).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderGroupedCard(g) {
+      const availSizes = Object.keys(g.sizes).map(Number).sort((a, b) => a - b);
+      let selSize = activeSizeSelections[g.key];
+      if (!selSize || !g.sizes[selSize]) {
+        selSize = g.bestSize || availSizes[0];
+      }
+
+      const sizeItems = g.sizes[selSize] || [];
+      let bestItem = sizeItems[0];
+      let bestPricing = getProductPricing(bestItem);
+      for (const it of sizeItems) {
+        const pr = getProductPricing(it);
+        if (pr.finalPrice < bestPricing.finalPrice) {
+          bestItem = it;
+          bestPricing = pr;
+        }
+      }
+
+      let diaasBadgeClass = 'badge-diaas-high';
+      if (g.diaas_score >= 1.28) diaasBadgeClass = 'badge-diaas-elite';
+      else if (g.diaas_score < 1.00) diaasBadgeClass = 'badge-diaas-moderate';
+      else if (g.diaas_score < 1.15) diaasBadgeClass = 'badge-diaas-good';
+
+      let valueColor = 'text-emerald-400';
+      if (bestPricing.costPerG > 0.75) valueColor = 'text-amber-400';
+      else if (bestPricing.costPerG > 0.55) valueColor = 'text-sky-400';
+
+      const isCompared = comparisonList.some(item => item.id === bestItem.id);
+
+      const flavorList = Array.from(g.flavors);
+      const flavorText = flavorList.slice(0, 3).join(' • ') + (flavorList.length > 3 ? ` +${flavorList.length - 3}` : '');
+
+      const retBadges = Array.from(g.retailers).map(ret => {
+        let bClass = 'badge-retailer-takealot';
+        if (ret === 'Clicks') bClass = 'badge-retailer-clicks';
+        if (ret === 'Dis-Chem') bClass = 'badge-retailer-dischem';
+        if (ret === 'Amazon ZA') bClass = 'badge-retailer-amazon';
+        if (ret === 'Nutritech Direct') bClass = 'badge-retailer-nutritech';
+        return `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded ${bClass}">${ret}</span>`;
+      }).join('');
+
+      const sizePillsHtml = availSizes.map(s => {
+        const isSel = s === selSize;
+        const isBest = availSizes.length > 1 && s === g.bestSize;
+        const sItems = g.sizes[s] || [];
+        const minP = Math.min(...sItems.map(it => getProductPricing(it).finalPrice));
+        const sLabel = s >= 1000 ? (s / 1000) + 'kg' : s + 'g';
+        return `
+          <button type="button" onclick="selectCardSize('${escapeJs(g.key)}', ${s})"
+                  class="px-2 py-1 rounded-lg text-[11px] font-semibold transition flex items-center gap-1 ${
+                    isSel 
+                      ? 'bg-blue-600 text-white shadow-sm ring-1 ring-blue-400' 
+                      : 'bg-[#0b0f17] text-gray-300 hover:bg-gray-800 border border-gray-800'
+                  }">
+            <span>${sLabel}</span>
+            <span class="${isSel ? 'text-blue-100' : 'text-emerald-400'} font-mono">R${minP.toFixed(0)}</span>
+            ${isBest ? `<span title="Best Value Size" class="text-[9px] text-amber-300">★</span>` : ''}
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
+          
+          <div>
+            <!-- Top Row: Brand + Retailers & Compare -->
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[11px] font-extrabold text-blue-400 uppercase tracking-wider">${g.brand}</span>
+                <span class="text-gray-700">•</span>
+                ${retBadges}
+              </div>
+              <label class="flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-200 cursor-pointer select-none">
+                <input type="checkbox" onchange="toggleCompare('${bestItem.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded">
+                <span>Compare</span>
+              </label>
+            </div>
+
+            <!-- Product Line Title -->
+            <h3 onclick="openDetailModal('${bestItem.id}')" class="text-[15px] font-bold text-white leading-snug mb-1.5 group-hover:text-blue-300 cursor-pointer transition line-clamp-1" title="${g.product_line}">
+              ${g.product_line}
+            </h3>
+
+            <!-- Type, DIAAS & Flavours -->
+            <div class="flex items-center gap-1.5 flex-wrap mb-2.5">
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded ${diaasBadgeClass}" title="${g.quality_summary || ''}">
+                DIAAS ${g.diaas_score ? g.diaas_score.toFixed(2) : '1.22'}
+              </span>
+              <span class="px-2 py-0.5 rounded bg-gray-800/90 text-gray-300 text-[10px] font-medium">
+                ${g.type}
+              </span>
+              <span class="text-[11px] text-gray-400 truncate max-w-[180px]" title="${flavorList.join(', ')}">
+                • ${flavorText}
+              </span>
+            </div>
+
+            <!-- Compact Size Selector Pills -->
+            <div class="flex flex-wrap gap-1.5 mb-3">
+              ${sizePillsHtml}
+            </div>
+          </div>
+
+          <!-- Clean 3-Column Key Metric Strip + Footer -->
+          <div class="space-y-2.5 pt-2.5 border-t border-gray-800/70">
+            
+            <div class="grid grid-cols-3 gap-1.5 text-center bg-[#0b0f17] p-2 rounded-xl border border-gray-800/70">
+              <div>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Cost / g Prot</span>
+                <span class="text-xs font-extrabold ${valueColor} font-mono">R ${bestPricing.costPerG.toFixed(2)}</span>
+              </div>
+              <div class="border-x border-gray-800/70 px-1">
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Protein Purity</span>
+                <span class="text-xs font-extrabold text-purple-400">${g.protein_percentage}% <span class="text-[10px] text-gray-400 font-normal">(${bestItem.protein_per_serving_g}g)</span></span>
+              </div>
+              <div>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Scoop / Carbs</span>
+                <span class="text-xs font-bold text-gray-300">${bestItem.scoop_size_g}g <span class="text-[10px] ${bestItem.carbs_g >= 5 ? 'text-amber-400' : 'text-gray-500'}">(${bestItem.carbs_g}g C)</span></span>
+              </div>
+            </div>
+
+            <!-- Footer Row: Price on Left, Actions on Right -->
+            <div class="flex items-center justify-between pt-0.5">
+              <div>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-base font-black ${bestPricing.isDiscounted ? 'text-emerald-400' : 'text-white'}">R ${bestPricing.finalPrice.toFixed(2)}</span>
+                  ${bestPricing.isDiscounted ? `<span class="text-[11px] text-gray-500 line-through">R ${bestItem.price_zar.toFixed(0)}</span>` : ''}
+                </div>
+                <div class="text-[10px] text-gray-500 whitespace-nowrap">
+                  R ${bestPricing.costPerServ.toFixed(2)}/shake • ${bestItem.servings_count} serv
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1.5">
+                <button onclick="openDetailModal('${bestItem.id}')" class="py-1.5 px-3 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg text-xs font-medium transition">
+                  Specs & Ingredients
+                </button>
+                <a href="${bestItem.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition" title="Buy at ${bestItem.retailer}">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      `;
+    }
+
+    function renderIndividualCard(p) {
+      const pricing = getProductPricing(p);
+
+      let badgeClass = 'badge-retailer-takealot';
+      if (p.retailer === 'Clicks') badgeClass = 'badge-retailer-clicks';
+      if (p.retailer === 'Dis-Chem') badgeClass = 'badge-retailer-dischem';
+      if (p.retailer === 'Amazon ZA') badgeClass = 'badge-retailer-amazon';
+      if (p.retailer === 'Nutritech Direct') badgeClass = 'badge-retailer-nutritech';
+
+      let diaasBadgeClass = 'badge-diaas-high';
+      if (p.diaas_score >= 1.28) diaasBadgeClass = 'badge-diaas-elite';
+      else if (p.diaas_score < 1.00) diaasBadgeClass = 'badge-diaas-moderate';
+      else if (p.diaas_score < 1.15) diaasBadgeClass = 'badge-diaas-good';
+
+      let valueColor = 'text-emerald-400';
+      if (pricing.costPerG > 0.75) valueColor = 'text-amber-400';
+      else if (pricing.costPerG > 0.55) valueColor = 'text-sky-400';
+
+      const isCompared = comparisonList.some(item => item.id === p.id);
+      const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
+
+      return `
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="text-[11px] font-extrabold text-blue-400 uppercase tracking-wider">${p.brand}</span>
+                <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded ${badgeClass}">${p.retailer}</span>
+              </div>
+              <label class="flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-200 cursor-pointer select-none">
+                <input type="checkbox" onchange="toggleCompare('${p.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded">
+                <span>Compare</span>
+              </label>
+            </div>
+
+            <h3 onclick="openDetailModal('${p.id}')" class="text-sm font-bold text-white line-clamp-2 leading-snug mb-2 group-hover:text-blue-300 cursor-pointer transition" title="${p.title}">
+              ${p.title}
+            </h3>
+
+            <div class="flex flex-wrap gap-1.5 mb-3 text-[10px]">
+              <span class="font-semibold px-2 py-0.5 rounded ${diaasBadgeClass}">DIAAS ${(p.diaas_score || 1.22).toFixed(2)}</span>
+              <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300">${p.type}</span>
+              <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300">${p.flavor}</span>
+              <span class="px-2 py-0.5 rounded bg-gray-800 text-blue-300 font-mono font-bold">${sLabel}</span>
+            </div>
+          </div>
+
+          <div class="space-y-2.5 pt-2.5 border-t border-gray-800/70">
+            <div class="grid grid-cols-3 gap-1.5 text-center bg-[#0b0f17] p-2 rounded-xl border border-gray-800/70">
+              <div>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Cost / g Prot</span>
+                <span class="text-xs font-extrabold ${valueColor} font-mono">R ${pricing.costPerG.toFixed(2)}</span>
+              </div>
+              <div class="border-x border-gray-800/70 px-1">
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Purity</span>
+                <span class="text-xs font-extrabold text-purple-400">${p.protein_percentage}% <span class="text-[10px] text-gray-400 font-normal">(${p.protein_per_serving_g}g)</span></span>
+              </div>
+              <div>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Scoop / Carbs</span>
+                <span class="text-xs font-bold text-gray-300">${p.scoop_size_g}g <span class="text-[10px] ${p.carbs_g >= 5 ? 'text-amber-400' : 'text-gray-500'}">(${p.carbs_g}g C)</span></span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-0.5">
+              <div>
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-base font-black ${pricing.isDiscounted ? 'text-emerald-400' : 'text-white'}">R ${pricing.finalPrice.toFixed(2)}</span>
+                  ${pricing.isDiscounted ? `<span class="text-[11px] text-gray-500 line-through">R ${p.price_zar.toFixed(0)}</span>` : ''}
+                </div>
+                <div class="text-[10px] text-gray-500 whitespace-nowrap">
+                  R ${pricing.costPerServ.toFixed(2)}/shake • ${p.servings_count} serv
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1.5">
+                <button onclick="openDetailModal('${p.id}')" class="py-1.5 px-3 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg text-xs font-medium transition">
+                  Specs
+                </button>
+                <a href="${p.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function escapeJs(str) {
+      return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    }
+
+    function toggleCompare(id) {
+      const idx = comparisonList.findIndex(p => p.id === id);
+      if (idx >= 0) {
+        comparisonList.splice(idx, 1);
+      } else {
+        if (comparisonList.length >= 4) {
+          alert("You can compare up to 4 proteins simultaneously.");
+          applyFilters();
+          return;
+        }
+        const p = rawProducts.find(item => item.id === id);
+        if (p) comparisonList.push(p);
+      }
+      updateComparisonDrawer();
+    }
+
+    function updateComparisonDrawer() {
+      const drawer = document.getElementById('comparisonDrawer');
+      const countEl = document.getElementById('compareCount');
+      const thumbs = document.getElementById('comparisonThumbs');
+
+      countEl.innerText = comparisonList.length;
+
+      if (comparisonList.length > 0) {
+        drawer.classList.remove('hidden');
+        thumbs.innerHTML = comparisonList.map(p => `
+          <div class="flex items-center gap-2 bg-[#0b0f17] px-2.5 py-1 rounded-lg border border-gray-700 text-xs">
+            <span class="font-semibold text-white max-w-[140px] truncate">${p.product_line || p.title}</span>
+            <button onclick="toggleCompare('${p.id}')" class="text-gray-400 hover:text-red-400">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        `).join('');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function clearComparison() {
+      comparisonList = [];
+      updateComparisonDrawer();
+      applyFilters();
+    }
+
+    function openComparisonModal() {
+      if (comparisonList.length === 0) return;
+      const modal = document.getElementById('comparisonModal');
+      const wrapper = document.getElementById('comparisonTableWrapper');
+
+      let cols = comparisonList.map(p => {
+        const pricing = getProductPricing(p);
+        return `
+          <th class="p-3.5 text-left border-l border-gray-800 bg-[#0b0f17]/60 min-w-[200px]">
+            <span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-blue-300">${p.retailer}</span>
+            <div class="text-xs font-bold text-white mt-1">${p.title}</div>
+            <div class="text-base font-black text-emerald-400 mt-1">R ${pricing.finalPrice.toFixed(2)}</div>
+          </th>
+        `;
+      }).join('');
+
+      let makeRow = (label, getter) => `
+        <tr class="border-t border-gray-800/80">
+          <td class="p-2.5 font-semibold text-gray-400 text-xs">${label}</td>
+          ${comparisonList.map(p => `<td class="p-2.5 text-xs text-gray-200 border-l border-gray-800/80">${getter(p)}</td>`).join('')}
+        </tr>
+      `;
+
+      wrapper.innerHTML = `
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr>
+              <th class="p-3.5 text-xs font-bold text-gray-400 uppercase tracking-wider">Metric</th>
+              ${cols}
+            </tr>
+          </thead>
+          <tbody>
+            ${makeRow('Cost / g Pure Protein', p => `<span class="font-extrabold text-emerald-400 text-sm">R ${getProductPricing(p).costPerG.toFixed(2)}</span>`)}
+            ${makeRow('DIAAS Bioavailability', p => `<span class="font-bold text-amber-300">${(p.diaas_score || 1.22).toFixed(2)} — ${p.diaas_rating || ''}</span>`)}
+            ${makeRow('Protein Classification', p => p.diaas_category || p.type)}
+            ${makeRow('Protein Purity (%)', p => `<span class="font-bold text-purple-400">${p.protein_percentage}%</span>`)}
+            ${makeRow('Macros per Scoop', p => `<b>${p.protein_per_serving_g}g P</b> • ${p.carbs_g || 0}g C • ${p.fat_g || 0}g F (per ${p.scoop_size_g}g)`)}
+            ${makeRow('Tub Size & Servings', p => `${p.container_size_g >= 1000 ? (p.container_size_g/1000)+'kg' : p.container_size_g+'g'} (${p.servings_count} servings)`)}
+            ${makeRow('Cost per Shake', p => `R ${getProductPricing(p).costPerServ.toFixed(2)}`)}
+            ${makeRow('Digestive Enzymes', p => p.digestive_enzymes)}
+            ${makeRow('Sweetener', p => p.sweetener)}
+            ${makeRow('Ingredients', p => `<p class="max-h-28 overflow-y-auto font-mono text-[11px] leading-relaxed text-gray-400">${p.ingredients}</p>`)}
+            ${makeRow('Store Link', p => `<a href="${p.url}" target="_blank" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded font-bold text-xs inline-flex items-center gap-1">Buy <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>`)}
+          </tbody>
+        </table>
+      `;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeComparisonModal() {
+      document.getElementById('comparisonModal').classList.add('hidden');
+    }
+
+    function openDetailModal(id) {
+      const p = rawProducts.find(item => item.id === id);
+      if (!p) return;
+
+      const pricing = getProductPricing(p);
+
+      document.getElementById('modalTitle').innerText = p.title;
+      document.getElementById('modalRetailerBadge').innerText = `${p.retailer} • ${p.brand}`;
+      document.getElementById('modalRetailerBadge').className = `text-xs px-2.5 py-0.5 rounded-full font-semibold ${
+        p.retailer === 'Clicks' ? 'badge-retailer-clicks' :
+        p.retailer === 'Dis-Chem' ? 'badge-retailer-dischem' :
+        p.retailer === 'Amazon ZA' ? 'badge-retailer-amazon' :
+        p.retailer === 'Nutritech Direct' ? 'badge-retailer-nutritech' : 'badge-retailer-takealot'
+      }`;
+
+      document.getElementById('modalDiaasBadge').innerText = `DIAAS ${(p.diaas_score || 1.22).toFixed(2)} • ${p.type}`;
+      document.getElementById('modalDiaasBadge').className = `text-xs px-2.5 py-0.5 rounded-full font-semibold ${
+        (p.diaas_score >= 1.28) ? 'badge-diaas-elite' :
+        (p.diaas_score < 1.00) ? 'badge-diaas-moderate' :
+        (p.diaas_score < 1.15) ? 'badge-diaas-good' : 'badge-diaas-high'
+      }`;
+
+      document.getElementById('modalPrice').innerText = `R ${pricing.finalPrice.toFixed(2)}`;
+      document.getElementById('modalCostPerG').innerText = `R ${pricing.costPerG.toFixed(2)}`;
+      document.getElementById('modalProteinPct').innerText = `${p.protein_percentage}%`;
+      document.getElementById('modalProteinPerServ').innerText = `${p.protein_per_serving_g}g`;
+      document.getElementById('modalCarbsFat').innerText = `${p.carbs_g || 0}g / ${p.fat_g || 0}g`;
+
+      document.getElementById('modalDiaasScoreDisplay').innerText = p.diaas_rating || 'Excellent (122%)';
+      document.getElementById('modalDiaasScoreVal').innerText = `${(p.diaas_score || 1.22).toFixed(2)} (${p.diaas_category || p.type})`;
+      document.getElementById('modalPdcaasVal').innerText = `${(p.pdcaas_score || 1.00).toFixed(2)}`;
+      document.getElementById('modalQualitySummary').innerText = p.quality_summary || 'Provides complete essential amino acid profile with high bioavailability.';
+
+      const promoSec = document.getElementById('modalPromoSection');
+      if (p.coupon_code || p.coupon_description) {
+        promoSec.classList.remove('hidden');
+        document.getElementById('modalPromoCodeBadge').innerText = p.coupon_code || 'PROMO';
+        document.getElementById('modalPromoDesc').innerText = p.coupon_description || 'Active promotion eligible at checkout.';
+      } else {
+        promoSec.classList.add('hidden');
+      }
+
+      document.getElementById('modalFlavor').innerText = p.flavor;
+      document.getElementById('modalServingInfo').innerText = `${p.scoop_size_g}g scoop (${p.protein_per_serving_g}g prot) • ${p.servings_count} servings (${p.total_protein_g}g total protein)`;
+      document.getElementById('modalEnzymes').innerText = p.digestive_enzymes;
+      document.getElementById('modalSweetener').innerText = p.sweetener;
+      document.getElementById('modalIngredients').innerText = p.ingredients;
+      document.getElementById('modalBuyLink').href = p.url;
+
+      document.getElementById('detailModal').classList.remove('hidden');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+    }
+
+    function clearFilterGroup(group) {
+      if (group === 'retailer') {
+        document.querySelectorAll('#retailerFilters input').forEach(el => el.checked = true);
+      } else if (group === 'type') {
+        document.querySelectorAll('#typeFilters input').forEach(el => el.checked = true);
+        syncQuickPills('ALL');
+      } else if (group === 'diaas') {
+        document.querySelectorAll('#diaasFilters input').forEach(el => el.checked = true);
+      }
+      applyFilters();
+    }
+
+    function resetAllFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value = 'cost_per_g_asc';
+      document.getElementById('priceRange').value = 4500;
+      document.getElementById('priceVal').innerText = 'R 4,500';
+      document.getElementById('brandSelect').value = 'ALL';
+      document.querySelectorAll('#retailerFilters input').forEach(el => el.checked = true);
+      document.querySelectorAll('#typeFilters input').forEach(el => el.checked = true);
+      document.querySelectorAll('#diaasFilters input').forEach(el => el.checked = true);
+      syncQuickPills('ALL');
+      applyFilters();
+    }
+
+    window.addEventListener('DOMContentLoaded', loadData);
+  </script>
+</body>
+</html>

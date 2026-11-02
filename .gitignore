@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+
+# IDE & Agent Config
+.gemini/
+.idea/
+.vscode/
+
+# Local logs
+*.log
+
+# Local development and exploratory scripts
+scripts/

@@ -1,0 +1,271 @@
+[
+  {
+    "id": "nutritech_proven_454g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PROVEN PROTEIN 454g 14 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-454g-1lbs/",
+    "price_zar": 159.0,
+    "original_price_zar": 159.0,
+    "container_size_g": 454.0,
+    "flavors": [
+      "Caramel Cream",
+      "Chocolate Milk",
+      "Vanilla Soft Serve"
+    ],
+    "flavor": "Caramel Cream / Chocolate Milk / Vanilla Soft Serve",
+    "rating": 4.8,
+    "review_count": 45,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_proven_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PROVEN PROTEIN 908g 28 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-908g-2lbs/",
+    "price_zar": 263.0,
+    "original_price_zar": 263.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Strawberry Cereal Milk",
+      "Coffee Ice-Cream",
+      "Chocolate Milk",
+      "Caramel Cream",
+      "Cookies & Cream",
+      "Vanilla Soft Serve"
+    ],
+    "flavor": "Strawberry Cereal Milk / Coffee Ice-Cream / Chocolate Milk / Caramel Cream / Cookies & Cream / Vanilla Soft Serve",
+    "rating": 4.8,
+    "review_count": 90,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_proven_1800g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PROVEN PROTEIN 1.8kg 56 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-1-8kg-4lbs/",
+    "price_zar": 495.0,
+    "original_price_zar": 619.0,
+    "container_size_g": 1800.0,
+    "flavors": [
+      "Caramel Cream",
+      "Chocolate Milk",
+      "Cookies & Cream",
+      "Vanilla Soft Serve"
+    ],
+    "flavor": "Caramel Cream / Chocolate Milk / Cookies & Cream / Vanilla Soft Serve",
+    "rating": 4.8,
+    "review_count": 60,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_premium_454g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PREMIUM WHEY 454g 14 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/notorious-nt-whey-1lb-454g/",
+    "price_zar": 209.0,
+    "original_price_zar": 299.0,
+    "container_size_g": 454.0,
+    "flavors": [
+      "Strawberry Ice Cream",
+      "Vanilla Soft Serve",
+      "Chocolate Milk"
+    ],
+    "flavor": "Strawberry Ice Cream / Vanilla Soft Serve / Chocolate Milk",
+    "rating": 4.8,
+    "review_count": 45,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_premium_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PREMIUM WHEY 908g 28 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/premium-whey-protein-908g/",
+    "price_zar": 535.0,
+    "original_price_zar": 589.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Strawberry Ice Cream",
+      "Vanilla Soft Serve",
+      "Chocolate Milk"
+    ],
+    "flavor": "Strawberry Ice Cream / Vanilla Soft Serve / Chocolate Milk",
+    "rating": 4.8,
+    "review_count": 45,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_premium_2000g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PREMIUM WHEY 2kg 62 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/premium-whey-protein-2kg/",
+    "price_zar": 959.0,
+    "original_price_zar": 1199.0,
+    "container_size_g": 2000.0,
+    "flavors": [
+      "Vanilla Soft Serve",
+      "Chocolate Milk",
+      "Cookies & Cream Gelato",
+      "Strawberry Ice Cream"
+    ],
+    "flavor": "Vanilla Soft Serve / Chocolate Milk / Cookies & Cream Gelato / Strawberry Ice Cream",
+    "rating": 4.8,
+    "review_count": 60,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_premium_natural_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PREMIUM WHEY PROTEIN NATURAL 908g 28 Servings",
+    "url": "https://www.nutritechfit.com/shop/sport-supplements/fitness/nutritech-premium-whey-protein-natural-2lbs-908g/",
+    "price_zar": 599.0,
+    "original_price_zar": 599.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Chocolate Cocoa"
+    ],
+    "flavor": "Chocolate Cocoa",
+    "rating": 4.8,
+    "review_count": 15,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_prosport_premium_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH PROSPORT PREMIUM WHEY INFORMED SPORT TESTED 908g 28 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nutritech-prosport-premium-whey-informed-sport-tested/",
+    "price_zar": 669.0,
+    "original_price_zar": 669.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Milk Chocolate"
+    ],
+    "flavor": "Milk Chocolate",
+    "rating": 4.8,
+    "review_count": 15,
+    "in_stock": false,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_heavyduty_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH HEAVY-DUTY PROTEIN 908g 28 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/heavy-duty-nt-whey/heavy-duty-protein-2lbs-908g/",
+    "price_zar": 263.0,
+    "original_price_zar": 329.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Chocolate Milk"
+    ],
+    "flavor": "Chocolate Milk",
+    "rating": 4.8,
+    "review_count": 15,
+    "in_stock": false,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_heavyduty_1800g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH HEAVY-DUTY PROTEIN 1.8KG 56 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/heavy-duty-nt-whey/heavy-duty-protein-4lbs-1-8kg/",
+    "price_zar": 495.0,
+    "original_price_zar": 619.0,
+    "container_size_g": 1800.0,
+    "flavors": [
+      "Chocolate Milk"
+    ],
+    "flavor": "Chocolate Milk",
+    "rating": 4.8,
+    "review_count": 15,
+    "in_stock": false,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_nt_isolate_700g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH NT ISOLATE 700g 23 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/nt-isolate-700g/",
+    "price_zar": 639.0,
+    "original_price_zar": 799.0,
+    "container_size_g": 700.0,
+    "flavors": [
+      "Vanilla Softserve",
+      "Chocolate Milk"
+    ],
+    "flavor": "Vanilla Softserve / Chocolate Milk",
+    "rating": 4.8,
+    "review_count": 30,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_clear_whey_500g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH CLEAR WHEY PROTEIN ISOLATE 500g 20 Servings",
+    "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nutritech-clear-whey-protein-isolate-500g-1-1lbs/",
+    "price_zar": 439.0,
+    "original_price_zar": 549.0,
+    "container_size_g": 500.0,
+    "flavors": [
+      "Watermelon",
+      "Peach Ice Tea",
+      "Strawberry Daiquiri",
+      "Fresh Mojito"
+    ],
+    "flavor": "Watermelon / Peach Ice Tea / Strawberry Daiquiri / Fresh Mojito",
+    "rating": 4.8,
+    "review_count": 60,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  },
+  {
+    "id": "nutritech_casein_908g",
+    "retailer": "Nutritech Direct",
+    "brand": "Nutritech",
+    "title": "NUTRITECH CASEIN SLOW RELEASE PROTEIN",
+    "url": "https://www.nutritechfit.com/shop/shop-by-goals/lean-muscle/casein-slow-release-protein/",
+    "price_zar": 300.0,
+    "original_price_zar": 599.0,
+    "container_size_g": 908.0,
+    "flavors": [
+      "Cookies & Cream Sundae",
+      "Chocolate Mousse"
+    ],
+    "flavor": "Cookies & Cream Sundae / Chocolate Mousse",
+    "rating": 4.8,
+    "review_count": 30,
+    "in_stock": true,
+    "coupon_code": "DIRECT",
+    "coupon_description": "🚚 Official Nutritech Store: Free Delivery Over R500"
+  }
+]

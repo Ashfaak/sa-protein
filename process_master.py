@@ -52,6 +52,10 @@ def clean_brand(brand_raw, title, url=""):
         return 'Tony Ferguson'
     if 'sci-core' in t or 'scicore' in t or 'sci-core' in b_raw_low:
         return 'Sci-Core'
+    if 'lifeworth' in t or 'lifeworth' in b_raw_low or 'b0fj7m74k1' in (url or '').lower() or 'super standard' in t:
+        return 'Lifeworth'
+    if 'biyode' in t or 'biyode' in b_raw_low or 'b0f9twj4hq' in (url or '').lower():
+        return 'Biyode'
 
     # Priority 1: Extract brand from Clicks URL slug if applicable
     if 'clicks.co.za/' in (url or ''):
@@ -408,6 +412,10 @@ def get_product_family_key(title, brand):
         return ('32Gi', '32Gi Plant Based Protein Shake')
     if 'peak' in b or 'peak' in t:
         return ('Peak', 'Peak Plant Protein Shake')
+    if 'lifeworth' in b or 'lifeworth' in t or 'b0fj7m74k1' in t:
+        return ('Lifeworth', 'Lifeworth Super Standard 100% Whey')
+    if 'biyode' in b or 'biyode' in t or 'b0f9twj4hq' in t:
+        return ('Biyode', 'Biyode Whey Protein Powder')
 
     # Generic
     clean_t = re.sub(r'[\d\.]+\s*(?:kg|g|lb)\b', '', title, flags=re.IGNORECASE)
@@ -645,6 +653,16 @@ BRAND_FORMULATIONS = {
         'ingredients': 'Whey Protein Concentrate, Whey Protein Isolate, Whey Powder, Skim Milk Powder, L-Glutamine, Permitted Flavourants & Colourants (Dutch Cocoa in chocolate variants), Tolerase® L (pH-Stable Lactase Enzyme), Stevia [Non-Nutritive Sweetener]. No added fillers, thickeners or artificial colouring.',
         'digestive_enzymes': 'Tolerase® L (Lactase Enzyme)',
         'sweetener': 'Stevia'
+    },
+    'lifeworth_super_standard': {
+        'ingredients': 'Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Hydrolyzed Bovine Collagen), Cocoa (Processed with Alkali), Sunflower Lecithin Powder, Polydextrose, Natural and Artificial Flavors, Acesulfame Potassium, Sucralose. Contains Milk and Soy.',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Sucralose & Acesulfame Potassium'
+    },
+    'biyode_whey': {
+        'ingredients': 'Whey Protein Blend (Whey Protein Isolate, Whey Protein Concentrate), Vanilla Flavouring, Emulsifier (Sunflower Lecithin), Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Sucralose'
     }
 }
 
@@ -748,6 +766,10 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
             matched = BRAND_FORMULATIONS['psnlifestyle_mrp']
     elif 'rogue legion' in b or 'rogue legion' in t or 'rogue' in b or 'rogue' in t:
         matched = BRAND_FORMULATIONS['rogue_legion_lifestyle']
+    elif 'lifeworth' in b or 'lifeworth' in t or 'b0fj7m74k1' in t:
+        matched = BRAND_FORMULATIONS['lifeworth_super_standard']
+    elif 'biyode' in b or 'biyode' in t or 'b0f9twj4hq' in t:
+        matched = BRAND_FORMULATIONS['biyode_whey']
         
     # Macros based on type & product line
     if matched == BRAND_FORMULATIONS.get('futurelife_high_protein'):
@@ -825,6 +847,16 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 23.0
         carbs = 2.0
         fat = 1.0
+    elif matched == BRAND_FORMULATIONS.get('lifeworth_super_standard'):
+        serving_size = 30.0
+        protein_per_serving = 10.0
+        carbs = 18.4
+        fat = 1.0
+    elif matched == BRAND_FORMULATIONS.get('biyode_whey'):
+        serving_size = 30.0
+        protein_per_serving = 21.0
+        carbs = 3.0
+        fat = 1.5
     elif matched == BRAND_FORMULATIONS.get('nutritech_proven'):
         serving_size = 32.0
         protein_per_serving = 22.0
@@ -961,6 +993,16 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
             'diaas_category': '100% Golden Pea Protein Isolate',
             'pdcaas_score': 0.89,
             'quality_summary': 'Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).'
+        }
+
+    # 0.45. Lifeworth Super Standard 100% Whey (Whey + Bovine Collagen Blend)
+    if 'lifeworth' in t or 'b0fj7m74k1' in t:
+        return {
+            'diaas_score': 0.88,
+            'diaas_rating': '⚠️ Moderate (88% - Collagen Blend)',
+            'diaas_category': 'Whey + Bovine Collagen + Polydextrose',
+            'pdcaas_score': 0.85,
+            'quality_summary': 'Blend of Whey Isolate, Whey Concentrate, and Hydrolyzed Bovine Collagen with Polydextrose. Delivers 10g protein (33.3% purity) and 18.4g carbohydrates per 30g serving.'
         }
 
     # 0.5. Casein & Slow-Release Milk Protein

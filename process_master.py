@@ -470,6 +470,11 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'Tolerase™ L (Lactase)',
         'sweetener': 'Sucralose & Acesulfame-K'
     },
+    'usn_hardcore_ripped': {
+        'ingredients': 'Whey protein concentrate, Soy protein isolate, Type 1 Hydrolysed collagen, Glycine, Cocoa powder (9,1%), Taurine, Creatine monohydrate, Vegetable fat powder [Refined vegetable oil (Palm fruit), Glucose syrup, Milk protein, Anti-caking agent], Milk protein concentrate, Flavourings, L-Carnitine tartrate, Sodium chloride, Dextrose monohydrate, Coffea arabica L. (Green coffee bean) [seed; extract standardised to 45 % chlorogenic acid], Stabiliser (Xanthan gum), MCT powder [Medium chain triglycerides oil powder (Palm fruit, Palm kernel), Glucose syrup, Sodium caseinate, Dipotassium phosphate, Tricalcium phosphate], Non-nutritive sweeteners (Sucralose, Acesulfame-K), Magnesium Amino Acid Chelate (AAC), Caffeine anhydrous, Zinc lactate, Magnesium oxide, Tolerase® L (pH-stable lactase), Pyridoxine hydrochloride (Vitamin B6), Chromium picolinate.',
+        'digestive_enzymes': 'Tolerase® L (Lactase), L-Carnitine Tartrate (500mg), Green Coffee Bean Extract (250mg), Caffeine (75mg), Creatine & Taurine (4000mg), Z-Mag-B6',
+        'sweetener': 'Sucralose & Acesulfame-K'
+    },
     'usn_hydrotech': {
         'ingredients': 'Staged-Release Protein Matrix [Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk), Hydrolysed Wheat Protein (Gluten), Wheat Protein (Gluten)], Cocoa Powder (13%), Sodium Chloride, Emulsifier, Stabiliser, Flavouring, DigeZyme® (Proprietary Multi-Enzyme Complex: Amylase, Protease, Cellulase, Lactase, Lipase), Vitamin B6, Iron, Selenium, Non-Nutritive Sweetener (Sucralose). [Contains Wheat Gluten: 1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid per 30g scoop].',
         'digestive_enzymes': 'DigeZyme® Multi-Enzyme Complex',
@@ -684,7 +689,10 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     elif 'protein water' in t and 'usn' in t:
         matched = BRAND_FORMULATIONS['usn_protein_water']
     elif 'hardcore' in t or 'whey gh' in t:
-        matched = BRAND_FORMULATIONS['usn_hardcore']
+        if 'ripped' in t:
+            matched = BRAND_FORMULATIONS['usn_hardcore_ripped']
+        else:
+            matched = BRAND_FORMULATIONS['usn_hardcore']
     elif 'beast' in t and ('usn' in b or 'usn' in t):
         matched = BRAND_FORMULATIONS['usn_beast']
     elif 'diet fuel' in t:
@@ -798,6 +806,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 15.0
         carbs = 0.5
         fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('usn_hardcore_ripped'):
+        serving_size = 33.0
+        protein_per_serving = 26.1
+        carbs = 2.0
+        fat = 1.7
     elif matched == BRAND_FORMULATIONS.get('usn_hardcore'):
         serving_size = 33.0
         protein_per_serving = 27.0
@@ -1020,11 +1033,11 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
     if ptype == 'Collagen / Beef / Broth' or 'beef' in t or 'bone broth' in t or ('collagen' in t and 'whey' not in t):
         if 'beef' in t or 'bone broth' in t:
             return {
-                'diaas_score': 0.85,
-                'diaas_rating': '🥩 Dairy-Free Beef/Broth (85%)',
-                'diaas_category': 'Hydrolysed Beef / Bone Broth Protein',
-                'pdcaas_score': 0.90,
-                'quality_summary': '100% dairy-free, lactose-free hydrolysed beef/bone broth protein rich in collagen peptides, glycine, and proline for joint, gut, and tissue recovery.'
+                'diaas_score': 0.38,
+                'diaas_rating': '🥩 Hydrolysed Beef Collagen (38%)',
+                'diaas_category': 'Hydrolysed Bovine Connective Tissue Peptides',
+                'pdcaas_score': 0.42,
+                'quality_summary': '100% dairy-free hydrolysed bovine collagen isolate. Extremely rich in Glycine (5.3g) and Proline (2.9g) for joints, tendons, and gut health, but heavily deficient in EAAs (only 4.3g EAAs/scoop) and BCAAs (0.7g Leucine) with an ileal DIAAS of 38%.'
             }
         return {
             'diaas_score': 0.45,
@@ -1308,23 +1321,14 @@ def run_consolidation():
                 nut = determine_nutrition(brand, ptype, weight_g, title, item.get('ingredients'))
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
 
+                # Only use genuine verified coupons extracted from the Amazon listing
                 coupon_code = item.get('coupon_code')
-                coupon_desc = item.get('coupon_text')
-                has_deal = False
-                orig_price = price
+                coupon_desc = item.get('coupon_text') or item.get('coupon_description')
+                has_deal = bool(coupon_code)
+                orig_price = float(item.get('original_price') or item.get('original_price_zar') or price)
                 
-                if 'black bull' in title.lower() and price <= 250:
-                    orig_price = 299.0
-                    coupon_code = 'DEAL20'
-                    coupon_desc = '⚡ Amazon Deal: 20% Off Limited Time'
-                    has_deal = True
-                elif price >= 350:
-                    coupon_code = 'AMAZONNEW'
-                    coupon_desc = '🏷️ Amazon Promo: Save 10% with code AMAZONNEW (Orders R350+)'
-                    has_deal = True
-                
-                discount_pct = 10 if has_deal else 0
-                discounted_price = round(price * 0.90, 2) if has_deal else price
+                discount_pct = float(item.get('discount_pct') or 0) if has_deal else 0
+                discounted_price = round(price * (1 - discount_pct / 100.0), 2) if (has_deal and discount_pct > 0) else price
 
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
                 cost_per_g_disc = round(discounted_price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
@@ -1575,7 +1579,7 @@ def run_consolidation():
 
                 master_products.append({
                     'id': key,
-                    'retailer': 'Nutritech Direct',
+                    'retailer': 'Brand Direct',
                     'brand': brand,
                     'title': title,
                     'product_line': family[1],
@@ -1595,8 +1599,8 @@ def run_consolidation():
                     'clicks_staff_discount_eligible': False,
                     'clicks_3_for_2_eligible': False,
                     'amazon_promo_eligible': False,
-                    'coupon_code': 'DIRECT',
-                    'coupon_description': '🚚 Official Nutritech Store: Free Delivery Over R500',
+                    'coupon_code': None,
+                    'coupon_description': 'Official Manufacturer Store',
                     'discount_pct': round(((orig_price - price) / orig_price) * 100, 1) if orig_price > price else 0,
                     'discounted_price_zar': round(price, 2),
                     'cost_per_g_protein_zar': cost_per_g,
@@ -1645,17 +1649,25 @@ def run_consolidation():
                 quality = compute_protein_quality_scores(ptype, ing_str, title)
 
                 price = float(item.get('price_zar') or 449.0)
-                raw_ret = item.get('retailer', 'Takealot')
-                if 'Clicks' in raw_ret:
+                url_str = (item.get('url') or '').lower()
+                raw_ret = str(item.get('retailer', ''))
+
+                if 'clicks.co.za' in url_str:
+                    ret_clean = 'Clicks'
+                elif 'dischem.co.za' in url_str:
+                    ret_clean = 'Dis-Chem'
+                elif 'takealot.com' in url_str:
+                    ret_clean = 'Takealot'
+                elif 'amazon.co.za' in url_str:
+                    ret_clean = 'Amazon ZA'
+                elif any(dom in url_str for dom in ['usn.global', 'usn.co.za', 'nutritechfit.com', 'npl.za.com', 'phytopro.co.za', 'biogen.co.za']) or 'official' in raw_ret.lower() or 'direct' in raw_ret.lower():
+                    ret_clean = 'Brand Direct'
+                elif 'Clicks' in raw_ret:
                     ret_clean = 'Clicks'
                 elif 'Dis-Chem' in raw_ret:
                     ret_clean = 'Dis-Chem'
-                elif 'Takealot' in raw_ret:
-                    ret_clean = 'Takealot'
-                elif 'Nutritech' in raw_ret or brand == 'Nutritech':
-                    ret_clean = 'Nutritech Direct'
-                elif 'USN' in raw_ret:
-                    ret_clean = 'Dis-Chem'
+                elif 'Amazon' in raw_ret:
+                    ret_clean = 'Amazon ZA'
                 else:
                     ret_clean = 'Takealot'
 
@@ -1671,6 +1683,9 @@ def run_consolidation():
                 key = f"alt_{idx_alt}_{re.sub(r'[^a-z0-9]', '', title.lower())[:18]}"
                 if key in seen_keys: continue
                 seen_keys.add(key)
+
+                coupon_code = 'STAFF13' if is_clicks else ('BETTER10' if is_dischem else None)
+                coupon_desc = '💳 Clicks Staff 13% Discount' if is_clicks else ('🎁 Dis-Chem Better Rewards 10%' if is_dischem else None)
 
                 master_products.append({
                     'id': key,
@@ -1694,8 +1709,8 @@ def run_consolidation():
                     'clicks_staff_discount_eligible': is_clicks,
                     'clicks_3_for_2_eligible': bool(item.get('clicks_3_for_2_eligible', False)),
                     'amazon_promo_eligible': False,
-                    'coupon_code': 'STAFF13' if is_clicks else ('BETTER10' if is_dischem else 'DIRECT'),
-                    'coupon_description': '💳 Clicks Staff 13% Discount' if is_clicks else ('🎁 Dis-Chem Better Rewards 10%' if is_dischem else '🚚 Official Brand Store Price'),
+                    'coupon_code': coupon_code,
+                    'coupon_description': coupon_desc or 'Standard Retail Price',
                     'discount_pct': disc_pct,
                     'discounted_price_zar': disc_price,
                     'cost_per_g_protein_zar': cost_per_g,

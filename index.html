@@ -201,7 +201,7 @@
             <span>Amazon ZA</span>
           </label>
           <label class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#0b0f17]/60 hover:bg-[#0b0f17] cursor-pointer text-gray-300 hover:text-white">
-            <input type="checkbox" value="Nutritech Direct" checked onchange="applyFilters()" class="accent-red-500 rounded">
+            <input type="checkbox" value="Brand Direct" checked onchange="applyFilters()" class="accent-red-500 rounded">
             <span>Brand Direct</span>
           </label>
         </div>
@@ -498,7 +498,8 @@
       'Takealot': 'Fast doorstep delivery via Takealot warehouse logistics across South Africa.',
       'Dis-Chem': 'Dis-Chem retail pharmacy and health store with Better Rewards.',
       'Amazon ZA': 'Amazon South Africa with Prime fast shipping and localized delivery.',
-      'Nutritech Direct': 'Direct from manufacturer factory store.'
+      'Brand Direct': 'Direct from official manufacturer/brand online store.',
+      'Nutritech Direct': 'Direct from official manufacturer/brand online store.'
     };
 
     function getTagTooltip(key) {
@@ -660,10 +661,11 @@
           isDiscounted = true;
           discountLabel = 'Clicks Staff -13%';
         }
-      } else if (amazonPromoEnabled && p.retailer === 'Amazon ZA' && p.price_zar >= 350) {
-        finalPrice = round2(p.price_zar * 0.90);
+      } else if (amazonPromoEnabled && p.retailer === 'Amazon ZA' && (p.amazon_promo_eligible || p.coupon_code)) {
+        const pct = p.discount_pct || 10;
+        finalPrice = round2(p.price_zar * (1 - pct / 100.0));
         isDiscounted = true;
-        discountLabel = 'AMAZONNEW -10%';
+        discountLabel = `${p.coupon_code || 'Amazon Promo'} -${pct}%`;
       } else if (dischemRewardsEnabled && p.retailer === 'Dis-Chem') {
         finalPrice = round2(p.price_zar * 0.90);
         isDiscounted = true;
@@ -862,20 +864,8 @@
       }
     }
 
-    function renderCompactTable(products, sort) {
-      const container = document.getElementById('productsContainer');
-      const sorted = [...products].sort((a, b) => {
-        const prA = getProductPricing(a);
-        const prB = getProductPricing(b);
-        if (sort === 'cost_per_g_asc') return prA.costPerG - prB.costPerG;
-        if (sort === 'diaas_desc') return (b.diaas_score || 1.2) - (a.diaas_score || 1.2);
-        if (sort === 'price_asc') return prA.finalPrice - prB.finalPrice;
-        if (sort === 'protein_pct_desc') return b.protein_percentage - a.protein_percentage;
-        if (sort === 'protein_per_serving_desc') return b.protein_per_serving_g - a.protein_per_serving_g;
-        return 0;
-      });
-
-      const rows = sorted.map(p => {
+    function renderTableMarkup(items) {
+      const rows = items.map(p => {
         const pr = getProductPricing(p);
         const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
         const isCompared = comparisonList.some(item => item.id === p.id);
@@ -892,7 +882,7 @@
               <input type="checkbox" onchange="toggleCompare('${p.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded cursor-pointer">
             </td>
             <td class="py-2.5 px-3">
-              <div class="font-bold text-white hover:text-blue-400 cursor-pointer flex items-center flex-wrap gap-1" onclick="openDetailModal('${p.id}')">
+              <div class="font-bold text-white hover:text-blue-400 cursor-pointer flex items-center flex-wrap gap-1" onclick="openDetailModal('${p.id}')" title="Click for full specs & ingredients">
                 <span>${p.product_line || p.title}</span>
                 ${promoBadge}
               </div>
@@ -909,14 +899,16 @@
             </td>
             <td class="py-2.5 px-3 whitespace-nowrap"><span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 cursor-help" title="${getTagTooltip(p.retailer)}">${p.retailer}</span></td>
             <td class="py-2.5 px-3 text-right whitespace-nowrap">
-              <button onclick="openDetailModal('${p.id}')" class="px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded text-[11px] mr-1">Specs</button>
-              <a href="${p.url}" target="_blank" class="px-2 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px]" title="View on ${p.retailer}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="${p.url}" target="_blank" class="px-2.5 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px] inline-flex items-center gap-1 transition" title="View on ${p.retailer}">
+                <span>Buy</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
             </td>
           </tr>
         `;
       }).join('');
 
-      container.innerHTML = `
+      return `
         <div class="bg-[#131924] border border-gray-800/80 rounded-xl overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
@@ -937,6 +929,53 @@
           </table>
         </div>
       `;
+    }
+
+    function renderCompactTable(products, sort) {
+      const container = document.getElementById('productsContainer');
+      const sorted = [...products].sort((a, b) => {
+        const prA = getProductPricing(a);
+        const prB = getProductPricing(b);
+        if (sort === 'cost_per_g_asc') return prA.costPerG - prB.costPerG;
+        if (sort === 'diaas_desc') return (b.diaas_score || 1.2) - (a.diaas_score || 1.2);
+        if (sort === 'price_asc') return prA.finalPrice - prB.finalPrice;
+        if (sort === 'protein_pct_desc') return b.protein_percentage - a.protein_percentage;
+        if (sort === 'protein_per_serving_desc') return b.protein_per_serving_g - a.protein_per_serving_g;
+        return 0;
+      });
+
+      if (currentSectionGrouping === 'none') {
+        container.innerHTML = renderTableMarkup(sorted);
+        return;
+      }
+
+      const sections = {};
+      for (const item of sorted) {
+        let secKey = 'Other';
+        if (currentSectionGrouping === 'brand') secKey = item.brand;
+        else if (currentSectionGrouping === 'type') secKey = item.type;
+        else if (currentSectionGrouping === 'size') {
+          const s = item.container_size_g || 1000;
+          if (s >= 2500) secKey = 'Bulk Value Packs (2.5kg – 4.5kg)';
+          else if (s >= 1500) secKey = 'Large Tubs (1.5kg – 2.3kg)';
+          else secKey = 'Standard & Compact Tubs (< 1.5kg)';
+        } else if (currentSectionGrouping === 'retailer') {
+          secKey = item.retailer;
+        }
+        if (!sections[secKey]) sections[secKey] = [];
+        sections[secKey].push(item);
+      }
+
+      const sortedSections = Object.entries(sections).sort((a, b) => b[1].length - a[1].length);
+      container.innerHTML = sortedSections.map(([title, list]) => `
+        <div class="mb-7">
+          <div class="flex items-center gap-2 pb-2 mb-3 border-b border-gray-800/80">
+            <h2 class="text-xs font-bold text-white uppercase tracking-wider">${title}</h2>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 font-mono">${list.length}</span>
+          </div>
+          ${renderTableMarkup(list)}
+        </div>
+      `).join('');
     }
 
     function renderSectionedView(items, isGrouped) {
@@ -1013,7 +1052,7 @@
         if (ret === 'Clicks') bClass = 'badge-retailer-clicks';
         if (ret === 'Dis-Chem') bClass = 'badge-retailer-dischem';
         if (ret === 'Amazon ZA') bClass = 'badge-retailer-amazon';
-        if (ret === 'Nutritech Direct') bClass = 'badge-retailer-nutritech';
+        if (ret === 'Nutritech Direct' || ret === 'Brand Direct') bClass = 'badge-retailer-nutritech';
         return `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded cursor-help ${bClass}" title="${getTagTooltip(ret)}">${ret}</span>`;
       }).join('');
 
@@ -1117,11 +1156,9 @@
               </div>
 
               <div class="flex items-center gap-1.5">
-                <button onclick="openDetailModal('${bestItem.id}')" class="py-1.5 px-3 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg text-xs font-medium transition">
-                  Specs & Ingredients
-                </button>
-                <a href="${bestItem.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition" title="Buy at ${bestItem.retailer}">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <a href="${bestItem.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${bestItem.retailer}">
+                  <span>View on ${bestItem.retailer}</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
               </div>
             </div>
@@ -1139,7 +1176,7 @@
       if (p.retailer === 'Clicks') badgeClass = 'badge-retailer-clicks';
       if (p.retailer === 'Dis-Chem') badgeClass = 'badge-retailer-dischem';
       if (p.retailer === 'Amazon ZA') badgeClass = 'badge-retailer-amazon';
-      if (p.retailer === 'Nutritech Direct') badgeClass = 'badge-retailer-nutritech';
+      if (p.retailer === 'Nutritech Direct' || p.retailer === 'Brand Direct') badgeClass = 'badge-retailer-nutritech';
 
       let diaasBadgeClass = 'badge-diaas-high';
       let diaasTier = 'DIAAS High';
@@ -1218,11 +1255,9 @@
               </div>
 
               <div class="flex items-center gap-1.5">
-                <button onclick="openDetailModal('${p.id}')" class="py-1.5 px-3 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg text-xs font-medium transition">
-                  Specs
-                </button>
-                <a href="${p.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition" title="Buy at ${p.retailer}">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <a href="${p.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${p.retailer}">
+                  <span>View on ${p.retailer}</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
               </div>
             </div>
@@ -1345,7 +1380,7 @@
         p.retailer === 'Clicks' ? 'badge-retailer-clicks' :
         p.retailer === 'Dis-Chem' ? 'badge-retailer-dischem' :
         p.retailer === 'Amazon ZA' ? 'badge-retailer-amazon' :
-        p.retailer === 'Nutritech Direct' ? 'badge-retailer-nutritech' : 'badge-retailer-takealot'
+        (p.retailer === 'Nutritech Direct' || p.retailer === 'Brand Direct') ? 'badge-retailer-nutritech' : 'badge-retailer-takealot'
       }`;
 
       document.getElementById('modalDiaasBadge').innerText = `DIAAS ${(p.diaas_score || 1.22).toFixed(2)} • ${p.type}`;
@@ -1383,10 +1418,10 @@
           desc += `<br><span class="text-sky-300 font-semibold">With Clicks Staff -13%:</span> 3 tubs cost R ${bundlePriceStaff.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubStaff.toFixed(2)} / tub</b>).`;
         }
         document.getElementById('modalPromoDesc').innerHTML = desc;
-      } else if (p.coupon_code || p.coupon_description) {
+      } else if (p.coupon_code && p.coupon_code !== 'DIRECT' && p.coupon_code !== 'STANDARD' && p.coupon_code !== 'NONE') {
         promoSec.classList.remove('hidden');
         document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag"></i> Active Discount & Promotions';
-        document.getElementById('modalPromoCodeBadge').innerText = p.coupon_code || 'PROMO';
+        document.getElementById('modalPromoCodeBadge').innerText = p.coupon_code;
         document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-blue-900/60 text-blue-200 font-mono text-xs';
         document.getElementById('modalPromoDesc').innerText = p.coupon_description || 'Active promotion eligible at checkout.';
       } else {

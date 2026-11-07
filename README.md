@@ -33,6 +33,10 @@ python process_master.py
 ```
 This updates `data/proteins.db`, `data/proteins.json`, and `data/products_data.js`.
 
+## 🛠️ Built With
+
+Built with **Antigravity**, **Gemini 3.8 Flash**, and **Argon**.
+
 ## ⚠️ Disclaimer
 
 This website and repository are independent resources provided solely for informational and educational purposes. Product formulations, ingredient profiles, nutritional values, stock availability, and prices are collected from public retailer listings and manufacturer packaging and may change at any time without notice.

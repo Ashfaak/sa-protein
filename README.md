@@ -1,6 +1,8 @@
 # 🇿🇦 South Africa Protein Powder Database & Tracker
 
-A comprehensive database and cost-per-gram comparison tool for protein powders across South African retailers (Takealot, Amazon ZA, Clicks, Dis-Chem, and Nutritech Direct).
+🌐 **Live Website:** [https://ashfaak.github.io/sa-protein/](https://ashfaak.github.io/sa-protein/)
+
+A comprehensive database and cost-per-gram comparison tool for protein powders across South African retailers (Takealot, Amazon ZA, Clicks, Dis-Chem, and Brand Direct).
 
 Covers **Whey Blends, 100% Whey Isolates, Plant & Vegan, Micellar Casein, Beef Isolate, Bone Broth, Collagen Peptides, Clear Whey, and Multi-Source Blends**.
 

@@ -2,6 +2,7 @@ import json
 import re
 import os
 import sqlite3
+from datetime import datetime
 
 def clean_brand(brand_raw, title, url=""):
     t = (title or '').lower()
@@ -1816,13 +1817,30 @@ def run_consolidation():
     conn.commit()
     conn.close()
 
+    # Format current date (e.g. "7 Nov 2026")
+    today_str = datetime.now().strftime("%d %b %Y").lstrip("0")
+
+    # Automatically update lastUpdatedDate in index.html
+    if os.path.exists('index.html'):
+        with open('index.html', 'r', encoding='utf-8') as f:
+            html_content = f.read()
+        updated_html = re.sub(
+            r'(<b[^>]*id=["\']lastUpdatedDate["\'][^>]*>)[^<]*(</b>)',
+            rf'\g<1>{today_str}\g<2>',
+            html_content
+        )
+        if updated_html != html_content:
+            with open('index.html', 'w', encoding='utf-8') as f:
+                f.write(updated_html)
+            print(f"Updated index.html lastUpdatedDate to {today_str}")
+
     # Save finalized JSON
     with open('data/proteins.json', 'w', encoding='utf-8') as f:
         json.dump(master_products, f, indent=2)
 
-    # Save as JS for direct browser loading
+    # Save as JS for direct browser loading with window.LAST_UPDATED timestamp
     with open('data/products_data.js', 'w', encoding='utf-8') as f:
-        f.write("window.EMBEDDED_PROTEINS = " + json.dumps(master_products, indent=2) + ";")
+        f.write(f"window.LAST_UPDATED = '{today_str}';\nwindow.EMBEDDED_PROTEINS = " + json.dumps(master_products, indent=2) + ";\n")
 
     print(f"Database successfully updated! {len(master_products)} pure whey protein powders stored.")
 

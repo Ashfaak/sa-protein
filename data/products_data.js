@@ -1,3 +1,4 @@
+window.LAST_UPDATED = '7 Nov 2026';
 window.EMBEDDED_PROTEINS = [
   {
     "id": "takealot_98115152",

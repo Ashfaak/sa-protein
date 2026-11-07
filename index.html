@@ -544,6 +544,10 @@
 
     async function loadData() {
       checkUrlParameters();
+      if (window.LAST_UPDATED) {
+        const dateEl = document.getElementById('lastUpdatedDate');
+        if (dateEl) dateEl.innerText = window.LAST_UPDATED;
+      }
       if (window.EMBEDDED_PROTEINS && Array.isArray(window.EMBEDDED_PROTEINS)) {
         rawProducts = window.EMBEDDED_PROTEINS;
         populateBrandFilter();
@@ -567,7 +571,8 @@
       for (const p of rawProducts) {
         counts[p.brand] = (counts[p.brand] || 0) + 1;
       }
-      const sortedBrands = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+      // Sort brands strictly in alphabetical order (A to Z)
+      const sortedBrands = Object.entries(counts).sort((a, b) => a[0].localeCompare(b[0], undefined, { sensitivity: 'base' }));
       let html = `<option value="ALL">All Brands (${rawProducts.length} Tubs)</option>`;
       for (const [brand, count] of sortedBrands) {
         html += `<option value="${brand}">${brand} (${count})</option>`;

@@ -64,14 +64,24 @@
         </div>
       </div>
 
-      <!-- Header Right Status / Badge -->
-      <div class="flex items-center gap-2">
+      <!-- Header Right Status / Badge & 3 for 2 Toggle -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <!-- Clicks 3 for 2 Promo Toggle -->
+        <label class="inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Simulate Clicks 'Buy 3, Pay for 2' special (effective 33.3% savings per tub when buying 3)">
+          <input type="checkbox" id="clicks3For2Toggle" class="sr-only peer" onchange="toggleClicks3For2()">
+          <div class="w-7 h-4 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all relative peer-checked:bg-amber-500"></div>
+          <span class="text-[11px] font-medium text-gray-300 flex items-center gap-1">
+            <i class="fa-solid fa-tags text-amber-400 text-[10px]"></i> Clicks <b class="text-amber-400">3 for 2</b>
+          </span>
+        </label>
+
         <span id="clicksStaffActiveBadge" class="hidden text-[11px] px-2.5 py-1 rounded-lg bg-sky-950/90 text-sky-300 border border-sky-800/60 font-medium">
-          <i class="fa-solid fa-id-card text-sky-400 mr-1"></i> Clicks Staff Discount Active (-13%)
+          <i class="fa-solid fa-id-card text-sky-400 mr-1"></i> Clicks Staff Active (-13%)
         </span>
+
         <span class="text-[11px] px-2.5 py-1 bg-[#131924] border border-gray-800/80 rounded-lg text-gray-400 font-medium hidden sm:inline-flex items-center gap-1.5" title="Database prices and formulation data last verified">
           <i class="fa-regular fa-calendar-check text-emerald-400 text-xs"></i>
-          <span>Updated: <b class="text-gray-200 font-semibold" id="lastUpdatedDate">2 Nov 2026</b></span>
+          <span>Updated: <b class="text-gray-200 font-semibold" id="lastUpdatedDate">7 Nov 2026</b></span>
         </span>
         <span id="productCounter" class="text-[11px] px-2.5 py-1 bg-gray-800/80 rounded-lg text-gray-400 font-mono hidden sm:inline-block">Loading...</span>
       </div>
@@ -81,34 +91,34 @@
     <!-- Quick Category Tabs Bar (One-Click Filtering for All Protein Sources) -->
     <div class="border-t border-gray-800/60 bg-[#0d121b]">
       <div class="max-w-[1400px] mx-auto px-4 py-1.5 flex items-center gap-1.5 overflow-x-auto no-scrollbar" id="quickCategoryTabs">
-        <button onclick="selectQuickCategory('ALL')" data-cat="ALL" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-emerald-600 text-white shadow-sm">
+        <button onclick="selectQuickCategory('ALL')" data-cat="ALL" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition bg-emerald-600 text-white shadow-sm" title="View all indexed protein powders across South African retailers.">
           All
         </button>
-        <button onclick="selectQuickCategory('Whey Blend')" data-cat="Whey Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Whey Blend')" data-cat="Whey Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Synergistic blend of Whey Concentrate & Isolate. High BCAAs, fast digestion, great value daily protein.">
           Whey Blends
         </button>
-        <button onclick="selectQuickCategory('Whey Isolate')" data-cat="Whey Isolate" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Whey Isolate')" data-cat="Whey Isolate" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Cross-flow microfiltered pure whey (≥85-90% protein). Ultra-low lactose, fat, and carbs for lean definition.">
           Isolate
         </button>
-        <button onclick="selectQuickCategory('Plant / Vegan Protein')" data-cat="Plant / Vegan Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Plant / Vegan Protein')" data-cat="Plant / Vegan Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="100% plant-derived proteins (Pea, Rice, Pumpkin, Hemp) providing complete dairy-free amino acid nutrition.">
           Plant / Vegan
         </button>
-        <button onclick="selectQuickCategory('Casein / Milk Protein')" data-cat="Casein / Milk Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Casein / Milk Protein')" data-cat="Casein / Milk Protein" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Slow-release micellar milk protein (6-8 hour sustained release) preventing muscle breakdown during sleep or fasting.">
           Casein
         </button>
-        <button onclick="selectQuickCategory('Collagen / Beef / Broth')" data-cat="Collagen / Beef / Broth" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Collagen / Beef / Broth')" data-cat="Collagen / Beef / Broth" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Dairy-free structural protein high in Glycine & Proline for joint, tendon, skin, and gut health.">
           Beef & Collagen
         </button>
-        <button onclick="selectQuickCategory('Clear Whey / Protein Water')" data-cat="Clear Whey / Protein Water" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Clear Whey / Protein Water')" data-cat="Clear Whey / Protein Water" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Light, refreshing fruit-juice style hydrolysed whey isolate with zero milky texture and zero sugar.">
           Clear Whey
         </button>
-        <button onclick="selectQuickCategory('Multi-Source / Meal Blend')" data-cat="Multi-Source / Meal Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Multi-Source / Meal Blend')" data-cat="Multi-Source / Meal Blend" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Timed-release matrix blending fast, medium, and slow proteins for prolonged satiety and meal replacement.">
           Multi-Source
         </button>
-        <button onclick="selectQuickCategory('Hardcore / All-in-One')" data-cat="Hardcore / All-in-One" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Hardcore / All-in-One')" data-cat="Hardcore / All-in-One" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="High-potency formulation spiked with performance actives like Creatine, Taurine, Glycine, and BCAAs for strength and mass recovery.">
           Anabolic
         </button>
-        <button onclick="selectQuickCategory('Diet / Lean Whey')" data-cat="Diet / Lean Whey" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800">
+        <button onclick="selectQuickCategory('Diet / Lean Whey')" data-cat="Diet / Lean Whey" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss.">
           Diet / Lean
         </button>
       </div>
@@ -233,16 +243,16 @@
           <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i>
         </summary>
         <div class="px-3.5 pb-3.5 pt-1 space-y-1.5 text-xs border-t border-gray-800/60" id="typeFilters">
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Blend (WPC+WPI)</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Isolate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Isolate (WPI)</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Whey Concentrate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Concentrate (WPC)</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Clear Whey / Protein Water" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Clear Whey & Protein Water</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Plant / Vegan Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Plant / Vegan Protein</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Casein / Milk Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Casein & Milk Protein</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Collagen / Beef / Broth" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Beef, Bone Broth & Collagen</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Multi-Source / Meal Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Multi-Source / Timed Blend</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Hardcore / All-in-One" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Hardcore / Anabolic (+Creatine)</label>
-          <label class="flex items-center gap-2 cursor-pointer text-gray-300"><input type="checkbox" value="Diet / Lean Whey" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Diet / Lean Whey</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Synergistic blend of Whey Concentrate & Isolate. Fast digestion, high BCAAs, great value daily protein."><input type="checkbox" value="Whey Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Blend (WPC+WPI)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Cross-flow microfiltered pure whey (≥85-90% protein). Ultra-low lactose, fat, and carbs for lean definition."><input type="checkbox" value="Whey Isolate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Isolate (WPI)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Whole whey protein (WPC80) retaining natural beneficial immune fractions (immunoglobulins and lactoferrin)."><input type="checkbox" value="Whey Concentrate" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Whey Concentrate (WPC)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Light, refreshing fruit-juice style hydrolysed whey isolate with zero milky texture and zero sugar."><input type="checkbox" value="Clear Whey / Protein Water" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Clear Whey & Protein Water</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="100% plant-derived proteins (Pea, Rice, Pumpkin, Hemp) providing complete dairy-free amino acid nutrition."><input type="checkbox" value="Plant / Vegan Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Plant / Vegan Protein</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Slow-release micellar milk protein (6-8 hour sustained release) preventing muscle breakdown during sleep or fasting."><input type="checkbox" value="Casein / Milk Protein" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Casein & Milk Protein</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Dairy-free structural protein high in Glycine & Proline for joint, tendon, skin, and gut health."><input type="checkbox" value="Collagen / Beef / Broth" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Beef, Bone Broth & Collagen</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Timed-release matrix blending fast, medium, and slow proteins for prolonged satiety and meal replacement."><input type="checkbox" value="Multi-Source / Meal Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Multi-Source / Timed Blend</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="High-potency formulation spiked with performance actives like Creatine, Taurine, Glycine, and BCAAs for strength and mass recovery."><input type="checkbox" value="Hardcore / All-in-One" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Hardcore / Anabolic (+Creatine)</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss."><input type="checkbox" value="Diet / Lean Whey" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Diet / Lean Whey</label>
         </div>
       </details>
 
@@ -448,9 +458,57 @@
     let activeSizeSelections = {}; // lineKey -> selectedSizeG
     let lastFilteredProducts = [];
     let clicksDiscountEnabled = false;
+    let clicks3For2Enabled = false;
     let amazonPromoEnabled = false;
     let dischemRewardsEnabled = false;
     let comparisonList = [];
+
+    // Comprehensive Tooltips for Types, Metrics, Retailers, and Badges
+    const TAG_TOOLTIPS = {
+      // Detailed Protein Types & Classifications
+      'Whey Blend': 'Synergistic blend of Whey Concentrate & Isolate. Fast digestion, high BCAAs, great value daily protein.',
+      'Whey Isolate': 'Cross-flow microfiltered pure whey (≥85-90% protein). Ultra-low lactose, fat, and carbs for lean definition.',
+      'Whey Concentrate': 'Whole whey protein (WPC80) retaining natural beneficial immune fractions (immunoglobulins and lactoferrin).',
+      'Clear Whey / Protein Water': 'Light, refreshing fruit-juice style hydrolysed whey isolate with zero milky texture and zero sugar.',
+      'Plant / Vegan Protein': '100% plant-derived proteins (Pea, Rice, Pumpkin, Hemp) providing complete dairy-free amino acid nutrition.',
+      'Casein / Milk Protein': 'Slow-release micellar milk protein (6-8 hour sustained release) preventing muscle breakdown during sleep or fasting.',
+      'Collagen / Beef / Broth': 'Dairy-free structural protein high in Glycine & Proline for joint, tendon, skin, and gut health.',
+      'Multi-Source / Meal Blend': 'Timed-release matrix blending fast, medium, and slow proteins for prolonged satiety and meal replacement.',
+      'Hardcore / All-in-One': 'High-potency formulation spiked with performance actives like Creatine, Taurine, Glycine, and BCAAs for strength and mass recovery.',
+      'Diet / Lean Whey': 'Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss.',
+
+      // Bioavailability & Amino Acid Scores
+      'DIAAS Elite': 'Elite protein bioavailability (DIAAS ≥ 1.28): Maximum essential amino acids with fastest muscle protein synthesis.',
+      'DIAAS Excellent': 'Excellent protein bioavailability (DIAAS 1.20–1.27): High leucine content and optimal tissue repair.',
+      'DIAAS High': 'High protein bioavailability (DIAAS 1.15–1.19): Complete amino acid profile exceeding human requirements.',
+      'DIAAS Good': 'Good protein bioavailability (DIAAS 1.00–1.14): Solid baseline complete protein profile.',
+      'DIAAS Moderate': 'Moderate protein bioavailability (DIAAS < 1.00): Incomplete or lower indispensable amino acid digestibility.',
+      'DIAAS': 'Digestible Indispensable Amino Acid Score (FAO gold-standard): Measures true ileal amino acid absorption in humans.',
+      'PDCAAS': 'Protein Digestibility-Corrected Amino Acid Score (standard metric, capped at 1.00).',
+
+      // Supplement Metrics
+      'Cost / g Prot': 'Calculated as Total Price divided by Total Grams of Pure Protein in the container. The definitive benchmark for supplement value.',
+      'Protein Purity': 'The percentage of the powder by weight that is actual protein (e.g. 24g protein in a 32g scoop = 75% purity).',
+      'Scoop / Carbs': 'Serving scoop size in grams, alongside the amount of carbohydrates per serving.',
+      'Best Value Size': 'This size gives you the lowest cost per gram of pure protein for this product line.',
+
+      // Retailers & Promos
+      'Clicks 3 for 2': "Eligible for Clicks 'Buy 3, Pay for 2' special. Mix & match across qualifying products (cheapest free = effective 33.3% savings per tub).",
+      'Clicks': 'Clicks retail pharmacy and online store with ClubCard points and periodic 3-for-2 promotions.',
+      'Takealot': 'Fast doorstep delivery via Takealot warehouse logistics across South Africa.',
+      'Dis-Chem': 'Dis-Chem retail pharmacy and health store with Better Rewards.',
+      'Amazon ZA': 'Amazon South Africa with Prime fast shipping and localized delivery.',
+      'Nutritech Direct': 'Direct from manufacturer factory store.'
+    };
+
+    function getTagTooltip(key) {
+      if (!key) return '';
+      if (TAG_TOOLTIPS[key]) return TAG_TOOLTIPS[key];
+      for (const [k, v] of Object.entries(TAG_TOOLTIPS)) {
+        if (key.includes(k)) return v;
+      }
+      return '';
+    }
 
     function checkUrlParameters() {
       const params = new URLSearchParams(window.location.search);
@@ -464,12 +522,24 @@
         const badge = document.getElementById('clicksStaffActiveBadge');
         if (badge) badge.classList.remove('hidden');
       }
+      const promo3for2 = params.get('3for2') || params.get('promo');
+      if (promo3for2 === 'true' || promo3for2 === '1' || promo3for2 === '3for2') {
+        clicks3For2Enabled = true;
+        const toggle = document.getElementById('clicks3For2Toggle');
+        if (toggle) toggle.checked = true;
+      }
       if (params.get('amazon') === 'true' || params.get('amazon') === '1') {
         amazonPromoEnabled = true;
       }
       if (params.get('dischem') === 'true' || params.get('dischem') === '1') {
         dischemRewardsEnabled = true;
       }
+    }
+
+    function toggleClicks3For2() {
+      const toggle = document.getElementById('clicks3For2Toggle');
+      clicks3For2Enabled = toggle ? toggle.checked : !clicks3For2Enabled;
+      applyFilters();
     }
 
     async function loadData() {
@@ -565,10 +635,26 @@
       let finalPrice = p.price_zar;
       let discountLabel = null;
 
-      if (clicksDiscountEnabled && p.retailer === 'Clicks') {
-        finalPrice = p.discounted_price_zar;
-        isDiscounted = true;
-        discountLabel = 'Clicks Staff -13%';
+      const isClicks = p.retailer === 'Clicks';
+      const is3for2 = Boolean(p.clicks_3_for_2_eligible) && isClicks;
+
+      if (isClicks) {
+        if (clicksDiscountEnabled && clicks3For2Enabled && is3for2) {
+          // Stacking 13% staff discount and 3 for 2 special:
+          // (Price * 2 tubs * 0.87) / 3 = Price * 0.58 (effective 42% discount)
+          finalPrice = round2((p.price_zar * 2 * 0.87) / 3);
+          isDiscounted = true;
+          discountLabel = '3 for 2 + Staff -13%';
+        } else if (clicks3For2Enabled && is3for2) {
+          // 3 for 2 special only: 3 tubs for price of 2 = 33.3% discount
+          finalPrice = round2((p.price_zar * 2) / 3);
+          isDiscounted = true;
+          discountLabel = 'Clicks 3 for 2 Special';
+        } else if (clicksDiscountEnabled) {
+          finalPrice = p.discounted_price_zar;
+          isDiscounted = true;
+          discountLabel = 'Clicks Staff -13%';
+        }
       } else if (amazonPromoEnabled && p.retailer === 'Amazon ZA' && p.price_zar >= 350) {
         finalPrice = round2(p.price_zar * 0.90);
         isDiscounted = true;
@@ -788,25 +874,38 @@
         const pr = getProductPricing(p);
         const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
         const isCompared = comparisonList.some(item => item.id === p.id);
+        const is3For2 = Boolean(p.clicks_3_for_2_eligible);
+        const promoBadge = is3For2 ? `
+          <span class="ml-1 text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold cursor-help inline-flex items-center gap-0.5" title="${getTagTooltip('Clicks 3 for 2')}">
+            <i class="fa-solid fa-tags text-[8px] text-amber-400"></i> 3 for 2
+          </span>
+        ` : '';
+
         return `
           <tr class="border-b border-gray-800/60 hover:bg-gray-800/30 transition text-xs">
             <td class="py-2.5 px-3">
               <input type="checkbox" onchange="toggleCompare('${p.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded cursor-pointer">
             </td>
             <td class="py-2.5 px-3">
-              <div class="font-bold text-white hover:text-blue-400 cursor-pointer" onclick="openDetailModal('${p.id}')">${p.product_line || p.title}</div>
+              <div class="font-bold text-white hover:text-blue-400 cursor-pointer flex items-center flex-wrap gap-1" onclick="openDetailModal('${p.id}')">
+                <span>${p.product_line || p.title}</span>
+                ${promoBadge}
+              </div>
               <div class="text-[11px] text-gray-500">${p.brand} • ${p.flavor}</div>
             </td>
-            <td class="py-2.5 px-3 text-gray-300 whitespace-nowrap">${p.type}</td>
-            <td class="py-2.5 px-3 font-mono font-semibold text-amber-300 whitespace-nowrap">${(p.diaas_score || 1.22).toFixed(2)}</td>
+            <td class="py-2.5 px-3 text-gray-300 whitespace-nowrap cursor-help" title="${getTagTooltip(p.type)}">${p.type}</td>
+            <td class="py-2.5 px-3 font-mono font-semibold text-amber-300 whitespace-nowrap cursor-help" title="${p.quality_summary || getTagTooltip('DIAAS')}">${(p.diaas_score || 1.22).toFixed(2)}</td>
             <td class="py-2.5 px-3 text-gray-300 whitespace-nowrap">${sLabel}</td>
-            <td class="py-2.5 px-3 text-purple-300 font-semibold whitespace-nowrap">${p.protein_per_serving_g}g <span class="text-gray-500 font-normal">(${p.protein_percentage}%)</span></td>
-            <td class="py-2.5 px-3 font-mono font-bold text-emerald-400 whitespace-nowrap">R ${pr.costPerG.toFixed(2)}/g</td>
-            <td class="py-2.5 px-3 font-mono font-bold text-white whitespace-nowrap">R ${pr.finalPrice.toFixed(0)}</td>
-            <td class="py-2.5 px-3 whitespace-nowrap"><span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300">${p.retailer}</span></td>
+            <td class="py-2.5 px-3 text-purple-300 font-semibold whitespace-nowrap cursor-help" title="${getTagTooltip('Protein Purity')}">${p.protein_per_serving_g}g <span class="text-gray-500 font-normal">(${p.protein_percentage}%)</span></td>
+            <td class="py-2.5 px-3 font-mono font-bold text-emerald-400 whitespace-nowrap cursor-help" title="${getTagTooltip('Cost / g Prot')}">R ${pr.costPerG.toFixed(2)}/g</td>
+            <td class="py-2.5 px-3 font-mono font-bold text-white whitespace-nowrap">
+              <span>R ${pr.finalPrice.toFixed(0)}</span>
+              ${pr.isDiscounted ? `<div class="text-[10px] text-emerald-400 font-sans font-normal">${pr.discountLabel}</div>` : ''}
+            </td>
+            <td class="py-2.5 px-3 whitespace-nowrap"><span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 cursor-help" title="${getTagTooltip(p.retailer)}">${p.retailer}</span></td>
             <td class="py-2.5 px-3 text-right whitespace-nowrap">
               <button onclick="openDetailModal('${p.id}')" class="px-2 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded text-[11px] mr-1">Specs</button>
-              <a href="${p.url}" target="_blank" class="px-2 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px]"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="${p.url}" target="_blank" class="px-2 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px]" title="View on ${p.retailer}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </td>
           </tr>
         `;
@@ -819,11 +918,11 @@
               <tr class="border-b border-gray-800 text-[10px] uppercase tracking-wider text-gray-400 bg-[#0b0f17]/60">
                 <th class="py-2.5 px-3 w-8">Cmp</th>
                 <th class="py-2.5 px-3">Product & Flavour</th>
-                <th class="py-2.5 px-3">Category</th>
-                <th class="py-2.5 px-3">DIAAS</th>
+                <th class="py-2.5 px-3 cursor-help" title="${getTagTooltip('Whey Blend')}">Category</th>
+                <th class="py-2.5 px-3 cursor-help" title="${getTagTooltip('DIAAS')}">DIAAS</th>
                 <th class="py-2.5 px-3">Size</th>
-                <th class="py-2.5 px-3">Prot / Scoop</th>
-                <th class="py-2.5 px-3">Cost / g</th>
+                <th class="py-2.5 px-3 cursor-help" title="${getTagTooltip('Protein Purity')}">Prot / Scoop</th>
+                <th class="py-2.5 px-3 cursor-help" title="${getTagTooltip('Cost / g Prot')}">Cost / g</th>
                 <th class="py-2.5 px-3">Price</th>
                 <th class="py-2.5 px-3">Store</th>
                 <th class="py-2.5 px-3 text-right">Action</th>
@@ -888,15 +987,18 @@
       }
 
       let diaasBadgeClass = 'badge-diaas-high';
-      if (g.diaas_score >= 1.28) diaasBadgeClass = 'badge-diaas-elite';
-      else if (g.diaas_score < 1.00) diaasBadgeClass = 'badge-diaas-moderate';
-      else if (g.diaas_score < 1.15) diaasBadgeClass = 'badge-diaas-good';
+      let diaasTier = 'DIAAS High';
+      if (g.diaas_score >= 1.28) { diaasBadgeClass = 'badge-diaas-elite'; diaasTier = 'DIAAS Elite'; }
+      else if (g.diaas_score < 1.00) { diaasBadgeClass = 'badge-diaas-moderate'; diaasTier = 'DIAAS Moderate'; }
+      else if (g.diaas_score >= 1.20) { diaasBadgeClass = 'badge-diaas-high'; diaasTier = 'DIAAS Excellent'; }
+      else if (g.diaas_score < 1.15) { diaasBadgeClass = 'badge-diaas-good'; diaasTier = 'DIAAS Good'; }
 
       let valueColor = 'text-emerald-400';
       if (bestPricing.costPerG > 0.75) valueColor = 'text-amber-400';
       else if (bestPricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === bestItem.id);
+      const is3For2 = g.items.some(it => it.clicks_3_for_2_eligible);
 
       const flavorList = Array.from(g.flavors);
       const flavorText = flavorList.slice(0, 3).join(' • ') + (flavorList.length > 3 ? ` +${flavorList.length - 3}` : '');
@@ -907,8 +1009,14 @@
         if (ret === 'Dis-Chem') bClass = 'badge-retailer-dischem';
         if (ret === 'Amazon ZA') bClass = 'badge-retailer-amazon';
         if (ret === 'Nutritech Direct') bClass = 'badge-retailer-nutritech';
-        return `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded ${bClass}">${ret}</span>`;
+        return `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded cursor-help ${bClass}" title="${getTagTooltip(ret)}">${ret}</span>`;
       }).join('');
+
+      const promo3For2Badge = is3For2 ? `
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-help inline-flex items-center gap-1" title="${getTagTooltip('Clicks 3 for 2')}">
+          <i class="fa-solid fa-tags text-[9px] text-amber-400"></i> 3 for 2
+        </span>
+      ` : '';
 
       const sizePillsHtml = availSizes.map(s => {
         const isSel = s === selSize;
@@ -925,7 +1033,7 @@
                   }">
             <span>${sLabel}</span>
             <span class="${isSel ? 'text-blue-100' : 'text-emerald-400'} font-mono">R${minP.toFixed(0)}</span>
-            ${isBest ? `<span title="Best Value Size" class="text-[9px] text-amber-300">★</span>` : ''}
+            ${isBest ? `<span title="${getTagTooltip('Best Value Size')}" class="text-[9px] text-amber-300 cursor-help">★</span>` : ''}
           </button>
         `;
       }).join('');
@@ -952,15 +1060,16 @@
               ${g.product_line}
             </h3>
 
-            <!-- Type, DIAAS & Flavours -->
+            <!-- Type, DIAAS, 3-for-2 & Flavours -->
             <div class="flex items-center gap-1.5 flex-wrap mb-2.5">
-              <span class="text-[10px] font-semibold px-2 py-0.5 rounded ${diaasBadgeClass}" title="${g.quality_summary || ''}">
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded cursor-help ${diaasBadgeClass}" title="${g.quality_summary || getTagTooltip(diaasTier)}">
                 DIAAS ${g.diaas_score ? g.diaas_score.toFixed(2) : '1.22'}
               </span>
-              <span class="px-2 py-0.5 rounded bg-gray-800/90 text-gray-300 text-[10px] font-medium">
+              <span class="px-2 py-0.5 rounded bg-gray-800/90 text-gray-300 text-[10px] font-medium cursor-help" title="${getTagTooltip(g.type)}">
                 ${g.type}
               </span>
-              <span class="text-[11px] text-gray-400 truncate max-w-[180px]" title="${flavorList.join(', ')}">
+              ${promo3For2Badge}
+              <span class="text-[11px] text-gray-400 truncate max-w-[170px]" title="${flavorList.join(', ')}">
                 • ${flavorText}
               </span>
             </div>
@@ -976,15 +1085,15 @@
             
             <div class="grid grid-cols-3 gap-1.5 text-center bg-[#0b0f17] p-2 rounded-xl border border-gray-800/70">
               <div>
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Cost / g Prot</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Cost / g Prot')}">Cost / g Prot</span>
                 <span class="text-xs font-extrabold ${valueColor} font-mono">R ${bestPricing.costPerG.toFixed(2)}</span>
               </div>
               <div class="border-x border-gray-800/70 px-1">
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Protein Purity</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Protein Purity')}">Protein Purity</span>
                 <span class="text-xs font-extrabold text-purple-400">${g.protein_percentage}% <span class="text-[10px] text-gray-400 font-normal">(${bestItem.protein_per_serving_g}g)</span></span>
               </div>
               <div>
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Scoop / Carbs</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Scoop / Carbs')}">Scoop / Carbs</span>
                 <span class="text-xs font-bold text-gray-300">${bestItem.scoop_size_g}g <span class="text-[10px] ${bestItem.carbs_g >= 5 ? 'text-amber-400' : 'text-gray-500'}">(${bestItem.carbs_g}g C)</span></span>
               </div>
             </div>
@@ -998,6 +1107,7 @@
                 </div>
                 <div class="text-[10px] text-gray-500 whitespace-nowrap">
                   R ${bestPricing.costPerServ.toFixed(2)}/shake • ${bestItem.servings_count} serv
+                  ${bestPricing.isDiscounted ? `<span class="ml-1 text-emerald-400 font-medium">(${bestPricing.discountLabel})</span>` : ''}
                 </div>
               </div>
 
@@ -1027,16 +1137,25 @@
       if (p.retailer === 'Nutritech Direct') badgeClass = 'badge-retailer-nutritech';
 
       let diaasBadgeClass = 'badge-diaas-high';
-      if (p.diaas_score >= 1.28) diaasBadgeClass = 'badge-diaas-elite';
-      else if (p.diaas_score < 1.00) diaasBadgeClass = 'badge-diaas-moderate';
-      else if (p.diaas_score < 1.15) diaasBadgeClass = 'badge-diaas-good';
+      let diaasTier = 'DIAAS High';
+      if (p.diaas_score >= 1.28) { diaasBadgeClass = 'badge-diaas-elite'; diaasTier = 'DIAAS Elite'; }
+      else if (p.diaas_score < 1.00) { diaasBadgeClass = 'badge-diaas-moderate'; diaasTier = 'DIAAS Moderate'; }
+      else if (p.diaas_score >= 1.20) { diaasBadgeClass = 'badge-diaas-high'; diaasTier = 'DIAAS Excellent'; }
+      else if (p.diaas_score < 1.15) { diaasBadgeClass = 'badge-diaas-good'; diaasTier = 'DIAAS Good'; }
 
       let valueColor = 'text-emerald-400';
       if (pricing.costPerG > 0.75) valueColor = 'text-amber-400';
       else if (pricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === p.id);
+      const is3For2 = Boolean(p.clicks_3_for_2_eligible);
       const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
+
+      const promo3For2Badge = is3For2 ? `
+        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-help inline-flex items-center gap-1" title="${getTagTooltip('Clicks 3 for 2')}">
+          <i class="fa-solid fa-tags text-[9px] text-amber-400"></i> 3 for 2
+        </span>
+      ` : '';
 
       return `
         <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
@@ -1044,7 +1163,7 @@
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="text-[11px] font-extrabold text-blue-400 uppercase tracking-wider">${p.brand}</span>
-                <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded ${badgeClass}">${p.retailer}</span>
+                <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded cursor-help ${badgeClass}" title="${getTagTooltip(p.retailer)}">${p.retailer}</span>
               </div>
               <label class="flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-200 cursor-pointer select-none">
                 <input type="checkbox" onchange="toggleCompare('${p.id}')" ${isCompared ? 'checked' : ''} class="accent-blue-500 rounded">
@@ -1056,9 +1175,10 @@
               ${p.title}
             </h3>
 
-            <div class="flex flex-wrap gap-1.5 mb-3 text-[10px]">
-              <span class="font-semibold px-2 py-0.5 rounded ${diaasBadgeClass}">DIAAS ${(p.diaas_score || 1.22).toFixed(2)}</span>
-              <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300">${p.type}</span>
+            <div class="flex flex-wrap items-center gap-1.5 mb-3 text-[10px]">
+              <span class="font-semibold px-2 py-0.5 rounded cursor-help ${diaasBadgeClass}" title="${p.quality_summary || getTagTooltip(diaasTier)}">DIAAS ${(p.diaas_score || 1.22).toFixed(2)}</span>
+              <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300 cursor-help" title="${getTagTooltip(p.type)}">${p.type}</span>
+              ${promo3For2Badge}
               <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300">${p.flavor}</span>
               <span class="px-2 py-0.5 rounded bg-gray-800 text-blue-300 font-mono font-bold">${sLabel}</span>
             </div>
@@ -1067,15 +1187,15 @@
           <div class="space-y-2.5 pt-2.5 border-t border-gray-800/70">
             <div class="grid grid-cols-3 gap-1.5 text-center bg-[#0b0f17] p-2 rounded-xl border border-gray-800/70">
               <div>
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Cost / g Prot</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Cost / g Prot')}">Cost / g Prot</span>
                 <span class="text-xs font-extrabold ${valueColor} font-mono">R ${pricing.costPerG.toFixed(2)}</span>
               </div>
               <div class="border-x border-gray-800/70 px-1">
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Purity</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Protein Purity')}">Purity</span>
                 <span class="text-xs font-extrabold text-purple-400">${p.protein_percentage}% <span class="text-[10px] text-gray-400 font-normal">(${p.protein_per_serving_g}g)</span></span>
               </div>
               <div>
-                <span class="text-[9px] text-gray-500 uppercase font-semibold block">Scoop / Carbs</span>
+                <span class="text-[9px] text-gray-500 uppercase font-semibold block cursor-help" title="${getTagTooltip('Scoop / Carbs')}">Scoop / Carbs</span>
                 <span class="text-xs font-bold text-gray-300">${p.scoop_size_g}g <span class="text-[10px] ${p.carbs_g >= 5 ? 'text-amber-400' : 'text-gray-500'}">(${p.carbs_g}g C)</span></span>
               </div>
             </div>
@@ -1088,6 +1208,7 @@
                 </div>
                 <div class="text-[10px] text-gray-500 whitespace-nowrap">
                   R ${pricing.costPerServ.toFixed(2)}/shake • ${p.servings_count} serv
+                  ${pricing.isDiscounted ? `<span class="ml-1 text-emerald-400 font-medium">(${pricing.discountLabel})</span>` : ''}
                 </div>
               </div>
 
@@ -1095,7 +1216,7 @@
                 <button onclick="openDetailModal('${p.id}')" class="py-1.5 px-3 bg-gray-800 hover:bg-gray-700 text-gray-200 rounded-lg text-xs font-medium transition">
                   Specs
                 </button>
-                <a href="${p.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition">
+                <a href="${p.url}" target="_blank" class="p-1.5 px-2.5 bg-blue-600/15 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs transition" title="Buy at ${p.retailer}">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
@@ -1241,9 +1362,27 @@
       document.getElementById('modalQualitySummary').innerText = p.quality_summary || 'Provides complete essential amino acid profile with high bioavailability.';
 
       const promoSec = document.getElementById('modalPromoSection');
-      if (p.coupon_code || p.coupon_description) {
+      if (p.clicks_3_for_2_eligible) {
         promoSec.classList.remove('hidden');
+        const bundlePrice = round2(p.price_zar * 2);
+        const perTubEffective = round2((p.price_zar * 2) / 3);
+        const bundlePriceStaff = round2(bundlePrice * 0.87);
+        const perTubStaff = round2(bundlePriceStaff / 3);
+
+        document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tags text-amber-400"></i> Clicks "3 for 2" Special Eligible';
+        document.getElementById('modalPromoCodeBadge').innerText = 'BUY 3 GET 1 FREE';
+        document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-amber-900/60 text-amber-200 font-mono text-xs font-bold';
+        
+        let desc = `Buy any 3 eligible products and get the cheapest free! 3 tubs cost R ${bundlePrice.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubEffective.toFixed(2)} / tub</b>, saving R ${p.price_zar.toFixed(0)} per bundle).`;
+        if (clicksDiscountEnabled) {
+          desc += `<br><span class="text-sky-300 font-semibold">With Clicks Staff -13%:</span> 3 tubs cost R ${bundlePriceStaff.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubStaff.toFixed(2)} / tub</b>).`;
+        }
+        document.getElementById('modalPromoDesc').innerHTML = desc;
+      } else if (p.coupon_code || p.coupon_description) {
+        promoSec.classList.remove('hidden');
+        document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag"></i> Active Discount & Promotions';
         document.getElementById('modalPromoCodeBadge').innerText = p.coupon_code || 'PROMO';
+        document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-blue-900/60 text-blue-200 font-mono text-xs';
         document.getElementById('modalPromoDesc').innerText = p.coupon_description || 'Active promotion eligible at checkout.';
       } else {
         promoSec.classList.add('hidden');

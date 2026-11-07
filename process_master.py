@@ -1242,6 +1242,7 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': False,
+                    'clicks_3_for_2_eligible': False,
                     'amazon_promo_eligible': False,
                     'coupon_code': None,
                     'coupon_description': 'Standard Retail Price',
@@ -1437,6 +1438,7 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': True,
+                    'clicks_3_for_2_eligible': True,
                     'amazon_promo_eligible': False,
                     'coupon_code': 'STAFF13',
                     'coupon_description': '💳 Clicks Staff 13% Discount Active',
@@ -1516,6 +1518,7 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': False,
+                    'clicks_3_for_2_eligible': False,
                     'amazon_promo_eligible': False,
                     'coupon_code': 'BETTER10',
                     'coupon_description': '🎁 Dis-Chem Better Rewards: 10% Instant Savings',
@@ -1589,6 +1592,7 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(orig_price, 2),
                     'clicks_staff_discount_eligible': False,
+                    'clicks_3_for_2_eligible': False,
                     'amazon_promo_eligible': False,
                     'coupon_code': 'DIRECT',
                     'coupon_description': '🚚 Official Nutritech Store: Free Delivery Over R500',
@@ -1687,6 +1691,7 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': is_clicks,
+                    'clicks_3_for_2_eligible': is_clicks,
                     'amazon_promo_eligible': False,
                     'coupon_code': 'STAFF13' if is_clicks else ('BETTER10' if is_dischem else 'DIRECT'),
                     'coupon_description': '💳 Clicks Staff 13% Discount' if is_clicks else ('🎁 Dis-Chem Better Rewards 10%' if is_dischem else '🚚 Official Brand Store Price'),
@@ -1743,6 +1748,7 @@ def run_consolidation():
             price_zar REAL,
             original_price_zar REAL,
             clicks_staff_discount_eligible INTEGER,
+            clicks_3_for_2_eligible INTEGER,
             amazon_promo_eligible INTEGER,
             coupon_code TEXT,
             coupon_description TEXT,
@@ -1788,7 +1794,7 @@ def run_consolidation():
         
         c.execute('''
             INSERT OR REPLACE INTO products VALUES (
-                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
             )
         ''', (
             p['id'], p['retailer'], p['brand'], p['title'], p['product_line'], p['type'], p['flavor'],
@@ -1796,6 +1802,7 @@ def run_consolidation():
             p['total_protein_g'], p['protein_percentage'], p['carbs_g'], p['fat_g'],
             p['servings_count'], p['price_zar'], p['original_price_zar'],
             1 if p['clicks_staff_discount_eligible'] else 0,
+            1 if p.get('clicks_3_for_2_eligible') else 0,
             1 if p['amazon_promo_eligible'] else 0,
             p['coupon_code'], p['coupon_description'], p['discount_pct'],
             p['discounted_price_zar'], p['cost_per_g_protein_zar'], p['cost_per_g_protein_discounted_zar'],

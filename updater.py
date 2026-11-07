@@ -79,13 +79,20 @@ def update_clicks():
                         slug_brand = full_url.split('clicks.co.za/')[1].split('_')[0].strip()
                         brand_extracted = clean_brand(slug_brand, title, full_url)
 
+                    # Check if Clicks marks this item with 3 for 2 promotion
+                    is_3_for_2 = False
+                    parent_str = str(parent)
+                    if '3for2' in parent_str.lower() or '3 for 2' in parent_str.lower():
+                        is_3_for_2 = True
+
                     if any(w in title.lower() for w in ['whey', 'protein', 'isolate', 'casein']):
                         products[full_url] = {
                             'title': title,
                             'brand': brand_extracted,
                             'price': price,
                             'url': full_url,
-                            'retailer': 'Clicks'
+                            'retailer': 'Clicks',
+                            'clicks_3_for_2_eligible': is_3_for_2
                         }
         except Exception as e:
             print(f"  [Clicks] Error querying {q}: {e}")

@@ -879,7 +879,7 @@
         const pr = getProductPricing(p);
         const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
         const isCompared = comparisonList.some(item => item.id === p.id);
-        const is3For2 = Boolean(p.clicks_3_for_2_eligible);
+        const is3For2 = clicks3For2Enabled && Boolean(p.clicks_3_for_2_eligible);
         const promoBadge = is3For2 ? `
           <span class="ml-1 text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold cursor-help inline-flex items-center gap-0.5" title="${getTagTooltip('Clicks 3 for 2')}">
             <i class="fa-solid fa-tags text-[8px] text-amber-400"></i> 3 for 2
@@ -1003,7 +1003,7 @@
       else if (bestPricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === bestItem.id);
-      const is3For2 = g.items.some(it => it.clicks_3_for_2_eligible);
+      const is3For2 = clicks3For2Enabled && g.items.some(it => it.clicks_3_for_2_eligible);
 
       const flavorList = Array.from(g.flavors);
       const flavorText = flavorList.slice(0, 3).join(' • ') + (flavorList.length > 3 ? ` +${flavorList.length - 3}` : '');
@@ -1153,7 +1153,7 @@
       else if (pricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === p.id);
-      const is3For2 = Boolean(p.clicks_3_for_2_eligible);
+      const is3For2 = clicks3For2Enabled && Boolean(p.clicks_3_for_2_eligible);
       const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
 
       const promo3For2Badge = is3For2 ? `
@@ -1367,7 +1367,7 @@
       document.getElementById('modalQualitySummary').innerText = p.quality_summary || 'Provides complete essential amino acid profile with high bioavailability.';
 
       const promoSec = document.getElementById('modalPromoSection');
-      if (p.clicks_3_for_2_eligible) {
+      if (clicks3For2Enabled && p.clicks_3_for_2_eligible) {
         promoSec.classList.remove('hidden');
         const bundlePrice = round2(p.price_zar * 2);
         const perTubEffective = round2((p.price_zar * 2) / 3);

@@ -33,3 +33,9 @@ python process_master.py
 ```
 This updates `data/proteins.db`, `data/proteins.json`, and `data/products_data.js`.
 
+## ⚠️ Disclaimer
+
+This website and repository are independent resources provided solely for informational and educational purposes. Product formulations, ingredient profiles, nutritional values, stock availability, and prices are collected from public retailer listings and manufacturer packaging and may change at any time without notice.
+
+The authors and contributors make no representations or warranties as to the accuracy, completeness, or reliability of any information presented and expressly disclaim all liability for any errors, omissions, inaccuracies, or outcomes resulting from the use of this data. Always verify nutritional facts, allergen warnings, and prices directly on official product labels or retailer websites before purchasing or consuming any supplement.
+

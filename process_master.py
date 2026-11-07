@@ -210,7 +210,48 @@ def parse_weight_g(title, container_size_str=None):
     if '454' in s_low or '1 lb' in s_low or '426' in s_low or '408' in s_low or '400' in s_low: return 454.0
     return 1000.0
 
-def determine_type(title, ing=""):
+FAMILY_TYPE_MAP = {
+    'Nutritech Heavy Duty Whey': 'Hardcore / All-in-One',
+    'Nutritech Premium Whey Protein': 'Whey Blend',
+    'Nutritech Proven Protein': 'Multi-Source / Meal Blend',
+    'Nutritech Isolate Protein': 'Whey Isolate',
+    'Nutritech Clear Whey Isolate': 'Clear Whey / Protein Water',
+    'Nutritech 100% Vegan Protein': 'Plant / Vegan Protein',
+    'Nutritech ProSport Vegan Protein': 'Plant / Vegan Protein',
+    'Nutritech Casein Slow Release': 'Casein / Milk Protein',
+    'USN BlueLab 100% Whey': 'Whey Blend',
+    'USN Hydrotec Whey (HydroTech)': 'Whey Blend',
+    'USN Hardcore Whey gH': 'Hardcore / All-in-One',
+    'USN Hardcore Whey gH Ripped': 'Hardcore / All-in-One',
+    'USN IsoZero 100% Whey Isolate': 'Whey Isolate',
+    'USN IsoPro 100% Beef Isolate': 'Collagen / Beef / Broth',
+    'USN Diet Fuel UltraLean': 'Multi-Source / Meal Blend',
+    'USN Protein Water + Hydration': 'Clear Whey / Protein Water',
+    'Optimum Nutrition Gold Standard 100% Whey': 'Whey Blend',
+    'Optimum Nutrition Gold Standard 100% Isolate': 'Whey Isolate',
+    'Optimum Nutrition Gold Standard 100% Casein': 'Casein / Milk Protein',
+    'Optimum Nutrition Platinum HydroWhey': 'Whey Isolate',
+    'NPL Platinum Whey +': 'Whey Blend',
+    'NPL Anabolic Whey': 'Hardcore / All-in-One',
+    'NPL 100% Whey Isolate': 'Whey Isolate',
+    'NPL 100% Plant Protein': 'Plant / Vegan Protein',
+    'Muscle Works Whey-Bolic': 'Hardcore / All-in-One',
+    'Muscle Works 100% Whey Protein': 'Whey Blend',
+    'Muscle Works Superior Whey': 'Whey Blend',
+    'Muscle Works Thermo Whey': 'Diet / Lean Whey',
+    'MuscleTech Nitro-Tech 100% Whey Gold': 'Whey Blend',
+    'MuscleTech Nitro-Tech Ripped': 'Diet / Lean Whey',
+    'Biogen 100% Whey Isolate': 'Whey Isolate',
+    'Biogen Iso-Whey Premium': 'Whey Blend',
+    'Biogen Pro Series 100% Whey': 'Whey Blend',
+    'Biogen Complete Blended Protein': 'Multi-Source / Meal Blend',
+    'My Wellness Super Clean Protein x5': 'Multi-Source / Meal Blend',
+    'Gloot Vegan Protein Water': 'Plant / Vegan Protein',
+}
+
+def determine_type(title, ing="", family_name=""):
+    if family_name and family_name in FAMILY_TYPE_MAP:
+        return FAMILY_TYPE_MAP[family_name]
     t = (title or "").lower()
     if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro']):
         return 'Plant / Vegan Protein'
@@ -222,11 +263,11 @@ def determine_type(title, ing=""):
         return 'Multi-Source / Meal Blend'
     if 'clear whey' in t or 'protein water' in t or 'collagen pro' in t:
         return 'Clear Whey / Protein Water'
-    if ('isolate' in t or 'iso-tech' in t or 'iso gold' in t or 'isopro' in t or 'iso pro' in t or 'isozero' in t or 'iso zero' in t or 'iso-whey' in t) and not any(k in t for k in ['blend', 'matrix', 'proven', 'heavy duty', 'premium whey', 'beef', 'plant', 'vegan']):
+    if ('isolate' in t or 'iso-tech' in t or 'iso gold' in t or 'isopro' in t or 'iso pro' in t or 'isozero' in t or 'iso zero' in t or 'iso-whey' in t) and not any(k in t for k in ['blend', 'matrix', 'proven', 'heavy duty', 'heavy-duty', 'premium whey', 'beef', 'plant', 'vegan', 'bluelab', 'blue lab']):
         return 'Whey Isolate'
-    if 'hardcore' in t or 'whey gh' in t or 'anabolic' in t or 'heavy duty' in t or 'whey-bolic' in t or 'wheybolic' in t:
+    if 'hardcore' in t or 'whey gh' in t or 'anabolic' in t or 'heavy duty' in t or 'heavy-duty' in t or 'whey-bolic' in t or 'wheybolic' in t:
         return 'Hardcore / All-in-One'
-    if 'diet' in t or 'ripped' in t or 'for her' in t or 'carnitine' in t or 'lean' in t or 'lite' in t or 'meltdown' in t or 'thermo' in t or 'whey slim' in t:
+    if ('diet' in t or 'ripped' in t or 'for her' in t or 'carnitine' in t or 'lite' in t or 'meltdown' in t or 'thermo' in t or 'whey slim' in t or ('lean' in t and not any(m in t for m in ['lean muscle', 'lean mass']))) and not any(k in t for k in ['bluelab', 'blue lab', 'hydrotech', 'hydrotec', 'gold standard', 'premium whey']):
         return 'Diet / Lean Whey'
     if 'concentrate' in t or 'grass-fed whey' in t or 'grass fed whey' in t or 'naked pure whey' in t:
         return 'Whey Concentrate'
@@ -282,9 +323,9 @@ def get_product_family_key(title, brand):
         return ('Muscle Works', 'Muscle Works 100% Whey Protein')
         
     # 4. Optimum Nutrition Families
-    if 'optimum nutrition' in b or 'on' == b:
-        if 'isolate' in t: return ('Optimum Nutrition', 'Optimum Nutrition Gold Standard 100% Isolate')
+    if 'optimum nutrition' in b or 'on' == b or 'optimum' in b or 'optimum' in t:
         if 'hydro whey' in t or 'hydrowhey' in t: return ('Optimum Nutrition', 'Optimum Nutrition Platinum HydroWhey')
+        if 'isolate' in t: return ('Optimum Nutrition', 'Optimum Nutrition Gold Standard 100% Isolate')
         if 'casein' in t: return ('Optimum Nutrition', 'Optimum Nutrition Gold Standard 100% Casein')
         return ('Optimum Nutrition', 'Optimum Nutrition Gold Standard 100% Whey')
         
@@ -307,12 +348,15 @@ def get_product_family_key(title, brand):
         if 'peptan' in t or ('collagen' in t and 'whey' not in t): return ('Biogen', 'Biogen Peptan Collagen Powder')
         if 'collagen & whey' in t: return ('Biogen', 'Biogen Collagen & Whey Protein')
         if 'complete whey' in t or 'blended protein' in t: return ('Biogen', 'Biogen Complete Blended Protein')
+        if 'whey isolate' in t or 'pure isolate' in t or (('isolate' in t or 'iso' in t) and 'tri-matrix' not in t and 'tri matrix' not in t and 'premium iso' not in t and 'iso whey' not in t):
+            return ('Biogen', 'Biogen 100% Whey Isolate')
         if 'iso' in t or 'isolate' in t: return ('Biogen', 'Biogen Iso-Whey Premium')
         if 'diet' in t or 'lean' in t: return ('Biogen', 'Biogen Diet Protein Shake')
         return ('Biogen', 'Biogen Pro Series 100% Whey')
         
     # 7. MuscleTech Families
     if 'muscletech' in b or 'muscletech' in t:
+        if 'ripped' in t: return ('MuscleTech', 'MuscleTech Nitro-Tech Ripped')
         if 'nitro-tech' in t or 'nitrotech' in t or 'nitro tech' in t: return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
         if 'phase8' in t: return ('MuscleTech', 'MuscleTech Phase8 Sustained Release')
         return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
@@ -322,10 +366,14 @@ def get_product_family_key(title, brand):
         if 'vegan' in t: return ('My Wellness', 'My Wellness Super Vegan Protein')
         if 'milk protein' in t: return ('My Wellness', "My Wellness Nature's Milk Protein")
         if 'clean diet whey' in t: return ('My Wellness', 'My Wellness Clean Diet Whey')
-        if 'natures whey' in t: return ('My Wellness', 'My Wellness Natures Whey')
+        if 'clean whey' in t or 'clean protein' in t or 'super clean' in t:
+            if 'isolate' in t: return ('My Wellness', 'My Wellness Clean Whey Isolate')
+            return ('My Wellness', 'My Wellness Super Clean Protein x5')
         if 'clear whey' in t: return ('My Wellness', 'My Wellness Clear Whey ISO')
-        if 'grass fed' in t or 'grass-fed' in t: return ('My Wellness', 'My Wellness Grass-Fed Whey')
-        if 'super clean' in t or 'clean protein' in t: return ('My Wellness', 'My Wellness Super Clean Protein x5')
+        if 'grass fed' in t or 'grass-fed' in t:
+            if 'isolate' in t: return ('My Wellness', 'My Wellness Grass-Fed Whey Isolate')
+            return ('My Wellness', 'My Wellness Grass-Fed Whey Concentrate')
+        if 'isolate' in t: return ('My Wellness', 'My Wellness Clean Whey Isolate')
         if 'superior whey' in t: return ('My Wellness', 'My Wellness Superior Whey')
         return ('My Wellness', 'My Wellness Natures Whey')
         
@@ -406,6 +454,7 @@ def get_product_family_key(title, brand):
         return ('Lifestyle Food', 'Lifestyle Food Whey Protein')
     if 'primal' in b or 'primal' in t:
         if 'casein' in t: return ('Primal', 'Primal Micellar Casein')
+        if 'isolate' in t: return ('Primal', 'Primal 100% Whey Isolate')
         return ('Primal', 'Primal 100% Whey Protein')
     if 'youthful living' in b or 'youthful living' in t:
         return ('Youthful Living', 'Youthful Living Vegan Protein')
@@ -451,8 +500,8 @@ BRAND_FORMULATIONS = {
         'sweetener': 'Sucralose'
     },
     'nutritech_heavy_duty': {
-        'ingredients': 'PROVEN VI™ Protein Formula (Whey Protein Concentrate, Whey Protein Isolate, Calcium Caseinate, Pea Protein Isolate, Soy Protein Isolate, Brown Rice Protein), CREATECH™ Anabolic Stack (Creatine Monohydrate, L-Glycine, Boron Citrate), Milk Protein, Flavouring, Cocoa, Xanthan Gum, Sweetener (Sucralose).',
-        'digestive_enzymes': 'None added',
+        'ingredients': 'PROVEN VI™ Protein Formula (Whey Protein Concentrate, Whey Protein Isolate, Calcium Caseinate, Pea Protein Isolate, Soy Protein Isolate, Brown Rice Protein), CREATECH™ Anabolic Stack (Creatine Monohydrate, L-Glycine, Boron Citrate), Milk Protein, Flavouring, Cocoa, Xanthan Gum, Sucralose, Emulsifier: Sunflower Lecithin.',
+        'digestive_enzymes': 'CREATECH™ Anabolic Stack (Creatine Monohydrate 2000mg, L-Glycine 2000mg, Boron Citrate 5mg)',
         'sweetener': 'Sucralose'
     },
     'futurelife_high_protein': {
@@ -610,6 +659,11 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'None added',
         'sweetener': 'Sucralose'
     },
+    'gloot_vegan': {
+        'ingredients': 'Pea Protein Isolate, Natural Flavours, Stevia, Citric Acid, Beetroot Extract',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Stevia'
+    },
     'primeself_grassfed': {
         'ingredients': '100% Grass-Fed Whey Protein Concentrate (80% Native Whey from Pasture-Raised Cows), Cocoa Powder (in choc), Natural Flavouring, Sunflower Lecithin, Stevia Leaf Extract.',
         'digestive_enzymes': 'None added (Clean & Natural)',
@@ -707,7 +761,7 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['on_casein']
     elif 'gold standard' in t and 'isolate' in t:
         matched = BRAND_FORMULATIONS['on_isolate']
-    elif 'gold standard' in t or 'optimum nutrition' in t:
+    elif 'gold standard' in t or 'optimum nutrition' in t or ('optimum' in t and 'whey' in t) or ('optimum' in b and 'whey' in t):
         matched = BRAND_FORMULATIONS['on_gold_standard']
     elif 'nihpro' in t:
         matched = BRAND_FORMULATIONS['nutritech_nihpro']
@@ -753,7 +807,8 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     elif 'evox' in b or 'evox' in t:
         matched = BRAND_FORMULATIONS['evox_whey']
     elif 'gloot' in b or 'gloot' in t:
-        matched = BRAND_FORMULATIONS['gloot_whey']
+        if 'vegan' in t: matched = BRAND_FORMULATIONS['gloot_vegan']
+        else: matched = BRAND_FORMULATIONS['gloot_whey']
     elif 'primeself' in b or 'primeself' in t:
         matched = BRAND_FORMULATIONS['primeself_grassfed']
     elif 'my wellness' in b or 'mywellness' in b or 'nature' in t:
@@ -881,6 +936,71 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 23.0
         carbs = 3.0
         fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('nutritech_heavy_duty'):
+        serving_size = 32.0
+        protein_per_serving = 23.0
+        carbs = 4.0
+        fat = 1.3
+    elif matched == BRAND_FORMULATIONS.get('nutritech_notorious'):
+        serving_size = 34.0
+        protein_per_serving = 24.0
+        carbs = 3.2
+        fat = 2.1
+    elif matched == BRAND_FORMULATIONS.get('nutritech_isolate'):
+        serving_size = 30.0
+        protein_per_serving = 26.5
+        carbs = 0.5
+        fat = 0.4
+    elif matched == BRAND_FORMULATIONS.get('nutritech_clear'):
+        serving_size = 25.0
+        protein_per_serving = 20.0
+        carbs = 0.2
+        fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('on_gold_standard'):
+        serving_size = 31.0
+        protein_per_serving = 24.0
+        carbs = 3.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('npl_platinum_whey'):
+        serving_size = 32.0
+        protein_per_serving = 23.0
+        carbs = 2.8
+        fat = 1.6
+    elif matched == BRAND_FORMULATIONS.get('npl_anabolic_whey'):
+        serving_size = 43.0
+        protein_per_serving = 30.0
+        carbs = 4.5
+        fat = 1.8
+    elif matched == BRAND_FORMULATIONS.get('muscletech_nitrotech'):
+        serving_size = 33.0
+        protein_per_serving = 24.0
+        carbs = 2.0
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('biogen_whey'):
+        serving_size = 32.0
+        protein_per_serving = 24.0
+        carbs = 2.5
+        fat = 1.4
+    elif matched == BRAND_FORMULATIONS.get('biogen_clear'):
+        serving_size = 24.0
+        protein_per_serving = 20.0
+        carbs = 0.3
+        fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('gloot_whey'):
+        serving_size = 19.0
+        protein_per_serving = 14.0
+        carbs = 0.8
+        fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('gloot_vegan'):
+        serving_size = 17.0
+        protein_per_serving = 12.0
+        carbs = 0.5
+        fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('ssa_whey'):
+        serving_size = 32.0
+        protein_per_serving = 24.0
+        carbs = 2.2
+        fat = 1.5
     elif matched == BRAND_FORMULATIONS.get('muscle_works_wheybolic') or 'whey-bolic' in t or 'wheybolic' in t:
         serving_size = 40.0
         protein_per_serving = 22.0
@@ -1225,7 +1345,7 @@ def run_consolidation():
                 family = get_product_family_key(title, brand)
 
                 weight_g = parse_weight_g(title, item.get('container_size'))
-                ptype = determine_type(title, item.get('ingredients'))
+                ptype = determine_type(title, item.get('ingredients'), family[1])
                 flavor = determine_flavor(title, item.get('flavor'))
                 nut = determine_nutrition(brand, ptype, weight_g, title, item.get('ingredients'))
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
@@ -1316,7 +1436,7 @@ def run_consolidation():
                 family = get_product_family_key(title, brand)
 
                 weight_g = parse_weight_g(title, str(item.get('container_size_g') or ''))
-                ptype = determine_type(title, item.get('ingredients'))
+                ptype = determine_type(title, item.get('ingredients'), family[1])
                 flavor = determine_flavor(title, item.get('flavor'))
                 nut = determine_nutrition(brand, ptype, weight_g, title, item.get('ingredients'))
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
@@ -1407,7 +1527,7 @@ def run_consolidation():
                 family = get_product_family_key(title, brand)
 
                 weight_g = parse_weight_g(title, str(item.get('container_size_g') or ''))
-                ptype = determine_type(title)
+                ptype = determine_type(title, '', family[1])
                 flavor = determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
@@ -1488,7 +1608,7 @@ def run_consolidation():
                 family = get_product_family_key(title, brand)
 
                 weight_g = parse_weight_g(title)
-                ptype = determine_type(title)
+                ptype = determine_type(title, '', family[1])
                 flavor = determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
@@ -1565,7 +1685,7 @@ def run_consolidation():
                 family = get_product_family_key(title, brand)
 
                 weight_g = float(item.get('container_size_g') or parse_weight_g(title))
-                ptype = determine_type(title)
+                ptype = determine_type(title, '', family[1])
                 flavor = item.get('flavor') or determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
@@ -1643,7 +1763,7 @@ def run_consolidation():
                 total_prot_g = round(servings_cnt * prot_g, 1)
                 prot_pct = float(item.get('protein_pct') or round((prot_g / serving_g) * 100, 1))
 
-                ptype = determine_type(title, item.get('protein_sources', ''))
+                ptype = determine_type(title, item.get('protein_sources', ''), family[1])
                 flavor = determine_flavor(title)
                 ing_str = f"{item.get('protein_sources', '')}. {item.get('notes', '')}".strip()
                 quality = compute_protein_quality_scores(ptype, ing_str, title)

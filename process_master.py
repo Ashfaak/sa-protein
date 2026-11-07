@@ -247,6 +247,9 @@ FAMILY_TYPE_MAP = {
     'Biogen Complete Blended Protein': 'Multi-Source / Meal Blend',
     'My Wellness Super Clean Protein x5': 'Multi-Source / Meal Blend',
     'Gloot Vegan Protein Water': 'Plant / Vegan Protein',
+    'FutureLife High Protein Smart Food': 'Multi-Source / Meal Blend',
+    'FutureLife Repair Food Shake': 'Collagen / Beef / Broth',
+    'FutureLife Beauti Food Shake': 'Collagen / Beef / Broth',
 }
 
 def determine_type(title, ing="", family_name=""):
@@ -409,6 +412,8 @@ def get_product_family_key(title, brand):
         
     # 14. FutureLife
     if 'future' in b or 'future' in t:
+        if 'repair' in t: return ('FutureLife', 'FutureLife Repair Food Shake')
+        if 'beauti' in t: return ('FutureLife', 'FutureLife Beauti Food Shake')
         return ('FutureLife', 'FutureLife High Protein Smart Food')
         
     # 15. PrimeSelf
@@ -508,6 +513,16 @@ BRAND_FORMULATIONS = {
         'ingredients': 'SmartProtein3D™ Blend (43%) [Whole Soy Bean Flour, Soy Protein Isolate, Skimmed Milk Powder (Cow\'s Milk), Whey Protein Concentrate (Cow\'s Milk), Calcium Caseinate (Cow’s Milk)], SmartMaize™ (Whole Maize Flour), Sucrose, Maltodextrin, Cocoa Powder, Inulin (Prebiotic Fiber), 23 Essential Vitamins & Minerals (Vitamin A, B-Complex, C, D, E, Biotin, Iron, Zinc, Chromium), Salt, Flavouring.',
         'digestive_enzymes': 'Inulin Prebiotic Fiber & 23 Essential Vitamins and Minerals',
         'sweetener': 'Sucrose & Maltodextrin (No artificial sweeteners)'
+    },
+    'futurelife_repair_food': {
+        'ingredients': 'SmartMaize™ (Whole Maize Flour), Whole Soy Bean Flour, Hydrolyzed Collagen Peptides (13.3%) (Bovine), Xylitol, Soy Isolate (Soy), Maltodextrin, Skim Milk Powder (Cow\'s Milk), Cocoa Powder, Inulin, Vitamins & Minerals.',
+        'digestive_enzymes': '10,000mg Hydrolyzed Collagen Peptides + Inulin Prebiotic Fiber',
+        'sweetener': 'Xylitol (No artificial sweeteners)'
+    },
+    'futurelife_beauti_food': {
+        'ingredients': 'Whole Soy Bean Flour (Soy), Xylitol, Skim Milk Powder (Cow\'s Milk), White Maize Flour, Hydrolyzed Collagen Peptides (10%) (Bovine), Soy Isolate (Soy), Maltodextrin, Oats Bran, Inulin, Sucralose, Vitamins & Minerals.',
+        'digestive_enzymes': '5,000mg Hydrolyzed Collagen Peptides + Inulin Prebiotic Fiber',
+        'sweetener': 'Xylitol & Sucralose'
     },
     'usn_bluelab': {
         'ingredients': '100% Whey Protein Blend [Whey Protein Isolate (Milk), Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk)], Cocoa Powder (4.1% in choc), Flavouring, Sodium Chloride, Stabilisers (Guar Gum, Xanthan Gum), Non-Nutritive Sweetener Blend (Sucralose, Acesulfame-K), Tolerase™ L (pH-Stable Lactase Enzyme). Zero wheat or plant fillers [2.5g Leucine & 5.3g BCAAs per 32g scoop].',
@@ -733,7 +748,9 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     # Match specific product line
     matched = None
     if 'future' in t or 'future' in b:
-        matched = BRAND_FORMULATIONS['futurelife_high_protein']
+        if 'repair' in t: matched = BRAND_FORMULATIONS['futurelife_repair_food']
+        elif 'beauti' in t: matched = BRAND_FORMULATIONS['futurelife_beauti_food']
+        else: matched = BRAND_FORMULATIONS['futurelife_high_protein']
     elif 'hydrotech' in t or 'hydrotec' in t or 'hydro tech' in t:
         matched = BRAND_FORMULATIONS['usn_hydrotech']
     elif 'bluelab' in t or 'blue lab' in t:
@@ -841,6 +858,16 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 22.5
         carbs = 29.0
         fat = 3.8
+    elif matched == BRAND_FORMULATIONS.get('futurelife_repair_food') or 'repair food' in t:
+        serving_size = 75.0
+        protein_per_serving = 21.0
+        carbs = 33.8
+        fat = 7.4
+    elif matched == BRAND_FORMULATIONS.get('futurelife_beauti_food') or 'beauti food' in t:
+        serving_size = 55.0
+        protein_per_serving = 13.7
+        carbs = 12.0
+        fat = 4.7
     elif matched == BRAND_FORMULATIONS.get('usn_hydrotech'):
         serving_size = 30.0
         protein_per_serving = 20.0
@@ -1738,6 +1765,80 @@ def run_consolidation():
                     'pdcaas_score': quality['pdcaas_score'],
                     'quality_summary': quality['quality_summary'],
                     'url': item.get('url') or 'https://www.nutritechfit.com/',
+                    'in_stock': item.get('in_stock', True)
+                })
+
+    # ----------------------------------------------------
+    # 5b. FutureLife Direct (Official Brand Store)
+    # ----------------------------------------------------
+    fl_file = find_data_file('futurelife_products.json')
+    if fl_file and os.path.exists(fl_file):
+        with open(fl_file, 'r', encoding='utf-8') as f:
+            fl_items = json.load(f)
+            for item in fl_items:
+                title = item.get('title', '')
+                if not title or len(title) < 5: continue
+                if not is_valid_protein_powder(title, item.get('url')): continue
+
+                price = float(item.get('price_zar') or 79.0)
+                orig_price = float(item.get('original_price_zar') or price)
+                brand = 'FutureLife'
+                family = get_product_family_key(title, brand)
+
+                weight_g = float(item.get('container_size_g') or parse_weight_g(title))
+                ptype = determine_type(title, '', family[1])
+                flavor = item.get('flavor') or determine_flavor(title)
+                nut = determine_nutrition(brand, ptype, weight_g, title)
+                quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+
+                cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
+                cost_per_serv = round(price / nut['servings_count'], 2)
+
+                key = item.get('id') or f"futurelife_{title[:20]}"
+                if key in seen_keys: continue
+                seen_keys.add(key)
+
+                master_products.append({
+                    'id': key,
+                    'retailer': 'Brand Direct',
+                    'brand': brand,
+                    'title': title,
+                    'product_line': family[1],
+                    'type': ptype,
+                    'flavor': flavor,
+                    'container_size_g': weight_g,
+                    'serving_size_g': nut['serving_size_g'],
+                    'scoop_size_g': nut['scoop_size_g'],
+                    'protein_per_serving_g': nut['protein_per_serving_g'],
+                    'total_protein_g': nut['total_protein_g'],
+                    'protein_percentage': nut['protein_percentage'],
+                    'carbs_g': nut['carbs_g'],
+                    'fat_g': nut['fat_g'],
+                    'servings_count': nut['servings_count'],
+                    'price_zar': round(price, 2),
+                    'original_price_zar': round(orig_price, 2),
+                    'clicks_staff_discount_eligible': False,
+                    'clicks_3_for_2_eligible': False,
+                    'amazon_promo_eligible': False,
+                    'coupon_code': None,
+                    'coupon_description': 'Official Manufacturer Store',
+                    'discount_pct': round(((orig_price - price) / orig_price) * 100, 1) if orig_price > price else 0,
+                    'discounted_price_zar': round(price, 2),
+                    'cost_per_g_protein_zar': cost_per_g,
+                    'cost_per_g_protein_discounted_zar': cost_per_g,
+                    'cost_per_serving_zar': cost_per_serv,
+                    'cost_per_serving_discounted_zar': cost_per_serv,
+                    'rating': item.get('rating') or 4.8,
+                    'review_count': item.get('review_count') or 25,
+                    'ingredients': nut['ingredients'],
+                    'digestive_enzymes': nut['digestive_enzymes'],
+                    'sweetener': nut['sweetener'],
+                    'diaas_score': quality['diaas_score'],
+                    'diaas_rating': quality['diaas_rating'],
+                    'diaas_category': quality['diaas_category'],
+                    'pdcaas_score': quality['pdcaas_score'],
+                    'quality_summary': quality['quality_summary'],
+                    'url': item.get('url') or 'https://futurelife.co.za',
                     'in_stock': item.get('in_stock', True)
                 })
 

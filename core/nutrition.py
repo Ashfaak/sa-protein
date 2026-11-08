@@ -121,6 +121,26 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'L-Carnitine, DigeZyme® & Probiotics',
         'sweetener': 'Sucralose & Stevia'
     },
+    'npl_pro_gains': {
+        'ingredients': 'Multi-Stage Carbohydrate Blend (Maltodextrin, Waxy Maize Starch, Oat Flour), Multi-Stage Protein Blend (Whey Protein Concentrate, Milk Protein Isolate, Micellar Casein), Creatine Monohydrate, L-Glutamine, Taurine, DigeZyme® Multi-Enzyme Complex, Sweetener (Sucralose).',
+        'digestive_enzymes': 'DigeZyme® Multi-Enzyme Complex & Creatine/Taurine Anabolic Stack (5,000mg)',
+        'sweetener': 'Sucralose'
+    },
+    'biogen_bulk': {
+        'ingredients': 'Advanced Carbohydrate Matrix (Maltodextrin, Corn Syrup Solids, Dextrose), Multi-Source Protein Blend (Whey Protein Concentrate, Calcium Caseinate, Soy Protein Isolate), Tolerase™ L (pH-Stable Lactase Enzyme), Multivitamin & Mineral Premix, Sweetener (Sucralose).',
+        'digestive_enzymes': 'Tolerase™ L (Lactase) & Multivitamin/Antioxidant Complex',
+        'sweetener': 'Sucralose'
+    },
+    'lifegain': {
+        'ingredients': 'Triple Protein Matrix (Soy Protein Isolate, Whey Protein Isolate, Milk Protein Isolate), Maltodextrin, Inulin / Chicory Root Fibre, 24 Essential Vitamins and Minerals Complex, L-Glutamine, Essential Fatty Acids (Omega-3 & 6), Flavouring, Sweetener (Sucralose).',
+        'digestive_enzymes': '24 Essential Vitamins & Minerals, L-Glutamine & Omega-3/6 Fatty Acids',
+        'sweetener': 'Sucralose'
+    },
+    'usn_hyperbolic': {
+        'ingredients': '4-Stage Glyco-Matrix Carb System (Maltodextrin, Waxy Maize Starch, Dextrose, Fructose), 5-Stage Anabolic Protein Matrix (Whey Concentrate, Soy Isolate, Calcium Caseinate, Egg Albumin, Milk Protein), Creatine Monohydrate, Tolerase™ L, Sweeteners.',
+        'digestive_enzymes': 'Tolerase™ L (Lactase) & Creatine Anabolic Stack',
+        'sweetener': 'Sucralose & Acesulfame-K'
+    },
     'usn_bluelab': {
         'ingredients': '100% Whey Protein Blend [Whey Protein Isolate (Milk), Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk)], Cocoa Powder (4.1% in choc), Flavouring, Sodium Chloride, Stabilisers (Guar Gum, Xanthan Gum), Non-Nutritive Sweetener Blend (Sucralose, Acesulfame-K), Tolerase™ L (pH-Stable Lactase Enzyme). Zero wheat or plant fillers [2.5g Leucine & 5.3g BCAAs per 32g scoop].',
         'digestive_enzymes': 'Tolerase™ L (pH-Stable Lactase)',
@@ -403,12 +423,15 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         else: matched = BRAND_FORMULATIONS['nutritech_clear']
     elif 'anabolic whey' in t and 'npl' in t:
         matched = BRAND_FORMULATIONS['npl_anabolic_whey']
+    elif 'pro gains' in t or ('npl' in b and 'gain' in t):
+        matched = BRAND_FORMULATIONS['npl_pro_gains']
     elif 'npl' in b or 'platinum whey' in t:
         matched = BRAND_FORMULATIONS['npl_platinum_whey']
     elif 'nitrotech' in t or 'nitro-tech' in t or 'nitro tech' in t or 'muscletech' in b:
         matched = BRAND_FORMULATIONS['muscletech_nitrotech']
     elif 'biogen' in b or 'biogen' in t:
-        if 'clear' in t: matched = BRAND_FORMULATIONS['biogen_clear']
+        if 'bulk' in t: matched = BRAND_FORMULATIONS['biogen_bulk']
+        elif 'clear' in t: matched = BRAND_FORMULATIONS['biogen_clear']
         else: matched = BRAND_FORMULATIONS['biogen_whey']
     elif 'amp amplified' in t or 'amp gold' in t:
         matched = BRAND_FORMULATIONS['gnc_amp_gold']
@@ -425,6 +448,8 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         else: matched = BRAND_FORMULATIONS['gloot_whey']
     elif 'primeself' in b or 'primeself' in t:
         matched = BRAND_FORMULATIONS['primeself_grassfed']
+    elif 'lifegain' in b or 'lifegain' in t:
+        matched = BRAND_FORMULATIONS['lifegain']
     elif 'weider' in b or 'mega mass' in t:
         matched = BRAND_FORMULATIONS['weider_mega_mass']
     elif 'alpha plant' in t or ('alpha' in t and 'plant' in t):
@@ -619,6 +644,26 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 25.0
         carbs = 122.5
         fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('npl_pro_gains') or 'pro gains' in t:
+        serving_size = 150.0
+        protein_per_serving = 50.0
+        carbs = 82.0
+        fat = 3.5
+    elif matched == BRAND_FORMULATIONS.get('biogen_bulk') or 'bulk 45' in t:
+        serving_size = 226.0
+        protein_per_serving = 45.3
+        carbs = 150.0
+        fat = 3.6
+    elif matched == BRAND_FORMULATIONS.get('usn_hyperbolic') or 'hyperbolic' in t:
+        serving_size = 300.0
+        protein_per_serving = 60.0
+        carbs = 206.0
+        fat = 5.0
+    elif matched == BRAND_FORMULATIONS.get('lifegain') or 'lifegain' in t:
+        serving_size = 30.0
+        protein_per_serving = 15.0
+        carbs = 8.5
+        fat = 1.5
     elif matched == BRAND_FORMULATIONS.get('primal_skinny_whey'):
         serving_size = 30.0
         protein_per_serving = 20.6
@@ -734,7 +779,7 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 22.0
         carbs = 0.5
         fat = 0.3
-    elif ptype == 'Mass Gainer' or (matched and 'mass' in str(matched)) or any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer']):
+    elif ptype == 'Mass Gainer' or (matched and 'mass' in str(matched)) or any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer', 'pro gains', 'bulk 45', 'hyperbolic']) or (any(m in t for m in ['mass', 'gainer', 'gain', 'gains']) and not any(p in t for p in ['lean muscle', 'muscle gain', 'gain lean', 'muscle growth', 'lifegain'])):
         serving_size = 150.0
         protein_per_serving = 30.0
         carbs = 95.0
@@ -764,7 +809,10 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     servings = max(1, int(weight_g / serving_size))
     total_protein = round(servings * protein_per_serving, 1)
 
-    final_ing = matched['ingredients'] if matched else 'Premium Whey Protein Matrix (Whey Protein Concentrate, Whey Protein Isolate), Cocoa / Natural Flavouring, Emulsifier (Lecithin), Stabiliser (Xanthan Gum), Non-Nutritive Sweetener (Sucralose).'
+    final_ing = matched['ingredients'] if matched else (
+        'Multi-Stage Carbohydrate Blend (Maltodextrin, Waxy Maize Starch, Oat Flour), Multi-Stage Protein Matrix (Whey Protein Concentrate, Milk Protein Isolate, Calcium Caseinate), Cocoa Powder, Flavouring, Sweetener (Sucralose).' if ptype == 'Mass Gainer' else
+        'Premium Whey Protein Matrix (Whey Protein Concentrate, Whey Protein Isolate), Cocoa / Natural Flavouring, Emulsifier (Lecithin), Stabiliser (Xanthan Gum), Non-Nutritive Sweetener (Sucralose).'
+    )
     final_enzymes = matched['digestive_enzymes'] if matched else ('Tolerase™ L (Lactase)' if ('usn' in b or 'evox' in b) else ('DigeZyme®' if ('npl' in b or 'biogen' in b or 'ssa' in b) else 'None added'))
     final_sweetener = matched['sweetener'] if matched else ('Stevia' if ('nature' in b or 'wellness' in b) else 'Sucralose')
 

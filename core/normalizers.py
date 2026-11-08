@@ -169,7 +169,7 @@ def is_valid_protein_powder(title, url=""):
         return False
 
     # Must be a protein powder (Whey, Casein, Plant/Vegan, NiHPRO, Collagen, Bone Broth, Beef, Hybrid Meal, Gainer, Protein Shake)
-    if not any(k in t for k in ['whey', 'protein', 'isolate', 'iso', 'casein', 'future', 'nitro-tech', 'nitrotech', 'nitro tech', 'halo pro', 'whey-bolic', 'wheybolic', 'vegan', 'plant', 'nihpro', 'collagen', 'bone broth', 'beef', 'phyto', 'mass', 'gainer', 'vegainer', 'meal replacement', 'shake', 'smoothie', 'meal', 'matcha', 'keto']):
+    if not any(k in t for k in ['whey', 'protein', 'isolate', 'iso', 'casein', 'future', 'nitro-tech', 'nitrotech', 'nitro tech', 'halo pro', 'whey-bolic', 'wheybolic', 'vegan', 'plant', 'nihpro', 'collagen', 'bone broth', 'beef', 'phyto', 'mass', 'gainer', 'vegainer', 'gain', 'gains', 'bulk 45', 'meal replacement', 'shake', 'smoothie', 'meal', 'matcha', 'keto']):
         return False
         
     return True
@@ -244,6 +244,7 @@ FAMILY_TYPE_MAP = {
     'NPL Anabolic Whey': 'Hardcore / All-in-One',
     'NPL 100% Whey Isolate': 'Whey Isolate',
     'NPL 100% Plant Protein': 'Plant / Vegan Protein',
+    'NPL Pro Gains': 'Mass Gainer',
     'Muscle Works Whey-Bolic': 'Hardcore / All-in-One',
     'Muscle Works 100% Whey Protein': 'Whey Blend',
     'Muscle Works Superior Whey': 'Whey Blend',
@@ -254,6 +255,7 @@ FAMILY_TYPE_MAP = {
     'Biogen Iso-Whey Premium': 'Whey Blend',
     'Biogen Pro Series 100% Whey': 'Whey Blend',
     'Biogen Complete Blended Protein': 'Multi-Source / Meal Blend',
+    'Biogen Bulk 45/150': 'Mass Gainer',
     'My Wellness Super Clean Protein x5': 'Multi-Source / Meal Blend',
     'My Wellness Alpha Whey': 'Hardcore / All-in-One',
     'My Wellness Hardcore Alpha Plant': 'Hardcore / All-in-One',
@@ -295,13 +297,16 @@ FAMILY_TYPE_MAP = {
     'FutureLife High Protein Smart Food': 'Multi-Source / Meal Blend',
     'FutureLife Repair Food Shake': 'Collagen / Beef / Broth',
     'FutureLife Beauti Food Shake': 'Collagen / Beef / Broth',
+    'Lifegain': 'Multi-Source / Meal Blend',
+    'Lifegain Junior': 'Multi-Source / Meal Blend',
+    'Lifegain Advanced': 'Multi-Source / Meal Blend',
 }
 
 def determine_type(title, ing="", family_name=""):
     if family_name and family_name in FAMILY_TYPE_MAP:
         return FAMILY_TYPE_MAP[family_name]
     t = (title or "").lower()
-    if any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer']) or ('mass' in t and any(m in t for m in ['gainer', '4000', 'gain', 'stacked'])):
+    if any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer', 'pro gains', 'bulk 45', 'hyperbolic']) or (any(m in t for m in ['mass', 'gainer', 'gain', 'gains']) and not any(p in t for p in ['lean muscle', 'muscle gain', 'gain lean', 'muscle growth', 'lifegain'])):
         return 'Mass Gainer'
     if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro', 'vegainer']):
         return 'Plant / Vegan Protein'
@@ -309,7 +314,7 @@ def determine_type(title, ing="", family_name=""):
         return 'Casein / Milk Protein'
     if 'beef' in t or 'bone broth' in t or ('collagen' in t and not any(k in t for k in ['whey', 'vegan', 'phyto', 'water', 'clear'])):
         return 'Collagen / Beef / Broth'
-    if 'future' in t or 'proven' in t or 'super clean' in t or 'complete whey' in t or 'blended protein' in t or 'beast' in t or 'diet fuel' in t or 'diet pro' in t:
+    if 'future' in t or 'proven' in t or 'super clean' in t or 'complete whey' in t or 'blended protein' in t or 'beast' in t or 'diet fuel' in t or 'diet pro' in t or 'lifegain' in t:
         return 'Multi-Source / Meal Blend'
     if 'clear whey' in t or 'protein water' in t or 'collagen pro' in t:
         return 'Clear Whey / Protein Water'
@@ -381,6 +386,7 @@ def get_product_family_key(title, brand):
         
     # 5. NPL Families
     if 'npl' in b or 'npl' in t:
+        if 'pro gains' in t or 'gains' in t or 'gain' in t: return ('NPL', 'NPL Pro Gains')
         if 'plant' in t or 'vegan' in t: return ('NPL', 'NPL 100% Plant Protein')
         if 'collagen pro' in t: return ('NPL', 'NPL Collagen Pro Hybrid Water')
         if 'diet pro' in t: return ('NPL', 'NPL Diet Pro Meal Replacement')
@@ -393,6 +399,7 @@ def get_product_family_key(title, brand):
         
     # 6. Biogen Families
     if 'biogen' in b or 'biogen' in t:
+        if 'bulk' in t: return ('Biogen', 'Biogen Bulk 45/150')
         if 'plant' in t: return ('Biogen', 'Biogen Plant Based Protein')
         if 'clear' in t: return ('Biogen', 'Biogen Clear Whey Collagen')
         if 'peptan' in t or ('collagen' in t and 'whey' not in t): return ('Biogen', 'Biogen Peptan Collagen Powder')

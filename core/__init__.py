@@ -18,7 +18,8 @@ from core.nutrition import (
 )
 
 from core.quality import (
-    compute_protein_quality_scores
+    compute_protein_quality_scores,
+    assign_product_archetype
 )
 
 from core.deals import (
@@ -53,6 +54,7 @@ __all__ = [
     'determine_nutrition',
     'BRAND_FORMULATIONS',
     'compute_protein_quality_scores',
+    'assign_product_archetype',
     'determine_bulk_deal',
     'find_data_file',
     'collect_all_products',

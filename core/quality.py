@@ -213,3 +213,182 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
         'quality_summary': '100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).'
     }
 
+
+def assign_product_archetype(p):
+    """
+    Evaluates product nutritional and market profile to determine its primary
+    value proposition / internal archetype (strictly hidden from user) and the
+    associated standout metric displayed on alternative cards beneath the modal.
+    """
+    cpg = p.get('cost_per_g_protein_zar') or 0.0
+    rating = p.get('rating') or 0.0
+    reviews = p.get('review_count') or 0
+    diaas = p.get('diaas_score') or 1.15
+    pdcaas = p.get('pdcaas_score') or 1.00
+    purity = p.get('protein_percentage') or 75.0
+    ptype = (p.get('type') or '').lower()
+    title = (p.get('title') or '').lower()
+    size = p.get('container_size_g') or 1000.0
+    enzymes = (p.get('digestive_enzymes') or '').lower()
+    carbs = p.get('carbs_g') or 0.0
+    fat = p.get('fat_g') or 0.0
+    prot_g = p.get('protein_per_serving_g', 24.0)
+    sc_g = p.get('scoop_size_g', 30.0)
+
+    # 1. Bioavailable Plant / Vegan
+    if 'plant' in ptype or 'vegan' in ptype:
+        return {
+            'internal_archetype': 'bioavailable_plant',
+            'standout_metric': {
+                'label': 'Complete Plant',
+                'value': f"DIAAS {diaas:.2f} • PDCAAS {pdcaas:.2f}",
+                'icon': 'fa-solid fa-seedling',
+                'badge_class': 'badge-archetype-plant'
+            }
+        }
+
+    # 2. Sustained Release (Casein / Milk Protein)
+    if 'casein' in ptype:
+        return {
+            'internal_archetype': 'sustained_release',
+            'standout_metric': {
+                'label': 'Slow Release',
+                'value': f"Micellar Casein (7-8h)",
+                'icon': 'fa-solid fa-moon',
+                'badge_class': 'badge-archetype-casein'
+            }
+        }
+
+    # 3. Clear Whey / Refreshing Juice-style
+    if 'clear' in ptype or 'water' in ptype or 'clear' in title:
+        return {
+            'internal_archetype': 'clear_refreshing',
+            'standout_metric': {
+                'label': 'Juice Style',
+                'value': f"{purity:.0f}% Prot • Light & Fruity",
+                'icon': 'fa-solid fa-droplet',
+                'badge_class': 'badge-archetype-clear'
+            }
+        }
+
+    # 4. Joint & Skin Peptides (Collagen / Beef)
+    if 'collagen' in ptype or 'beef' in ptype or 'broth' in ptype or 'collagen' in title:
+        return {
+            'internal_archetype': 'joint_collagen',
+            'standout_metric': {
+                'label': 'Joint & Skin',
+                'value': 'Pure Hydrolysed Peptides',
+                'icon': 'fa-solid fa-bone',
+                'badge_class': 'badge-archetype-collagen'
+            }
+        }
+
+    # 5. Diet / Lean Whey (Calorie Control)
+    if 'diet' in ptype or 'lean' in ptype:
+        return {
+            'internal_archetype': 'diet_lean',
+            'standout_metric': {
+                'label': 'Calorie Control',
+                'value': f"Lean Whey ({carbs:.1f}g C / {fat:.1f}g F)",
+                'icon': 'fa-solid fa-fire-flame-curved',
+                'badge_class': 'badge-archetype-diet'
+            }
+        }
+
+    # 6. Ultra-Lean Isolate / High Purity
+    if purity >= 84.0 or 'isolate' in ptype:
+        return {
+            'internal_archetype': 'lean_purity',
+            'standout_metric': {
+                'label': 'Ultra Purity',
+                'value': f"{purity:.0f}% Protein ({prot_g}g / {sc_g}g)",
+                'icon': 'fa-solid fa-bolt',
+                'badge_class': 'badge-archetype-purity'
+            }
+        }
+
+    # 7. Bulk Saver (Economy volume 2.5kg+)
+    if size >= 2500:
+        serv = p.get('servings_count') or int(size / (sc_g if sc_g > 0 else 30))
+        return {
+            'internal_archetype': 'bulk_saver',
+            'standout_metric': {
+                'label': 'Bulk Economy',
+                'value': f"{size/1000:.1f}kg • {serv} Servings",
+                'icon': 'fa-solid fa-box-open',
+                'badge_class': 'badge-archetype-bulk'
+            }
+        }
+
+    # 8. Best Value / Cost Leader (top cost efficiency)
+    if cpg > 0 and cpg <= 0.45:
+        return {
+            'internal_archetype': 'cost_leader',
+            'standout_metric': {
+                'label': 'Best Value',
+                'value': f"R {cpg:.2f} / g prot",
+                'icon': 'fa-solid fa-coins',
+                'badge_class': 'badge-archetype-value'
+            }
+        }
+
+    # 9. Community Favorite (proven rating + high review count)
+    if rating >= 4.6 and reviews >= 20:
+        return {
+            'internal_archetype': 'community_favorite',
+            'standout_metric': {
+                'label': 'Top Rated',
+                'value': f"★ {rating:.1f} ({reviews} reviews)",
+                'icon': 'fa-solid fa-star',
+                'badge_class': 'badge-archetype-favorite'
+            }
+        }
+
+    # 10. Digestive System Fortified
+    if any(k in enzymes for k in ['digezyme', 'lactase', 'tolerase', 'protease']):
+        enz_name = 'DigeZyme® Multi-Enzyme' if 'digezyme' in enzymes else ('Tolerase™ L Lactase' if 'tolerase' in enzymes else 'Active Digestive Enzymes')
+        return {
+            'internal_archetype': 'digestive_friendly',
+            'standout_metric': {
+                'label': 'Digestive Comfort',
+                'value': enz_name,
+                'icon': 'fa-solid fa-leaf',
+                'badge_class': 'badge-archetype-digestive'
+            }
+        }
+
+    # 11. Elite Bioavailability
+    if diaas >= 1.25:
+        return {
+            'internal_archetype': 'elite_bioavailability',
+            'standout_metric': {
+                'label': 'Elite Uptake',
+                'value': f"DIAAS {diaas:.2f} (Elite BV)",
+                'icon': 'fa-solid fa-dna',
+                'badge_class': 'badge-archetype-elite'
+            }
+        }
+
+    # 12. Good Value Tier
+    if cpg > 0 and cpg <= 0.58:
+        return {
+            'internal_archetype': 'cost_leader',
+            'standout_metric': {
+                'label': 'Good Value',
+                'value': f"R {cpg:.2f} / g prot",
+                'icon': 'fa-solid fa-coins',
+                'badge_class': 'badge-archetype-value'
+            }
+        }
+
+    # 13. Daily Standard (Default balanced whey)
+    return {
+        'internal_archetype': 'balanced_standard',
+        'standout_metric': {
+            'label': 'Daily Standard',
+            'value': f"{prot_g}g Prot / {sc_g}g Scoop",
+            'icon': 'fa-solid fa-shield-halved',
+            'badge_class': 'badge-archetype-standard'
+        }
+    }
+

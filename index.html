@@ -36,6 +36,19 @@
     .badge-diaas-high { background: rgba(59, 130, 246, 0.14); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); }
     .badge-diaas-good { background: rgba(168, 85, 247, 0.14); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.35); }
     .badge-diaas-moderate { background: rgba(249, 115, 22, 0.14); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.35); }
+    /* Internal Archetype Standout Badges */
+    .badge-archetype-favorite { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .badge-archetype-value { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); }
+    .badge-archetype-plant { background: rgba(34, 197, 94, 0.15); color: #86efac; border: 1px solid rgba(34, 197, 94, 0.35); }
+    .badge-archetype-purity { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35); }
+    .badge-archetype-digestive { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.35); }
+    .badge-archetype-bulk { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.35); }
+    .badge-archetype-elite { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.35); }
+    .badge-archetype-standard { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.35); }
+    .badge-archetype-casein { background: rgba(147, 51, 234, 0.15); color: #d8b4fe; border: 1px solid rgba(147, 51, 234, 0.35); }
+    .badge-archetype-clear { background: rgba(14, 165, 233, 0.15); color: #7dd3fc; border: 1px solid rgba(14, 165, 233, 0.35); }
+    .badge-archetype-collagen { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.35); }
+    .badge-archetype-diet { background: rgba(249, 115, 22, 0.15); color: #fdba74; border: 1px solid rgba(249, 115, 22, 0.35); }
     ::-webkit-scrollbar { width: 7px; height: 7px; }
     ::-webkit-scrollbar-track { background: #0b0f17; }
     ::-webkit-scrollbar-thumb { background: #293241; border-radius: 4px; }
@@ -1527,6 +1540,132 @@
       document.getElementById('comparisonModal').classList.add('hidden');
     }
 
+    function getProductStandoutMetric(p) {
+      if (p && p.standout_metric && p.standout_metric.label && p.standout_metric.value) {
+        return p.standout_metric;
+      }
+      const pricing = getProductPricing(p);
+      const cpg = pricing.costPerG || p.cost_per_g_protein_zar || 0.0;
+      const rating = p.rating || 0.0;
+      const reviews = p.review_count || 0;
+      const diaas = p.diaas_score || 1.15;
+      const pdcaas = p.pdcaas_score || 1.00;
+      const purity = p.protein_percentage || 75.0;
+      const ptype = (p.type || '').toLowerCase();
+      const title = (p.title || '').toLowerCase();
+      const size = p.container_size_g || 1000.0;
+      const enzymes = (p.digestive_enzymes || '').toLowerCase();
+      const carbs = p.carbs_g || 0.0;
+      const fat = p.fat_g || 0.0;
+      const protG = p.protein_per_serving_g || 24.0;
+      const scG = p.scoop_size_g || 30.0;
+
+      if (ptype.includes('plant') || ptype.includes('vegan')) {
+        return {
+          label: 'Complete Plant',
+          value: `DIAAS ${diaas.toFixed(2)} • PDCAAS ${pdcaas.toFixed(2)}`,
+          icon: 'fa-solid fa-seedling',
+          badge_class: 'badge-archetype-plant'
+        };
+      }
+      if (ptype.includes('casein')) {
+        return {
+          label: 'Slow Release',
+          value: 'Micellar Casein (7-8h)',
+          icon: 'fa-solid fa-moon',
+          badge_class: 'badge-archetype-casein'
+        };
+      }
+      if (ptype.includes('clear') || ptype.includes('water') || title.includes('clear')) {
+        return {
+          label: 'Juice Style',
+          value: `${purity.toFixed(0)}% Prot • Light & Fruity`,
+          icon: 'fa-solid fa-droplet',
+          badge_class: 'badge-archetype-clear'
+        };
+      }
+      if (ptype.includes('collagen') || ptype.includes('beef') || ptype.includes('broth') || title.includes('collagen')) {
+        return {
+          label: 'Joint & Skin',
+          value: 'Pure Hydrolysed Peptides',
+          icon: 'fa-solid fa-bone',
+          badge_class: 'badge-archetype-collagen'
+        };
+      }
+      if (ptype.includes('diet') || ptype.includes('lean')) {
+        return {
+          label: 'Calorie Control',
+          value: `Lean Whey (${carbs.toFixed(1)}g C / ${fat.toFixed(1)}g F)`,
+          icon: 'fa-solid fa-fire-flame-curved',
+          badge_class: 'badge-archetype-diet'
+        };
+      }
+      if (purity >= 84.0 || ptype.includes('isolate')) {
+        return {
+          label: 'Ultra Purity',
+          value: `${purity.toFixed(0)}% Protein (${protG}g / ${scG}g)`,
+          icon: 'fa-solid fa-bolt',
+          badge_class: 'badge-archetype-purity'
+        };
+      }
+      if (size >= 2500) {
+        const serv = p.servings_count || Math.round(size / (scG > 0 ? scG : 30));
+        return {
+          label: 'Bulk Economy',
+          value: `${(size / 1000).toFixed(1)}kg • ${serv} Servings`,
+          icon: 'fa-solid fa-box-open',
+          badge_class: 'badge-archetype-bulk'
+        };
+      }
+      if (cpg > 0 && cpg <= 0.45) {
+        return {
+          label: 'Best Value',
+          value: `R ${cpg.toFixed(2)} / g prot`,
+          icon: 'fa-solid fa-coins',
+          badge_class: 'badge-archetype-value'
+        };
+      }
+      if (rating >= 4.6 && reviews >= 20) {
+        return {
+          label: 'Top Rated',
+          value: `★ ${rating.toFixed(1)} (${reviews} reviews)`,
+          icon: 'fa-solid fa-star',
+          badge_class: 'badge-archetype-favorite'
+        };
+      }
+      if (['digezyme', 'lactase', 'tolerase', 'protease'].some(k => enzymes.includes(k))) {
+        const enzName = enzymes.includes('digezyme') ? 'DigeZyme® Multi-Enzyme' : (enzymes.includes('tolerase') ? 'Tolerase™ L Lactase' : 'Active Digestive Enzymes');
+        return {
+          label: 'Digestive Comfort',
+          value: enzName,
+          icon: 'fa-solid fa-leaf',
+          badge_class: 'badge-archetype-digestive'
+        };
+      }
+      if (diaas >= 1.25) {
+        return {
+          label: 'Elite Uptake',
+          value: `DIAAS ${diaas.toFixed(2)} (Elite BV)`,
+          icon: 'fa-solid fa-dna',
+          badge_class: 'badge-archetype-elite'
+        };
+      }
+      if (cpg > 0 && cpg <= 0.58) {
+        return {
+          label: 'Good Value',
+          value: `R ${cpg.toFixed(2)} / g prot`,
+          icon: 'fa-solid fa-coins',
+          badge_class: 'badge-archetype-value'
+        };
+      }
+      return {
+        label: 'Daily Standard',
+        value: `${protG}g Prot / ${scG}g Scoop`,
+        icon: 'fa-solid fa-shield-halved',
+        badge_class: 'badge-archetype-standard'
+      };
+    }
+
     function findClosestAlternatives(product, limit = 3, isDelisted = false) {
       if (!product || !rawProducts || rawProducts.length === 0) return [];
 
@@ -1621,18 +1760,47 @@
 
       scored.sort((a, b) => b.score - a.score);
 
-      // For active products, ensure brand diversity across results
+      // For active products, ensure brand diversity AND archetype diversity across results
       if (!isDelisted) {
         const diverse = [];
         const seenBrands = new Set();
+        const seenArchs = new Set();
+
+        // Pass 1: brand AND internal archetype diversity so user gets 3 distinct value angles
         for (const item of scored) {
           const b = (item.product.brand || '').toLowerCase().trim();
-          if (!seenBrands.has(b)) {
+          const sm = getProductStandoutMetric(item.product);
+          const archKey = item.product.internal_archetype || (sm ? sm.label : '');
+          if (!seenBrands.has(b) && !seenArchs.has(archKey)) {
             seenBrands.add(b);
+            seenArchs.add(archKey);
             diverse.push(item);
             if (diverse.length === limit) break;
           }
         }
+
+        // Pass 2: fill if needed with brand diversity
+        if (diverse.length < limit) {
+          for (const item of scored) {
+            const b = (item.product.brand || '').toLowerCase().trim();
+            if (!seenBrands.has(b)) {
+              seenBrands.add(b);
+              diverse.push(item);
+              if (diverse.length === limit) break;
+            }
+          }
+        }
+
+        // Pass 3: fill if still under limit
+        if (diverse.length < limit) {
+          for (const item of scored) {
+            if (!diverse.some(d => d.product.id === item.product.id)) {
+              diverse.push(item);
+              if (diverse.length === limit) break;
+            }
+          }
+        }
+
         return diverse;
       }
 
@@ -1772,22 +1940,31 @@
           if (alt.product.retailer === 'Amazon ZA') bClass = 'badge-retailer-amazon';
           if (alt.product.retailer === 'Nutritech Direct' || alt.product.retailer === 'Brand Direct') bClass = 'badge-retailer-nutritech';
           const sLbl = alt.product.container_size_g >= 1000 ? (alt.product.container_size_g / 1000) + 'kg' : alt.product.container_size_g + 'g';
+          const sm = getProductStandoutMetric(alt.product);
 
           return `
-            <div onclick="openDetailModal('${alt.product.id}')" class="p-2.5 rounded-xl bg-[#0b0f17] hover:bg-[#161d2a] border ${alt.isDifferentRetailer ? 'border-emerald-500/50 bg-emerald-950/20' : 'border-gray-800/80 hover:border-blue-500/40'} transition cursor-pointer flex flex-col justify-between group">
+            <div onclick="openDetailModal('${alt.product.id}')" class="p-3 rounded-xl bg-[#0b0f17] hover:bg-[#161d2a] border ${alt.isDifferentRetailer ? 'border-emerald-500/50 bg-emerald-950/20' : 'border-gray-800/80 hover:border-blue-500/40'} transition cursor-pointer flex flex-col justify-between group shadow-sm">
               <div>
-                <div class="flex items-center justify-between gap-1 mb-1">
+                <div class="flex items-center justify-between gap-1 mb-1.5">
                   <span class="text-[9px] font-bold uppercase tracking-wider text-blue-400 truncate">${alt.product.brand}</span>
                   <span class="text-[9px] px-1.5 py-0.5 rounded font-semibold ${bClass}">${alt.product.retailer}</span>
                 </div>
-                <div class="text-[11px] font-bold text-white line-clamp-2 leading-tight group-hover:text-blue-300 transition mb-1" title="${alt.product.title}">
+                <div class="text-[11px] font-bold text-white line-clamp-2 leading-tight group-hover:text-blue-300 transition mb-2" title="${alt.product.title}">
                   ${alt.product.title}
                 </div>
-                <div class="inline-block px-1.5 py-0.5 rounded text-[9px] font-semibold ${alt.isDifferentRetailer ? 'bg-emerald-900/70 text-emerald-200 border border-emerald-600/50' : 'bg-gray-800 text-gray-300'} mb-2">
-                  ${alt.matchReason}
+
+                <!-- Standout Metric Pill (Associated with Internal Category) -->
+                <div class="flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-semibold ${sm.badge_class} mb-2">
+                  <i class="${sm.icon} text-[9px] shrink-0"></i>
+                  <span class="truncate">${sm.label}: <b class="text-white font-bold">${sm.value}</b></span>
                 </div>
+
+                ${alt.isDifferentRetailer ? `
+                <div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-semibold bg-emerald-900/60 text-emerald-200 border border-emerald-600/40 mb-2">
+                  <i class="fa-solid fa-circle-check text-[8px]"></i> Same product at ${alt.product.retailer}
+                </div>` : ''}
               </div>
-              <div class="pt-1.5 border-t border-gray-800/60 flex items-baseline justify-between">
+              <div class="pt-2 border-t border-gray-800/60 flex items-baseline justify-between mt-auto">
                 <div>
                   <span class="text-xs font-black text-emerald-400">R ${altPricing.finalPrice.toFixed(0)}</span>
                   <span class="text-[10px] text-gray-400 font-mono ml-1">R${altPricing.costPerG.toFixed(2)}/g</span>

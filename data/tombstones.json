@@ -18,7 +18,7 @@
     "original_price_zar": 599.0,
     "cost_per_g_protein_zar": 0.73,
     "diaas_score": 1.22,
-    "diaas_rating": "⭐ Excellent",
+    "diaas_rating": "\u2b50 Excellent",
     "diaas_category": "Whey Blend",
     "pdcaas_score": 1.0,
     "quality_summary": "Complete milk whey protein profile providing rapid amino acid uptake.",
@@ -30,7 +30,14 @@
     "url": "https://www.takealot.com",
     "delisted_date": "8 Nov 2026",
     "in_stock": false,
-    "status": "delisted"
+    "status": "delisted",
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (142 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   "clicks_delisted_test_vintage_isolate_900g": {
     "id": "clicks_delisted_test_vintage_isolate_900g",
@@ -50,8 +57,8 @@
     "price_zar": 680.0,
     "original_price_zar": 749.0,
     "cost_per_g_protein_zar": 0.84,
-    "diaas_score": 1.30,
-    "diaas_rating": "💎 Elite Bioavailability",
+    "diaas_score": 1.3,
+    "diaas_rating": "\ud83d\udc8e Elite Bioavailability",
     "diaas_category": "Whey Isolate",
     "pdcaas_score": 1.0,
     "quality_summary": "Ultra-filtered whey isolate delivering ultra-fast leucine delivery and zero lactose.",
@@ -63,6 +70,13 @@
     "url": "https://clicks.co.za",
     "delisted_date": "1 Nov 2026",
     "in_stock": false,
-    "status": "delisted"
+    "status": "delisted",
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (27.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   }
 }

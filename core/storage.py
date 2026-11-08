@@ -9,6 +9,7 @@ import os
 import re
 import sqlite3
 from datetime import datetime
+from core.quality import assign_product_archetype
 
 def save_products(master_products, db_path='data/proteins.db', json_path='data/proteins.json', js_path='data/products_data.js', tombstones_path='data/tombstones.json'):
     print(f"Total consolidated pure protein powders: {len(master_products)}")
@@ -28,6 +29,12 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
             print(f"Warning reading existing tombstones: {e}")
             tombstones = {}
 
+    # Enrich products with internal archetype and standout metrics
+    for p in master_products:
+        arch_data = assign_product_archetype(p)
+        p['internal_archetype'] = arch_data['internal_archetype']
+        p['standout_metric'] = arch_data['standout_metric']
+
     # Track products dropped from previous catalog into tombstone archive
     incoming_ids = {p['id'] for p in master_products}
     if os.path.exists(json_path):
@@ -37,6 +44,7 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
             for p in prev_products:
                 pid = p.get('id')
                 if pid and pid not in incoming_ids and pid not in tombstones:
+                    arch_data = assign_product_archetype(p)
                     tombstones[pid] = {
                         'id': pid,
                         'retailer': p.get('retailer'),
@@ -61,12 +69,21 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
                         'quality_summary': p.get('quality_summary', ''),
                         'url': p.get('url', ''),
                         'ingredients': p.get('ingredients', ''),
+                        'internal_archetype': arch_data['internal_archetype'],
+                        'standout_metric': arch_data['standout_metric'],
                         'delisted_date': today_str,
                         'in_stock': False,
                         'status': 'delisted'
                     }
         except Exception as e:
             print(f"Warning tracking previous products for tombstones: {e}")
+
+    # Ensure existing tombstones have archetype & standout metric
+    for tid, tomb in tombstones.items():
+        if 'internal_archetype' not in tomb or 'standout_metric' not in tomb:
+            t_arch = assign_product_archetype(tomb)
+            tomb['internal_archetype'] = t_arch['internal_archetype']
+            tomb['standout_metric'] = t_arch['standout_metric']
 
     # Save tombstones JSON
     with open(tombstones_path, 'w', encoding='utf-8') as f:
@@ -120,7 +137,12 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
             pdcaas_score REAL,
             quality_summary TEXT,
             url TEXT,
-            in_stock INTEGER
+            in_stock INTEGER,
+            internal_archetype TEXT,
+            standout_metric_label TEXT,
+            standout_metric_value TEXT,
+            standout_metric_icon TEXT,
+            standout_metric_badge_class TEXT
         )
     ''')
     c.execute('''
@@ -145,7 +167,7 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
         
         c.execute('''
             INSERT OR REPLACE INTO products VALUES (
-                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
             )
         ''', (
             p['id'], p['retailer'], p['brand'], p['title'], p['product_line'], p['type'], p['flavor'],
@@ -162,7 +184,12 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
             p.get('cost_per_serving_zar'), p.get('cost_per_serving_discounted_zar'), p.get('rating'),
             p.get('review_count'), p.get('ingredients'), p.get('digestive_enzymes'), p.get('sweetener'),
             p.get('diaas_score'), p.get('diaas_rating'), p.get('diaas_category'), p.get('pdcaas_score'),
-            p.get('quality_summary'), p.get('url'), 1 if p.get('in_stock', True) else 0
+            p.get('quality_summary'), p.get('url'), 1 if p.get('in_stock', True) else 0,
+            p.get('internal_archetype'),
+            p.get('standout_metric', {}).get('label'),
+            p.get('standout_metric', {}).get('value'),
+            p.get('standout_metric', {}).get('icon'),
+            p.get('standout_metric', {}).get('badge_class')
         ))
         c.execute('INSERT INTO price_history (product_id, price_zar) VALUES (?, ?)', (p['id'], p['price_zar']))
 

@@ -43,7 +43,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.takealot.com/whey-isolate/PLID98115152?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (27.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "takealot_70432591",
@@ -88,7 +95,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/muscletech-nitro-tech-100-whey-gold-dble-rich-chocolate-2-28kg/PLID70432591?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "takealot_72179460",
@@ -133,7 +147,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-speckled-eggs-1kg/PLID72179460?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_73601470",
@@ -178,7 +199,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.takealot.com/hydrotech-whey-vanilla-cookie-dough-900g/PLID73601470",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_95681880",
@@ -223,7 +251,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-vanilla-milkshake/PLID95681880",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_95681845",
@@ -268,7 +303,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-nutella-waffle/PLID95681845",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_32846166",
@@ -313,7 +355,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/premium-whey-protein-vanilla/PLID32846166",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (461 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_72179454",
@@ -358,7 +407,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-vanilla-milkshake-1kg/PLID72179454?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_72179458",
@@ -403,7 +459,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-hazelnut-praline-1kg/PLID72179458?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_95698085",
@@ -448,7 +511,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-berries-cream/PLID95698085",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_73304994",
@@ -493,7 +563,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-cinnamon-doughnut-1kg/PLID73304994?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_90356822",
@@ -538,7 +615,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-wafer-biscuit-1kg/PLID90356822?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_95681881",
@@ -583,7 +667,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-salted-caramel/PLID95681881",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_73601469",
@@ -628,7 +719,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.takealot.com/hydrotech-whey-chocolate-cookie-dough-900g/PLID73601469",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_28059271",
@@ -673,7 +771,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.takealot.com/usn-hardcore-whey-gh-1-8kg-french-vanilla/PLID28059271",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (235 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_90356823",
@@ -718,7 +823,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-nutella-waffle-1kg/PLID90356823",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_100089528",
@@ -763,7 +875,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.takealot.com/natural-whey-protein-900g-unflavoured-naked-powders/PLID100089528",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (68 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_72179455",
@@ -808,7 +927,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-chocolate-truffle-1kg/PLID72179455",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_101549329",
@@ -853,7 +979,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.takealot.com/blast-daily-protein-vanilla/PLID101549329?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "takealot_70432866",
@@ -898,7 +1031,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.takealot.com/muscletech-nitro-tech-ripped-performance-series-french-vanilla-bean-1-81kg/PLID70432866?offer_pref=lowest_priced",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.0g C / 2.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "takealot_92979003",
@@ -943,7 +1083,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.takealot.com/bluelab-100-whey-protein-vanilla-1kg/PLID92979003",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (59 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_28059273",
@@ -988,7 +1135,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.takealot.com/usn-hardcore-whey-gh-1-8kg-dutch-chocolate/PLID28059273",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (316 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_101248558",
@@ -1033,7 +1187,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.takealot.com/hydrotech-whey-blueberry-muffin-900g/PLID101248558",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_32846161",
@@ -1078,7 +1239,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/premium-whey-protein-chocolate/PLID32846161?size=2%20kg",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (401 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_92978990",
@@ -1123,7 +1291,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.takealot.com/bluelab-100-whey-protein-chocolate-1kg/PLID92978990",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.9 (69 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_94527371",
@@ -1168,7 +1343,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/100-whey-protein-1kg-vanilla-ice-cream/PLID94527371",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "takealot_72179453",
@@ -1213,7 +1395,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-salted-caramel-1kg/PLID72179453",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_101824841",
@@ -1258,7 +1447,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.takealot.com/usn-bluelab-100-whey-chocolate-super-m-1kg/PLID101824841",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_72928434",
@@ -1303,7 +1499,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-meltdown-whey-protein-fat-burner-vanilla-milkshake-1kg/PLID72928434",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.0g C / 1.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "takealot_101824840",
@@ -1348,7 +1551,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.takealot.com/usn-bluelab-100-whey-vanilla-caramel-super-m-1kg/PLID101824840",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_92979004",
@@ -1393,7 +1603,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.takealot.com/hardcore-whey-gh-dutch-chocolate-1kg/PLID92979004",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_28059265",
@@ -1438,7 +1655,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.takealot.com/usn-hardcore-whey-gh-dutch-chocolate-908-g/PLID28059265",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_91330196",
@@ -1483,7 +1707,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.takealot.com/muscle-works-whey-bolic-protein-900g-chocolate-ice-cream/PLID91330196",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.58 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_91799315",
@@ -1528,7 +1759,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.takealot.com/beast-protein-800g-chocolate/PLID91799315",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "takealot_95698123",
@@ -1573,7 +1811,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-caf-mocha/PLID95698123",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_95495131",
@@ -1618,7 +1863,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.takealot.com/my-wellness-super-clean-protein-900g-chocolate/PLID95495131",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "takealot_95681847",
@@ -1663,7 +1915,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/rogue-legion-lifestyle-whey-protein-1kg-dark-chocolate-sea-salt/PLID95681847",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "takealot_103350284",
@@ -1708,7 +1967,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/one-whey-protein-29-servings-ugandan-vanilla-841g/PLID103350284",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.4g Prot / 29.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "takealot_71641564",
@@ -1753,7 +2019,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/my-wellness-superior-whey-protein-3-3kg-chocolate/PLID71641564",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.3kg \u2022 110 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "takealot_43804505",
@@ -1798,7 +2071,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.takealot.com/usn-bluelab-100-whey-protein-chocolate-908g/PLID43804505",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (111 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "takealot_72179456",
@@ -1843,7 +2123,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.takealot.com/psnlifestyle-mrp-whey-protein-double-decker-1kg/PLID72179456",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FWBNXP4M",
@@ -1888,7 +2175,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBNXP4M",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4BQF7D",
@@ -1933,7 +2227,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FN4BQF7D",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "88% Protein (26.5g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FF9Y21N4",
@@ -1978,7 +2279,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FF9Y21N4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FVMB61GL",
@@ -2023,7 +2331,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.amazon.co.za/dp/B0FVMB61GL",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.58 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0GKNHCV6Q",
@@ -2068,7 +2383,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.amazon.co.za/dp/B0GKNHCV6Q",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "67% Protein (20.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FPRF4ML1",
@@ -2113,7 +2435,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FPRF4ML1",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FFB2LQCG",
@@ -2158,7 +2487,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FFB2LQCG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4CXFRP",
@@ -2203,7 +2539,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4CXFRP",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FFB2X6HG",
@@ -2248,7 +2591,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FFB2X6HG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B078FZJDLN",
@@ -2293,7 +2643,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B078FZJDLN",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B000GIQSVG",
@@ -2338,7 +2695,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B000GIQSVG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (78 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "amazon_B0FXWWHNLY",
@@ -2383,7 +2747,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FXWWHNLY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0F2T11TPJ",
@@ -2428,7 +2799,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0F2T11TPJ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "72% Protein (23.0g / 32.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0F93XM7VT",
@@ -2473,7 +2851,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F93XM7VT",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FVXV919Y",
@@ -2518,7 +2903,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.amazon.co.za/dp/B0FVXV919Y",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FSSJJ7SR",
@@ -2563,7 +2955,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSSJJ7SR",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B08G8661ZT",
@@ -2608,7 +3007,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B08G8661ZT",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FN4DPGND",
@@ -2653,7 +3059,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.amazon.co.za/dp/B0FN4DPGND",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "amazon_B0GLHQJX8K",
@@ -2698,7 +3111,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0GLHQJX8K",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "amazon_B0FWKNT3LM",
@@ -2743,7 +3163,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWKNT3LM",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0GKNM6H8Q",
@@ -2788,7 +3215,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.amazon.co.za/dp/B0GKNM6H8Q",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "67% Protein (20.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FWBRKTXG",
@@ -2833,7 +3267,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBRKTXG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FXGQT8GM",
@@ -2878,7 +3319,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FXGQT8GM",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B08G8C22PJ",
@@ -2923,7 +3371,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B08G8C22PJ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FN4HVYL8",
@@ -2968,7 +3423,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.amazon.co.za/dp/B0FN4HVYL8",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.50 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FVXWC7RT",
@@ -3013,7 +3475,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.amazon.co.za/dp/B0FVXWC7RT",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.47 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FWBRXMZ1",
@@ -3058,7 +3527,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBRXMZ1",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FSSJB3NK",
@@ -3103,7 +3579,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSSJB3NK",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.54 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0F2T141HQ",
@@ -3148,7 +3631,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F2T141HQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.8g C / 1.6g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "amazon_B0FVMNB523",
@@ -3193,7 +3683,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FVMNB523",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FVY3NSY8",
@@ -3238,7 +3735,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVY3NSY8",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4FHM3D",
@@ -3283,7 +3787,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4FHM3D",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FVMMZG63",
@@ -3328,7 +3839,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FVMMZG63",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FWBT76L7",
@@ -3373,7 +3891,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBT76L7",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FVY5NCGK",
@@ -3418,7 +3943,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVY5NCGK",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0GZQYSXQW",
@@ -3463,7 +3995,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0GZQYSXQW",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FVY436DV",
@@ -3508,7 +4047,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVY436DV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4FDHGM",
@@ -3553,7 +4099,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.amazon.co.za/dp/B0FN4FDHGM",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "amazon_B0G6JPR9YV",
@@ -3598,7 +4151,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0G6JPR9YV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "72% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B0FN4GJT41",
@@ -3643,7 +4203,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4GJT41",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4FNXNN",
@@ -3688,7 +4255,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FN4FNXNN",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B0FVMPTN6J",
@@ -3733,7 +4307,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FVMPTN6J",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0H3BN4GX7",
@@ -3778,7 +4359,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0H3BN4GX7",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B002ZHREGO",
@@ -3823,7 +4411,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Enzymatically pre-cleaved peptide bonds maximize ileal absorption rate and rapid hyperaminoacidemia.",
     "url": "https://www.amazon.co.za/dp/B002ZHREGO",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "77% Protein (30.0g / 39.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FVY9RML9",
@@ -3868,7 +4463,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVY9RML9",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0G1T14YMY",
@@ -3913,7 +4515,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0G1T14YMY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "91% Protein (29.0g / 32.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B07G46TFL9",
@@ -3958,7 +4567,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B07G46TFL9",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (21 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "amazon_B002DYIZH6",
@@ -4003,7 +4619,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B002DYIZH6",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FZV6D52M",
@@ -4048,7 +4671,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.amazon.co.za/dp/B0FZV6D52M",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FN4C7XX2",
@@ -4093,7 +4723,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4C7XX2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.39 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FNY6TGNY",
@@ -4138,7 +4775,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNY6TGNY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0DSKX9XRJ",
@@ -4183,7 +4827,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0DSKX9XRJ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.9 (24 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "amazon_B0FNYXXD6G",
@@ -4228,7 +4879,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYXXD6G",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0DSJL8SS2",
@@ -4273,7 +4931,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0DSJL8SS2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FWBSD8HF",
@@ -4318,7 +4983,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBSD8HF",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.56 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FZTKVX62",
@@ -4363,7 +5035,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0FZTKVX62",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B07ZKVZT4T",
@@ -4408,7 +5087,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B07ZKVZT4T",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FS1V98JZ",
@@ -4453,7 +5139,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS1V98JZ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.58 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FN4G3BZ7",
@@ -4498,7 +5191,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4G3BZ7",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0DTHTXT2N",
@@ -4543,7 +5243,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0DTHTXT2N",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0BH4MXYBT",
@@ -4588,7 +5295,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.amazon.co.za/dp/B0BH4MXYBT",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0F2T2SL2F",
@@ -4633,7 +5347,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F2T2SL2F",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FS1TTZM6",
@@ -4678,7 +5399,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS1TTZM6",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.58 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FNYXT29K",
@@ -4723,7 +5451,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYXT29K",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FZT8V74Z",
@@ -4768,7 +5503,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0FZT8V74Z",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FSS3KP3S",
@@ -4813,7 +5555,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSS3KP3S",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0DSJHLTH7",
@@ -4858,7 +5607,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0DSJHLTH7",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0DSVWXMLH",
@@ -4903,7 +5659,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0DSVWXMLH",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FRSVQYYL",
@@ -4948,7 +5711,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FRSVQYYL",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FNYKHWPV",
@@ -4993,7 +5763,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYKHWPV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0F2T2YGGY",
@@ -5038,7 +5815,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F2T2YGGY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.41 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FWBRNQ4Z",
@@ -5083,7 +5867,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBRNQ4Z",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B000GISTZ4",
@@ -5128,7 +5919,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B000GISTZ4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (29 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "amazon_B0FS1S5ZMD",
@@ -5173,7 +5971,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS1S5ZMD",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 75 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0FJ7M74K1",
@@ -5218,7 +6023,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.amazon.co.za/dp/B0FJ7M74K1",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "10.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FXH5ZWJQ",
@@ -5263,7 +6075,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FXH5ZWJQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FXH5T74C",
@@ -5308,7 +6127,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.amazon.co.za/dp/B0FXH5T74C",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B07R16QQY8",
@@ -5353,7 +6179,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B07R16QQY8",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "87% Protein (26.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0F2SZRRQV",
@@ -5398,7 +6231,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F2SZRRQV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0HH9358J2",
@@ -5443,7 +6283,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0HH9358J2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FS1B81DG",
@@ -5488,7 +6335,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FS1B81DG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.2g C / 1.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "amazon_B0FS22RZRZ",
@@ -5533,7 +6387,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS22RZRZ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.51 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FS1S2W6R",
@@ -5578,7 +6439,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS1S2W6R",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 75 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0FZTWXNFL",
@@ -5623,7 +6491,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FZTWXNFL",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0GKNCZS29",
@@ -5668,7 +6543,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0GKNCZS29",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 40.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4FRLTZ",
@@ -5713,7 +6595,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4FRLTZ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FZV4YX5N",
@@ -5758,7 +6647,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FZV4YX5N",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FSSNX9BP",
@@ -5803,7 +6699,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSSNX9BP",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.54 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FXH55LWQ",
@@ -5848,7 +6751,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.amazon.co.za/dp/B0FXH55LWQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4F3CGV",
@@ -5893,7 +6803,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4F3CGV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FSSHJQ4L",
@@ -5938,7 +6855,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSSHJQ4L",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FXH2TMPZ",
@@ -5983,7 +6907,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FXH2TMPZ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FWBRWMYR",
@@ -6028,7 +6959,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBRWMYR",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0FS1CSRMQ",
@@ -6073,7 +7011,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FS1CSRMQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.2g C / 1.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "amazon_B0FN3X3CSP",
@@ -6118,7 +7063,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN3X3CSP",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0GZQX53QP",
@@ -6163,7 +7115,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.amazon.co.za/dp/B0GZQX53QP",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FS1S4CPR",
@@ -6208,7 +7167,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic post-workout formulation: 22g protein (WPC & WPI) paired with Anabolic Carb Complex (Cream of Rice & Maltodextrin, 10.8g carbs) for glycogen replenishment, plus 4.5g Anabolic Amino Complex (Creatine, Taurine, Glycine, L-Leucine).",
     "url": "https://www.amazon.co.za/dp/B0FS1S4CPR",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.58 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FWKFV4Q4",
@@ -6253,7 +7219,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.amazon.co.za/dp/B0FWKFV4Q4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "amazon_B0FWBRGRKY",
@@ -6298,7 +7271,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FWBRGRKY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FSSQ1LB2",
@@ -6343,7 +7323,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FSSQ1LB2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FNYY64Q4",
@@ -6388,7 +7375,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYY64Q4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FVY5WQR9",
@@ -6433,7 +7427,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVY5WQR9",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FFB1BB3X",
@@ -6478,7 +7479,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FFB1BB3X",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FVMF7K3P",
@@ -6523,7 +7531,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.amazon.co.za/dp/B0FVMF7K3P",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.46 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "amazon_B0FNYD2715",
@@ -6568,7 +7583,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYD2715",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0HJ2LCXS4",
@@ -6613,7 +7635,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0HJ2LCXS4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "86% Protein (21.6g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0F9TWJ4HQ",
@@ -6658,7 +7687,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0F9TWJ4HQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (3.0g C / 1.5g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "amazon_B0H3BCGQHQ",
@@ -6703,7 +7739,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0H3BCGQHQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B0FN4HG2ZP",
@@ -6748,7 +7791,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4HG2ZP",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B008JC26E4",
@@ -6793,7 +7843,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B008JC26E4",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FN4DMP91",
@@ -6838,7 +7895,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FN4DMP91",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B0FN4FC5PY",
@@ -6883,7 +7947,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FN4FC5PY",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0FZV3JZLH",
@@ -6928,7 +7999,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0FZV3JZLH",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "81% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B0FNXXZDYQ",
@@ -6973,7 +8051,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNXXZDYQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FVXYXPM2",
@@ -7018,7 +8103,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FVXYXPM2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B0H3BV2XZC",
@@ -7063,7 +8155,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0H3BV2XZC",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "amazon_B000GIURIQ",
@@ -7108,7 +8207,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B000GIURIQ",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.6 (109 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "amazon_B0GZR8L5JB",
@@ -7153,7 +8259,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B0GZR8L5JB",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "87% Protein (20.0g / 23.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "amazon_B0FNZ1QY92",
@@ -7198,7 +8311,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNZ1QY92",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B000QSTBNS",
@@ -7243,7 +8363,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B000QSTBNS",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0GZ82M9VV",
@@ -7288,7 +8415,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0GZ82M9VV",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 30.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B000GIQT3I",
@@ -7333,7 +8467,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B000GIQT3I",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.5kg \u2022 146 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "amazon_B008IC0Y80",
@@ -7378,7 +8519,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.amazon.co.za/dp/B008IC0Y80",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "elite_bioavailability",
+    "standout_metric": {
+      "label": "Elite Uptake",
+      "value": "DIAAS 1.30 (Elite BV)",
+      "icon": "fa-solid fa-dna",
+      "badge_class": "badge-archetype-elite"
+    }
   },
   {
     "id": "amazon_B0785WTF14",
@@ -7423,7 +8571,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0785WTF14",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0FNYV9GJG",
@@ -7468,7 +8623,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0FNYV9GJG",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "amazon_B0GBX4PTN2",
@@ -7513,7 +8675,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0GBX4PTN2",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 35.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "amazon_B0015R3AOA",
@@ -7558,7 +8727,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.amazon.co.za/dp/B0015R3AOA",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_nutritech_premium-whey-protein-vanilla-1kg",
@@ -7603,7 +8779,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_premium-whey-protein-vanilla-1kg/p/316647",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_notorious-whey-protein-vanilla-908g",
@@ -7648,7 +8831,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_notorious-whey-protein-vanilla-908g/p/332418",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_pure-whey-protein-chocolate-1kg",
@@ -7693,7 +8883,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_pure-whey-protein-chocolate-1kg/p/257054",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_premium-whey-protein-peanut-butter-1kg",
@@ -7738,7 +8935,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_premium-whey-protein-peanut-butter-1kg/p/272374",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_pure-whey-protein-lite-chocolate-1kg",
@@ -7783,7 +8987,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_pure-whey-protein-lite-chocolate-1kg/p/257057",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_clear-whey-protein-isolate-watermelon-500g",
@@ -7828,7 +9039,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://clicks.co.za/nutritech_clear-whey-protein-isolate-watermelon-500g/p/402626",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_nutritech_clear-whey-protein-isolate-peach-500g",
@@ -7873,7 +9091,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://clicks.co.za/nutritech_clear-whey-protein-isolate-peach-500g/p/402627",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-100-whey-protein-strawberry-405-6g",
@@ -7918,7 +9143,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/gnc_pro-performance-100-whey-protein-strawberry-405-6g/p/222024",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-100-whey-protein-chocolate-supreme-957g",
@@ -7963,7 +9195,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/gnc_pro-performance-100-whey-protein-chocolate-supreme-957g/p/222043",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-100-whey-protein-powder-chocolate-426g",
@@ -8008,7 +9247,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/gnc_pro-performance-100-whey-protein-powder-chocolate-426g/p/222019",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-100-whey-protein-vanilla-cream-769g",
@@ -8053,7 +9299,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/gnc_pro-performance-100-whey-protein-vanilla-cream-769g/p/222046",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_gloot_whey-protein-for-her-vanilla-ice-cream-700g",
@@ -8098,7 +9351,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_whey-protein-for-her-vanilla-ice-cream-700g/p/381348",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (0.8g C / 0.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "clicks_usn_bluelab-plato-100-whey-protein-coffee-freezo-704g",
@@ -8143,7 +9403,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_bluelab-plato-100-whey-protein-coffee-freezo-704g/p/402684",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-amp-amplified-gold-whey-protein-vanilla-ice-cream-891g",
@@ -8188,7 +9455,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Enzymatically pre-cleaved peptide bonds maximize ileal absorption rate and rapid hyperaminoacidemia.",
     "url": "https://clicks.co.za/gnc_pro-performance-amp-amplified-gold-whey-protein-vanilla-ice-cream-891g/p/228592",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-amp-amplified-gold-whey-protein-double-rich-chocolate-930g",
@@ -8233,7 +9507,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Enzymatically pre-cleaved peptide bonds maximize ileal absorption rate and rapid hyperaminoacidemia.",
     "url": "https://clicks.co.za/gnc_pro-performance-amp-amplified-gold-whey-protein-double-rich-chocolate-930g/p/228590",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Active Digestive Enzymes",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_diet-fuel-ultralean-low-g-i-weight-control-shake-with-whey-protein-strawberry-900g",
@@ -8278,7 +9559,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/usn_diet-fuel-ultralean-low-g-i-weight-control-shake-with-whey-protein-strawberry-900g/p/923796",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_black-bull_whey-supreme-lean-muscle-protein-vanilla-cookie-908g",
@@ -8323,7 +9611,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/black-bull_whey-supreme-lean-muscle-protein-vanilla-cookie-908g/p/369080",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.49 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_black-bull_whey-supreme-lean-muscle-protein-chocolate-nougat-908g",
@@ -8368,7 +9663,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/black-bull_whey-supreme-lean-muscle-protein-chocolate-nougat-908g/p/369079",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.49 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_usn_hard-core-series-hardcore-whey-all-in-one-protein-french-vanilla-908g",
@@ -8413,7 +9715,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/usn_hard-core-series-hardcore-whey-all-in-one-protein-french-vanilla-908g/p/206047",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hard-core-series-hardcore-whey-all-in-one-protein-dutch-chocolate-908g",
@@ -8458,7 +9767,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/usn_hard-core-series-hardcore-whey-all-in-one-protein-dutch-chocolate-908g/p/203779",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hardcore-series-hardcore-whey-all-in-one-protein-gh-strawberry-smoothie-908g",
@@ -8503,7 +9819,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/usn_hardcore-series-hardcore-whey-all-in-one-protein-gh-strawberry-smoothie-908g/p/203774",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-chocolate-1kg",
@@ -8559,7 +9882,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-chocolate-1kg/p/327868",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.57 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-strawberry-1kg",
@@ -8615,7 +9945,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-strawberry-1kg/p/327867",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.57 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-strawberry-500g",
@@ -8660,7 +9997,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-strawberry-500g/p/327870",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "21.4g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-chocolate-500g",
@@ -8705,7 +10049,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-chocolate-500g/p/327871",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "21.4g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-vanilla-1kg",
@@ -8761,7 +10112,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-vanilla-1kg/p/327869",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.57 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_clicks_purified-protein-vanilla-500g",
@@ -8806,7 +10164,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/clicks_purified-protein-vanilla-500g/p/327872",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "21.4g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_usn_hardcore-whey-gh-chocolate-1-8kg",
@@ -8851,7 +10216,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/usn_hardcore-whey-gh-chocolate-1-8kg/p/211819",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hardcore-whey-gh-vanilla-1-8kg",
@@ -8896,7 +10268,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://clicks.co.za/usn_hardcore-whey-gh-vanilla-1-8kg/p/211820",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hydrotech-whey-chocolate-wafer-900g",
@@ -8941,7 +10320,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://clicks.co.za/usn_hydrotech-whey-chocolate-wafer-900g/p/362203",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hydrotech-whey-blueberry-muffin-900g",
@@ -8986,7 +10372,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://clicks.co.za/usn_hydrotech-whey-blueberry-muffin-900g/p/398178",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_nutritech_notorious-protein-908g",
@@ -9031,7 +10424,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_notorious-protein-908g/p/332417",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 34.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_gnc_pro-performance-100-whey-vanilla-408g",
@@ -9076,7 +10476,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/gnc_pro-performance-100-whey-vanilla-408g/p/222021",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "24.0g Prot / 33.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_usn_blue-lab-premium-whey-chocolate-454g",
@@ -9121,7 +10528,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_blue-lab-premium-whey-chocolate-454g/p/286200",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_bluelab-100-premium-whey-strawberry-908g",
@@ -9166,7 +10580,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-strawberry-908g/p/278846",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_bluelab-100-premium-whey-vanilla-908g",
@@ -9211,7 +10632,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-vanilla-908g/p/278848",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_blue-lab-premium-whey-vanilla-454g",
@@ -9256,7 +10684,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_blue-lab-premium-whey-vanilla-454g/p/286204",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hydrotech-whey-chocolate-cookie-dough-900g",
@@ -9301,7 +10736,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://clicks.co.za/usn_hydrotech-whey-chocolate-cookie-dough-900g/p/355684",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_hydrotech-whey-vanilla-cookie-dough-900g",
@@ -9346,7 +10788,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://clicks.co.za/usn_hydrotech-whey-vanilla-cookie-dough-900g/p/355877",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_nutritech_proven-whey-cookies-n-cream-908g",
@@ -9391,7 +10840,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/nutritech_proven-whey-cookies-n-cream-908g/p/355873",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.43 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_nutritech_heavy-duty-whey-chocolate-milk-908g",
@@ -9436,7 +10892,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/nutritech_heavy-duty-whey-chocolate-milk-908g/p/347672",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.51 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_nutritech_heavy-duty-whey-vanilla-softserve-908g",
@@ -9481,7 +10944,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/nutritech_heavy-duty-whey-vanilla-softserve-908g/p/347673",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Good Value",
+      "value": "R 0.51 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_nutritech_pro-sport-premium-whey-chocolate-908g",
@@ -9526,7 +10996,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://clicks.co.za/nutritech_pro-sport-premium-whey-chocolate-908g/p/392723",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "clicks_nutritech_proven-protein-vanilla-908g",
@@ -9571,7 +11048,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/nutritech_proven-protein-vanilla-908g/p/355872",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.43 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_nutritech_isolate-protein-vanilla-700g",
@@ -9616,7 +11100,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://clicks.co.za/nutritech_isolate-protein-vanilla-700g/p/322835",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "88% Protein (26.5g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-+-burn-220g",
@@ -9661,7 +11152,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-+-burn-220g/p/402571",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-+-mood-220g",
@@ -9706,7 +11204,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-+-mood-220g/p/402572",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-+-glow-220g",
@@ -9751,7 +11256,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-+-glow-220g/p/402574",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-+-hydrate-220g",
@@ -9796,7 +11308,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-+-hydrate-220g/p/402573",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_usn_bluelab-100-premuim-whey-chocolate-caramel-454g",
@@ -9841,7 +11360,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_bluelab-100-premuim-whey-chocolate-caramel-454g/p/307537",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_usn_bluelab-100-whey-plato-caribbean-mocha-704g",
@@ -9886,7 +11412,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_bluelab-100-whey-plato-caribbean-mocha-704g/p/402507",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_nutritech_proven-protein-chocolate-milk-908g",
@@ -9931,7 +11464,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/nutritech_proven-protein-chocolate-milk-908g/p/355871",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.43 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "clicks_nutritech_isolate-protein-chocolate-milk-700g",
@@ -9976,7 +11516,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://clicks.co.za/nutritech_isolate-protein-chocolate-milk-700g/p/322833",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "88% Protein (26.5g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "clicks_usn_beast-protein-chocolate-wafer-800g",
@@ -10021,7 +11568,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://clicks.co.za/usn_beast-protein-chocolate-wafer-800g/p/373753",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "DigeZyme\u00ae Multi-Enzyme",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-tropical-crush-323g",
@@ -10066,7 +11620,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-tropical-crush-323g/p/385745",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-kiwi-strawberry-323g",
@@ -10111,7 +11672,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-kiwi-strawberry-323g/p/385743",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-cranberry-crush-323g",
@@ -10156,7 +11724,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-cranberry-crush-323g/p/398673",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_nutritech_nihpro-protein-vanilla-custard-908g",
@@ -10201,7 +11776,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://clicks.co.za/nutritech_nihpro-protein-vanilla-custard-908g/p/402625",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-matcha-mango-340g",
@@ -10246,7 +11828,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-matcha-mango-340g/p/408367",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_gloot_vegan-protein-water-blueberry-289g",
@@ -10291,7 +11880,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://clicks.co.za/gloot_vegan-protein-water-blueberry-289g/p/408366",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_nutritech_vegan-protein-coffee-ice-cream-908g",
@@ -10336,7 +11932,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://clicks.co.za/nutritech_vegan-protein-coffee-ice-cream-908g/p/370355",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_nutritech_vegan-protein-pancakes-n-syrup-908g",
@@ -10381,7 +11984,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://clicks.co.za/nutritech_vegan-protein-pancakes-n-syrup-908g/p/370358",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_gloot_protein-water-peach-iced-tea-323g",
@@ -10426,7 +12036,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-peach-iced-tea-323g/p/387844",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "clicks_nutritech_pro-sport-vegan-protein-chocolate-908g",
@@ -10471,7 +12088,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://clicks.co.za/nutritech_pro-sport-vegan-protein-chocolate-908g/p/392725",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_nutritech_nihpro-protein-chocolate-ice-cream-908g",
@@ -10516,7 +12140,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://clicks.co.za/nutritech_nihpro-protein-chocolate-ice-cream-908g/p/402624",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "clicks_usn_blue-lab-whey-protein-salted-caramel-908g",
@@ -10561,7 +12192,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://clicks.co.za/usn_blue-lab-whey-protein-salted-caramel-908g/p/394338",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "digestive_friendly",
+    "standout_metric": {
+      "label": "Digestive Comfort",
+      "value": "Tolerase\u2122 L Lactase",
+      "icon": "fa-solid fa-leaf",
+      "badge_class": "badge-archetype-digestive"
+    }
   },
   {
     "id": "dischem_190883;;;;000000000190883002",
@@ -10606,7 +12244,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/npl-100-whey-protein-isolate-1-5kg-883",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "72% Protein (23.0g / 32.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_153789;;;;000000000153789001",
@@ -10651,7 +12296,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/evox-whey-protein-2kg-advance-789",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_329510;;;;000000000329510002",
@@ -10696,7 +12348,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/primal-whey-protein-750g-510",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_428781;;;;000000000428781003",
@@ -10741,7 +12400,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/primal-whey-protein-1-5kg-781",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_289122;;;;000000000289122002",
@@ -10786,7 +12452,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-iso-whey-1-5kg-122",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_153699;;;;000000000153699001",
@@ -10831,7 +12504,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/evox-whey-protein-454g-advance-699",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_206582;;;;000000000206582004",
@@ -10876,7 +12556,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/evox-whey-protein-advance-908g-582",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000437907",
@@ -10921,7 +12608,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/lifestyle-food-whey-protein-500g-unflavoured-907",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_390424;;;;000000000390424001",
@@ -10966,7 +12660,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-platinum-whey-plus-2kg-424",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.45 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "dischem_286970;;;;000000000286970002",
@@ -11011,7 +12712,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-iso-whey-750g-970",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000470099",
@@ -11056,7 +12764,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-van-099",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000470096",
@@ -11101,7 +12816,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-420g-straw-096",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000471170",
@@ -11146,7 +12868,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tferg-whey-protein-420g-choc-170",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_207934;;;;000000000207934001",
@@ -11191,7 +12920,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/usn-hardcore-whey-gh-1-8kg-934",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000470097",
@@ -11236,7 +12972,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-straw-097",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000470095",
@@ -11281,7 +13024,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-choc-095",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000470098",
@@ -11326,7 +13076,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-420g-van-098",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_289407;;;;000000000289407001",
@@ -11371,7 +13128,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/npl-anabolic-whey-1-8kg-407",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_153851;;;;000000000153851006",
@@ -11416,7 +13180,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/optimum-100-whey-900g-851",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000227318",
@@ -11461,7 +13232,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/nature-s-choice-protein-powder-whey-concentrate-400g-318",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_178098;;;;000000000178098002",
@@ -11506,7 +13284,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.dischem.co.za/usn-blue-lab-100-whey-908g-098",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_425107;;;;000000000425107001",
@@ -11551,7 +13336,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-rage-impact-whey-1-6kg-107",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_188927;;;;000000000188927003",
@@ -11596,7 +13388,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-lean-whey-640g-927",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.5g C / 1.4g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_178096;;;;000000000178096003",
@@ -11641,7 +13440,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.dischem.co.za/usn-blue-lab-100-premium-whey-2kg-096",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_440397;;;;000000000440397001",
@@ -11686,7 +13492,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/npl-whey-isolated-700g-397",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "72% Protein (23.0g / 32.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_209550;;;;000000000209550004",
@@ -11731,7 +13544,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/primal-skinny-whey-900g-550",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (0.5g C / 1.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_454706;;;;000000000454706001",
@@ -11776,7 +13596,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/myprotein-clear-whey-20-serv-706",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "dischem_417047;;;;000000000417047001",
@@ -11821,7 +13648,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/primal-whey-isolate-750g-047",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "70% Protein (21.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_390423;;;;000000000390423001",
@@ -11866,7 +13700,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-platinum-whey-plus-1kg-423",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_185967;;;;000000000185967001",
@@ -11911,7 +13752,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/npl-supreme-anabolic-whey-908g-967",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_204245;;;;000000000204245002",
@@ -11956,7 +13804,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-platinum-whey-2kg-245",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000453265",
@@ -12001,7 +13856,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/biogen-complete-whey-875g-peanut-banan-265",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000054707",
@@ -12046,7 +13908,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/optimum-100-whey-900g-choc-mint-707",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_210675;;;;000000000210675001",
@@ -12091,7 +13960,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% pure 3-stage dairy whey (Isolate, Hydrolysate, Concentrate) with zero wheat or plant fillers. High leucine (2.5g) & BCAAs (5.3g) per 32g scoop with Tolerase\u2122 L lactase.",
     "url": "https://www.dischem.co.za/usn-blue-lab-100-whey-900g-675",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_382922;;;;000000000382922001",
@@ -12136,7 +14012,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.dischem.co.za/usn-hydrotec-whey-900g-922",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_207936;;;;000000000207936003",
@@ -12181,7 +14064,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/usn-hardcore-whey-gh-908g-936",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_153942;;;;000000000153942005",
@@ -12226,7 +14116,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/optimum-100-whey-2-27kg-942",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_204250;;;;000000000204250005",
@@ -12271,7 +14168,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-platinum-whey-908g-250",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_205312;;;;000000000205312003",
@@ -12316,7 +14220,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/usn-isozero-whey-1-6kg-312",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "87% Protein (20.0g / 23.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_218165;;;;000000000218165001",
@@ -12361,7 +14272,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.dischem.co.za/biogen-collagen-whey-725g-165",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "dischem_390455;;;;000000000390455001",
@@ -12406,7 +14324,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/biogen-whey-isolate-700g-455",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "75% Protein (24.0g / 32.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_289468;;;;000000000289468001",
@@ -12451,7 +14376,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/npl-anabolic-whey-908g-468",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000475575",
@@ -12496,7 +14428,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.dischem.co.za/biogen-clear-whey-collagen-504-g-raspberry-lemonade-575",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "83% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "dischem_183836;;;;000000000183836001",
@@ -12541,7 +14480,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-2-27kg-whey-gold-836",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_382920;;;;000000000382920001",
@@ -12586,7 +14532,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Staged-release blend of Whey (WPH, WPC) diluted with Hydrolysed Wheat Protein & Wheat Gluten. Delivers 20g protein (1.9g Leucine, 4.1g BCAAs, 7.5g Glutamic Acid) per 30g scoop with DigeZyme\u00ae.",
     "url": "https://www.dischem.co.za/usn-hydrotec-whey-1-8kg-920",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_477733;;;;000000000477733001",
@@ -12631,7 +14584,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.dischem.co.za/usn-protein-water-440g-733",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "68% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "dischem_000000000289407005",
@@ -12676,7 +14636,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.dischem.co.za/npl-anabolic-whey-1-8-tin-roof-005",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_181477;;;;000000000181477002",
@@ -12721,7 +14688,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-whey-gold-477",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_211799;;;;000000000211799002",
@@ -12766,7 +14740,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitrotech-whey-gold-2-27kg-799",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_211792;;;;000000000211792001",
@@ -12811,7 +14792,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_335916;;;;000000000335916002",
@@ -12856,7 +14844,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-rage-impact-whey-750g-916",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_168181;;;;000000000168181002",
@@ -12901,7 +14896,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/myprotein-impact-whey-1kg-181",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000041442",
@@ -12946,7 +14948,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/health-connection-just-whey-450g-442",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_437551;;;;000000000437551002",
@@ -12991,7 +15000,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-halo-pro-700g-551",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_197706;;;;000000000197706001",
@@ -13036,7 +15052,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://www.dischem.co.za/future-life-high-protein-1kg-706",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_416723;;;;000000000416723001",
@@ -13081,7 +15104,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.dischem.co.za/primal-casein-protein-750g-723",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "dischem_221666;;;;000000000221666003",
@@ -13126,7 +15156,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/usn-iso-pro-zero-carb-690g-666",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "87% Protein (20.0g / 23.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_410051;;;;000000000410051001",
@@ -13171,7 +15208,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/biogen-blended-protein-1-75kg-051",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_410053;;;;000000000410053001",
@@ -13216,7 +15260,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/biogen-blended-protein-875g-053",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_206527;;;;000000000206527004",
@@ -13261,7 +15312,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/evox-leanpro-diet-protein-900g-527",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (5.0g C / 1.5g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_153929;;;;000000000153929003",
@@ -13306,7 +15364,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-performance-1-8kg-929",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_175180;;;;000000000175180002",
@@ -13351,7 +15416,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-ripped-1-81kg-180",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.0g C / 2.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_153856;;;;000000000153856002",
@@ -13396,7 +15468,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-performance-856",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_384458;;;;000000000384458001",
@@ -13441,7 +15520,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/muscle-tech-nitro-tech-perfomance-458",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_220404;;;;000000000220404001",
@@ -13486,7 +15572,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-ripped-908g-404",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.0g C / 2.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_000000000000455895",
@@ -13531,7 +15624,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/mt-nitrotech-performance-4lb-vanilla-895",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_384470;;;;000000000384470001",
@@ -13576,7 +15676,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/muscle-tech-nitro-tech-ripped-470",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (2.0g C / 2.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_209508;;;;000000000209508004",
@@ -13621,7 +15728,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/primal-diet-shake-900g-508",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.2g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_329520;;;;000000000329520002",
@@ -13666,7 +15780,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.dischem.co.za/primal-mass-gain-1kg-520",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_226591;;;;000000000226591001",
@@ -13711,7 +15832,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.dischem.co.za/biogen-bulk-45-150-4kg-591",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.0kg \u2022 17 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "dischem_153904;;;;000000000153904002",
@@ -13756,7 +15884,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.dischem.co.za/optimum-gold-stand-casein-2lbs-904",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "dischem_211302;;;;000000000211302001",
@@ -13801,7 +15936,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Premium whey concentrate fortified with L-Carnitine, CLA, and Garcinia for metabolic enhancement (115% DIAAS).",
     "url": "https://www.dischem.co.za/tony-ferguson-go-shake-500g-302",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (11.0g C / 0.9g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "dischem_153683;;;;000000000153683002",
@@ -13846,7 +15988,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/lifegain-300g-683",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000117692",
@@ -13891,7 +16040,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/lifegain-junior-vanilla-300g-692",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_196312;;;;000000000196312001",
@@ -13936,7 +16092,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/lifegain-advanced-1kg-312",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000427893",
@@ -13981,7 +16144,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/npl-platinum-whey-2kg-chocolate-candy-dream-893",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000000326850",
@@ -14026,7 +16196,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/nestle-resorce-shey-protein-neutral-850",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "88% Protein (10.6g / 12.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_000000000000431055",
@@ -14071,7 +16248,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.dischem.co.za/biogen-rage-impact-whey-750g-chocolate-055",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000166932002",
@@ -14116,7 +16300,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/myprotein-whey-isolate-1kg-strawberry",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "92% Protein (23.0g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_000000000166933001",
@@ -14161,7 +16352,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/myprotein-whey-1kg-strawberry",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000166933002",
@@ -14206,7 +16404,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/myprotein-whey-1kg-vanilla",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000166933003",
@@ -14251,7 +16456,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.dischem.co.za/myprotein-impact-whey-1kg-chocolate-peanut-butter",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "dischem_000000000166932003",
@@ -14296,7 +16508,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.dischem.co.za/myprotein-whey-isolate-1kg-vanilla",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "92% Protein (23.0g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "dischem_667;;;;000000000000667003",
@@ -14341,7 +16560,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.dischem.co.za/weider-mega-mass-4000-4kg-667",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.0kg \u2022 26 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "dischem_000000000000431114",
@@ -14386,7 +16612,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.dischem.co.za/biogen-bulk-45-150-4kg-chocolate-114",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.0kg \u2022 17 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "nutritech_proven_454g",
@@ -14431,7 +16664,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-454g-1lbs/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (45 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "nutritech_proven_908g",
@@ -14476,7 +16716,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-908g-2lbs/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.43 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "nutritech_proven_1800g",
@@ -14521,7 +16768,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/proven-nt-protein/proven-protein-1-8kg-4lbs/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.40 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "nutritech_premium_454g",
@@ -14566,7 +16820,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/notorious-nt-whey-1lb-454g/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (45 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "nutritech_premium_908g",
@@ -14611,7 +16872,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/premium-whey-protein-908g/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (45 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "nutritech_premium_2000g",
@@ -14656,7 +16924,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/premium-whey-protein-2kg/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (60 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "nutritech_premium_natural_908g",
@@ -14701,7 +16976,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/sport-supplements/fitness/nutritech-premium-whey-protein-natural-2lbs-908g/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "nutritech_prosport_premium_908g",
@@ -14746,7 +17028,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nutritech-prosport-premium-whey-informed-sport-tested/",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "23.0g Prot / 32.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "nutritech_heavyduty_908g",
@@ -14791,7 +17080,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/heavy-duty-nt-whey/heavy-duty-protein-2lbs-908g/",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.41 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "nutritech_heavyduty_1800g",
@@ -14836,7 +17132,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/heavy-duty-nt-whey/heavy-duty-protein-4lbs-1-8kg/",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.38 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "nutritech_nt_isolate_700g",
@@ -14881,7 +17184,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nt-whey/nt-isolate-700g/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "88% Protein (26.5g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "nutritech_clear_whey_500g",
@@ -14926,7 +17236,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/whey-protein/nutritech-clear-whey-protein-isolate-500g-1-1lbs/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "nutritech_casein_908g",
@@ -14971,7 +17288,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/shop-by-goals/lean-muscle/casein-slow-release-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "futurelife_smartfood_choc_1kg",
@@ -15016,7 +17340,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food-chocolate-1kg",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (36 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "futurelife_smartfood_vanilla_1kg",
@@ -15061,7 +17392,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food-vanilla-1kg",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (28 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "futurelife_smartfood_pb_500g",
@@ -15106,7 +17444,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food\u2122-peanut-butter-500g",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.9 (45 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "futurelife_smartfood_choc_500g",
@@ -15151,7 +17496,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food\u2122-chocolate-500g",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (22 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "futurelife_smartfood_vanilla_500g",
@@ -15196,7 +17548,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food\u2122-vanilla-500g",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.5g Prot / 75.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "futurelife_smartfood_vanilla_600g",
@@ -15241,7 +17600,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.92,
     "quality_summary": "Formulated with 43% SmartProtein3D\u2122 (Soy flour, soy isolate, skim milk, whey concentrate, caseinate) and SmartMaize\u2122. Primary protein is plant-based (soy), with moderate DIAAS (88%) and higher carbohydrate content (39%).",
     "url": "https://futurelife.co.za/products/high-protein-smart-food\u2122-vanilla-75g-x-8",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "balanced_standard",
+    "standout_metric": {
+      "label": "Daily Standard",
+      "value": "22.5g Prot / 75.0g Scoop",
+      "icon": "fa-solid fa-shield-halved",
+      "badge_class": "badge-archetype-standard"
+    }
   },
   {
     "id": "futurelife_repairfood_choc_525g",
@@ -15286,7 +17652,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://futurelife.co.za/products/repair-food-chocolate-flavoured-nutritional-supplement-shake",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "futurelife_repairfood_vanilla_525g",
@@ -15331,7 +17704,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://futurelife.co.za/products/repair-food-vanilla-flavoured-nutritional-supplement-shake",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "futurelife_beautifood_caramel_385g",
@@ -15376,7 +17756,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://futurelife.co.za/products/beauti-food-protein-shake-caramel-latte-box",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "futurelife_beautifood_vanilla_385g",
@@ -15421,7 +17808,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://futurelife.co.za/products/beauti-food-protein-shake-french-vanilla-box",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_67872968802383",
@@ -15466,7 +17860,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-peptide-protein-900g?variant=67872968802383",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_67872968835151",
@@ -15511,7 +17912,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-peptide-protein-900g?variant=67872968835151",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_50516351090767",
@@ -15556,7 +17964,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-her-collagen-whey-900g?variant=50516351090767",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_50516351123535",
@@ -15601,7 +18016,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-her-collagen-whey-900g?variant=50516351123535",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_50561653866575",
@@ -15646,7 +18068,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-yeast-protein-900g?variant=50561653866575",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_50561653899343",
@@ -15691,7 +18120,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-yeast-protein-900g?variant=50561653899343",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_46328781766735",
@@ -15736,7 +18172,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/beauty-gen-collagen-coffee-creamer?variant=46328781766735",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_46328785109071",
@@ -15781,7 +18224,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/remedy-greens-collagen-mobility?variant=46328785109071",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_46328832622671",
@@ -15826,7 +18276,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/nature-s-nutrition-plant-protein?variant=46328832622671",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_46328832655439",
@@ -15871,7 +18328,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/nature-s-nutrition-plant-protein?variant=46328832655439",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_46163925434447",
@@ -15916,7 +18380,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-protein-water-plus-780g?variant=46163925434447",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "77% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_46163925499983",
@@ -15961,7 +18432,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-protein-water-plus-780g?variant=46163925499983",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "77% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_46163582746703",
@@ -16006,7 +18484,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46163582746703",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_46880001753167",
@@ -16051,7 +18536,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46880001753167",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_46163582779471",
@@ -16096,7 +18588,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46163582779471",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_46880001785935",
@@ -16141,7 +18640,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46880001785935",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_46163582812239",
@@ -16186,7 +18692,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46163582812239",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_46880001818703",
@@ -16231,7 +18744,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg?variant=46880001818703",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_45071570370639",
@@ -16276,7 +18796,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/her-skinny-collagen-powder-strawberry-lemonade-450g?variant=45071570370639",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_45071570403407",
@@ -16321,7 +18848,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/her-skinny-collagen-powder-strawberry-lemonade-450g?variant=45071570403407",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_45071570436175",
@@ -16366,7 +18900,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/her-skinny-collagen-powder-strawberry-lemonade-450g?variant=45071570436175",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_44487382106191",
@@ -16411,7 +18952,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/hardcore-alpha-plant?variant=44487382106191",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_44487382138959",
@@ -16456,7 +19004,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/hardcore-alpha-plant?variant=44487382138959",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.41 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_44487382171727",
@@ -16501,7 +19056,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/hardcore-alpha-plant?variant=44487382171727",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_44487382204495",
@@ -16546,7 +19108,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/hardcore-alpha-plant?variant=44487382204495",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.41 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_43926172926031",
@@ -16591,7 +19160,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/protein-hydrator?variant=43926172926031",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "77% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_45052024520783",
@@ -16636,7 +19212,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/protein-hydrator?variant=45052024520783",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "77% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_43926158508111",
@@ -16681,7 +19264,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-her-cheat-meal?variant=43926158508111",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (12.0g C / 2.5g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_43926158540879",
@@ -16726,7 +19316,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-her-cheat-meal?variant=43926158540879",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (12.0g C / 2.5g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_43926158573647",
@@ -16771,7 +19368,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-her-cheat-meal?variant=43926158573647",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (12.0g C / 2.5g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_43688067956815",
@@ -16816,7 +19420,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/instant-wholefood-protein-smoothie?variant=43688067956815",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_44487396065359",
@@ -16861,7 +19472,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/instant-wholefood-protein-smoothie?variant=44487396065359",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_43688067989583",
@@ -16906,7 +19524,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/instant-wholefood-protein-smoothie?variant=43688067989583",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_44487396098127",
@@ -16951,7 +19576,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/instant-wholefood-protein-smoothie?variant=44487396098127",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_43590122438735",
@@ -16996,7 +19628,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-clear-whey-iso?variant=43590122438735",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_43590122471503",
@@ -17041,7 +19680,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-clear-whey-iso?variant=43590122471503",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "80% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "mywellness_43161253412943",
@@ -17086,7 +19732,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g?variant=43161253412943",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_43161253904463",
@@ -17131,7 +19784,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g?variant=43161253904463",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_43161253937231",
@@ -17176,7 +19836,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g?variant=43161253937231",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_43161253969999",
@@ -17221,7 +19888,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g?variant=43161253969999",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_42764574261327",
@@ -17266,7 +19940,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-clean-diet-matcha-1kg-vanilla-matcha?variant=42764574261327",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 2.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_28751894741071",
@@ -17311,7 +19992,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/naked-whey-isolate?variant=28751894741071",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "mywellness_29264044982351",
@@ -17356,7 +20044,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/naked-whey-isolate?variant=29264044982351",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "mywellness_41438149312591",
@@ -17401,7 +20096,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/clean-whey-isolate-1-8kg?variant=41438149312591",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "mywellness_41438149345359",
@@ -17446,7 +20148,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.",
     "url": "https://www.my-wellness.co.za/products/clean-whey-isolate-1-8kg?variant=41438149345359",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (22.5g / 25.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   },
   {
     "id": "mywellness_41604836393039",
@@ -17491,7 +20200,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-alpha-whey-2kg?variant=41604836393039",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41604884398159",
@@ -17536,7 +20252,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.my-wellness.co.za/products/my-wellness-alpha-whey-2kg?variant=41604884398159",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41445139644495",
@@ -17581,7 +20304,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=41445139644495",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_50516063354959",
@@ -17626,7 +20356,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063354959",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.45 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_50516063387727",
@@ -17671,7 +20408,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063387727",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.2kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_41445139677263",
@@ -17716,7 +20460,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=41445139677263",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_50516063420495",
@@ -17761,7 +20512,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063420495",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.45 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_50516063453263",
@@ -17806,7 +20564,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063453263",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.2kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_41445325766735",
@@ -17851,7 +20616,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=41445325766735",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_50516063486031",
@@ -17896,7 +20668,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063486031",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.45 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_50516063518799",
@@ -17941,7 +20720,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063518799",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.2kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_45165532512335",
@@ -17986,7 +20772,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=45165532512335",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_50516063551567",
@@ -18031,7 +20824,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063551567",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.45 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_50516063584335",
@@ -18076,7 +20876,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg?variant=50516063584335",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.2kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_41974071656527",
@@ -18121,7 +20928,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/copy-of-my-wellness-soy-protein-isolate-920g?variant=41974071656527",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41974071689295",
@@ -18166,7 +20980,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/copy-of-my-wellness-soy-protein-isolate-920g?variant=41974071689295",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41440630112335",
@@ -18211,7 +21032,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-diet-shake-1kg?variant=41440630112335",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_41810652987471",
@@ -18256,7 +21084,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/my-wellness-diet-shake-1kg?variant=41810652987471",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_41437919903823",
@@ -18301,7 +21136,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/clean-diet-whey-800g?variant=41437919903823",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_43700753858639",
@@ -18346,7 +21188,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/clean-diet-whey-800g?variant=43700753858639",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_41437947396175",
@@ -18391,7 +21240,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/clean-diet-whey-800g?variant=41437947396175",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_43700753891407",
@@ -18436,7 +21292,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/clean-diet-whey-800g?variant=43700753891407",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (4.5g C / 1.8g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_41437682466895",
@@ -18481,7 +21344,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/clean-diet-plant-900g?variant=41437682466895",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_43700743733327",
@@ -18526,7 +21396,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/clean-diet-plant-900g?variant=43700743733327",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41437686562895",
@@ -18571,7 +21448,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/clean-diet-plant-900g?variant=41437686562895",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_43700743766095",
@@ -18616,7 +21500,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.my-wellness.co.za/products/clean-diet-plant-900g?variant=43700743766095",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_40679709048911",
@@ -18661,7 +21552,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.my-wellness.co.za/products/alpha-whey-900g?variant=40679709048911",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40679709081679",
@@ -18706,7 +21604,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).",
     "url": "https://www.my-wellness.co.za/products/alpha-whey-900g?variant=40679709081679",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41965964656719",
@@ -18751,7 +21656,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/stay-golden-collagen-1kg-from-grass-fed-cows?variant=41965964656719",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_41965964689487",
@@ -18796,7 +21708,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/stay-golden-collagen-1kg-from-grass-fed-cows?variant=41965964689487",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_40632057462863",
@@ -18841,7 +21760,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/wholefood-vegainer-3-6kg?variant=40632057462863",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.6kg \u2022 30 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_46487076700239",
@@ -18886,7 +21812,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/wholefood-vegainer-3-6kg?variant=46487076700239",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40632057495631",
@@ -18931,7 +21864,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/wholefood-vegainer-3-6kg?variant=40632057495631",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.6kg \u2022 30 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_46487076733007",
@@ -18976,7 +21916,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/wholefood-vegainer-3-6kg?variant=46487076733007",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40280465113167",
@@ -19021,7 +21968,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=40280465113167",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41972609253455",
@@ -19066,7 +22020,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=41972609253455",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40280465145935",
@@ -19111,7 +22072,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=40280465145935",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41972609286223",
@@ -19156,7 +22124,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=41972609286223",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40280465178703",
@@ -19201,7 +22176,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=40280465178703",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41972609318991",
@@ -19246,7 +22228,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=41972609318991",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_42163164381263",
@@ -19291,7 +22280,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=42163164381263",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_42431988072527",
@@ -19336,7 +22332,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/superfood-protein-smoothie-430g-12-superfoods?variant=42431988072527",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_39349333524559",
@@ -19381,7 +22384,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/keto-diet-shake-600g-chocolate?variant=39349333524559",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (3.0g C / 28.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_39349333557327",
@@ -19426,7 +22436,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.my-wellness.co.za/products/keto-diet-shake-600g-chocolate?variant=39349333557327",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (3.0g C / 28.0g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "mywellness_39282554470479",
@@ -19471,7 +22488,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/sport-collagen-500g-apple-berry?variant=39282554470479",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_41966024818767",
@@ -19516,7 +22540,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/pure-pea-protein-1kg?variant=41966024818767",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41966024851535",
@@ -19561,7 +22592,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/pure-pea-protein-1kg?variant=41966024851535",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_67606075277391",
@@ -19606,7 +22644,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/pure-pea-protein-1kg?variant=67606075277391",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41965997588559",
@@ -19651,7 +22696,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/pure-collagen-1kg?variant=41965997588559",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_41965997621327",
@@ -19696,7 +22748,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/pure-collagen-1kg?variant=41965997621327",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_32907937710159",
@@ -19741,7 +22800,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=32907937710159",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956739151",
@@ -19786,7 +22852,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956739151",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956771919",
@@ -19831,7 +22904,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956771919",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956804687",
@@ -19876,7 +22956,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956804687",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32907937742927",
@@ -19921,7 +23008,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=32907937742927",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956837455",
@@ -19966,7 +23060,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956837455",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956870223",
@@ -20011,7 +23112,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956870223",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956902991",
@@ -20056,7 +23164,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956902991",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_39978228514895",
@@ -20101,7 +23216,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=39978228514895",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956935759",
@@ -20146,7 +23268,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956935759",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973956968527",
@@ -20191,7 +23320,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973956968527",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973957001295",
@@ -20236,7 +23372,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957001295",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_40781213990991",
@@ -20281,7 +23424,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=40781213990991",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973957034063",
@@ -20326,7 +23476,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957034063",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973957066831",
@@ -20371,7 +23528,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957066831",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973957099599",
@@ -20416,7 +23580,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957099599",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_41973957132367",
@@ -20461,7 +23632,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957132367",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973957165135",
@@ -20506,7 +23684,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=41973957165135",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_46022282051663",
@@ -20551,7 +23736,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022282051663",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022283034703",
@@ -20596,7 +23788,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022283034703",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022283657295",
@@ -20641,7 +23840,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022283657295",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022287884367",
@@ -20686,7 +23892,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022287884367",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_46022425018447",
@@ -20731,7 +23944,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022425018447",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022442877007",
@@ -20776,7 +23996,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022442877007",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022453329999",
@@ -20821,7 +24048,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022453329999",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46022460014671",
@@ -20866,7 +24100,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g?variant=46022460014671",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32907941118031",
@@ -20911,7 +24152,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=32907941118031",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972517961807",
@@ -20956,7 +24204,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972517961807",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972517994575",
@@ -21001,7 +24256,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972517994575",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518027343",
@@ -21046,7 +24308,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518027343",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_32907941150799",
@@ -21091,7 +24360,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=32907941150799",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518060111",
@@ -21136,7 +24412,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518060111",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518092879",
@@ -21181,7 +24464,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518092879",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518125647",
@@ -21226,7 +24516,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518125647",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_32907941183567",
@@ -21271,7 +24568,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=32907941183567",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518158415",
@@ -21316,7 +24620,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518158415",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518191183",
@@ -21361,7 +24672,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518191183",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518223951",
@@ -21406,7 +24724,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518223951",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_40045378535503",
@@ -21451,7 +24776,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=40045378535503",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518256719",
@@ -21496,7 +24828,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518256719",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518289487",
@@ -21541,7 +24880,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518289487",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518322255",
@@ -21586,7 +24932,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518322255",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518355023",
@@ -21631,7 +24984,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518355023",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_41972518387791",
@@ -21676,7 +25036,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=41972518387791",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_42161611145295",
@@ -21721,7 +25088,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.my-wellness.co.za/products/super-vegan-protein-450g?variant=42161611145295",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "mywellness_32907932336207",
@@ -21766,7 +25140,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=32907932336207",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205368911",
@@ -21811,7 +25192,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205368911",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205401679",
@@ -21856,7 +25244,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205401679",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855588839503",
@@ -21901,7 +25296,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855588839503",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32907932368975",
@@ -21946,7 +25348,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=32907932368975",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205467215",
@@ -21991,7 +25400,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205467215",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205499983",
@@ -22036,7 +25452,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205499983",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855588872271",
@@ -22081,7 +25504,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855588872271",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32907932401743",
@@ -22126,7 +25556,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=32907932401743",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205565519",
@@ -22171,7 +25608,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205565519",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205598287",
@@ -22216,7 +25660,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205598287",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855588905039",
@@ -22261,7 +25712,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855588905039",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_40045362610255",
@@ -22306,7 +25764,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=40045362610255",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205663823",
@@ -22351,7 +25816,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205663823",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205696591",
@@ -22396,7 +25868,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205696591",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855588937807",
@@ -22441,7 +25920,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855588937807",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_40820664762447",
@@ -22486,7 +25972,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=40820664762447",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205762127",
@@ -22531,7 +26024,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205762127",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_41973205794895",
@@ -22576,7 +26076,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205794895",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855588970575",
@@ -22621,7 +26128,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855588970575",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_41973205860431",
@@ -22666,7 +26180,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=41973205860431",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46855589003343",
@@ -22711,7 +26232,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46855589003343",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_46017292599375",
@@ -22756,7 +26284,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46017292599375",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46021232721999",
@@ -22801,7 +26336,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46021232721999",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46021243928655",
@@ -22846,7 +26388,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46021243928655",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_46021260705871",
@@ -22891,7 +26440,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/super-natures-whey-450g?variant=46021260705871",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "2.8kg \u2022 91 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32814934196303",
@@ -22936,7 +26492,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/clean-casein-protein-840g?variant=32814934196303",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_41973313765455",
@@ -22981,7 +26544,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/clean-casein-protein-840g?variant=41973313765455",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_32814934229071",
@@ -23026,7 +26596,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/clean-casein-protein-840g?variant=32814934229071",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_41973313798223",
@@ -23071,7 +26648,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/clean-casein-protein-840g?variant=41973313798223",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "mywellness_32814746533967",
@@ -23116,7 +26700,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/grass-fed-whey-concentrate?variant=32814746533967",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_40820577206351",
@@ -23161,7 +26752,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/grass-fed-whey-concentrate?variant=40820577206351",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_43843973185615",
@@ -23206,7 +26804,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Natural WPC80 preserving native immunoglobulins, lactoferrin, and high biological value (118% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/grass-fed-whey-concentrate?variant=43843973185615",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "3.0kg \u2022 100 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_32420642750543",
@@ -23251,7 +26856,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/game-changer-meal-replacement-choc-1kg?variant=32420642750543",
-    "in_stock": false
+    "in_stock": false,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_32420642783311",
@@ -23296,7 +26908,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.my-wellness.co.za/products/game-changer-meal-replacement-choc-1kg?variant=32420642783311",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_32227823583311",
@@ -23341,7 +26960,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/collagen-hot-chocolate-200g?variant=32227823583311",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_31889086971983",
@@ -23386,7 +27012,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.my-wellness.co.za/products/suoer-collagen-creamer-300g-with-baobab?variant=31889086971983",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "mywellness_28751964930127",
@@ -23431,7 +27064,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/ketobolic?variant=28751964930127",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_42296284184655",
@@ -23476,7 +27116,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.98,
     "quality_summary": "High total nitrogen and ergogenic support from added Creatine, Glycine, and Taurine; tailored for strength & mass recovery (105% DIAAS).",
     "url": "https://www.my-wellness.co.za/products/ketobolic?variant=42296284184655",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (34 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "mywellness_29255762640975",
@@ -23521,7 +27168,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/hard-mass-1-5?variant=29255762640975",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.44 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_41974135193679",
@@ -23566,7 +27220,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/hard-mass-1-5?variant=41974135193679",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.0kg \u2022 26 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "mywellness_29255759495247",
@@ -23611,7 +27272,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/hard-mass-1-5?variant=29255759495247",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "cost_leader",
+    "standout_metric": {
+      "label": "Best Value",
+      "value": "R 0.44 / g prot",
+      "icon": "fa-solid fa-coins",
+      "badge_class": "badge-archetype-value"
+    }
   },
   {
     "id": "mywellness_41974135226447",
@@ -23656,7 +27324,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.95,
     "quality_summary": "Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.",
     "url": "https://www.my-wellness.co.za/products/hard-mass-1-5?variant=41974135226447",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bulk_saver",
+    "standout_metric": {
+      "label": "Bulk Economy",
+      "value": "4.0kg \u2022 26 Servings",
+      "icon": "fa-solid fa-box-open",
+      "badge_class": "badge-archetype-bulk"
+    }
   },
   {
     "id": "alt_0_usnbluelab100plant",
@@ -23701,7 +27376,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://za.usn.global/products/bluelab-100-plant-protein-300-g-750-g-900-g",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_1_usnbluelab100plato",
@@ -23746,7 +27428,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.82,
     "quality_summary": "Blend of Wheat protein (gluten), Pea protein isolate, Pumpkin seed, and Watermelon seed protein with 48mg caffeine from Plato Matcha.",
     "url": "https://za.usn.global/products/bluelab-100-plato-plant-protein",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.78 \u2022 PDCAAS 0.82",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_2_usnisopro100beefpr",
@@ -23791,7 +27480,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.42,
     "quality_summary": "100% dairy-free hydrolysed bovine collagen isolate. Extremely rich in Glycine (5.3g) and Proline (2.9g) for joints, tendons, and gut health, but heavily deficient in EAAs (only 4.3g EAAs/scoop) and BCAAs (0.7g Leucine) with an ileal DIAAS of 38%.",
     "url": "https://za.usn.global/products/isopro-100-beef",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_3_usndietfuelultrale",
@@ -23836,7 +27532,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://za.usn.global/products/diet-fuel-ultralean-900-g-1-8-kg",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (42 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "alt_4_usnproteinwaterhyd",
@@ -23881,7 +27584,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://za.usn.global/products/protein-water-hydration",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "68% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "alt_5_usn100purecollagen",
@@ -23926,7 +27636,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://za.usn.global/products/100-pure-collagen-powder-200-g",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_6_nutritech100veganp",
@@ -23971,7 +27688,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/vegan-protein/vegan-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_7_nutritech100veganp",
@@ -24016,7 +27740,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/vegan-protein/100-vegan-protein-2kg/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_8_nutritechprosportv",
@@ -24061,7 +27792,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://www.nutritechfit.com/shop/supplements/proteins/vegan-protein/nutritech-prosport-vegan-protein-informed-sport-tested/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_9_nutritechnihpropro",
@@ -24106,7 +27844,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Hydrolysed Pea & Rice protein isolate fortified with free-form L-Leucine (2.76g), L-Lysine, and L-Methionine to match whey amino acid bioavailability (81.6% protein purity).",
     "url": "https://www.nutritechfit.com/shop/sport-supplements/cricket/nutritech-nihpro-protein-isolate-908g-2lbs/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 1.16 \u2022 PDCAAS 1.00",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_10_nutritechcaseinslo",
@@ -24151,7 +27896,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.nutritechfit.com/shop/shop-by-goals/lean-muscle/casein-slow-release-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "alt_11_optimumnutritiongo",
@@ -24196,7 +27948,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.dischem.co.za/optimum-gold-stand-casein-2lbs-904",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "alt_12_mywellnessnaturesm",
@@ -24241,7 +28000,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Slow-digesting anti-catabolic dairy protein (6-8 hour sustained amino acid release) with exceptional ileal digestibility (128% DIAAS).",
     "url": "https://www.takealot.com/my-wellness-nature-s-milk-protein-900g-unflavoured/PLID102835019",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "sustained_release",
+    "standout_metric": {
+      "label": "Slow Release",
+      "value": "Micellar Casein (7-8h)",
+      "icon": "fa-solid fa-moon",
+      "badge_class": "badge-archetype-casein"
+    }
   },
   {
     "id": "alt_13_mywellnesssuperveg",
@@ -24286,7 +28052,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.takealot.com/my-wellness-vegan-protein-powder-900g-chocolate/PLID90869200",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_14_mywellnesssuperveg",
@@ -24331,7 +28104,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.takealot.com/my-wellness-vegan-protein-3kg-chocolate/PLID71641604",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_15_mywellnesssupercle",
@@ -24376,7 +28156,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.takealot.com/my-wellness-super-clean-protein-x5-1-8kg-vanilla-bean/PLID94972088",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (42 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "alt_16_nplplantproteinveg",
@@ -24421,7 +28208,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.npl.za.com/products/vegan-protein",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_17_nplcollagenprohybr",
@@ -24466,7 +28260,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.npl.za.com/products/collagen-pro-box",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "77% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "alt_18_npldietpromealrepl",
@@ -24511,7 +28312,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.npl.za.com/products/diet-pro-meal-replacement-shakes",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (42 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "alt_19_biogenplantbasedpr",
@@ -24556,7 +28364,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.dischem.co.za/biogen-plant-protein-700g-697",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_20_biogencompletewhey",
@@ -24601,7 +28416,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 1.0,
     "quality_summary": "Multi-stage timed-release matrix combining fast dairy whey with plant isolates and/or micellar casein for extended amino acid delivery.",
     "url": "https://www.dischem.co.za/biogen-blended-protein-875g-053",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (42 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   {
     "id": "alt_21_biogenpeptancollag",
@@ -24646,7 +28468,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.dischem.co.za/biogen-peptan-collagen-280g-unflavoured-366",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_22_biogenclearwheycol",
@@ -24691,7 +28520,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://www.dischem.co.za/biogen-clear-whey-collagen-504-g-raspberry-lemonade-575",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "83% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "alt_23_theharvesttablepur",
@@ -24736,7 +28572,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.4,
     "quality_summary": "90-97% protein purity specialized for tendons, ligaments, cartilage, skin, and gut lining (high Glycine/Proline/Hydroxyproline, lacks Tryptophan for standalone muscle building).",
     "url": "https://www.dischem.co.za/harvest-table-collagen-450g-powder-061",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_24_theharvesttableorg",
@@ -24781,7 +28624,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.42,
     "quality_summary": "100% dairy-free hydrolysed bovine collagen isolate. Extremely rich in Glycine (5.3g) and Proline (2.9g) for joints, tendons, and gut health, but heavily deficient in EAAs (only 4.3g EAAs/scoop) and BCAAs (0.7g Leucine) with an ileal DIAAS of 38%.",
     "url": "https://www.dischem.co.za/the-harvest-table-bone-broth-350g-933",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_25_lifestylefoodpureb",
@@ -24826,7 +28676,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.42,
     "quality_summary": "100% dairy-free hydrolysed bovine collagen isolate. Extremely rich in Glycine (5.3g) and Proline (2.9g) for joints, tendons, and gut health, but heavily deficient in EAAs (only 4.3g EAAs/scoop) and BCAAs (0.7g Leucine) with an ileal DIAAS of 38%.",
     "url": "https://www.dischem.co.za/lifestyle-food-bone-broth-350g-149",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "joint_collagen",
+    "standout_metric": {
+      "label": "Joint & Skin",
+      "value": "Pure Hydrolysed Peptides",
+      "icon": "fa-solid fa-bone",
+      "badge_class": "badge-archetype-collagen"
+    }
   },
   {
     "id": "alt_26_youthfullivingvega",
@@ -24871,7 +28728,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.dischem.co.za/youthful-living-vegan-1-05kg-884",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_27_32giplantbasedprot",
@@ -24916,7 +28780,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.dischem.co.za/32gi-protein-shake-720g-276",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_28_phytoprothriveclea",
@@ -24961,7 +28832,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://phytopro.co.za/product/thrive-daily-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_29_phytoprosportactiv",
@@ -25006,7 +28884,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://phytopro.co.za/product/sport-recovery-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_30_phytoprovegancolla",
@@ -25051,7 +28936,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://phytopro.co.za/product/vegan-collagen-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_31_phytopromusclelean",
@@ -25096,7 +28988,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://phytopro.co.za/product/muscle-lean-protein/",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "diet_lean",
+    "standout_metric": {
+      "label": "Calorie Control",
+      "value": "Lean Whey (7.6g C / 3.3g F)",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "badge_class": "badge-archetype-diet"
+    }
   },
   {
     "id": "alt_32_peakplantproteinsh",
@@ -25141,7 +29040,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://clicks.co.za/peak_protein-shake-strawberry-roasted-cheesecake-750g/p/395927",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_33_glootveganproteinw",
@@ -25186,7 +29092,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.89,
     "quality_summary": "Hypoallergenic, dairy-free 100% Pea Protein Isolate. Naturally rich in arginine and branched-chain amino acids (~82% DIAAS, limited slightly by methionine).",
     "url": "https://clicks.co.za/gloot_vegan-protein-water-blueberry-289g/p/408366",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.82 \u2022 PDCAAS 0.89",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   },
   {
     "id": "alt_34_glootproteinwaterc",
@@ -25231,7 +29144,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.9,
     "quality_summary": "Combines Whey Protein with Hydrolysed Bovine Collagen Peptides. Collagen supports joints/skin but lacks tryptophan, moderating overall muscle DIAAS to 90%.",
     "url": "https://clicks.co.za/gloot_protein-water-cranberry-crush-323g/p/398673",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "clear_refreshing",
+    "standout_metric": {
+      "label": "Juice Style",
+      "value": "74% Prot \u2022 Light & Fruity",
+      "icon": "fa-solid fa-droplet",
+      "badge_class": "badge-archetype-clear"
+    }
   },
   {
     "id": "alt_35_ssasupplementsvega",
@@ -25276,7 +29196,14 @@ window.EMBEDDED_PROTEINS = [
     "pdcaas_score": 0.93,
     "quality_summary": "Complementary plant protein blend (Pea + Rice/Hemp/Seed) balances methionine and lysine limitations for a more complete vegan amino acid profile.",
     "url": "https://www.takealot.com/ssa-vegan-protein-908g-chocolate-mocha/PLID66829808",
-    "in_stock": true
+    "in_stock": true,
+    "internal_archetype": "bioavailable_plant",
+    "standout_metric": {
+      "label": "Complete Plant",
+      "value": "DIAAS 0.91 \u2022 PDCAAS 0.93",
+      "icon": "fa-solid fa-seedling",
+      "badge_class": "badge-archetype-plant"
+    }
   }
 ];
 window.ARCHIVED_PRODUCTS = {
@@ -25311,7 +29238,14 @@ window.ARCHIVED_PRODUCTS = {
     "url": "https://www.takealot.com",
     "delisted_date": "8 Nov 2026",
     "in_stock": false,
-    "status": "delisted"
+    "status": "delisted",
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.8 (142 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    }
   },
   "clicks_delisted_test_vintage_isolate_900g": {
     "id": "clicks_delisted_test_vintage_isolate_900g",
@@ -25344,6 +29278,13 @@ window.ARCHIVED_PRODUCTS = {
     "url": "https://clicks.co.za",
     "delisted_date": "1 Nov 2026",
     "in_stock": false,
-    "status": "delisted"
+    "status": "delisted",
+    "internal_archetype": "lean_purity",
+    "standout_metric": {
+      "label": "Ultra Purity",
+      "value": "90% Protein (27.0g / 30.0g)",
+      "icon": "fa-solid fa-bolt",
+      "badge_class": "badge-archetype-purity"
+    }
   }
 };

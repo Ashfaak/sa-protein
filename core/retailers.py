@@ -593,10 +593,16 @@ def load_mywellness(seen_keys=None):
                 price = float(v.get('price_zar') or 399.0)
                 orig_price = float(v.get('compare_at_price_zar') or price)
                 
-                size_str = v.get('size') or (item.get('available_sizes') or [None])[0] or base_title
-                weight_g = parse_weight_g(str(size_str))
-                if weight_g == 0:
-                    weight_g = parse_weight_g(base_title) or 1000.0
+                v_size = v.get('size')
+                weight_g = 0.0
+                if v_size and re.search(r'\d+\s*(?:k?g|lb)', str(v_size), re.I):
+                    weight_g = parse_weight_g(str(v_size))
+                if not weight_g or weight_g == 1000.0:
+                    title_w = parse_weight_g(base_title)
+                    if title_w and title_w != 1000.0:
+                        weight_g = title_w
+                    elif not weight_g:
+                        weight_g = title_w or 1000.0
 
                 flv_val = v.get('flavour')
                 v_title = v.get('title', '')

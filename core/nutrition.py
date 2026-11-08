@@ -111,6 +111,31 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'Hyper Anabolic Stack (Creatine, Taurine, L-Glycine)',
         'sweetener': 'Stevia Leaf Extract'
     },
+    'mywellness_keto_diet_shake': {
+        'ingredients': 'High-Fat Keto Blend (MCT Oil Powder, Butter Powder, Vegetable Fat), Protein Blend (Hydrolysed Bovine Collagen Peptides, Whey Protein Isolate), Baobab Fruit Powder, Xanthan Gum, Kalahari Sea Salt, BHB (Beta-Hydroxybutyrate) Salts, Stevia Leaf Powder, Vitamin C (Ascorbic Acid), Cocoa Powder (in Chocolate) / Natural Spices (in Vanilla Chai).',
+        'digestive_enzymes': 'Enriched with BHB Salts & Prebiotic Baobab Fibre',
+        'sweetener': 'Stevia Leaf Powder'
+    },
+    'mywellness_ketobolic': {
+        'ingredients': 'Keto-Bolic Fat Blend (Vegetable Fat Powder, MCT Oil Powder), Keto-Bolic Protein Blend (Pea Protein Isolate, Whey Protein Isolate), Cocoa Powder (in Chocolate) / Natural Spices (in Creamy Chai), Taurine, Creatine HCL, Xanthan Gum, Baobab Powder, Sea Salt, BHB Salts, Stevia Leaf Powder, Vitamin C (Ascorbic Acid).',
+        'digestive_enzymes': 'Enriched with Creatine HCL, Taurine & BHB Salts',
+        'sweetener': 'Stevia Leaf Powder'
+    },
+    'mywellness_her_cheat_meal': {
+        'ingredients': 'Multi-Source Protein Blend (Milk Protein Isolate, Hydrolysed Bovine Collagen Peptides, Fava Bean Protein, Pea Protein Isolate), Maltodextrin, Inulin Prebiotic Fibre, CLA (Conjugated Linoleic Acid) Powder, Garcinia Cambogia Extract, Green Tea Extract, Cocoa Powder (in Chocolate) / Matcha (in Matcha), Flavouring, Salt, Stevia Leaf Extract.',
+        'digestive_enzymes': 'Inulin Prebiotic Fibre + CLA & Garcinia Cambogia',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'mywellness_clean_diet_shake': {
+        'ingredients': 'Multi-Protein Lean Matrix (Pasture-Fed Whey Protein Concentrate, Micellar Casein, Grass-Fed Collagen Peptides), Inulin Prebiotic Fibre, Maca Root Powder, Ashwagandha Root Extract, L-Carnitine Tartrate, Cocoa Powder (in Chocolate), Natural Flavouring, Xanthan Gum, Low GI Sweetener Blend (Erythritol, Fructose, Stevia Leaf).',
+        'digestive_enzymes': 'Inulin Prebiotic Fibre + L-Carnitine, Ashwagandha & Maca',
+        'sweetener': 'Erythritol, Fructose & Stevia Leaf'
+    },
+    'mywellness_clean_diet_matcha': {
+        'ingredients': 'Grass-Fed Whey Protein Concentrate, Micellar Casein, Grass-Fed Collagen Peptides, Authentic Japanese Matcha Green Tea Powder, MCT Oil Powder, Inulin Dietary Fibre, Maca Root Powder, L-Carnitine Tartrate, Xanthan Gum, Low GI Sweetener Blend (Erythritol, Fructose, Stevia Leaf).',
+        'digestive_enzymes': 'Inulin Prebiotic Fibre + L-Carnitine & Maca Root',
+        'sweetener': 'Erythritol, Fructose & Stevia Leaf'
+    },
     'weider_mega_mass': {
         'ingredients': 'Carbohydrate Blend (Maltodextrin, Native Wheat Starch, Oat Flour), Protein Blend (Milk Protein Isolate, Whey Protein Concentrate, Dried Egg Albumin), Cocoa Powder, Creatine Monohydrate, Vitamin & Mineral Complex (Vitamin E, C, B1, B2, B6, B12, Niacin, Folic Acid, Biotin, Pantothenic Acid, Calcium, Iron, Zinc, Iodine), Sweetener (Sucralose).',
         'digestive_enzymes': 'Creatine Monohydrate (3,400mg per serving) & Complete Vitamin-Mineral Stack',
@@ -661,6 +686,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         elif 'smoothie' in t: matched = BRAND_FORMULATIONS['mywellness_protein_smoothie']
         elif 'isolate' in t: matched = BRAND_FORMULATIONS['mywellness_isolate']
         elif 'collagen' in t: matched = BRAND_FORMULATIONS['mywellness_collagen']
+        elif 'keto-bolic' in t or 'ketobolic' in t: matched = BRAND_FORMULATIONS['mywellness_ketobolic']
+        elif 'keto' in t: matched = BRAND_FORMULATIONS['mywellness_keto_diet_shake']
+        elif 'cheat meal' in t: matched = BRAND_FORMULATIONS['mywellness_her_cheat_meal']
+        elif 'diet matcha' in t or ('matcha' in t and 'diet' in t): matched = BRAND_FORMULATIONS['mywellness_clean_diet_matcha']
+        elif 'diet shake' in t or 'clean diet' in t: matched = BRAND_FORMULATIONS['mywellness_clean_diet_shake']
         elif any(k in t for k in ['vegan', 'plant', 'pea', 'yeast', 'soy']): matched = BRAND_FORMULATIONS['mywellness_vegan']
         elif 'casein' in t or 'milk protein' in t: matched = BRAND_FORMULATIONS['mywellness_casein']
         elif 'game changer' in t: matched = BRAND_FORMULATIONS['mywellness_game_changer']
@@ -1043,6 +1073,31 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 23.0
         carbs = 2.0
         fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_keto_diet_shake') or ('keto' in t and 'shake' in t and 'ketobolic' not in t and 'keto-bolic' not in t):
+        serving_size = 40.0
+        protein_per_serving = 9.0
+        carbs = 3.0
+        fat = 28.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_ketobolic') or 'ketobolic' in t or 'keto-bolic' in t:
+        serving_size = 80.0
+        protein_per_serving = 25.0
+        carbs = 10.0
+        fat = 50.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_her_cheat_meal') or 'cheat meal' in t:
+        serving_size = 40.0
+        protein_per_serving = 20.0
+        carbs = 12.0
+        fat = 2.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_clean_diet_matcha') or 'diet matcha' in t:
+        serving_size = 35.0
+        protein_per_serving = 21.0
+        carbs = 4.5
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_clean_diet_shake') or 'diet shake' in t:
+        serving_size = 35.0
+        protein_per_serving = 21.0
+        carbs = 4.5
+        fat = 1.8
     elif matched == BRAND_FORMULATIONS.get('blackbull_whey'):
         serving_size = 32.0
         protein_per_serving = 22.0

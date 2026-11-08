@@ -235,6 +235,7 @@ def parse_weight_g(title, container_size_str=None):
     if '899' in s_low or '896' in s_low or '891' in s_low: return 900.0
     if '800' in s_low: return 800.0
     if '769' in s_low or '750' in s_low or '704' in s_low or '700' in s_low: return 750.0
+    if '600' in s_low: return 600.0
     if '500' in s_low or "nature's nutrition" in s_low or "natures nutrition" in s_low: return 500.0
     if '454' in s_low or '1 lb' in s_low or '426' in s_low or '408' in s_low or '400' in s_low: return 454.0
     return 1000.0
@@ -296,6 +297,10 @@ FAMILY_TYPE_MAP = {
     'My Wellness Wholefood Vegainer': 'Mass Gainer',
     'My Wellness Clean Diet Whey': 'Diet / Lean Whey',
     'My Wellness Clean Diet Shake': 'Diet / Lean Whey',
+    'My Wellness Clean Diet Matcha': 'Diet / Lean Whey',
+    'My Wellness Her Cheat Meal': 'Diet / Lean Whey',
+    'My Wellness Keto Diet Shake': 'Diet / Lean Whey',
+    'My Wellness Keto-Bolic Muscle Meal': 'Hardcore / All-in-One',
     'My Wellness 100% Pure Collagen': 'Collagen / Beef / Broth',
     'My Wellness Stay Golden Collagen': 'Collagen / Beef / Broth',
     'My Wellness Her Collagen Whey': 'Collagen / Beef / Broth',
@@ -516,7 +521,11 @@ def get_product_family_key(title, brand):
         if 'collagen' in t: return ('My Wellness', 'My Wellness Collagen')
         if 'protein water' in t or 'hydrator' in t: return ('My Wellness', 'My Wellness Protein Water & Hydrator')
         if 'smoothie' in t: return ('My Wellness', 'My Wellness Protein Smoothie')
-        if 'diet shake' in t or 'diet matcha' in t or 'cheat meal' in t or 'keto' in t: return ('My Wellness', 'My Wellness Clean Diet Shake')
+        if 'keto-bolic' in t or 'ketobolic' in t: return ('My Wellness', 'My Wellness Keto-Bolic Muscle Meal')
+        if 'keto' in t: return ('My Wellness', 'My Wellness Keto Diet Shake')
+        if 'cheat meal' in t: return ('My Wellness', 'My Wellness Her Cheat Meal')
+        if 'diet matcha' in t: return ('My Wellness', 'My Wellness Clean Diet Matcha')
+        if 'diet shake' in t: return ('My Wellness', 'My Wellness Clean Diet Shake')
         if 'vegan' in t or 'plant' in t: return ('My Wellness', 'My Wellness Super Vegan Protein')
         if 'isolate' in t: return ('My Wellness', 'My Wellness Clean Whey Isolate')
         return ('My Wellness', "My Wellness Super Nature's Whey")

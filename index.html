@@ -64,14 +64,14 @@
         </div>
       </div>
 
-      <!-- Header Right Status / Badge & 3 for 2 Toggle -->
+      <!-- Header Right Status / Badge & Bulk Deals Toggle -->
       <div class="flex items-center gap-2 flex-wrap">
-        <!-- Clicks 3 for 2 Promo Toggle -->
-        <label class="inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Simulate Clicks 'Buy 3, Pay for 2' special (effective 33.3% savings per tub when buying 3)">
-          <input type="checkbox" id="clicks3For2Toggle" class="sr-only peer" onchange="toggleClicks3For2()">
+        <!-- Bulk Deals Promo Toggle -->
+        <label class="inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Simulate multi-buy & bulk specials across retailers (e.g. Clicks 2 for R599, 3 for 2 specials, twin packs, bundle savings)">
+          <input type="checkbox" id="bulkDealsToggle" class="sr-only peer" onchange="toggleBulkDeals()">
           <div class="w-7 h-4 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all relative peer-checked:bg-amber-500"></div>
           <span class="text-[11px] font-medium text-gray-300 flex items-center gap-1">
-            <i class="fa-solid fa-tags text-amber-400 text-[10px]"></i> Clicks <b class="text-amber-400">3 for 2</b>
+            <i class="fa-solid fa-boxes-stacked text-amber-400 text-[10px]"></i> Bulk <b class="text-amber-400">Deals</b>
           </span>
         </label>
 
@@ -477,7 +477,8 @@
     let activeSizeSelections = {}; // lineKey -> selectedSizeG
     let lastFilteredProducts = [];
     let clicksDiscountEnabled = false;
-    let clicks3For2Enabled = false;
+    let bulkDealsEnabled = false;
+    let clicks3For2Enabled = false; // synced alias
     let amazonPromoEnabled = false;
     let dischemRewardsEnabled = false;
     let comparisonList = [];
@@ -512,8 +513,11 @@
       'Best Value Size': 'This size gives you the lowest cost per gram of pure protein for this product line.',
 
       // Retailers & Promos
+      'Bulk Deals': 'Simulate multi-buy bundle and volume deals across retailers (e.g. Clicks 2 for R599, 3-for-2 specials). Shows effective unit price per tub.',
+      '2 for R599': 'Buy 2 for R599 special (effective R 299.50 per tub, saving R 161 total).',
+      '3 for 2': "Buy 3 qualifying products, get the cheapest free (effective 33.3% savings per tub).",
       'Clicks 3 for 2': "Eligible for Clicks 'Buy 3, Pay for 2' special. Mix & match across qualifying products (cheapest free = effective 33.3% savings per tub).",
-      'Clicks': 'Clicks retail pharmacy and online store with ClubCard points and periodic 3-for-2 promotions.',
+      'Clicks': 'Clicks retail pharmacy and online store with ClubCard points and periodic multi-buy promotions.',
       'Takealot': 'Fast doorstep delivery via Takealot warehouse logistics across South Africa.',
       'Dis-Chem': 'Dis-Chem retail pharmacy and health store with Better Rewards.',
       'Amazon ZA': 'Amazon South Africa with Prime fast shipping and localized delivery.',
@@ -556,10 +560,11 @@
         const toggle = document.getElementById('clicksStaffToggle');
         if (toggle) toggle.checked = true;
       }
-      const promo3for2 = params.get('3for2') || params.get('promo');
-      if (promo3for2 === 'true' || promo3for2 === '1' || promo3for2 === '3for2') {
+      const bulkParam = params.get('bulk') || params.get('bulkdeals') || params.get('deals') || params.get('3for2') || params.get('promo');
+      if (bulkParam === 'true' || bulkParam === '1' || bulkParam === 'bulk' || bulkParam === '3for2') {
+        bulkDealsEnabled = true;
         clicks3For2Enabled = true;
-        const toggle = document.getElementById('clicks3For2Toggle');
+        const toggle = document.getElementById('bulkDealsToggle') || document.getElementById('clicks3For2Toggle');
         if (toggle) toggle.checked = true;
       }
       if (params.get('amazon') === 'true' || params.get('amazon') === '1') {
@@ -576,10 +581,45 @@
       applyFilters();
     }
 
-    function toggleClicks3For2() {
-      const toggle = document.getElementById('clicks3For2Toggle');
-      clicks3For2Enabled = toggle ? toggle.checked : !clicks3For2Enabled;
+    function toggleBulkDeals() {
+      const toggle = document.getElementById('bulkDealsToggle') || document.getElementById('clicks3For2Toggle');
+      bulkDealsEnabled = toggle ? toggle.checked : !bulkDealsEnabled;
+      clicks3For2Enabled = bulkDealsEnabled;
       applyFilters();
+    }
+
+    function toggleClicks3For2() {
+      toggleBulkDeals();
+    }
+
+    function getBulkDealBadge(p) {
+      const bulk = p.bulk_deal || (p.clicks_3_for_2_eligible ? {
+        eligible: true,
+        type: '3_for_2',
+        label: '3 for 2',
+        description: "Eligible for Clicks 'Buy 3, Pay for 2' special (effective 33.3% savings per tub)."
+      } : null);
+
+      if (!bulk || !bulk.eligible) return '';
+
+      const active = bulkDealsEnabled;
+      const label = bulk.label || 'Bulk Deal';
+      const desc = bulk.description || 'Special multi-buy / bulk volume deal available.';
+      const tooltip = active ? `${desc} (Active: unit price applied)` : `${desc} • Toggle 'Bulk Deals' in header to simulate effective price`;
+
+      if (active) {
+        return `
+          <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/25 text-amber-300 border border-amber-400/80 font-bold cursor-help inline-flex items-center gap-1 shadow-sm" title="${tooltip}">
+            <i class="fa-solid fa-boxes-stacked text-[8px] text-amber-400"></i> ${label}
+          </span>
+        `;
+      } else {
+        return `
+          <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400/90 border border-amber-500/30 font-semibold cursor-help inline-flex items-center gap-1" title="${tooltip}">
+            <i class="fa-solid fa-boxes-stacked text-[8px] text-amber-400/80"></i> ${label}
+          </span>
+        `;
+      }
     }
 
     async function loadData() {
@@ -681,25 +721,35 @@
       let discountLabel = null;
 
       const isClicks = p.retailer === 'Clicks';
-      const is3for2 = Boolean(p.clicks_3_for_2_eligible) && isClicks;
+      const bulk = p.bulk_deal || (p.clicks_3_for_2_eligible ? {
+        eligible: true,
+        type: '3_for_2',
+        label: '3 for 2',
+        buy_qty: 3,
+        pay_qty: 2,
+        bundle_price_zar: round2(p.price_zar * 2),
+        unit_price_zar: round2((p.price_zar * 2) / 3),
+        savings_zar: round2(p.price_zar),
+        savings_pct: 33.3,
+        description: 'Buy 3 qualifying products and get the cheapest free (effective 33.3% savings per tub).'
+      } : null);
 
-      if (isClicks) {
-        if (clicksDiscountEnabled && clicks3For2Enabled && is3for2) {
-          // Stacking 13% staff discount and 3 for 2 special:
-          // (Price * 2 tubs * 0.87) / 3 = Price * 0.58 (effective 42% discount)
-          finalPrice = round2((p.price_zar * 2 * 0.87) / 3);
+      if (bulkDealsEnabled && bulk && bulk.eligible) {
+        const baseUnit = bulk.unit_price_zar || round2((p.price_zar * 2) / 3);
+        if (isClicks && clicksDiscountEnabled) {
+          // Stacking Clicks staff discount (-13%) with bulk deal:
+          finalPrice = round2(baseUnit * 0.87);
           isDiscounted = true;
-          discountLabel = '3 for 2 + Staff -13%';
-        } else if (clicks3For2Enabled && is3for2) {
-          // 3 for 2 special only: 3 tubs for price of 2 = 33.3% discount
-          finalPrice = round2((p.price_zar * 2) / 3);
+          discountLabel = `${bulk.label} + Staff -13%`;
+        } else {
+          finalPrice = baseUnit;
           isDiscounted = true;
-          discountLabel = 'Clicks 3 for 2 Special';
-        } else if (clicksDiscountEnabled) {
-          finalPrice = p.discounted_price_zar;
-          isDiscounted = true;
-          discountLabel = 'Clicks Staff -13%';
+          discountLabel = `${p.retailer} ${bulk.label}`;
         }
+      } else if (isClicks && clicksDiscountEnabled) {
+        finalPrice = p.discounted_price_zar;
+        isDiscounted = true;
+        discountLabel = 'Clicks Staff -13%';
       } else if (amazonPromoEnabled && p.retailer === 'Amazon ZA' && (p.amazon_promo_eligible || p.coupon_code)) {
         const pct = p.discount_pct || 10;
         finalPrice = round2(p.price_zar * (1 - pct / 100.0));
@@ -908,12 +958,7 @@
         const pr = getProductPricing(p);
         const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
         const isCompared = comparisonList.some(item => item.id === p.id);
-        const is3For2 = clicks3For2Enabled && Boolean(p.clicks_3_for_2_eligible);
-        const promoBadge = is3For2 ? `
-          <span class="ml-1 text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold cursor-help inline-flex items-center gap-0.5" title="${getTagTooltip('Clicks 3 for 2')}">
-            <i class="fa-solid fa-tags text-[8px] text-amber-400"></i> 3 for 2
-          </span>
-        ` : '';
+        const promoBadge = getBulkDealBadge(p);
 
         return `
           <tr class="border-b border-gray-800/60 hover:bg-gray-800/30 transition text-xs">
@@ -1091,7 +1136,8 @@
       else if (bestPricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === bestItem.id);
-      const is3For2 = clicks3For2Enabled && g.items.some(it => it.clicks_3_for_2_eligible);
+      const bulkItem = g.items.find(it => it.bulk_deal && it.bulk_deal.eligible) || g.items.find(it => it.clicks_3_for_2_eligible);
+      const promoBulkBadge = bulkItem ? getBulkDealBadge(bulkItem) : '';
 
       const flavorList = Array.from(g.flavors);
       const flavorText = flavorList.slice(0, 3).join(' • ') + (flavorList.length > 3 ? ` +${flavorList.length - 3}` : '');
@@ -1104,12 +1150,6 @@
         if (ret === 'Nutritech Direct' || ret === 'Brand Direct') bClass = 'badge-retailer-nutritech';
         return `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded cursor-help ${bClass}" title="${getTagTooltip(ret)}">${ret}</span>`;
       }).join('');
-
-      const promo3For2Badge = is3For2 ? `
-        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-help inline-flex items-center gap-1" title="${getTagTooltip('Clicks 3 for 2')}">
-          <i class="fa-solid fa-tags text-[9px] text-amber-400"></i> 3 for 2
-        </span>
-      ` : '';
 
       const sizePillsHtml = availSizes.map(s => {
         const isSel = s === selSize;
@@ -1161,7 +1201,7 @@
               <span class="px-2 py-0.5 rounded bg-gray-800/90 text-gray-300 text-[10px] font-medium cursor-help" title="${getTagTooltip(g.type)}">
                 ${g.type}
               </span>
-              ${promo3For2Badge}
+              ${promoBulkBadge}
               <span class="text-[11px] text-gray-400 truncate max-w-[170px]" title="${flavorList.join(', ')}">
                 • ${flavorText}
               </span>
@@ -1239,14 +1279,8 @@
       else if (pricing.costPerG > 0.55) valueColor = 'text-sky-400';
 
       const isCompared = comparisonList.some(item => item.id === p.id);
-      const is3For2 = clicks3For2Enabled && Boolean(p.clicks_3_for_2_eligible);
       const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
-
-      const promo3For2Badge = is3For2 ? `
-        <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-help inline-flex items-center gap-1" title="${getTagTooltip('Clicks 3 for 2')}">
-          <i class="fa-solid fa-tags text-[9px] text-amber-400"></i> 3 for 2
-        </span>
-      ` : '';
+      const promoBulkBadge = getBulkDealBadge(p);
 
       return `
         <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
@@ -1269,7 +1303,7 @@
             <div class="flex flex-wrap items-center gap-1.5 mb-3 text-[10px]">
               <span class="font-semibold px-2 py-0.5 rounded cursor-help ${diaasBadgeClass}" title="${p.quality_summary || getTagTooltip(diaasTier)}">DIAAS ${(p.diaas_score || 1.22).toFixed(2)}</span>
               <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300 cursor-help" title="${getTagTooltip(p.type)}">${p.type}</span>
-              ${promo3For2Badge}
+              ${promoBulkBadge}
               <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300">${p.flavor}</span>
               <span class="px-2 py-0.5 rounded bg-gray-800 text-blue-300 font-mono font-bold">${sLabel}</span>
             </div>
@@ -1451,20 +1485,44 @@
       document.getElementById('modalQualitySummary').innerText = p.quality_summary || 'Provides complete essential amino acid profile with high bioavailability.';
 
       const promoSec = document.getElementById('modalPromoSection');
-      if (clicks3For2Enabled && p.clicks_3_for_2_eligible) {
-        promoSec.classList.remove('hidden');
-        const bundlePrice = round2(p.price_zar * 2);
-        const perTubEffective = round2((p.price_zar * 2) / 3);
-        const bundlePriceStaff = round2(bundlePrice * 0.87);
-        const perTubStaff = round2(bundlePriceStaff / 3);
+      const bulk = p.bulk_deal || (p.clicks_3_for_2_eligible ? {
+        eligible: true,
+        type: '3_for_2',
+        label: '3 for 2',
+        tag: '3 for 2',
+        buy_qty: 3,
+        pay_qty: 2,
+        bundle_price_zar: round2(p.price_zar * 2),
+        unit_price_zar: round2((p.price_zar * 2) / 3),
+        savings_zar: round2(p.price_zar),
+        savings_pct: 33.3,
+        description: 'Buy any 3 qualifying products and get the cheapest free! (Effective 33.3% savings per tub).'
+      } : null);
 
-        document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tags text-amber-400"></i> Clicks "3 for 2" Special Eligible';
-        document.getElementById('modalPromoCodeBadge').innerText = 'BUY 3 GET 1 FREE';
-        document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-amber-900/60 text-amber-200 font-mono text-xs font-bold';
-        
-        let desc = `Buy any 3 eligible products and get the cheapest free! 3 tubs cost R ${bundlePrice.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubEffective.toFixed(2)} / tub</b>, saving R ${p.price_zar.toFixed(0)} per bundle).`;
-        if (clicksDiscountEnabled) {
-          desc += `<br><span class="text-sky-300 font-semibold">With Clicks Staff -13%:</span> 3 tubs cost R ${bundlePriceStaff.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubStaff.toFixed(2)} / tub</b>).`;
+      if (bulk && bulk.eligible) {
+        promoSec.classList.remove('hidden');
+        const buyQty = bulk.buy_qty || 2;
+        const bundlePrice = bulk.bundle_price_zar || round2((bulk.unit_price_zar || p.price_zar) * buyQty);
+        const unitPrice = bulk.unit_price_zar || round2(bundlePrice / buyQty);
+        const savings = bulk.savings_zar || round2(p.price_zar * buyQty - bundlePrice);
+
+        document.getElementById('modalPromoTitle').innerHTML = `<i class="fa-solid fa-boxes-stacked text-amber-400"></i> ${p.retailer} "${bulk.label}" Bulk Deal`;
+        document.getElementById('modalPromoCodeBadge').innerText = bulk.tag || bulk.label;
+        document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-amber-900/60 text-amber-200 font-mono text-xs font-bold border border-amber-500/40';
+
+        let desc = bulk.description;
+        desc += `<br><span class="text-gray-300">Bundle Price:</span> <b class="text-amber-300">R ${bundlePrice.toFixed(0)}</b> for ${buyQty} tubs (<b class="text-emerald-400">R ${unitPrice.toFixed(2)} / tub</b>, save R ${savings.toFixed(0)}).`;
+
+        if (p.retailer === 'Clicks' && clicksDiscountEnabled) {
+          const bundleStaff = round2(bundlePrice * 0.87);
+          const unitStaff = round2(unitPrice * 0.87);
+          desc += `<br><span class="text-sky-300 font-semibold"><i class="fa-solid fa-id-card"></i> With Clicks Staff -13%:</span> Bundle costs <b class="text-sky-200">R ${bundleStaff.toFixed(0)}</b> (effectively <b class="text-emerald-400">R ${unitStaff.toFixed(2)} / tub</b>).`;
+        }
+
+        if (bulkDealsEnabled) {
+          desc += `<br><span class="text-[10px] text-emerald-400 font-medium inline-flex items-center gap-1 mt-1"><i class="fa-solid fa-circle-check"></i> Bulk Deals simulated: Table and cards are displaying effective unit price.</span>`;
+        } else {
+          desc += `<br><span class="text-[10px] text-amber-400/90 italic inline-flex items-center gap-1 mt-1"><i class="fa-solid fa-circle-info"></i> Tip: Turn on "Bulk Deals" toggle in header to apply this price to comparison and sorting.</span>`;
         }
         document.getElementById('modalPromoDesc').innerHTML = desc;
       } else if (p.coupon_code === 'STAFF13') {

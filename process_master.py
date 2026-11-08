@@ -1409,6 +1409,70 @@ def determine_flavor(title, flavor_raw=None):
         return flavor_raw.strip().title()
     return 'Classic (Vanilla / Chocolate)'
 
+def determine_bulk_deal(retailer, brand, title, price_zar, weight_g, item_raw=None):
+    """
+    Evaluates multi-buy and bulk promotions across retailers.
+    Supports fixed-price bundles (e.g. Clicks 2 for R599), 3-for-2 multi-buys,
+    twin packs, and custom supplier bulk specials.
+    """
+    title_lower = (title or '').lower()
+    raw_str = str(item_raw or '').lower() if item_raw else ''
+    
+    # 1. Clicks Purified Protein 1kg promotion: "Buy 2 Clicks Purified Protein 1kg for R599, Save R161"
+    # Officially running at Clicks across all flavours (Chocolate, Vanilla, Strawberry)
+    if retailer == 'Clicks' and 'purified' in title_lower and (weight_g == 1000 or '1kg' in title_lower or '1 kg' in title_lower):
+        bundle_price = 599.00
+        buy_qty = 2
+        unit_price = round(bundle_price / buy_qty, 2)  # R 299.50
+        savings = round((price_zar * buy_qty) - bundle_price, 2)  # 380*2 - 599 = 161.00
+        savings_pct = round((savings / (price_zar * buy_qty)) * 100, 1) if price_zar > 0 else 21.2
+        return {
+            'eligible': True,
+            'type': 'bundle',
+            'label': '2 for R599',
+            'tag': 'Buy 2 for R599',
+            'buy_qty': buy_qty,
+            'bundle_price_zar': bundle_price,
+            'unit_price_zar': unit_price,
+            'savings_zar': savings,
+            'savings_pct': savings_pct,
+            'description': 'Buy 2 Clicks Purified Protein 1kg for R599, Save R161 (effective R 299.50 / tub).'
+        }
+
+    # 2. Check for explicit 3 for 2 specials (e.g. Clicks Smartlife 3 for 2 or general 3 for 2)
+    is_3for2 = (
+        '3for2' in raw_str or '3 for 2' in raw_str or 'buy 3' in raw_str or
+        (item_raw and isinstance(item_raw, dict) and item_raw.get('clicks_3_for_2_eligible'))
+    )
+    if is_3for2 and price_zar > 0:
+        buy_qty = 3
+        pay_qty = 2
+        bundle_price = round(price_zar * pay_qty, 2)
+        unit_price = round(bundle_price / buy_qty, 2)
+        savings = round(price_zar, 2)
+        savings_pct = 33.3
+        return {
+            'eligible': True,
+            'type': '3_for_2',
+            'label': '3 for 2',
+            'tag': '3 for 2',
+            'buy_qty': buy_qty,
+            'pay_qty': pay_qty,
+            'bundle_price_zar': bundle_price,
+            'unit_price_zar': unit_price,
+            'savings_zar': savings,
+            'savings_pct': savings_pct,
+            'description': 'Buy any 3 qualifying products and get the cheapest free (effective 33.3% savings per tub).'
+        }
+
+    # 3. Check for explicit bulk deal object already present on item_raw
+    if item_raw and isinstance(item_raw, dict) and item_raw.get('bulk_deal'):
+        bd = item_raw['bulk_deal']
+        if isinstance(bd, dict) and bd.get('eligible', True):
+            return bd
+
+    return None
+
 def find_data_file(filename):
     for candidate in [filename, os.path.join('data', 'raw', filename), os.path.join('data', filename)]:
         if os.path.exists(candidate):
@@ -1443,6 +1507,7 @@ def run_consolidation():
                 flavor = determine_flavor(title, item.get('flavor'))
                 nut = determine_nutrition(brand, ptype, weight_g, title, item.get('ingredients'))
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+                bulk_deal = determine_bulk_deal('Takealot', brand, title, price, weight_g, item)
 
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
                 cost_per_serv = round(price / nut['servings_count'], 2)
@@ -1470,7 +1535,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': False,
-                    'clicks_3_for_2_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': None,
                     'coupon_description': 'Standard Retail Price',
@@ -1554,6 +1621,8 @@ def run_consolidation():
                 if key in seen_keys: continue
                 seen_keys.add(key)
                 
+                bulk_deal = determine_bulk_deal('Amazon ZA', brand, title, price, weight_g, item)
+
                 master_products.append({
                     'id': key,
                     'retailer': 'Amazon ZA',
@@ -1574,6 +1643,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(orig_price, 2),
                     'clicks_staff_discount_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': has_deal,
                     'coupon_code': coupon_code,
                     'coupon_description': coupon_desc or 'Amazon Verified Listing',
@@ -1625,6 +1697,7 @@ def run_consolidation():
                 flavor = determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+                bulk_deal = determine_bulk_deal('Clicks', brand, title, price, weight_g, item)
 
                 discounted_price = round(price * 0.87, 2) # Clicks 13% Staff Discount
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
@@ -1657,7 +1730,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': True,
-                    'clicks_3_for_2_eligible': bool(item.get('clicks_3_for_2_eligible') or '3for2' in str(item.get('stickers') or item.get('badge') or '').lower() or '3 for 2' in str(item.get('stickers') or item.get('badge') or '').lower()),
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': 'STAFF13',
                     'coupon_description': '💳 Clicks Staff 13% Discount Active',
@@ -1706,6 +1781,7 @@ def run_consolidation():
                 flavor = determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+                bulk_deal = determine_bulk_deal('Dis-Chem', brand, title, price, weight_g, item)
 
                 discounted_price = round(price * 0.90, 2)
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
@@ -1737,7 +1813,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': False,
-                    'clicks_3_for_2_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': 'BETTER10',
                     'coupon_description': '🎁 Dis-Chem Better Rewards: 10% Instant Savings',
@@ -1783,6 +1861,7 @@ def run_consolidation():
                 flavor = item.get('flavor') or determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+                bulk_deal = determine_bulk_deal('Brand Direct', brand, title, price, weight_g, item)
 
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
                 cost_per_serv = round(price / nut['servings_count'], 2)
@@ -1811,7 +1890,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(orig_price, 2),
                     'clicks_staff_discount_eligible': False,
-                    'clicks_3_for_2_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': None,
                     'coupon_description': 'Official Manufacturer Store',
@@ -1857,6 +1938,7 @@ def run_consolidation():
                 flavor = item.get('flavor') or determine_flavor(title)
                 nut = determine_nutrition(brand, ptype, weight_g, title)
                 quality = compute_protein_quality_scores(ptype, nut['ingredients'], title)
+                bulk_deal = determine_bulk_deal('Brand Direct', brand, title, price, weight_g, item)
 
                 cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
                 cost_per_serv = round(price / nut['servings_count'], 2)
@@ -1885,7 +1967,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(orig_price, 2),
                     'clicks_staff_discount_eligible': False,
-                    'clicks_3_for_2_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': None,
                     'coupon_description': 'Official Manufacturer Store',
@@ -1968,6 +2052,8 @@ def run_consolidation():
                 cost_per_serv = round(price / servings_cnt, 2)
                 cost_per_serv_disc = round(disc_price / servings_cnt, 2)
 
+                bulk_deal = determine_bulk_deal(ret_clean, brand, title, price, weight_g, item)
+
                 key = f"alt_{idx_alt}_{re.sub(r'[^a-z0-9]', '', title.lower())[:18]}"
                 if key in seen_keys: continue
                 seen_keys.add(key)
@@ -1995,7 +2081,9 @@ def run_consolidation():
                     'price_zar': round(price, 2),
                     'original_price_zar': round(price, 2),
                     'clicks_staff_discount_eligible': is_clicks,
-                    'clicks_3_for_2_eligible': bool(item.get('clicks_3_for_2_eligible', False)),
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
                     'amazon_promo_eligible': False,
                     'coupon_code': coupon_code,
                     'coupon_description': coupon_desc or 'Standard Retail Price',
@@ -2053,6 +2141,8 @@ def run_consolidation():
             original_price_zar REAL,
             clicks_staff_discount_eligible INTEGER,
             clicks_3_for_2_eligible INTEGER,
+            bulk_deal_eligible INTEGER,
+            bulk_deal_label TEXT,
             amazon_promo_eligible INTEGER,
             coupon_code TEXT,
             coupon_description TEXT,
@@ -2098,7 +2188,7 @@ def run_consolidation():
         
         c.execute('''
             INSERT OR REPLACE INTO products VALUES (
-                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
             )
         ''', (
             p['id'], p['retailer'], p['brand'], p['title'], p['product_line'], p['type'], p['flavor'],
@@ -2107,6 +2197,8 @@ def run_consolidation():
             p['servings_count'], p['price_zar'], p['original_price_zar'],
             1 if p['clicks_staff_discount_eligible'] else 0,
             1 if p.get('clicks_3_for_2_eligible') else 0,
+            1 if p.get('bulk_deal_eligible') else 0,
+            p['bulk_deal']['label'] if p.get('bulk_deal') else None,
             1 if p['amazon_promo_eligible'] else 0,
             p['coupon_code'], p['coupon_description'], p['discount_pct'],
             p['discounted_price_zar'], p['cost_per_g_protein_zar'], p['cost_per_g_protein_discounted_zar'],

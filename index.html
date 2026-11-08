@@ -386,7 +386,9 @@
 
   <!-- Product Detail Modal -->
   <div id="detailModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" onclick="if(event.target===this) closeDetailModal()">
-    <div class="bg-[#131924] border border-gray-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 space-y-4 shadow-2xl">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto space-y-4">
+      <!-- Main Product Details Card -->
+      <div class="bg-[#131924] border border-gray-700 rounded-2xl p-6 space-y-4 shadow-2xl">
       
       <div class="flex items-center justify-between border-b border-gray-800 pb-3">
         <div class="flex items-center gap-2 flex-wrap">
@@ -485,19 +487,6 @@
         </div>
       </div>
 
-      <!-- Similar Products & Closest Alternatives Section -->
-      <div id="modalSimilarSection" class="pt-3 border-t border-gray-800/80 space-y-2.5">
-        <div class="flex items-center justify-between">
-          <span id="modalSimilarTitle" class="text-xs font-bold text-gray-200 uppercase tracking-wider flex items-center gap-1.5">
-            <i class="fa-solid fa-arrows-split-up-and-left text-blue-400"></i> Similar Products & Alternatives
-          </span>
-          <span id="modalSimilarSubhead" class="text-[10px] text-gray-400 font-medium"></span>
-        </div>
-        <div id="modalSimilarGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-          <!-- Rendered dynamically -->
-        </div>
-      </div>
-
       <div class="pt-3 border-t border-gray-800 flex justify-end items-center gap-2">
         <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs font-semibold transition">Close</button>
         <button id="modalShareBtn" onclick="shareCurrentModalProduct(event)" class="px-4 py-2 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/40 rounded-xl text-xs font-semibold transition flex items-center gap-1.5" title="Share this deal">
@@ -511,8 +500,22 @@
       <p class="text-[10px] text-gray-500 text-center pt-1">
         Disclaimer: Nutritional information, macros, and prices are compiled from public packaging and retailer sites. Always verify details directly with the retailer or official product packaging before use.
       </p>
-
     </div>
+
+    <!-- Visually Separated Alternatives Card with a clear gap below the product and buttons -->
+    <div id="modalSimilarSection" class="bg-[#101622] border border-gray-800/90 rounded-2xl p-5 space-y-3 shadow-2xl">
+      <div class="flex items-center justify-between">
+        <span id="modalSimilarTitle" class="text-xs font-bold text-gray-200 uppercase tracking-wider flex items-center gap-1.5">
+          <i class="fa-solid fa-arrows-split-up-and-left text-blue-400"></i> Similar Products & Alternatives
+        </span>
+        <span id="modalSimilarSubhead" class="text-[10px] text-gray-400 font-medium"></span>
+      </div>
+      <div id="modalSimilarGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+  </div>
   </div>
 
   <!-- Load Embedded Data Script -->
@@ -1524,7 +1527,7 @@
       document.getElementById('comparisonModal').classList.add('hidden');
     }
 
-    function findClosestAlternatives(product, limit = 3) {
+    function findClosestAlternatives(product, limit = 3, isDelisted = false) {
       if (!product || !rawProducts || rawProducts.length === 0) return [];
 
       const targetId = product.id;
@@ -1537,7 +1540,13 @@
       const targetDiaas = product.diaas_score || 1.15;
       const targetRetailer = product.retailer;
 
-      const candidates = rawProducts.filter(p => p.id !== targetId);
+      let candidates = rawProducts.filter(p => p.id !== targetId);
+
+      // For active products, enforce Tier 4: competing alternatives from OTHER brands
+      if (!isDelisted) {
+        candidates = candidates.filter(p => (p.brand || '').toLowerCase().trim() !== targetBrand);
+      }
+
       const scored = [];
 
       for (const p of candidates) {
@@ -1559,36 +1568,47 @@
         let matchReason = '';
         let isDifferentRetailer = false;
 
-        if (isSameLine && isSameSize && !isSameRetailer) {
-          score += 1000;
-          matchReason = `Same product at ${p.retailer}`;
-          isDifferentRetailer = true;
-        } else if (isSameLine) {
-          score += 600;
-          const sLbl = pSize >= 1000 ? `${(pSize / 1000).toFixed(pSize % 1000 === 0 ? 0 : 1)}kg` : `${pSize}g`;
-          matchReason = `Same line (${sLbl})`;
-        } else if (isSameBrand && isSameType) {
-          score += 350;
-          matchReason = `${p.brand} ${p.type}`;
-        } else if (isSameBrand) {
-          score += 200;
-          matchReason = `${p.brand} alternative`;
-        } else if (isSameType) {
-          score += 150;
-          matchReason = `Similar ${p.type}`;
+        if (isDelisted) {
+          if (isSameLine && isSameSize && !isSameRetailer) {
+            score += 1000;
+            matchReason = `Same product at ${p.retailer}`;
+            isDifferentRetailer = true;
+          } else if (isSameLine) {
+            score += 600;
+            const sLbl = pSize >= 1000 ? `${(pSize / 1000).toFixed(pSize % 1000 === 0 ? 0 : 1)}kg` : `${pSize}g`;
+            matchReason = `Same line (${sLbl})`;
+          } else if (isSameBrand && isSameType) {
+            score += 350;
+            matchReason = `${p.brand} ${p.type}`;
+          } else if (isSameBrand) {
+            score += 200;
+            matchReason = `${p.brand} alternative`;
+          } else if (isSameType) {
+            score += 150;
+            matchReason = `Similar ${p.type}`;
+          } else {
+            score += 10;
+            matchReason = 'Value alternative';
+          }
         } else {
-          score += 10;
-          matchReason = 'Value alternative';
+          // Tier 4 for active products: competing brands in same category
+          if (isSameType) {
+            score += 300;
+            matchReason = `Similar ${p.type}`;
+          } else {
+            score += 50;
+            matchReason = 'Alternative Protein';
+          }
         }
 
         const cpgDiffPct = Math.abs(pCpg - targetCpg) / Math.max(0.1, targetCpg);
-        score += Math.max(0, 100 - (cpgDiffPct * 100));
+        score += Math.max(0, 150 - (cpgDiffPct * 150));
 
         const sizeDiffPct = Math.abs(pSize - targetSize) / Math.max(100, targetSize);
-        score += Math.max(0, 50 - (sizeDiffPct * 50));
+        score += Math.max(0, 80 - (sizeDiffPct * 80));
 
         if (pDiaas >= targetDiaas) {
-          score += 30;
+          score += 40;
         }
 
         scored.push({
@@ -1600,6 +1620,22 @@
       }
 
       scored.sort((a, b) => b.score - a.score);
+
+      // For active products, ensure brand diversity across results
+      if (!isDelisted) {
+        const diverse = [];
+        const seenBrands = new Set();
+        for (const item of scored) {
+          const b = (item.product.brand || '').toLowerCase().trim();
+          if (!seenBrands.has(b)) {
+            seenBrands.add(b);
+            diverse.push(item);
+            if (diverse.length === limit) break;
+          }
+        }
+        return diverse;
+      }
+
       return scored.slice(0, limit);
     }
 
@@ -1716,8 +1752,8 @@
       document.getElementById('modalSweetener').innerText = p.sweetener || 'Sucralose';
       document.getElementById('modalIngredients').innerText = p.ingredients || 'Manufacturer ingredients not specified.';
 
-      // Compute and render Similar Products / Closest Alternatives
-      const alts = findClosestAlternatives(p, 3);
+      // Compute and render Similar Products / Closest Alternatives (Tier 4 for active, multi-tier for delisted)
+      const alts = findClosestAlternatives(p, 3, isDelisted);
       const otherRetailers = alts.filter(a => a.isDifferentRetailer);
       const similarGrid = document.getElementById('modalSimilarGrid');
       const similarSubhead = document.getElementById('modalSimilarSubhead');
@@ -1797,7 +1833,7 @@
         }
       } else {
         unavailBanner.classList.add('hidden');
-        similarSubhead.innerText = `Ranked by formula & value match`;
+        similarSubhead.innerText = `Alternative brands in same category`;
         buyBtn.href = p.url;
         const retName = (p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Official Store` : p.retailer;
         buyBtn.innerHTML = `<span>View on ${retName}</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
@@ -1844,8 +1880,11 @@
       const pricing = getProductPricing(p);
       const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
       const shareUrl = `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(p.id)}`;
-      const shareTitle = `${p.brand} ${p.title}`;
-      const shareText = `Check out this protein deal: ${p.brand} ${p.title} (${sLabel}) for R ${pricing.finalPrice.toFixed(2)} on ${p.retailer}! (DIAAS ${(p.diaas_score || 1.22).toFixed(2)}, ${p.protein_percentage}% protein)`;
+      const titleLower = (p.title || '').toLowerCase().trim();
+      const brandLower = (p.brand || '').toLowerCase().trim();
+      const displayTitle = titleLower.startsWith(brandLower) ? p.title : `${p.brand} ${p.title}`;
+      const shareTitle = displayTitle;
+      const shareText = `Check out this protein deal: ${displayTitle} (${sLabel}) for R ${pricing.finalPrice.toFixed(2)} on ${p.retailer}! (DIAAS ${(p.diaas_score || 1.22).toFixed(2)}, ${p.protein_percentage}% protein)`;
 
       let btn = null;
       if (event && event.currentTarget) {
@@ -1917,9 +1956,12 @@
 
         const sLabel = product.container_size_g >= 1000 ? (product.container_size_g / 1000) + 'kg' : product.container_size_g + 'g';
         if (banner && bannerTitle) {
+          const tLow = (product.title || '').toLowerCase().trim();
+          const bLow = (product.brand || '').toLowerCase().trim();
+          const dTitle = tLow.startsWith(bLow) ? product.title : `${product.brand} - ${product.title}`;
           if (bannerSubhead) bannerSubhead.innerText = "Viewing shared deal:";
           if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center shrink-0";
-          bannerTitle.innerText = `${product.brand} - ${product.title} (${sLabel}) • R ${product.price_zar.toFixed(2)}`;
+          bannerTitle.innerText = `${dTitle} (${sLabel}) • R ${product.price_zar.toFixed(2)}`;
           banner.classList.remove('hidden');
         }
 
@@ -1943,7 +1985,7 @@
       // Check tombstone archive
       const archived = archivedProducts[targetId];
       if (archived) {
-        const alts = findClosestAlternatives(archived, 3);
+        const alts = findClosestAlternatives(archived, 3, true);
         const otherRetailers = alts.filter(a => a.isDifferentRetailer);
         const sLabel = archived.container_size_g >= 1000 ? (archived.container_size_g / 1000) + 'kg' : archived.container_size_g + 'g';
 
@@ -1952,11 +1994,17 @@
             const retNames = [...new Set(otherRetailers.map(a => a.product.retailer))].join(', ');
             if (bannerSubhead) bannerSubhead.innerHTML = `<span class="text-amber-400 font-semibold"><i class="fa-solid fa-circle-info"></i> Availability Notice:</span>`;
             if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center shrink-0";
-            bannerTitle.innerHTML = `${archived.brand} ${archived.title} (${sLabel}) is no longer available at ${archived.retailer}, but in stock at <b class="text-emerald-400">${retNames}</b>!`;
+            const arcTLow = (archived.title || '').toLowerCase().trim();
+            const arcBLow = (archived.brand || '').toLowerCase().trim();
+            const arcDTitle = arcTLow.startsWith(arcBLow) ? archived.title : `${archived.brand} ${archived.title}`;
+            bannerTitle.innerHTML = `${arcDTitle} (${sLabel}) is no longer available at ${archived.retailer}, but in stock at <b class="text-emerald-400">${retNames}</b>!`;
           } else {
+            const arcTLow = (archived.title || '').toLowerCase().trim();
+            const arcBLow = (archived.brand || '').toLowerCase().trim();
+            const arcDTitle = arcTLow.startsWith(arcBLow) ? archived.title : `${archived.brand} ${archived.title}`;
             if (bannerSubhead) bannerSubhead.innerHTML = `<span class="text-amber-400 font-semibold"><i class="fa-solid fa-triangle-exclamation"></i> Deal Expired:</span>`;
             if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center shrink-0";
-            bannerTitle.innerHTML = `${archived.brand} ${archived.title} (${sLabel}) is no longer available at ${archived.retailer}. Viewing closest active alternatives below.`;
+            bannerTitle.innerHTML = `${arcDTitle} (${sLabel}) is no longer available at ${archived.retailer}. Viewing closest active alternatives below.`;
           }
           banner.classList.remove('hidden');
         }

@@ -282,8 +282,8 @@ BRAND_FORMULATIONS = {
         'sweetener': 'Sucralose'
     },
     'clicks_smartlife': {
-        'ingredients': 'Whey Protein Concentrate, Skim Milk Powder, Flavouring, Cocoa Powder (in choc variants), Stabilizer (Xanthan Gum), Non-Nutritive Sweeteners (Sucralose, Acesulfame-K).',
-        'digestive_enzymes': 'None added',
+        'ingredients': 'Protein Blend (Whey Protein Concentrate, Soy Isolate, Skim Milk Powder), Flavourant, Sodium Chloride, Emulsifier (Carboxymethyl Cellulose E466), Anti-Caking Agent (Silicone Dioxide E551) and Non-Nutritive Sweetener (Sucralose Acesulfame K Blend E950, E955).',
+        'digestive_enzymes': 'None added (Whey, Soy & Milk Multi-Source Blend)',
         'sweetener': 'Sucralose & Acesulfame-K'
     },
     'ssa_whey': {
@@ -647,6 +647,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 15.2
         carbs = 3.3
         fat = 0.7
+    elif matched == BRAND_FORMULATIONS.get('clicks_smartlife') or 'clicks' in b or 'smartlife' in t or 'purified protein' in t:
+        serving_size = 32.0
+        protein_per_serving = 21.4
+        carbs = 3.7
+        fat = 1.2
     elif matched == BRAND_FORMULATIONS.get('mywellness_vegainer') or 'vegainer' in t:
         serving_size = 120.0
         protein_per_serving = 36.0

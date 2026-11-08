@@ -302,6 +302,7 @@ FAMILY_TYPE_MAP = {
     'Lifegain': 'Multi-Source / Meal Blend',
     'Lifegain Junior': 'Multi-Source / Meal Blend',
     'Lifegain Advanced': 'Multi-Source / Meal Blend',
+    'Clicks Smartlife Purified Protein': 'Multi-Source / Meal Blend',
     "Nature's Nutrition Plant Protein": 'Plant / Vegan Protein',
 }
 

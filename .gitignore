@@ -16,3 +16,4 @@ env/
 
 # Local development and exploratory scripts
 scripts/
+.photos/

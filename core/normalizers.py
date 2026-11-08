@@ -8,15 +8,25 @@ def clean_brand(brand_raw, title, url=""):
     if any(k in t for k in ['muscle works', 'muscleworks', 'whey-bolic', 'wheybolic', 'thermo whey', 'iso-tech', 'isotech']) or any(k in b_raw_low for k in ['muscle works', 'muscleworks', 'whey-bolic', 'wheybolic', 'thermo whey', 'iso-tech']):
         if not ('my wellness' in t or 'mywellness' in t or 'my wellness' in b_raw_low or 'mywellness' in b_raw_low):
             return 'Muscle Works'
-    if 'superior whey' in t or 'superior whey' in b_raw_low:
-        if 'my wellness' in t or 'mywellness' in t or 'my wellness' in b_raw_low or 'mywellness' in b_raw_low:
-            return 'My Wellness'
-        return 'Muscle Works'
     if any(k in t for k in ['nutella waffle', 'blueberry cheesecake', 'malted chocolate']) or ('100% whey protein' in t and any(k in t for k in ['double choc', 'creamy vanilla', 'strawberries & cream', '22g protein per serving'])):
         if not ('my wellness' in t or 'primeself' in t or 'clear nutrition' in t or 'psnlifestyle' in t or 'psn' in t or 'psnlifestyle' in b_raw_low or 'psn' in b_raw_low or 'rogue legion' in t or 'rogue' in t or 'rogue legion' in b_raw_low or 'rogue' in b_raw_low):
             return 'Muscle Works'
 
     # Specific Brands
+    if 'ssa' in t or 'ssa supplements' in b_raw_low or 'ssa' in b_raw_low:
+        return 'SSA Supplements'
+    if '32gi' in t or '32gi' in b_raw_low:
+        return '32Gi'
+    if 'peak plant' in t or 'peak protein' in t or 'peak' in b_raw_low:
+        return 'Peak'
+    if 'black bull' in t or 'blackbull' in t or 'black bull' in b_raw_low or 'blackbull' in b_raw_low:
+        return 'Black Bull'
+    if 'evox' in t or 'evox' in b_raw_low:
+        return 'Evox'
+    if 'tnt mercury' in t or 'tnt' in b_raw_low or 'atomic mega' in t:
+        return 'TNT Mercury'
+    if 'phyto pro' in t or 'phytopro' in t or 'phyto pro' in b_raw_low:
+        return 'Phyto Pro'
     if 'psnlifestyle' in t or 'psn' in t or 'psnlifestyle' in b_raw_low or 'psn' in b_raw_low:
         return 'PSNLifestyle'
     if 'rogue legion' in t or 'rogue legion' in b_raw_low or 'rogue' in b_raw_low or 'rogue' in t:
@@ -25,6 +35,14 @@ def clean_brand(brand_raw, title, url=""):
         return 'FutureLife'
     if 'biogen' in t or 'biogen' in b_raw_low:
         return 'Biogen'
+    if 'superior whey' in t or 'superior whey' in b_raw_low:
+        return 'My Wellness'
+    if "nature's choice" in b_raw_low or "natures choice" in b_raw_low or "nature's choice" in t or "natures choice" in t:
+        return "Nature's Choice"
+    if "nature's nutrition" in b_raw_low or "natures nutrition" in b_raw_low or "nature's nutrition" in t or "natures nutrition" in t:
+        return "Nature's Nutrition"
+    if (('nature' in t and 'whey' in t) or ('nature' in b_raw_low and 'whey' in b_raw_low)) and not any(k in t or k in b_raw_low for k in ['nutrition', 'choice']):
+        return 'My Wellness'
     if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in b_raw_low and 'whey' in t):
         return 'My Wellness'
     if 'grass fed whey' in t or 'grass-fed whey' in t:
@@ -93,7 +111,7 @@ def clean_brand(brand_raw, title, url=""):
         if 'my wellness' in b_lower or 'mywellness' in b_lower or 'super clean' in b_lower: return 'My Wellness'
         if 'protein feed' in b_lower: return 'Protein Feed'
         if 'tony ferguson' in b_lower: return 'Tony Ferguson'
-        if 'nature' in b_lower and 'whey' in b_lower: return "Nature's Whey"
+        if 'nature' in b_lower and 'whey' in b_lower: return "My Wellness"
         return b
 
     # Priority 3: Title pattern matching
@@ -249,7 +267,6 @@ FAMILY_TYPE_MAP = {
     'NPL Pro Gains': 'Mass Gainer',
     'Muscle Works Whey-Bolic': 'Hardcore / All-in-One',
     'Muscle Works 100% Whey Protein': 'Whey Blend',
-    'Muscle Works Superior Whey': 'Whey Blend',
     'Muscle Works Thermo Whey': 'Diet / Lean Whey',
     'MuscleTech Nitro-Tech 100% Whey Gold': 'Whey Blend',
     'MuscleTech Nitro-Tech Ripped': 'Diet / Lean Whey',
@@ -304,6 +321,25 @@ FAMILY_TYPE_MAP = {
     'Lifegain Advanced': 'Multi-Source / Meal Blend',
     'Clicks Smartlife Purified Protein': 'Multi-Source / Meal Blend',
     "Nature's Nutrition Plant Protein": 'Plant / Vegan Protein',
+    'Tony Ferguson Go Shake': 'Diet / Lean Whey',
+    'Tony Ferguson 100% Whey Protein': 'Whey Concentrate',
+    'SSA Supplements Clear Whey Isolate': 'Clear Whey / Protein Water',
+    'SSA Supplements Whey Extreme': 'Hardcore / All-in-One',
+    '32Gi Plant Based Protein Shake': 'Plant / Vegan Protein',
+    'Peak Plant Protein Shake': 'Plant / Vegan Protein',
+    'Sci-Core Naked Pure Whey': 'Whey Concentrate',
+    'Sci-Core One Whey Protein': 'Whey Blend',
+    'TNT Mercury Atomic Mega Whey': 'Hardcore / All-in-One',
+    'Evox Leanpro Diet Protein': 'Diet / Lean Whey',
+    'Evox 100% Whey Protein Advanced': 'Whey Blend',
+    'Black Bull Whey Supreme': 'Whey Blend',
+    'GNC Pro Performance 100% Whey': 'Whey Blend',
+    'GNC Pro Performance AMP Amplified Gold': 'Whey Blend',
+    'Phyto Pro Thrive Daily Pea Protein': 'Plant / Vegan Protein',
+    'Phyto Pro Sport Active Recovery': 'Plant / Vegan Protein',
+    'Phyto Pro Vegan Collagen Protein': 'Plant / Vegan Protein',
+    'Phyto Pro Muscle Lean Protein': 'Diet / Lean Whey',
+    "Nature's Choice Whey Protein Concentrate": 'Whey Concentrate',
 }
 
 def determine_type(title, ing="", family_name=""):
@@ -376,7 +412,6 @@ def get_product_family_key(title, brand):
     # 3. Muscle Works Families
     if 'muscle works' in b or 'muscleworks' in b:
         if 'whey-bolic' in t or 'wheybolic' in t: return ('Muscle Works', 'Muscle Works Whey-Bolic')
-        if 'superior whey' in t: return ('Muscle Works', 'Muscle Works Superior Whey')
         if 'thermo whey' in t: return ('Muscle Works', 'Muscle Works Thermo Whey')
         if 'iso-tech' in t or 'isotech' in t: return ('Muscle Works', 'Muscle Works Iso-Tech Whey')
         return ('Muscle Works', 'Muscle Works 100% Whey Protein')
@@ -422,7 +457,9 @@ def get_product_family_key(title, brand):
         if 'phase8' in t: return ('MuscleTech', 'MuscleTech Phase8 Sustained Release')
         return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
 
-    # Nature's Nutrition Families
+    # Nature's Nutrition & Choice Families
+    if "nature's choice" in b or "natures choice" in b or "nature's choice" in t or "natures choice" in t:
+        return ("Nature's Choice", "Nature's Choice Whey Protein Concentrate")
     if "nature's nutrition" in b or "natures nutrition" in b or "nature's nutrition" in t or "natures nutrition" in t:
         return ("Nature's Nutrition", "Nature's Nutrition Plant Protein")
         
@@ -473,6 +510,7 @@ def get_product_family_key(title, brand):
         
     # 10. SSA Supplements Families
     if 'ssa' in b or 'ssa' in t:
+        if 'clear' in t: return ('SSA Supplements', 'SSA Supplements Clear Whey Isolate')
         if 'vegan' in t: return ('SSA Supplements', 'SSA Supplements Vegan Protein')
         if 'extreme' in t: return ('SSA Supplements', 'SSA Supplements Whey Extreme')
         if 'pure whey' in t or '100% whey' in t: return ('SSA Supplements', 'SSA Supplements Pure Whey')
@@ -510,7 +548,8 @@ def get_product_family_key(title, brand):
         return ('Black Bull', 'Black Bull Whey Supreme')
         
     # 17. Tony Ferguson
-    if 'tony ferguson' in b or 'tony ferguson' in t:
+    if 'tony ferguson' in b or 'tony ferguson' in t or 'tferg' in t:
+        if 'go shake' in t or 'go-shake' in t: return ('Tony Ferguson', 'Tony Ferguson Go Shake')
         return ('Tony Ferguson', 'Tony Ferguson 100% Whey Protein')
         
     # 18. Sci-Core
@@ -577,9 +616,11 @@ def get_product_family_key(title, brand):
     if 'alpha whey' in t or ('alpha' in b and 'whey' in t):
         return ('My Wellness', 'My Wellness Alpha Whey')
 
-    # 26. Nature's Whey (standalone brand, distinct from My Wellness Nature's Whey)
-    if ('nature\'s whey' in b or 'natures whey' in b) and 'my wellness' not in b:
-        return ("Nature's Whey", "Nature's Whey Protein Powder")
+    # 26. Nature's Whey / Superior Whey (My Wellness)
+    if ('nature\'s whey' in b or 'natures whey' in b) or ('nature' in t and 'whey' in t and 'nutrition' not in t):
+        return ("My Wellness", "My Wellness Super Nature's Whey")
+    if 'superior whey' in t:
+        return ("My Wellness", "My Wellness Superior Whey")
 
     # 27. Muscle Dynamix
     if 'muscle dynamix' in b or 'dynamix' in b or ('muscle dynamix' in t and 'muscle works' not in b):

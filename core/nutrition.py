@@ -57,9 +57,9 @@ BRAND_FORMULATIONS = {
         'sweetener': 'Stevia Leaf Extract'
     },
     'mywellness_superior': {
-        'ingredients': 'Pasture-Raised Whey Protein Matrix (Whey Protein Isolate, Whey Protein Concentrate), Superfood Blend, Raw Organic Cacao (in choc), Natural Flavouring, Stevia Leaf Extract, Erythritol.',
-        'digestive_enzymes': 'Superfood Enzymes',
-        'sweetener': 'Stevia & Erythritol'
+        'ingredients': 'Whey Protein Blend (Whey Protein Concentrate, Whey Protein Isolate), Cocoa Powder (in chocolate flavours), Flavouring, Xanthan Gum, Non-Nutritive Sweetener (Sucralose, Stevia).',
+        'digestive_enzymes': 'None added (Pure Ultra-Filtered Whey)',
+        'sweetener': 'Sucralose & Stevia'
     },
     'mywellness_isolate': {
         'ingredients': '100% Pure Cross-Flow Microfiltered Whey Protein Isolate, Colostrum Powder (2,000mg), Cocoa (in choc variants), Stevia Leaf Extract.',
@@ -312,14 +312,14 @@ BRAND_FORMULATIONS = {
         'sweetener': 'Stevia Leaf Extract'
     },
     'mywellness_nature': {
-        'ingredients': 'Pasture-Fed Grass-Fed Whey Protein Concentrate, Whey Protein Isolate, Raw Organic Cacao (in choc), Natural Flavouring, Stevia Leaf Extract.',
-        'digestive_enzymes': 'None added (Clean & Natural)',
+        'ingredients': '100% Pasture-Fed Whey Protein Concentrate, Cocoa Powder (in chocolate flavours), Natural Flavouring, Stevia Leaf Extract.',
+        'digestive_enzymes': 'None added (Pasture-Fed Natural Whey)',
         'sweetener': 'Stevia Leaf Extract'
     },
     'blackbull_whey': {
-        'ingredients': 'Whey Supreme Protein Matrix [Instantised Whey Protein Concentrate, Skimmed Milk Solids], Cocoa Powder, Flavouring, Xanthan Gum, Non-Nutritive Sweeteners (Sucralose, Acesulfame-K).',
-        'digestive_enzymes': 'None added',
-        'sweetener': 'Sucralose & Acesulfame-K'
+        'ingredients': 'Blackbull Protein Stack (Whey Protein Concentrate, Whey Protein Isolate, Hydrolysed Whey Protein, Milk Protein), Flavouring, Cocoa Powder, Stabilizer, Blackbull Anabolic Vitamin and Mineral Stack (Vitamin A, B1, B2, B3, B5, B6, B9, B12, C, D, E, H, Chromium AAC, Copper AAC, Potassium Iodide, Ferrous Fumarate), Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'Blackbull Anabolic Vitamin & Mineral Matrix',
+        'sweetener': 'Sucralose'
     },
     'tony_ferguson': {
         'ingredients': 'Whey Protein Concentrate, Cocoa Powder, Flavouring, Xanthan Gum, Non-Nutritive Sweeteners (Sucralose, Acesulfame-K).',
@@ -365,6 +365,81 @@ BRAND_FORMULATIONS = {
         'ingredients': 'Whey Protein Blend (Whey Protein Isolate, Whey Protein Concentrate), Vanilla Flavouring, Emulsifier (Sunflower Lecithin), Non-Nutritive Sweetener (Sucralose).',
         'digestive_enzymes': 'None added',
         'sweetener': 'Sucralose'
+    },
+    '32gi_plant': {
+        'ingredients': 'Plant-Based Protein Blend (Pea Protein Isolate, Rice Protein Concentrate), Cocoa Powder (10% in Choc) / Cinnamon (in Vanilla), Erythritol, Salt, Rice Starch, Stabilizer (Xanthan Gum, Gum Acacia), Steviol Glycosides, Flavouring, Trehalose, Inulin.',
+        'digestive_enzymes': 'Inulin Prebiotic Fibre (4596mg BCAAs)',
+        'sweetener': 'Erythritol & Steviol Glycosides'
+    },
+    'peak_plant': {
+        'ingredients': 'Faba Bean Protein Isolate, Pea Protein Isolate, Flavouring (Natural & Artificial), Flaxseed Oil Powder, Peak Micronutrient Blend (Vitamins & Minerals), Pumpkin Seed Protein Isolate, Vegetable Fibre (Inulin), Sunflower Lecithin, Xanthan Gum, Steviol Glycosides, Sucralose.',
+        'digestive_enzymes': 'Inulin Vegetable Fibre & Peak Micronutrient Blend',
+        'sweetener': 'Steviol Glycosides & Sucralose'
+    },
+    'mywellness_peptide_hydro': {
+        'ingredients': 'Hydrolysed Whey Peptide Protein, Raw Organic Cacao (in choc variant), Fructose, Salt, Stevia Leaf Extract.',
+        'digestive_enzymes': 'Pre-Hydrolysed Whey Peptides (Fast Digestion & Maximum Nitrogen Retention)',
+        'sweetener': 'Fructose & Stevia Leaf Extract'
+    },
+    'mywellness_protein_smoothie': {
+        'ingredients': 'Superfood Protein Blend (Pea Protein, Hemp Seed Powder), Superfood Complex (Maca Root, Cacao Powder, Baobab Powder, Chia Seeds, Flaxseed Powder, Lucuma Powder, Mesquite Powder, Wheat Grass Powder, Matcha Powder, Red Beet Powder, Turmeric Powder), Stevia Leaf Extract.',
+        'digestive_enzymes': '11 Organic Superfood Functional Complex',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'evox_lean_pro': {
+        'ingredients': 'Lean-Pro Protein Matrix (Whey Protein Concentrate, Soy Protein Isolate, Calcium Caseinate), Cocoa, Garcinia Cambogia Extract (60% HCA), L-Carnitine Tartrate, Green Tea Extract, Tolerase® L (Lactase), Sucralose.',
+        'digestive_enzymes': 'Tolerase® L (Lactase) + Garcinia & L-Carnitine Thermogenic Stack',
+        'sweetener': 'Sucralose'
+    },
+    'scicore_naked': {
+        'ingredients': '100% Cross-Flow Instantised Whey Protein Concentrate (80%), Sunflower Lecithin. Pure unflavoured, zero artificial sweeteners, zero thickeners.',
+        'digestive_enzymes': 'None added (Native Pure Whey)',
+        'sweetener': 'None (Unsweetened / Natural)'
+    },
+    'scicore_one_whey': {
+        'ingredients': 'Instantised Whey Protein Concentrate, Whey Protein Isolate, Cocoa Powder (in choc variants), Flavouring, Sunflower Lecithin, Xanthan Gum, Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added (Pure Ultra-Filtered Whey)',
+        'sweetener': 'Sucralose'
+    },
+    'ssa_clear_whey': {
+        'ingredients': 'Hydrolysed Clear Whey Protein Isolate, Citric Acid, Malic Acid, Flavouring, Colourant, Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'Pre-Hydrolysed Clear Peptides',
+        'sweetener': 'Sucralose'
+    },
+    'ssa_whey_extreme': {
+        'ingredients': 'Advanced Multi-Stage Whey Complex (Whey Protein Concentrate, Whey Protein Isolate, Hydrolysed Whey Peptides), Maltodextrin, Glycine, ZMB-6 Pro Stack (Zinc Monomethionine, Magnesium Aspartate, Vitamin B6), DigeZyme® Multi-Enzyme Complex, Flavouring, Cocoa Powder, Sucralose.',
+        'digestive_enzymes': 'DigeZyme® Multi-Enzyme Complex + ZMB-6 Recovery Stack',
+        'sweetener': 'Sucralose'
+    },
+    'tnt_atomic_mega': {
+        'ingredients': 'Tri-Phase Whey Protein Complex (Whey Protein Concentrate, Whey Protein Isolate, Whey Hydrolysate), L-Glycine, Creatine Monohydrate, Taurine, BCAAs, EAAs, Tolerase® L (Lactase), Flavouring, Cocoa Powder, Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'Tolerase® L (Lactase) + Creatine & EAA Anabolic Stack',
+        'sweetener': 'Sucralose'
+    },
+    'tony_ferguson_go_shake': {
+        'ingredients': 'Skim Milk Powder, Soy Protein Isolate, Whey Protein Concentrate, Inulin Prebiotic Fibre, Vitamins & Minerals Blend, Flavouring, Colouring (Beetroot Red), Stabiliser, Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'Inulin Prebiotic Fibre & 18 Essential Vitamins and Minerals',
+        'sweetener': 'Sucralose'
+    },
+    'phytopro_thrive': {
+        'ingredients': '100% Nutralys® EU Non-GMO Water-Extracted Pea Protein Isolate (88% protein), Cocoa Powder / Madagascan Vanilla Powder (in flavoured variants), Xylitol, Stevia Leaf Extract.',
+        'digestive_enzymes': 'None needed (Alkalizing Water-Extracted Pea Isolate)',
+        'sweetener': 'Xylitol & Stevia (Unsweetened in Unflavoured)'
+    },
+    'phytopro_sport': {
+        'ingredients': 'Nutralys® Pea Protein Isolate, L-Glutamine, Taurine, L-Carnitine, Creatine, Potassium AAC (1500mg), Magnesium AAC (750mg), Selenium AAC (50mg), C3 Turmeric Extract (200mg), Green Tea Extract (200mg), Maca Root Extract (500mg), Bioperine (5mg), Aminogen / DigeZyme Digestive Enzyme (200mg), B-Vitamin Complex, Cocoa Powder, Xylitol, Stevia, Kalahari Desert Salt.',
+        'digestive_enzymes': 'Aminogen / DigeZyme Multi-Enzyme Complex (200mg) + Bioperine (5mg)',
+        'sweetener': 'Xylitol & Stevia'
+    },
+    'phytopro_vegan_collagen': {
+        'ingredients': 'Nutralys® Pea Protein Isolate, PhytoColl® Collagen-Generating Amino Complex (Glycine, Proline, L-Glutamine, Lysine, Serine, Arginine, Calcium HMB), Xylitol, Horsetail Extract (7% Silica), Vanilla Bean Powder, Salt, Stevia, Vitamin B7 (Biotin).',
+        'digestive_enzymes': 'PhytoColl® Biomimetic Plant Collagen Matrix with Horsetail Silica & Biotin',
+        'sweetener': 'Xylitol & Stevia'
+    },
+    'phytopro_muscle': {
+        'ingredients': 'Nutralys® Pea Protein Isolate, GMO-Free Xylitol, Inulin (from Chicory Root Prebiotic), PhytaMin® A-Z Vitamin and Mineral Blend (23 vitamins & minerals), Calcium HMB, L-Carnitine, Taurine, Madagascan Vanilla Powder / UTZ-Certified Cocoa Powder, Steviol Glycosides, Oryx Desert Salt.',
+        'digestive_enzymes': 'Chicory Root Inulin Prebiotic (3g) + Calcium HMB Muscle Protector',
+        'sweetener': 'GMO-Free Xylitol & Steviol Glycosides'
     }
 }
 
@@ -397,8 +472,6 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['usn_diet_fuel']
     elif 'whey-bolic' in t or 'wheybolic' in t:
         matched = BRAND_FORMULATIONS['muscle_works_wheybolic']
-    elif 'superior whey' in t and 'my wellness' not in t and 'mywellness' not in t:
-        matched = BRAND_FORMULATIONS['muscle_works_superior']
     elif 'thermo whey' in t:
         matched = BRAND_FORMULATIONS['muscle_works_thermo']
     elif 'gold standard' in t and 'casein' in t:
@@ -409,7 +482,7 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['on_gold_standard']
     elif 'nihpro' in t:
         matched = BRAND_FORMULATIONS['nutritech_nihpro']
-    elif 'nutritech' in b or 'nutritech' in t or 'vegan protein' in t:
+    elif 'nutritech' in b or 'nutritech' in t:
         if ('pro sport' in t or 'prosport' in t) and 'vegan' in t:
             matched = BRAND_FORMULATIONS['nutritech_prosport_vegan']
         elif 'vegan' in t:
@@ -430,6 +503,7 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
             matched = BRAND_FORMULATIONS['nutritech_premium']
     elif 'clear whey' in t:
         if 'biogen' in b: matched = BRAND_FORMULATIONS['biogen_clear']
+        elif 'ssa' in b: matched = BRAND_FORMULATIONS['ssa_clear_whey']
         else: matched = BRAND_FORMULATIONS['nutritech_clear']
     elif 'anabolic whey' in t and 'npl' in t:
         matched = BRAND_FORMULATIONS['npl_anabolic_whey']
@@ -450,9 +524,12 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     elif 'clicks' in b or 'smartlife' in t:
         matched = BRAND_FORMULATIONS['clicks_smartlife']
     elif 'ssa' in b or 'ssa' in t:
-        matched = BRAND_FORMULATIONS['ssa_whey']
+        if 'clear' in t: matched = BRAND_FORMULATIONS['ssa_clear_whey']
+        elif 'extreme' in t: matched = BRAND_FORMULATIONS['ssa_whey_extreme']
+        else: matched = BRAND_FORMULATIONS['ssa_whey']
     elif 'evox' in b or 'evox' in t:
-        matched = BRAND_FORMULATIONS['evox_whey']
+        if 'lean' in t or 'diet' in t or 'lite' in t: matched = BRAND_FORMULATIONS['evox_lean_pro']
+        else: matched = BRAND_FORMULATIONS['evox_whey']
     elif 'gloot' in b or 'gloot' in t:
         if 'vegan' in t: matched = BRAND_FORMULATIONS['gloot_vegan']
         else: matched = BRAND_FORMULATIONS['gloot_whey']
@@ -468,11 +545,13 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['mywellness_alpha']
     elif "nature's nutrition" in b or "natures nutrition" in b or "nature's nutrition" in t or "natures nutrition" in t:
         matched = BRAND_FORMULATIONS['natures_nutrition_plant']
-    elif 'my wellness' in b or 'mywellness' in b:
+    elif 'my wellness' in b or 'mywellness' in b or 'superior whey' in t or 'natures whey' in t or "nature's whey" in t:
         if 'super clean' in t or ('clean protein' in t and 'x5' in t): matched = BRAND_FORMULATIONS['mywellness_super_clean']
         elif 'vegainer' in t: matched = BRAND_FORMULATIONS['mywellness_vegainer']
         elif 'hard mass' in t: matched = BRAND_FORMULATIONS['mywellness_hard_mass']
         elif 'superior whey' in t: matched = BRAND_FORMULATIONS['mywellness_superior']
+        elif 'peptide' in t or 'hydro protein' in t: matched = BRAND_FORMULATIONS['mywellness_peptide_hydro']
+        elif 'smoothie' in t: matched = BRAND_FORMULATIONS['mywellness_protein_smoothie']
         elif 'isolate' in t: matched = BRAND_FORMULATIONS['mywellness_isolate']
         elif 'collagen' in t: matched = BRAND_FORMULATIONS['mywellness_collagen']
         elif any(k in t for k in ['vegan', 'plant', 'pea', 'yeast', 'soy']): matched = BRAND_FORMULATIONS['mywellness_vegan']
@@ -483,17 +562,30 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['mywellness_nature']
     elif 'black bull' in b or 'blackbull' in b or ('supreme' in t and 'usn' not in b and 'usn' not in t):
         matched = BRAND_FORMULATIONS['blackbull_whey']
-    elif 'tony ferguson' in b or 'tony ferguson' in t:
-        matched = BRAND_FORMULATIONS['tony_ferguson']
+    elif 'tony ferguson' in b or 'tony ferguson' in t or 'tferg' in t:
+        if 'go shake' in t or 'go-shake' in t: matched = BRAND_FORMULATIONS['tony_ferguson_go_shake']
+        else: matched = BRAND_FORMULATIONS['tony_ferguson']
     elif 'sci-core' in b or 'scicore' in b:
-        matched = BRAND_FORMULATIONS['scicore_whey']
+        if 'one whey' in t: matched = BRAND_FORMULATIONS['scicore_one_whey']
+        elif 'naked' in t or 'pure' in t: matched = BRAND_FORMULATIONS['scicore_naked']
+        else: matched = BRAND_FORMULATIONS['scicore_whey']
+    elif '32gi' in b or '32gi' in t:
+        matched = BRAND_FORMULATIONS['32gi_plant']
+    elif 'peak' in b or 'peak' in t:
+        matched = BRAND_FORMULATIONS['peak_plant']
+    elif 'phyto pro' in b or 'phytopro' in b or 'phyto pro' in t or 'phytopro' in t:
+        if 'sport' in t: matched = BRAND_FORMULATIONS['phytopro_sport']
+        elif 'collagen' in t: matched = BRAND_FORMULATIONS['phytopro_vegan_collagen']
+        elif 'muscle' in t or 'lean' in t: matched = BRAND_FORMULATIONS['phytopro_muscle']
+        else: matched = BRAND_FORMULATIONS['phytopro_thrive']
     elif 'primal' in b or 'primal' in t:
         if 'mass' in t or 'gain' in t: matched = BRAND_FORMULATIONS['primal_mass_gain']
         elif 'skinny' in t: matched = BRAND_FORMULATIONS['primal_skinny_whey']
         elif 'diet' in t: matched = BRAND_FORMULATIONS['primal_diet_shake']
         else: matched = BRAND_FORMULATIONS['primal_whey']
     elif 'tnt' in b or 'tnt' in t:
-        matched = BRAND_FORMULATIONS['tnt_whey']
+        if 'atomic' in t or 'mega whey' in t: matched = BRAND_FORMULATIONS['tnt_atomic_mega']
+        else: matched = BRAND_FORMULATIONS['tnt_whey']
     elif 'psnlifestyle' in b or 'psnlifestyle' in t or 'psn' in t or 'psn' in b:
         if 'meltdown' in t or 'fat burner' in t:
             matched = BRAND_FORMULATIONS['psnlifestyle_meltdown']
@@ -787,6 +879,111 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 22.0
         carbs = 10.8
         fat = 1.9
+    elif matched == BRAND_FORMULATIONS.get('32gi_plant'):
+        serving_size = 30.0
+        protein_per_serving = 20.0
+        carbs = 3.0
+        fat = 1.8
+    elif matched == BRAND_FORMULATIONS.get('peak_plant'):
+        serving_size = 30.0
+        protein_per_serving = 20.0
+        carbs = 1.2
+        fat = 1.4
+    elif matched == BRAND_FORMULATIONS.get('mywellness_peptide_hydro'):
+        serving_size = 30.0
+        protein_per_serving = 21.6
+        carbs = 2.5
+        fat = 2.2
+    elif matched == BRAND_FORMULATIONS.get('mywellness_protein_smoothie'):
+        serving_size = 32.0
+        protein_per_serving = 15.0
+        carbs = 9.0
+        fat = 1.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_nature'):
+        serving_size = 30.0
+        protein_per_serving = 23.0
+        carbs = 2.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('blackbull_whey'):
+        serving_size = 32.0
+        protein_per_serving = 22.0
+        carbs = 4.5
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('gnc_pro_performance'):
+        serving_size = 33.0
+        protein_per_serving = 24.0
+        carbs = 3.0
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('gnc_amp_gold'):
+        serving_size = 33.0
+        protein_per_serving = 24.0
+        carbs = 2.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('evox_whey'):
+        serving_size = 32.0
+        protein_per_serving = 23.0
+        carbs = 2.5
+        fat = 1.7
+    elif matched == BRAND_FORMULATIONS.get('evox_lean_pro'):
+        serving_size = 35.0
+        protein_per_serving = 21.0
+        carbs = 5.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('scicore_naked'):
+        serving_size = 30.0
+        protein_per_serving = 23.0
+        carbs = 1.06
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('scicore_one_whey'):
+        serving_size = 29.0
+        protein_per_serving = 22.4
+        carbs = 3.3
+        fat = 1.4
+    elif matched == BRAND_FORMULATIONS.get('ssa_clear_whey'):
+        serving_size = 26.0
+        protein_per_serving = 21.0
+        carbs = 0.3
+        fat = 0.1
+    elif matched == BRAND_FORMULATIONS.get('ssa_whey_extreme'):
+        serving_size = 38.0
+        protein_per_serving = 22.0
+        carbs = 10.1
+        fat = 2.2
+    elif matched == BRAND_FORMULATIONS.get('tnt_atomic_mega'):
+        serving_size = 33.0
+        protein_per_serving = 25.0
+        carbs = 2.8
+        fat = 0.8
+    elif matched == BRAND_FORMULATIONS.get('tony_ferguson_go_shake'):
+        serving_size = 35.0
+        protein_per_serving = 17.4
+        carbs = 11.0
+        fat = 0.9
+    elif matched == BRAND_FORMULATIONS.get('tony_ferguson'):
+        serving_size = 28.0
+        protein_per_serving = 20.0
+        carbs = 2.6
+        fat = 1.6
+    elif matched == BRAND_FORMULATIONS.get('phytopro_thrive'):
+        serving_size = 20.0
+        protein_per_serving = 18.0
+        carbs = 0.6
+        fat = 1.4
+    elif matched == BRAND_FORMULATIONS.get('phytopro_sport'):
+        serving_size = 40.0
+        protein_per_serving = 27.5
+        carbs = 0.6
+        fat = 1.2
+    elif matched == BRAND_FORMULATIONS.get('phytopro_vegan_collagen'):
+        serving_size = 30.0
+        protein_per_serving = 25.0
+        carbs = 0.6
+        fat = 1.4
+    elif matched == BRAND_FORMULATIONS.get('phytopro_muscle'):
+        serving_size = 62.0
+        protein_per_serving = 40.0
+        carbs = 7.6
+        fat = 3.3
     elif ptype in ['Whey Isolate', 'Clear Whey / Protein Water'] or (matched and 'isolate' in str(matched)):
         serving_size = 30.0
         protein_per_serving = 26.0

@@ -75,9 +75,14 @@
           </span>
         </label>
 
-        <span id="clicksStaffActiveBadge" class="hidden text-[11px] px-2.5 py-1 rounded-lg bg-sky-950/90 text-sky-300 border border-sky-800/60 font-medium">
-          <i class="fa-solid fa-id-card text-sky-400 mr-1"></i> Clicks Staff Active (-13%)
-        </span>
+        <!-- Clicks Staff -13% Promo Toggle -->
+        <label class="inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Simulate Clicks Staff 13% discount (activate via toggle or ?clicks=true / ?staff=true)">
+          <input type="checkbox" id="clicksStaffToggle" class="sr-only peer" onchange="toggleClicksStaff()">
+          <div class="w-7 h-4 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all relative peer-checked:bg-sky-500"></div>
+          <span class="text-[11px] font-medium text-gray-300 flex items-center gap-1">
+            <i class="fa-solid fa-id-card text-sky-400 text-[10px]"></i> Staff <b class="text-sky-400">-13%</b>
+          </span>
+        </label>
 
         <span class="text-[11px] px-2.5 py-1 bg-[#131924] border border-gray-800/80 rounded-lg text-gray-400 font-medium hidden sm:inline-flex items-center gap-1.5" title="Database prices and formulation data last verified">
           <i class="fa-regular fa-calendar-check text-emerald-400 text-xs"></i>
@@ -533,8 +538,8 @@
         (params.has('staff') && (staff === null || staff === '' || staff.toLowerCase() === 'true' || staff === '1'))
       ) {
         clicksDiscountEnabled = true;
-        const badge = document.getElementById('clicksStaffActiveBadge');
-        if (badge) badge.classList.remove('hidden');
+        const toggle = document.getElementById('clicksStaffToggle');
+        if (toggle) toggle.checked = true;
       }
       const promo3for2 = params.get('3for2') || params.get('promo');
       if (promo3for2 === 'true' || promo3for2 === '1' || promo3for2 === '3for2') {
@@ -548,6 +553,12 @@
       if (params.get('dischem') === 'true' || params.get('dischem') === '1') {
         dischemRewardsEnabled = true;
       }
+    }
+
+    function toggleClicksStaff() {
+      const toggle = document.getElementById('clicksStaffToggle');
+      clicksDiscountEnabled = toggle ? toggle.checked : !clicksDiscountEnabled;
+      applyFilters();
     }
 
     function toggleClicks3For2() {
@@ -1431,6 +1442,26 @@
           desc += `<br><span class="text-sky-300 font-semibold">With Clicks Staff -13%:</span> 3 tubs cost R ${bundlePriceStaff.toFixed(0)} (effectively <b class="text-emerald-400">R ${perTubStaff.toFixed(2)} / tub</b>).`;
         }
         document.getElementById('modalPromoDesc').innerHTML = desc;
+      } else if (p.coupon_code === 'STAFF13') {
+        if (clicksDiscountEnabled) {
+          promoSec.classList.remove('hidden');
+          document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-id-card text-sky-400"></i> Active Discount & Promotions';
+          document.getElementById('modalPromoCodeBadge').innerText = 'STAFF13';
+          document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-sky-900/60 text-sky-200 font-mono text-xs font-bold';
+          document.getElementById('modalPromoDesc').innerText = 'Clicks Staff 13% Discount Active at checkout.';
+        } else {
+          promoSec.classList.add('hidden');
+        }
+      } else if (p.coupon_code === 'BETTER10') {
+        if (dischemRewardsEnabled) {
+          promoSec.classList.remove('hidden');
+          document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag text-emerald-400"></i> Active Discount & Promotions';
+          document.getElementById('modalPromoCodeBadge').innerText = 'BETTER10';
+          document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-200 font-mono text-xs font-bold';
+          document.getElementById('modalPromoDesc').innerText = 'Dis-Chem Better Rewards 10% instant savings active.';
+        } else {
+          promoSec.classList.add('hidden');
+        }
       } else if (p.coupon_code && p.coupon_code !== 'DIRECT' && p.coupon_code !== 'STANDARD' && p.coupon_code !== 'NONE') {
         promoSec.classList.remove('hidden');
         document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag"></i> Active Discount & Promotions';

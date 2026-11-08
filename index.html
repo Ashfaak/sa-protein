@@ -86,7 +86,7 @@
 
         <span class="text-[11px] px-2.5 py-1 bg-[#131924] border border-gray-800/80 rounded-lg text-gray-400 font-medium hidden sm:inline-flex items-center gap-1.5" title="Database prices and formulation data last verified">
           <i class="fa-regular fa-calendar-check text-emerald-400 text-xs"></i>
-          <span>Updated: <b class="text-gray-200 font-semibold" id="lastUpdatedDate">7 Nov 2026</b></span>
+          <span>Updated: <b class="text-gray-200 font-semibold" id="lastUpdatedDate">8 Nov 2026</b></span>
         </span>
         <span id="productCounter" class="text-[11px] px-2.5 py-1 bg-gray-800/80 rounded-lg text-gray-400 font-mono hidden sm:inline-block">Loading...</span>
       </div>
@@ -297,6 +297,7 @@
             <select id="sectionGroupingSelect" onchange="setSectionGrouping(this.value)" class="bg-[#0b0f17] border border-gray-800 rounded-lg px-2.5 py-1 text-xs text-gray-300 focus:outline-none focus:border-emerald-500 cursor-pointer">
               <option value="none">None (Continuous)</option>
               <option value="brand">Brand</option>
+              <option value="flavor">Flavour Category</option>
               <option value="type">Protein Type</option>
               <option value="size">Tub Size</option>
               <option value="retailer">Retailer</option>
@@ -527,6 +528,18 @@
         if (key.includes(k)) return v;
       }
       return '';
+    }
+
+    function getFlavorCategory(flavor) {
+      if (!flavor) return 'Unflavoured / Natural';
+      const f = flavor.toLowerCase();
+      if (f.includes('unflavoured') || f.includes('unflavored') || f.includes('natural')) return 'Unflavoured & Natural';
+      if (f.includes('choc') || f.includes('cocoa') || f.includes('brownie') || f.includes('truffle') || f.includes('nutella')) return 'Chocolate Flavours';
+      if (f.includes('vanilla')) return 'Vanilla Flavours';
+      if (f.includes('strawb') || f.includes('berry') || f.includes('peach') || f.includes('mango') || f.includes('banana') || f.includes('watermelon')) return 'Strawberry, Berry & Fruit Flavours';
+      if (f.includes('caramel') || f.includes('coffee') || f.includes('latte') || f.includes('mocha') || f.includes('cinnamon') || f.includes('biscuit') || f.includes('doughnut') || f.includes('waffle')) return 'Caramel, Coffee & Dessert Flavours';
+      if (f.includes('peanut butter')) return 'Peanut Butter Flavours';
+      return 'Classic & Other Flavours';
     }
 
     function checkUrlParameters() {
@@ -977,6 +990,7 @@
       for (const item of sorted) {
         let secKey = 'Other';
         if (currentSectionGrouping === 'brand') secKey = item.brand;
+        else if (currentSectionGrouping === 'flavor') secKey = getFlavorCategory(item.flavor);
         else if (currentSectionGrouping === 'type') secKey = item.type;
         else if (currentSectionGrouping === 'size') {
           const s = item.container_size_g || 1000;
@@ -1009,6 +1023,15 @@
       for (const item of items) {
         let secKey = 'Other';
         if (currentSectionGrouping === 'brand') secKey = item.brand;
+        else if (currentSectionGrouping === 'flavor') {
+          if (isGrouped) {
+            const fList = Array.from(item.flavors || []);
+            const primary = fList.find(f => !f.toLowerCase().includes('classic')) || fList[0] || '';
+            secKey = getFlavorCategory(primary);
+          } else {
+            secKey = getFlavorCategory(item.flavor);
+          }
+        }
         else if (currentSectionGrouping === 'type') secKey = item.type;
         else if (currentSectionGrouping === 'size') {
           const s = isGrouped ? (item.bestSize || 1000) : (item.container_size_g || 1000);

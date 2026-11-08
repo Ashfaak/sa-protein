@@ -472,9 +472,50 @@ def get_product_family_key(title, brand):
     if 'biyode' in b or 'biyode' in t or 'b0f9twj4hq' in t:
         return ('Biyode', 'Biyode Whey Protein Powder')
 
+    # 23. Clicks Smartlife
+    if 'smartlife' in b or 'smartlife' in t or ('clicks' in b and 'purified' in t):
+        if 'purified' in t: return ('Clicks Smartlife', 'Clicks Smartlife Purified Protein')
+        return ('Clicks Smartlife', 'Clicks Smartlife Whey Protein')
+
+    # 24. Just Protein
+    if 'just protein' in b or 'just protein' in t:
+        if 'isolate' in t: return ('Just Protein', 'Just Protein Pure Whey Isolate')
+        return ('Just Protein', 'Just Protein Premium Whey Protein')
+
+    # 25. Alpha
+    if 'alpha' in b:
+        return ('Alpha', 'Alpha Whey Protein')
+
+    # 26. Nature's Whey (standalone brand, distinct from My Wellness Nature's Whey)
+    if ('nature\'s whey' in b or 'natures whey' in b) and 'my wellness' not in b:
+        return ("Nature's Whey", "Nature's Whey Protein Powder")
+
+    # 27. Muscle Dynamix
+    if 'muscle dynamix' in b or 'dynamix' in b or ('muscle dynamix' in t and 'muscle works' not in b):
+        if 'iso gold' in t: return ('Muscle Dynamix', 'Muscle Dynamix Iso Gold')
+        if 'whey one' in t: return ('Muscle Dynamix', 'Muscle Dynamix Whey One Premium')
+        return ('Muscle Dynamix', 'Muscle Dynamix Whey Protein')
+
+    # 28. TNT Mercury
+    if 'tnt mercury' in b or 'tnt mercury' in t or 'tnt' in b:
+        if 'mega whey' in t or 'atomic' in t: return ('TNT Mercury', 'TNT Mercury Atomic Mega Whey')
+        if 'prime whey' in t: return ('TNT Mercury', 'TNT Mercury Prime Whey')
+        return ('TNT Mercury', 'TNT Mercury Whey Protein')
+
+    # 29. Blast Vitality
+    if 'blast vitality' in b or (b.strip() == 'blast') or ('blast vitality' in t):
+        return ('Blast Vitality', 'Blast Vitality Daily Protein')
+
+    # 30. Clear Nutrition
+    if 'clear nutrition' in b or 'clear nutrition' in t:
+        return ('Clear Nutrition', 'Clear Nutrition 100% Whey Protein')
+
     # Generic
     clean_t = re.sub(r'[\d\.]+\s*(?:kg|g|lb)\b', '', title, flags=re.IGNORECASE)
-    clean_t = re.sub(r'-\s*(?:vanilla|chocolate|strawberry|caramel|tin roof)[^$]*', '', clean_t, flags=re.IGNORECASE).strip()
+    # Strip common flavor descriptors from product line name so all flavors group together under the parent product
+    clean_t = re.sub(r'\b(?:double chocolate|rich chocolate|creamy vanilla|vanilla ice cream|chocolate truffle|chocolate milk|chocolate|choc|vanilla|strawberry|berries|berry|banana|caramel latte|salted caramel|caramel|coffee|peanut butter|cookies|cinnamon|hazelnut|unflavoured|unflavored|natural|mocha|chocotella)\b', '', clean_t, flags=re.IGNORECASE)
+    clean_t = re.sub(r'-\s*[^$]*', '', clean_t).strip(' -_,|')
+    clean_t = re.sub(r'\s+', ' ', clean_t).strip()
     return (brand, clean_t or f"{brand} Whey Protein")
 
 # Authentic Formulations

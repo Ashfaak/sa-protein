@@ -75,8 +75,8 @@
           </span>
         </label>
 
-        <!-- Clicks Staff -13% Promo Toggle -->
-        <label class="inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Simulate Clicks Staff 13% discount (activate via toggle or ?clicks=true / ?staff=true)">
+        <!-- Clicks Staff -13% Promo Toggle (Hidden by default; revealed only if ?clicks=true in URL) -->
+        <label id="clicksStaffToggleWrapper" class="hidden inline-flex items-center gap-1.5 bg-[#0b0f17] hover:bg-gray-900 px-2.5 py-1 rounded-lg border border-gray-800 cursor-pointer transition select-none shadow-sm" title="Clicks Staff 13% discount simulation">
           <input type="checkbox" id="clicksStaffToggle" class="sr-only peer" onchange="toggleClicksStaff()">
           <div class="w-7 h-4 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all relative peer-checked:bg-sky-500"></div>
           <span class="text-[11px] font-medium text-gray-300 flex items-center gap-1">
@@ -551,6 +551,8 @@
         (params.has('staff') && (staff === null || staff === '' || staff.toLowerCase() === 'true' || staff === '1'))
       ) {
         clicksDiscountEnabled = true;
+        const wrapper = document.getElementById('clicksStaffToggleWrapper');
+        if (wrapper) wrapper.classList.remove('hidden');
         const toggle = document.getElementById('clicksStaffToggle');
         if (toggle) toggle.checked = true;
       }

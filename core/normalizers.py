@@ -340,6 +340,25 @@ FAMILY_TYPE_MAP = {
     'Phyto Pro Vegan Collagen Protein': 'Plant / Vegan Protein',
     'Phyto Pro Muscle Lean Protein': 'Diet / Lean Whey',
     "Nature's Choice Whey Protein Concentrate": 'Whey Concentrate',
+    'Myprotein Impact Whey Protein': 'Whey Concentrate',
+    'Myprotein Impact Whey Isolate': 'Whey Isolate',
+    'Myprotein Clear Whey Isolate': 'Clear Whey / Protein Water',
+    'Just Protein Premium Whey Protein': 'Whey Blend',
+    'Muscle Works 100% Whey Protein': 'Whey Blend',
+    'Muscle Works Iso-Tech Whey': 'Whey Isolate',
+    'Lifestyle Food Whey Protein': 'Whey Concentrate',
+    'Health Connection Just Whey': 'Whey Concentrate',
+    'Clear Nutrition 100% Whey Protein': 'Whey Blend',
+    'Muscle Dynamix Whey One Premium': 'Whey Blend',
+    'Muscle Dynamix Iso Gold': 'Whey Isolate',
+    'Nestle Resource Whey Protein Neutral': 'Whey Concentrate',
+    'Blast Vitality Daily Protein': 'Plant / Vegan Protein',
+    'Collagen & Co Whey Isolate': 'Whey Isolate',
+    'SA Vitamins Whey Protein Isolate': 'Whey Isolate',
+    'ATP Fitness ATP Whey Protein Concentrate': 'Whey Concentrate',
+    'My Whey Milk Protein Isolate 85%': 'Casein / Milk Protein',
+    'Beauty Gen Collagen Coffee Creamer': 'Collagen / Beef / Broth',
+    'Remedy Greens Collagen Mobility': 'Collagen / Beef / Broth',
 }
 
 def determine_type(title, ing="", family_name=""):
@@ -641,6 +660,36 @@ def get_product_family_key(title, brand):
     # 30. Clear Nutrition
     if 'clear nutrition' in b or 'clear nutrition' in t:
         return ('Clear Nutrition', 'Clear Nutrition 100% Whey Protein')
+
+    # 31. Nestle Nutritionals
+    if 'nestle' in b or 'nestle' in t or 'resorce' in t or 'resource whey' in t:
+        return ('Nestle Nutritionals', 'Nestle Resource Whey Protein Neutral')
+
+    # 32. Health Connection
+    if 'health connection' in b or 'health connection' in t or 'just whey' in t:
+        return ('Health Connection', 'Health Connection Just Whey')
+
+    # 33. Collagen & Co
+    if 'collagen & co' in b or 'collagen & co' in t:
+        return ('Collagen & Co', 'Collagen & Co Whey Isolate')
+
+    # 34. SA Vitamins
+    if 'sa vitamins' in b or 'sa vitamins' in t:
+        return ('SA Vitamins', 'SA Vitamins Whey Protein Isolate')
+
+    # 35. ATP Fitness
+    if 'atp fitness' in b or 'atp fitness' in t or 'atp whey' in t:
+        return ('ATP Fitness', 'ATP Whey Protein Concentrate')
+
+    # 36. My Whey
+    if 'my whey' in b or 'my whey' in t:
+        return ('My Whey', 'My Whey Milk Protein Isolate 85%')
+
+    # 37. Beauty Gen & Remedy Greens
+    if 'beauty gen' in b or 'beauty gen' in t:
+        return ('Beauty Gen', 'Beauty Gen Collagen Coffee Creamer')
+    if 'remedy greens' in b or 'remedy greens' in t:
+        return ('Remedy Greens', 'Remedy Greens Collagen Mobility')
 
     # Generic
     clean_t = re.sub(r'[\d\.]+\s*(?:kg|g|lb)\b', '', title, flags=re.IGNORECASE)

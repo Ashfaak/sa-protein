@@ -440,6 +440,106 @@ BRAND_FORMULATIONS = {
         'ingredients': 'Nutralys® Pea Protein Isolate, GMO-Free Xylitol, Inulin (from Chicory Root Prebiotic), PhytaMin® A-Z Vitamin and Mineral Blend (23 vitamins & minerals), Calcium HMB, L-Carnitine, Taurine, Madagascan Vanilla Powder / UTZ-Certified Cocoa Powder, Steviol Glycosides, Oryx Desert Salt.',
         'digestive_enzymes': 'Chicory Root Inulin Prebiotic (3g) + Calcium HMB Muscle Protector',
         'sweetener': 'GMO-Free Xylitol & Steviol Glycosides'
+    },
+    'myprotein_impact_whey': {
+        'ingredients': 'Whey Protein Concentrate (Milk) (96%), Emulsifier (Soy Lecithin), Flavouring, Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added (Pure Cross-Flow Concentrated Whey)',
+        'sweetener': 'Sucralose'
+    },
+    'myprotein_impact_isolate': {
+        'ingredients': 'Whey Protein Isolate (Milk) (96%), Emulsifier (Soy / Sunflower Lecithin), Flavouring, Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added (Microfiltered Isolate)',
+        'sweetener': 'Sucralose'
+    },
+    'myprotein_clear': {
+        'ingredients': 'Hydrolysed Clear Whey Protein Isolate, Natural Acidifiers (Citric Acid, Malic Acid), Natural & Nature Identical Flavouring, Anti-Foaming Agent (Silicon Dioxide), Natural Colouring (Beetroot Red / Beta Carotene), Non-Nutritive Sweetener (Sucralose).',
+        'digestive_enzymes': 'Pre-Hydrolysed Clear Whey Peptides',
+        'sweetener': 'Sucralose'
+    },
+    'justprotein_premium': {
+        'ingredients': 'Whey Protein Concentrate, Milk Protein Concentrate, Cocoa Powder (in chocolate flavours), Flavouring, Salt, Emulsifier, Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Sucralose'
+    },
+    'muscleworks_100_whey': {
+        'ingredients': 'Ultra-microfiltered Whey Protein Matrix (Whey Protein Concentrate, Whey Protein Isolate), Low GI Sweetener Blend (Erythritol, Fructose, Stevia), Permitted Flavourants, Xanthan Gum, L-Glutamine, Instantised Branched Chain Amino Acids (BCAAs), Cocoa Powder (in chocolate flavours).',
+        'digestive_enzymes': 'L-Glutamine & BCAAs (No digestive enzymes added)',
+        'sweetener': 'Erythritol, Fructose & Stevia'
+    },
+    'muscleworks_isotech': {
+        'ingredients': 'Multi-Stage Isolate Matrix (Whey Protein Isolate, Hydrolysed Whey, Milk Protein Isolate, Nihpro® Hydrolysed Isolate, Whey Protein Concentrate, Pea Protein Isolate), Cocoa Powder (in chocolate flavours), Flavouring, Taurine, Salt, Emulsifier, Stabiliser, Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added (Multi-Stage Fast & Medium Isolate Matrix)',
+        'sweetener': 'Sucralose'
+    },
+    'lifestyle_food_whey': {
+        'ingredients': "100% Pure Whey Protein Concentrate (Cow's Milk).",
+        'digestive_enzymes': 'None added',
+        'sweetener': 'None (Unsweetened / 100% Pure)'
+    },
+    'health_connection_just_whey': {
+        'ingredients': "Whey Protein Concentrate (Cow's Milk) (98.5%), Non-GMO Soya Lecithin (1.5%).",
+        'digestive_enzymes': 'None added',
+        'sweetener': 'None (Unsweetened / 100% Pure)'
+    },
+    'clear_nutrition_whey': {
+        'ingredients': '100% Whey Protein Matrix (Whey Protein Concentrate, Whey Protein Isolate), Cocoa Powder (in chocolate flavours), Natural & Artificial Flavours, Soy Lecithin, Xanthan Gum, Sweetener (Sucralose).',
+        'digestive_enzymes': '5g Naturally Occurring BCAAs',
+        'sweetener': 'Sucralose'
+    },
+    'muscle_dynamix_whey_one': {
+        'ingredients': 'Ultra-Microfiltered Whey Protein Blend (Whey Protein Concentrate, Whey Protein Isolate), L-Leucine (4g), L-Glutamine, Cocoa Powder (in chocolate flavours), Flavouring, Emulsifier (Lecithin), Stabiliser (Xanthan Gum), Sweetener (Sucralose).',
+        'digestive_enzymes': 'Enriched with 4g L-Leucine & Glutamine precursors',
+        'sweetener': 'Sucralose'
+    },
+    'muscle_dynamix_iso_gold': {
+        'ingredients': 'Cross-Flow Microfiltered Whey Protein Isolate, Hydrolysed Whey Protein, Cocoa Powder (in chocolate flavours), Flavouring, Emulsifier (Lecithin), Thickener, Sweetener (Sucralose).',
+        'digestive_enzymes': 'None added (Pre-hydrolyzed)',
+        'sweetener': 'Sucralose'
+    },
+    'nestle_resource_whey': {
+        'ingredients': "Soluble Whey Protein Powder (88% Cow's Milk Protein), Emulsifier (Soya Lecithin INS 322i).",
+        'digestive_enzymes': 'None added (Clinical grade soluble whey)',
+        'sweetener': 'None (Neutral / Unsweetened)'
+    },
+    'blast_vitality_daily': {
+        'ingredients': '100% Plant-Based Protein Blend (Pea Protein Isolate, Rice Protein Concentrate), DigeZyme® Multi-Enzyme Complex (50mg), Natural Vanilla / Cocoa Flavouring, Sweetener (Stevia Leaf Extract).',
+        'digestive_enzymes': 'DigeZyme® Multi-Enzyme Complex (50mg)',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'on_platinum_hydrowhey': {
+        'ingredients': 'Hydrolysed Whey Protein Isolate (87%) [Emulsifier: Soy Lecithin], Micronized Branched-Chain Amino Acid Blend (5%) (L-Leucine, L-Isoleucine, L-Valine [Emulsifier: Sunflower Lecithin]), Cocoa Powder (in chocolate flavours), Thickener (Carrageenan), Flavourings, Sweeteners (Sucralose, Acesulfame Potassium), Sodium Chloride.',
+        'digestive_enzymes': 'Micronized BCAAs (9g+)',
+        'sweetener': 'Sucralose & Acesulfame Potassium'
+    },
+    'collagen_co_isolate': {
+        'ingredients': "100% Pure Cross-Flow Microfiltered Whey Protein Isolate (Cow's Milk), Instantising Agent (Sunflower Lecithin).",
+        'digestive_enzymes': 'Naturally Occurring BCAAs',
+        'sweetener': 'None (Taste Neutral / Unsweetened)'
+    },
+    'sa_vitamins_isolate': {
+        'ingredients': "100% Pure Cross-Flow Microfiltered Whey Protein Isolate (Cow's Milk), Sunflower Lecithin.",
+        'digestive_enzymes': 'None added',
+        'sweetener': 'None (Natural / Unflavoured)'
+    },
+    'atp_fitness_whey': {
+        'ingredients': "100% Pure Whey Protein Concentrate (Cow's Milk), Cocoa (in Belgian Cocoa flavour only).",
+        'digestive_enzymes': 'None added',
+        'sweetener': 'None (Unsweetened / 100% Pure)'
+    },
+    'my_whey_mpi': {
+        'ingredients': "100% Pure Milk Protein Isolate (Cow's Milk: 80% Micellar Casein, 20% Whey).",
+        'digestive_enzymes': 'None added',
+        'sweetener': 'None (Unsweetened / 100% Pure)'
+    },
+    'beauty_gen_creamer': {
+        'ingredients': 'Peptan® Hydrolysed Bovine Collagen Peptides (Type I & III), Medium Chain Triglycerides (MCT) Oil Powder, Coconut Milk Powder, Prebiotic Acacia Fibre.',
+        'digestive_enzymes': 'Prebiotic Acacia Fibre',
+        'sweetener': 'None (Sugar-Free, Unsweetened)'
+    },
+    'remedy_greens_mobility': {
+        'ingredients': 'Peptan® Hydrolysed Bovine Collagen Peptides (Type I), Active Collagen Type-II™ (Standardised Undenatured Chicken Cartilage), Organic Beetroot Powder, Buffered Vitamin C (Calcium Ascorbate), Flaxseed Powder (Omega-3 ALA), Flavouring, Sweetener (Stevia Extract).',
+        'digestive_enzymes': 'Active Collagen Type-II™ & Buffered Vitamin C',
+        'sweetener': 'Stevia Extract'
     }
 }
 
@@ -470,11 +570,18 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['usn_beast']
     elif 'diet fuel' in t:
         matched = BRAND_FORMULATIONS['usn_diet_fuel']
-    elif 'whey-bolic' in t or 'wheybolic' in t:
-        matched = BRAND_FORMULATIONS['muscle_works_wheybolic']
-    elif 'thermo whey' in t:
-        matched = BRAND_FORMULATIONS['muscle_works_thermo']
-    elif 'gold standard' in t and 'casein' in t:
+    elif 'muscle works' in b or 'muscleworks' in b or ('muscle works' in t and 'dynamix' not in t):
+        if 'iso-tech' in t or 'isotech' in t or 'iso tech' in t:
+            matched = BRAND_FORMULATIONS['muscleworks_isotech']
+        elif 'whey-bolic' in t or 'wheybolic' in t:
+            matched = BRAND_FORMULATIONS['muscle_works_wheybolic']
+        elif 'thermo' in t:
+            matched = BRAND_FORMULATIONS['muscle_works_thermo']
+        else:
+            matched = BRAND_FORMULATIONS['muscleworks_100_whey']
+    elif 'hydro whey' in t or 'hydrowhey' in t or 'hydro-whey' in t:
+        matched = BRAND_FORMULATIONS['on_platinum_hydrowhey']
+    elif 'casein' in t and ('optimum' in b or 'on' == b or 'optimum' in t or 'gold' in t):
         matched = BRAND_FORMULATIONS['on_casein']
     elif 'gold standard' in t and 'isolate' in t:
         matched = BRAND_FORMULATIONS['on_isolate']
@@ -597,6 +704,38 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['lifeworth_super_standard']
     elif 'biyode' in b or 'biyode' in t or 'b0f9twj4hq' in t:
         matched = BRAND_FORMULATIONS['biyode_whey']
+    elif 'myprotein' in b or 'myprotein' in t:
+        if 'clear' in t: matched = BRAND_FORMULATIONS['myprotein_clear']
+        elif 'isolate' in t: matched = BRAND_FORMULATIONS['myprotein_impact_isolate']
+        else: matched = BRAND_FORMULATIONS['myprotein_impact_whey']
+    elif 'just protein' in b or 'just protein' in t:
+        matched = BRAND_FORMULATIONS['justprotein_premium']
+    elif 'lifestyle food' in b or 'lifestyle food' in t:
+        if 'bone broth' in t: matched = BRAND_FORMULATIONS.get('harvest_table_broth')
+        else: matched = BRAND_FORMULATIONS['lifestyle_food_whey']
+    elif 'health connection' in b or 'health connection' in t or 'just whey' in t:
+        matched = BRAND_FORMULATIONS['health_connection_just_whey']
+    elif 'clear nutrition' in b or 'clear nutrition' in t:
+        matched = BRAND_FORMULATIONS['clear_nutrition_whey']
+    elif 'muscle dynamix' in b or 'muscle dynamix' in t or ('dynamix' in b and 'muscle works' not in b):
+        if 'iso gold' in t or 'isogold' in t: matched = BRAND_FORMULATIONS['muscle_dynamix_iso_gold']
+        else: matched = BRAND_FORMULATIONS['muscle_dynamix_whey_one']
+    elif 'nestle' in b or 'nestle' in t or 'resorce' in t or 'resource whey' in t:
+        matched = BRAND_FORMULATIONS['nestle_resource_whey']
+    elif 'blast vitality' in b or 'blast vitality' in t or (b.strip() == 'blast' and 'daily protein' in t):
+        matched = BRAND_FORMULATIONS['blast_vitality_daily']
+    elif 'collagen & co' in b or 'collagen & co' in t:
+        matched = BRAND_FORMULATIONS['collagen_co_isolate']
+    elif 'sa vitamins' in b or 'sa vitamins' in t:
+        matched = BRAND_FORMULATIONS['sa_vitamins_isolate']
+    elif 'atp fitness' in b or 'atp fitness' in t or 'atp whey' in t:
+        matched = BRAND_FORMULATIONS['atp_fitness_whey']
+    elif 'my whey' in b or 'my whey' in t:
+        matched = BRAND_FORMULATIONS['my_whey_mpi']
+    elif 'beauty gen' in b or 'beauty gen' in t:
+        matched = BRAND_FORMULATIONS['beauty_gen_creamer']
+    elif 'remedy greens' in b or 'remedy greens' in t:
+        matched = BRAND_FORMULATIONS['remedy_greens_mobility']
         
     # Macros based on type & product line
     if matched == BRAND_FORMULATIONS.get('futurelife_high_protein'):
@@ -984,6 +1123,106 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 40.0
         carbs = 7.6
         fat = 3.3
+    elif matched == BRAND_FORMULATIONS.get('myprotein_impact_whey'):
+        serving_size = 25.0
+        protein_per_serving = 20.0
+        carbs = 1.0
+        fat = 1.9
+    elif matched == BRAND_FORMULATIONS.get('myprotein_impact_isolate'):
+        serving_size = 25.0
+        protein_per_serving = 23.0
+        carbs = 0.6
+        fat = 0.1
+    elif matched == BRAND_FORMULATIONS.get('myprotein_clear'):
+        serving_size = 25.0
+        protein_per_serving = 20.0
+        carbs = 0.7
+        fat = 0.1
+    elif matched == BRAND_FORMULATIONS.get('justprotein_premium'):
+        serving_size = 30.0
+        protein_per_serving = 23.0
+        carbs = 2.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('muscleworks_100_whey'):
+        serving_size = 34.0
+        protein_per_serving = 22.0
+        carbs = 3.5
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('muscleworks_isotech'):
+        serving_size = 30.0
+        protein_per_serving = 20.0
+        carbs = 1.5
+        fat = 0.8
+    elif matched == BRAND_FORMULATIONS.get('lifestyle_food_whey'):
+        serving_size = 20.0
+        protein_per_serving = 15.2
+        carbs = 1.0
+        fat = 1.2
+    elif matched == BRAND_FORMULATIONS.get('health_connection_just_whey'):
+        serving_size = 30.0
+        protein_per_serving = 23.4
+        carbs = 1.5
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('clear_nutrition_whey'):
+        serving_size = 32.0
+        protein_per_serving = 23.0
+        carbs = 2.5
+        fat = 1.8
+    elif matched == BRAND_FORMULATIONS.get('muscle_dynamix_whey_one'):
+        serving_size = 35.0
+        protein_per_serving = 24.0
+        carbs = 3.2
+        fat = 1.8
+    elif matched == BRAND_FORMULATIONS.get('muscle_dynamix_iso_gold'):
+        serving_size = 32.0
+        protein_per_serving = 29.0
+        carbs = 0.9
+        fat = 0.4
+    elif matched == BRAND_FORMULATIONS.get('nestle_resource_whey'):
+        serving_size = 12.0
+        protein_per_serving = 10.6
+        carbs = 0.04
+        fat = 0.12
+    elif matched == BRAND_FORMULATIONS.get('blast_vitality_daily'):
+        serving_size = 20.0
+        protein_per_serving = 15.0
+        carbs = 1.3
+        fat = 1.3
+    elif matched == BRAND_FORMULATIONS.get('on_platinum_hydrowhey'):
+        serving_size = 39.0
+        protein_per_serving = 30.0
+        carbs = 2.0
+        fat = 1.0
+    elif matched == BRAND_FORMULATIONS.get('collagen_co_isolate'):
+        serving_size = 30.0
+        protein_per_serving = 27.0
+        carbs = 0.5
+        fat = 0.3
+    elif matched == BRAND_FORMULATIONS.get('sa_vitamins_isolate'):
+        serving_size = 25.0
+        protein_per_serving = 21.6
+        carbs = 0.5
+        fat = 0.3
+    elif matched == BRAND_FORMULATIONS.get('atp_fitness_whey'):
+        serving_size = 30.0
+        protein_per_serving = 24.0
+        carbs = 1.8
+        fat = 1.8
+    elif matched == BRAND_FORMULATIONS.get('my_whey_mpi'):
+        serving_size = 30.0
+        protein_per_serving = 25.5
+        carbs = 1.2
+        fat = 0.4
+    elif matched == BRAND_FORMULATIONS.get('beauty_gen_creamer'):
+        serving_size = 15.0
+        protein_per_serving = 10.0
+        carbs = 1.5
+        fat = 2.5
+    elif matched == BRAND_FORMULATIONS.get('remedy_greens_mobility'):
+        serving_size = 15.0
+        protein_per_serving = 9.6
+        carbs = 2.0
+        fat = 0.5
     elif ptype in ['Whey Isolate', 'Clear Whey / Protein Water'] or (matched and 'isolate' in str(matched)):
         serving_size = 30.0
         protein_per_serving = 26.0

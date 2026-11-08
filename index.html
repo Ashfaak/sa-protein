@@ -313,6 +313,23 @@
 
       <!-- Products Container -->
       <div id="productsContainer" class="flex-1">
+        <!-- Shared Product Landing Banner -->
+        <div id="sharedProductBanner" class="hidden mb-4 p-3 bg-gradient-to-r from-blue-950/60 via-blue-900/30 to-[#0b0f17] border border-blue-500/40 rounded-2xl flex items-center justify-between gap-3 text-xs shadow-lg shadow-blue-950/20">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-share-nodes text-xs"></i>
+            </span>
+            <div class="truncate">
+              <span class="text-gray-400 text-[11px]">Viewing shared deal:</span>
+              <div class="font-bold text-white text-xs truncate" id="sharedBannerTitle"></div>
+            </div>
+          </div>
+          <button onclick="clearSharedProductView()" class="shrink-0 px-3 py-1.5 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded-lg text-xs font-semibold transition flex items-center gap-1.5 border border-gray-700/60">
+            <span>Show All Deals</span>
+            <i class="fa-solid fa-xmark text-[10px]"></i>
+          </button>
+        </div>
+
         <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
           <!-- Rendered dynamically -->
         </div>
@@ -457,8 +474,12 @@
         </div>
       </div>
 
-      <div class="pt-3 border-t border-gray-800 flex justify-end gap-2">
+      <div class="pt-3 border-t border-gray-800 flex justify-end items-center gap-2">
         <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs font-semibold transition">Close</button>
+        <button id="modalShareBtn" onclick="shareCurrentModalProduct(event)" class="px-4 py-2 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/40 rounded-xl text-xs font-semibold transition flex items-center gap-1.5" title="Share this deal">
+          <i class="fa-solid fa-share-nodes text-xs"></i>
+          <span>Share Deal</span>
+        </button>
         <a id="modalBuyLink" href="#" target="_blank" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-2">
           View on Retailer <i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
@@ -637,6 +658,7 @@
         rawProducts = window.EMBEDDED_PROTEINS;
         populateBrandFilter();
         applyFilters();
+        handleSharedProductLanding();
         return;
       }
       try {
@@ -647,6 +669,7 @@
       }
       populateBrandFilter();
       applyFilters();
+      handleSharedProductLanding();
     }
 
     function populateBrandFilter() {
@@ -988,10 +1011,15 @@
             </td>
             <td class="py-2.5 px-3 whitespace-nowrap"><span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 cursor-help" title="${getTagTooltip(p.retailer)}">${p.retailer}</span></td>
             <td class="py-2.5 px-3 text-right whitespace-nowrap">
-              <a href="${p.url}" target="_blank" class="px-2.5 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px] inline-flex items-center gap-1 transition" title="View on ${p.retailer}">
-                <span>Buy</span>
-                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-              </a>
+              <div class="inline-flex items-center gap-1">
+                <button type="button" onclick="shareProduct('${p.id}', event)" class="p-1 px-2 bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white rounded text-[11px] transition" title="Share Deal">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                </button>
+                <a href="${p.url}" target="_blank" class="px-2.5 py-1 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white rounded text-[11px] inline-flex items-center gap-1 transition" title="View on ${p.retailer}">
+                  <span>Buy</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
             </td>
           </tr>
         `;
@@ -1177,7 +1205,7 @@
       }).join('');
 
       return `
-        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group" data-prod-id="${bestItem.id}" data-group-key="${escapeJs(g.key)}">
           
           <div>
             <!-- Top Row: Brand + Retailers & Compare -->
@@ -1250,6 +1278,9 @@
               </div>
 
               <div class="flex items-center gap-1.5">
+                <button type="button" onclick="shareProduct('${bestItem.id}', event)" class="py-1.5 px-2.5 bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-700/60 rounded-lg text-xs font-medium transition inline-flex items-center gap-1 shrink-0" title="Share Deal">
+                  <i class="fa-solid fa-share-nodes text-[11px]"></i>
+                </button>
                 <a href="${bestItem.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${bestItem.retailer}">
                   <span>View on ${(bestItem.retailer === 'Brand Direct' || bestItem.retailer === 'Nutritech Direct') ? `${bestItem.brand} Direct` : bestItem.retailer}</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
@@ -1288,7 +1319,7 @@
       const promoBulkBadge = getBulkDealBadge(p);
 
       return `
-        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group">
+        <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group" data-prod-id="${p.id}">
           <div>
             <div class="flex items-center justify-between gap-2 mb-1.5">
               <div class="flex items-center gap-1.5 flex-wrap">
@@ -1343,6 +1374,9 @@
               </div>
 
               <div class="flex items-center gap-1.5">
+                <button type="button" onclick="shareProduct('${p.id}', event)" class="py-1.5 px-2.5 bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-white border border-gray-700/60 rounded-lg text-xs font-medium transition inline-flex items-center gap-1 shrink-0" title="Share Deal">
+                  <i class="fa-solid fa-share-nodes text-[11px]"></i>
+                </button>
                 <a href="${p.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${p.retailer}">
                   <span>View on ${(p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Direct` : p.retailer}</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
@@ -1456,10 +1490,13 @@
       document.getElementById('comparisonModal').classList.add('hidden');
     }
 
+    let currentModalProductId = null;
+
     function openDetailModal(id) {
       const p = rawProducts.find(item => item.id === id);
       if (!p) return;
 
+      currentModalProductId = p.id;
       const pricing = getProductPricing(p);
 
       document.getElementById('modalTitle').innerText = p.title;
@@ -1577,6 +1614,138 @@
       document.getElementById('detailModal').classList.add('hidden');
     }
 
+    let toastTimer = null;
+
+    function showToast(msg) {
+      const toast = document.getElementById('shareToast');
+      const toastMsg = document.getElementById('shareToastMsg');
+      if (!toast || !toastMsg) return;
+      toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2600);
+    }
+
+    function shareCurrentModalProduct(e) {
+      if (currentModalProductId) {
+        shareProduct(currentModalProductId, e);
+      }
+    }
+
+    async function shareProduct(id, event) {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+      const p = rawProducts.find(item => item.id === id);
+      if (!p) return;
+
+      const pricing = getProductPricing(p);
+      const sLabel = p.container_size_g >= 1000 ? (p.container_size_g / 1000) + 'kg' : p.container_size_g + 'g';
+      const shareUrl = `${window.location.origin}${window.location.pathname}?p=${encodeURIComponent(p.id)}`;
+      const shareTitle = `${p.brand} ${p.title}`;
+      const shareText = `Check out this protein deal: ${p.brand} ${p.title} (${sLabel}) for R ${pricing.finalPrice.toFixed(2)} on ${p.retailer}! (DIAAS ${(p.diaas_score || 1.22).toFixed(2)}, ${p.protein_percentage}% protein)`;
+
+      let btn = null;
+      if (event && event.currentTarget) {
+        btn = event.currentTarget;
+      }
+      const originalHtml = btn ? btn.innerHTML : null;
+
+      const showSuccessFeedback = (msg = 'Deal link copied to clipboard!') => {
+        showToast(msg);
+        if (btn) {
+          btn.innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i>`;
+          setTimeout(() => {
+            if (btn && originalHtml) btn.innerHTML = originalHtml;
+          }, 2000);
+        }
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: shareTitle,
+            text: shareText,
+            url: shareUrl
+          });
+          showToast('Shared successfully!');
+          return;
+        } catch (err) {
+          if (err.name === 'AbortError') return;
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+        showSuccessFeedback('Deal link copied to clipboard!');
+      } catch (e) {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = `${shareText}\n${shareUrl}`;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showSuccessFeedback('Deal link copied to clipboard!');
+      }
+    }
+
+    function handleSharedProductLanding() {
+      const params = new URLSearchParams(window.location.search);
+      const targetId = params.get('p');
+      if (!targetId || !rawProducts || rawProducts.length === 0) return;
+
+      const product = rawProducts.find(item => item.id === targetId);
+      if (!product) return;
+
+      const priceSlider = document.getElementById('priceRange');
+      if (priceSlider && product.price_zar > parseFloat(priceSlider.value)) {
+        priceSlider.value = 4500;
+        document.getElementById('priceVal').innerText = 'R 4,500';
+      }
+
+      const groupKey = product.product_line || product.title;
+      activeSizeSelections[groupKey] = product.container_size_g;
+
+      applyFilters();
+
+      const banner = document.getElementById('sharedProductBanner');
+      const bannerTitle = document.getElementById('sharedBannerTitle');
+      const sLabel = product.container_size_g >= 1000 ? (product.container_size_g / 1000) + 'kg' : product.container_size_g + 'g';
+      if (banner && bannerTitle) {
+        bannerTitle.innerText = `${product.brand} - ${product.title} (${sLabel}) • R ${product.price_zar.toFixed(2)}`;
+        banner.classList.remove('hidden');
+      }
+
+      setTimeout(() => {
+        let card = document.querySelector(`[data-prod-id="${product.id}"]`);
+        if (!card) {
+          card = document.querySelector(`[data-group-key="${escapeJs(groupKey)}"]`);
+        }
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.classList.add('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
+          setTimeout(() => {
+            card.classList.remove('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
+          }, 4000);
+        }
+        openDetailModal(product.id);
+      }, 350);
+    }
+
+    function clearSharedProductView() {
+      const banner = document.getElementById('sharedProductBanner');
+      if (banner) banner.classList.add('hidden');
+      const url = new URL(window.location.href);
+      url.searchParams.delete('p');
+      window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+      applyFilters();
+    }
+
     function clearFilterGroup(group) {
       if (group === 'retailer') {
         document.querySelectorAll('#retailerFilters input').forEach(el => el.checked = true);
@@ -1604,5 +1773,10 @@
 
     window.addEventListener('DOMContentLoaded', loadData);
   </script>
+  <!-- Toast Notification for Share / Copy -->
+  <div id="shareToast" class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-2.5 bg-gray-900 border border-blue-500/50 text-white rounded-xl shadow-2xl shadow-blue-500/20 text-xs font-semibold">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+    <span id="shareToastMsg">Deal link copied to clipboard!</span>
+  </div>
 </body>
 </html>

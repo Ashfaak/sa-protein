@@ -1,0 +1,1824 @@
+{
+  "collection_title": "Whey & Dairy Protein",
+  "collection_handle": "protein",
+  "collection_url": "https://www.my-wellness.co.za/collections/protein",
+  "total_products_in_collection": 16,
+  "products": [
+    {
+      "product_id": 4874296787023,
+      "title": "My Wellness Super Nature's Whey Protein",
+      "handle": "super-natures-whey-450g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/super-natures-whey-450g",
+      "canonical_url": "https://www.my-wellness.co.za/products/super-natures-whey-450g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "protein",
+        "Supplements",
+        "Vitamins & Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "450g",
+        "900g",
+        "2kg",
+        "2.75kg"
+      ],
+      "available_flavours": [
+        "Belgian Chocolate",
+        "Unflavoured",
+        "Creamy Indian Chai",
+        "Berry and Beet",
+        "Vanilla Bean",
+        "Mocha Java",
+        "Matcha"
+      ],
+      "prices_by_size": {
+        "450g": {
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "formatted_price": "R369.00",
+          "in_stock": true
+        },
+        "900g": {
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "formatted_price": "R629.00",
+          "in_stock": true
+        },
+        "2kg": {
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "formatted_price": "R1349.00",
+          "in_stock": true
+        },
+        "2.75kg": {
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "formatted_price": "R1649.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Super Nature's Whey\nProduct Information:\n\nSuperfood Enhanced Protein\nNaturally Gluten Free\nWhey from Grass Fed Cows\n\nMy Wellness Nature's Whey is a high-quality protein that is made from grass-fed whey protein containing whey concentrate. It is free from all artificial additives, including any flavouring, sweeteners and process aids. Ideal for thos",
+      "variants": [
+        {
+          "variant_id": 32907932336207,
+          "title": "Belgian Chocolate / 450g",
+          "sku": "NWC450C",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "450g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973205368911,
+          "title": "Belgian Chocolate / 900g",
+          "sku": "NWC900C",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973205401679,
+          "title": "Belgian Chocolate / 2kg",
+          "sku": "NWC2000C",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 46855588839503,
+          "title": "Belgian Chocolate / 2.75kg",
+          "sku": "NWC3000C",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 32907932368975,
+          "title": "Unflavoured / 450g",
+          "sku": "NWC450U",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "450g",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 41973205467215,
+          "title": "Unflavoured / 900g",
+          "sku": "NWC900U",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 41973205499983,
+          "title": "Unflavoured / 2kg",
+          "sku": "NWC2000U",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 46855588872271,
+          "title": "Unflavoured / 2.75kg",
+          "sku": "NWC3000U",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 32907932401743,
+          "title": "Creamy Indian Chai / 450g",
+          "sku": "NWC450CH",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "450g",
+          "flavour": "Creamy Indian Chai"
+        },
+        {
+          "variant_id": 41973205565519,
+          "title": "Creamy Indian Chai / 900g",
+          "sku": "NWC900CH",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Creamy Indian Chai"
+        },
+        {
+          "variant_id": 41973205598287,
+          "title": "Creamy Indian Chai / 2kg",
+          "sku": "NWC2000CH",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Creamy Indian Chai"
+        },
+        {
+          "variant_id": 46855588905039,
+          "title": "Creamy Indian Chai / 2.75kg",
+          "sku": "NWC3000CH",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Creamy Indian Chai"
+        },
+        {
+          "variant_id": 40045362610255,
+          "title": "Berry and Beet / 450g",
+          "sku": "NWC450BB",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "450g",
+          "flavour": "Berry and Beet"
+        },
+        {
+          "variant_id": 41973205663823,
+          "title": "Berry and Beet / 900g",
+          "sku": "NWC900BB",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Berry and Beet"
+        },
+        {
+          "variant_id": 41973205696591,
+          "title": "Berry and Beet / 2kg",
+          "sku": "NWC2000BB",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Berry and Beet"
+        },
+        {
+          "variant_id": 46855588937807,
+          "title": "Berry and Beet / 2.75kg",
+          "sku": "NWC3000BB",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Berry and Beet"
+        },
+        {
+          "variant_id": 40820664762447,
+          "title": "Vanilla Bean / 450g",
+          "sku": "NWC450VB",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "450g",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 41973205762127,
+          "title": "Vanilla Bean / 900g",
+          "sku": "NWC900VB",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 41973205794895,
+          "title": "Vanilla Bean / 2kg",
+          "sku": "NWC2000VB",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 46855588970575,
+          "title": "Vanilla Bean / 2.75kg",
+          "sku": "NWC3000VB",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 41973205860431,
+          "title": "Mocha Java / 2kg",
+          "sku": "NWC2000MJ",
+          "price_zar": 1349,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Mocha Java"
+        },
+        {
+          "variant_id": 46855589003343,
+          "title": "Mocha Java / 2.75kg",
+          "sku": "NWC3000MJ",
+          "price_zar": 1649,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Mocha Java"
+        },
+        {
+          "variant_id": 46017292599375,
+          "title": "Matcha / 450g",
+          "sku": "NWC450M",
+          "price_zar": 369,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "450g",
+          "flavour": "Matcha"
+        },
+        {
+          "variant_id": 46021232721999,
+          "title": "Matcha / 900g",
+          "sku": "NWC900M",
+          "price_zar": 629,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Matcha"
+        },
+        {
+          "variant_id": 46021243928655,
+          "title": "Matcha / 2kg",
+          "sku": "NWC2000M",
+          "price_zar": 1349,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Matcha"
+        },
+        {
+          "variant_id": 46021260705871,
+          "title": "Matcha / 2.75kg",
+          "sku": "NWC3000M",
+          "price_zar": 1649,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2.75kg",
+          "flavour": "Matcha"
+        }
+      ]
+    },
+    {
+      "product_id": 4874298228815,
+      "title": "My Wellness Superior Whey Protein",
+      "handle": "superior-whey-protein-462g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/superior-whey-protein-462g",
+      "canonical_url": "https://www.my-wellness.co.za/products/superior-whey-protein-462g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "protein",
+        "Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "462g",
+        "900g",
+        "2kg",
+        "3kg"
+      ],
+      "available_flavours": [
+        "Belgian Chocolate",
+        "Vanilla",
+        "Fresh Strawberry",
+        "Salted Caramel",
+        "Tin Roof",
+        "Peanut Bomb",
+        "Caramel Cinnamon Biscotti"
+      ],
+      "prices_by_size": {
+        "462g": {
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "formatted_price": "R309.00",
+          "in_stock": true
+        },
+        "900g": {
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "formatted_price": "R589.00",
+          "in_stock": true
+        },
+        "2kg": {
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "formatted_price": "R1189.00",
+          "in_stock": true
+        },
+        "3kg": {
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "formatted_price": "R1459.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "SUPERIOR WHEY\nGOLD MEDAL STANDARD ISO-WHEY\nMy Wellness Superior Whey protein is a revolution in modern whey protein supplementation in that it proves you with all the muscular benefits of top-quality whey protein and combines it with the health benefits of super foods.\nA blend of whey isolate and whey concentrate. This whey protein is sourced from ",
+      "variants": [
+        {
+          "variant_id": 32907937710159,
+          "title": "Belgian Chocolate / 462g",
+          "sku": "SW462C",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "462g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973956739151,
+          "title": "Belgian Chocolate / 900g",
+          "sku": "SW900C",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973956771919,
+          "title": "Belgian Chocolate / 2kg",
+          "sku": "SW2000C",
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "available": false,
+          "size": "2kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973956804687,
+          "title": "Belgian Chocolate / 3kg",
+          "sku": "SW3300C",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 32907937742927,
+          "title": "Vanilla / 462g",
+          "sku": "SW462V",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "462g",
+          "flavour": "Vanilla"
+        },
+        {
+          "variant_id": 41973956837455,
+          "title": "Vanilla / 900g",
+          "sku": "SW900V",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Vanilla"
+        },
+        {
+          "variant_id": 41973956870223,
+          "title": "Vanilla / 2kg",
+          "sku": "SW2000V",
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Vanilla"
+        },
+        {
+          "variant_id": 41973956902991,
+          "title": "Vanilla / 3kg",
+          "sku": "SW3300V",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Vanilla"
+        },
+        {
+          "variant_id": 39978228514895,
+          "title": "Fresh Strawberry / 462g",
+          "sku": "SW462S",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "462g",
+          "flavour": "Fresh Strawberry"
+        },
+        {
+          "variant_id": 41973956935759,
+          "title": "Fresh Strawberry / 900g",
+          "sku": "SW900S",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "900g",
+          "flavour": "Fresh Strawberry"
+        },
+        {
+          "variant_id": 41973956968527,
+          "title": "Fresh Strawberry / 2kg",
+          "sku": "SW2000S",
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Fresh Strawberry"
+        },
+        {
+          "variant_id": 41973957001295,
+          "title": "Fresh Strawberry / 3kg",
+          "sku": "SW3300S",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Fresh Strawberry"
+        },
+        {
+          "variant_id": 40781213990991,
+          "title": "Salted Caramel / 462g",
+          "sku": "SW462SC",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "462g",
+          "flavour": "Salted Caramel"
+        },
+        {
+          "variant_id": 41973957034063,
+          "title": "Salted Caramel / 900g",
+          "sku": "SW900SC",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Salted Caramel"
+        },
+        {
+          "variant_id": 41973957066831,
+          "title": "Salted Caramel / 2kg",
+          "sku": "SW2000SC",
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Salted Caramel"
+        },
+        {
+          "variant_id": 41973957099599,
+          "title": "Salted Caramel / 3kg",
+          "sku": "SW3300SC",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Salted Caramel"
+        },
+        {
+          "variant_id": 41973957132367,
+          "title": "Tin Roof / 2kg",
+          "sku": "SW2000TR",
+          "price_zar": 1189,
+          "compare_at_price_zar": 849,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Tin Roof"
+        },
+        {
+          "variant_id": 41973957165135,
+          "title": "Tin Roof / 3kg",
+          "sku": "SW3300TR",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "3kg",
+          "flavour": "Tin Roof"
+        },
+        {
+          "variant_id": 46022282051663,
+          "title": "Peanut Bomb / 462g",
+          "sku": "SW462PB",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "462g",
+          "flavour": "Peanut Bomb"
+        },
+        {
+          "variant_id": 46022283034703,
+          "title": "Peanut Bomb / 900g",
+          "sku": "SW900PB",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "900g",
+          "flavour": "Peanut Bomb"
+        },
+        {
+          "variant_id": 46022283657295,
+          "title": "Peanut Bomb / 2kg",
+          "sku": "SW2000PB",
+          "price_zar": 1189,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Peanut Bomb"
+        },
+        {
+          "variant_id": 46022287884367,
+          "title": "Peanut Bomb / 3kg",
+          "sku": "SW3000PB",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Peanut Bomb"
+        },
+        {
+          "variant_id": 46022425018447,
+          "title": "Caramel Cinnamon Biscotti / 462g",
+          "sku": "SW462CB",
+          "price_zar": 309,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "462g",
+          "flavour": "Caramel Cinnamon Biscotti"
+        },
+        {
+          "variant_id": 46022442877007,
+          "title": "Caramel Cinnamon Biscotti / 900g",
+          "sku": "SW900CB",
+          "price_zar": 589,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Caramel Cinnamon Biscotti"
+        },
+        {
+          "variant_id": 46022453329999,
+          "title": "Caramel Cinnamon Biscotti / 2kg",
+          "sku": "SW2000CB",
+          "price_zar": 1189,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "2kg",
+          "flavour": "Caramel Cinnamon Biscotti"
+        },
+        {
+          "variant_id": 46022460014671,
+          "title": "Caramel Cinnamon Biscotti / 3kg",
+          "sku": "SW3000CB",
+          "price_zar": 1459,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Caramel Cinnamon Biscotti"
+        }
+      ]
+    },
+    {
+      "product_id": 7342158217295,
+      "title": "My Wellness Clean Whey Isolate 1.8kg",
+      "handle": "clean-whey-isolate-1-8kg",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/clean-whey-isolate-1-8kg",
+      "canonical_url": "https://www.my-wellness.co.za/products/clean-whey-isolate-1-8kg",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "protein",
+        "Whey"
+      ],
+      "available_sizes": [
+        "1.8kg"
+      ],
+      "available_flavours": [
+        "Chocolate",
+        "Unflavoured"
+      ],
+      "prices_by_size": {
+        "1.8kg": {
+          "price_zar": 1522,
+          "compare_at_price_zar": null,
+          "formatted_price": "R1522.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": "100% Whey Isolate, Cocoa Powder (in chocolate variant only), Colostrum Powder, Stevia Leaf Extract (in chocolate variant only).",
+      "allergens": "Milk. Made in a factory that uses nuts.",
+      "directions": null,
+      "nutritional_info": "SERVING SIZE: 2 level scoops (30g)",
+      "description_summary": "Clean Whey Isolate is by far the best formulation when it comes to whey isolate that not only provides the purest highest quality whey isolate virtually free of fat and impact carbohydrates but also assists with digestion, gut health as well as providing extra growth factors in a way which no other whey supplement can.\nThe following are the major b",
+      "variants": [
+        {
+          "variant_id": 41438149312591,
+          "title": "Chocolate",
+          "sku": "CWI1800C",
+          "price_zar": 1522,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Chocolate"
+        },
+        {
+          "variant_id": 41438149345359,
+          "title": "Unflavoured",
+          "sku": "CWI1800U",
+          "price_zar": 1522,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Unflavoured"
+        }
+      ]
+    },
+    {
+      "product_id": 4847556788303,
+      "title": "My Wellness Grass Fed Whey Concentrate",
+      "handle": "grass-fed-whey-concentrate",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/grass-fed-whey-concentrate",
+      "canonical_url": "https://www.my-wellness.co.za/products/grass-fed-whey-concentrate",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "protein",
+        "Whey"
+      ],
+      "available_sizes": [
+        "1kg",
+        "400g",
+        "3kg"
+      ],
+      "available_flavours": [
+        "Unflavoured"
+      ],
+      "prices_by_size": {
+        "1kg": {
+          "price_zar": 608,
+          "compare_at_price_zar": null,
+          "formatted_price": "R608.00",
+          "in_stock": true
+        },
+        "400g": {
+          "price_zar": 314,
+          "compare_at_price_zar": null,
+          "formatted_price": "R314.00",
+          "in_stock": true
+        },
+        "3kg": {
+          "price_zar": 1417,
+          "compare_at_price_zar": null,
+          "formatted_price": "R1417.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": "Whey Protein Concentrate",
+      "allergens": "Milk. Made in a factory that uses nuts",
+      "directions": null,
+      "nutritional_info": "PER 100g\nEnergy                                                                                  1665KJProtein                                                                                   78gGlycaemic Carbohydrates                                                    6gOf which Total Sugar                                                            3.8gTotal Fat                                                                                  6gOf which Saturated Fat                                                         2.7gDietary Fibre                                                                          0mgTotal Sodium                                                                        168mg",
+      "description_summary": "GRASS FED WHEY CONCENTRATE \nGrass Fed Whey Protein comes from cows that are fed mainly grass, ensuring that milk is higher in good fats and of higher nutritional quality than grain fed cows.INGREDIENTS: Whey Protein Concentrate\nALLERGENS: Milk. Made in a factory that uses nuts\n\nNUTRITIONAL INFORMATION:                                     PER 100g\nE",
+      "variants": [
+        {
+          "variant_id": 32814746533967,
+          "title": "Unflavoured / 1kg",
+          "sku": "GFWC1000",
+          "price_zar": 608,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1kg",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 40820577206351,
+          "title": "Unflavoured / 400g",
+          "sku": "GFWC400",
+          "price_zar": 314,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "400g",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 43843973185615,
+          "title": "Unflavoured / 3kg",
+          "sku": "WC3KGU",
+          "price_zar": 1417,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3kg",
+          "flavour": "Unflavoured"
+        }
+      ]
+    },
+    {
+      "product_id": 3703536418895,
+      "title": "My Wellness Clean Whey Isolate 800g",
+      "handle": "naked-whey-isolate",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/naked-whey-isolate",
+      "canonical_url": "https://www.my-wellness.co.za/products/naked-whey-isolate",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "protein",
+        "Whey"
+      ],
+      "available_sizes": [
+        "800g"
+      ],
+      "available_flavours": [
+        "Chocolate",
+        "Unflavoured"
+      ],
+      "prices_by_size": {
+        "800g": {
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "formatted_price": "R787.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "CLEAN WHEY ISOLATE \n\nSuperior Single Source Protein\n2g colostrum containing & natural growth factors\nHighest protein 88-90% lowest carb and fat content\nNo amino acid spiking\nNo artificial additives\n\nClean Whey Isolate is by far the best formulation when it comes to a whey isolate that not only provides the purest highest quality whey isolate virtua",
+      "variants": [
+        {
+          "variant_id": 28751894741071,
+          "title": "Chocolate",
+          "sku": "CWI800C",
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "800g",
+          "flavour": "Chocolate"
+        },
+        {
+          "variant_id": 29264044982351,
+          "title": "Unflavoured",
+          "sku": "CWI800U",
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "800g",
+          "flavour": "Unflavoured"
+        }
+      ]
+    },
+    {
+      "product_id": 7346280267855,
+      "title": "My Wellness Super Clean Protein x5",
+      "handle": "super-clean-protein-1-8kg",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/super-clean-protein-1-8kg",
+      "canonical_url": "https://www.my-wellness.co.za/products/super-clean-protein-1-8kg",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "vegan",
+        "Vitamins & Supplements",
+        "Whey",
+        "whey-blend"
+      ],
+      "available_sizes": [
+        "900g",
+        "1.8kg",
+        "3.2kg"
+      ],
+      "available_flavours": [
+        "Vanilla Bean",
+        "Belgian Chocolate",
+        "Choco-Chino",
+        "Unflavoured"
+      ],
+      "prices_by_size": {
+        "900g": {
+          "price_zar": 398,
+          "compare_at_price_zar": null,
+          "formatted_price": "R398.00",
+          "in_stock": true
+        },
+        "1.8kg": {
+          "price_zar": 577,
+          "compare_at_price_zar": null,
+          "formatted_price": "R577.00",
+          "in_stock": true
+        },
+        "3.2kg": {
+          "price_zar": 724,
+          "compare_at_price_zar": null,
+          "formatted_price": "R724.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": "Clean NON-GMO Protein Blend (Whey Protein Concentrate, Yellow Pea Protein Isolate, Whey Isolate, Rice Protein Isolate, Hemp Protein Powder) Cacao Powder (in Chocolate variant only), Low GI Natural Sweetener Blend (Erythritol, Fructose, Stevia Leaf), Coffee Granules (in chocochino variant only), Vanilla Extract (in Vanilla Bean only), Wheatgrass Powder.",
+      "allergens": "MILK. Made in a factory that contains nuts.",
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Super Clean Protein X5 offers the best of both animal and plant proteins in that the amino acid profiles of the proteins perfectly complement each other. Whey Protein, Pea Protein, Hemp Protein, Whey Isolate and Rice Protein all contribute to the protein sources in this formula. This may provide a really great complete protein source that may assis",
+      "variants": [
+        {
+          "variant_id": 41445139644495,
+          "title": "Vanilla Bean / 900g",
+          "sku": "CP900GX5VB",
+          "price_zar": 398,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 50516063354959,
+          "title": "Vanilla Bean / 1.8kg",
+          "sku": "CP1800VB",
+          "price_zar": 577,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 50516063387727,
+          "title": "Vanilla Bean / 3.2kg",
+          "sku": "CP3200VB",
+          "price_zar": 724,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3.2kg",
+          "flavour": "Vanilla Bean"
+        },
+        {
+          "variant_id": 41445139677263,
+          "title": "Belgian Chocolate / 900g",
+          "sku": "CP900GX5C",
+          "price_zar": 398,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 50516063420495,
+          "title": "Belgian Chocolate / 1.8kg",
+          "sku": "CP1800DC",
+          "price_zar": 577,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 50516063453263,
+          "title": "Belgian Chocolate / 3.2kg",
+          "sku": "CP3200C",
+          "price_zar": 724,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3.2kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41445325766735,
+          "title": "Choco-Chino / 900g",
+          "sku": "CP900GX5CC",
+          "price_zar": 398,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Choco-Chino"
+        },
+        {
+          "variant_id": 50516063486031,
+          "title": "Choco-Chino / 1.8kg",
+          "sku": "CP1800CC",
+          "price_zar": 577,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Choco-Chino"
+        },
+        {
+          "variant_id": 50516063518799,
+          "title": "Choco-Chino / 3.2kg",
+          "sku": "CP3200CC",
+          "price_zar": 724,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3.2kg",
+          "flavour": "Choco-Chino"
+        },
+        {
+          "variant_id": 45165532512335,
+          "title": "Unflavoured / 900g",
+          "sku": "CP900GX5U",
+          "price_zar": 398,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 50516063551567,
+          "title": "Unflavoured / 1.8kg",
+          "sku": "CP1800U",
+          "price_zar": 577,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Unflavoured"
+        },
+        {
+          "variant_id": 50516063584335,
+          "title": "Unflavoured / 3.2kg",
+          "sku": "CP3200U",
+          "price_zar": 724,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "3.2kg",
+          "flavour": "Unflavoured"
+        }
+      ]
+    },
+    {
+      "product_id": 4848830677071,
+      "title": "My Wellness Clean Casein",
+      "handle": "clean-casein-protein-840g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/clean-casein-protein-840g",
+      "canonical_url": "https://www.my-wellness.co.za/products/clean-casein-protein-840g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "casein",
+        "cat-recovery-amino-acids",
+        "cat-whey-protein",
+        "goal-muscle",
+        "goal-recovery",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "protein"
+      ],
+      "available_sizes": [
+        "840g",
+        "1.8kg"
+      ],
+      "available_flavours": [
+        "Belgian Chocolate",
+        "Creamy Vanilla"
+      ],
+      "prices_by_size": {
+        "840g": {
+          "price_zar": 461,
+          "compare_at_price_zar": null,
+          "formatted_price": "R461.00",
+          "in_stock": false
+        },
+        "1.8kg": {
+          "price_zar": 839,
+          "compare_at_price_zar": null,
+          "formatted_price": "R839.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": "Milk",
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Nature's Clean Casein\nMy Wellness Clean Casein is a perfect addition to your muscle building and repair regime as it works in a way that no other protein does. Focused on sustained release of amino acids over 8 hours, it feeds muscles whilst you sleep.\nUsing the best available caseins and including GABA, a known Grown Hormone Stimulator and sleep a",
+      "variants": [
+        {
+          "variant_id": 32814934196303,
+          "title": "Belgian Chocolate / 840g",
+          "sku": "CC840C",
+          "price_zar": 461,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "840g",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 41973313765455,
+          "title": "Belgian Chocolate / 1.8kg",
+          "sku": "CC1800C",
+          "price_zar": 839,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Belgian Chocolate"
+        },
+        {
+          "variant_id": 32814934229071,
+          "title": "Creamy Vanilla / 840g",
+          "sku": "CC840V",
+          "price_zar": 461,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "840g",
+          "flavour": "Creamy Vanilla"
+        },
+        {
+          "variant_id": 41973313798223,
+          "title": "Creamy Vanilla / 1.8kg",
+          "sku": "CC1800V",
+          "price_zar": 839,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Creamy Vanilla"
+        }
+      ]
+    },
+    {
+      "product_id": 7772967796815,
+      "title": "My Wellness NiHPRO\u00ae Gourmet Protein Isolate 900g",
+      "handle": "nihpro-hydrolysed-protein-isolate-900g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/nihpro-hydrolysed-protein-isolate-900g",
+      "canonical_url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "all",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "protein",
+        "Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "900g"
+      ],
+      "available_flavours": [
+        "Natural Unflavoured",
+        "Vanilla Caramel Ice Cream",
+        "Dutch Chocolate Ice Cream",
+        "Choc Truffle Ice Cream"
+      ],
+      "prices_by_size": {
+        "900g": {
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "formatted_price": "R619.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": "Hydrolyzed NiHPRO\u00ae Protein Isolate (Pea Protein Isolate, Rice Protein Isolate, L-Leucine, L-Lysine, L-Valine, L-Methionine, L-Isoleucine, L-Threonine) L-Glutamine, Cocoa Powder (in Chocolate flavour only ) Flavouring, Salt, Stevia.\nCONTAINS: Pea, Rice.\n*Values calculated on dry matter bases.",
+      "allergens": null,
+      "directions": "Formulated for easy mixing. Add one scoop (included) to 150-180ml of water, make your favourite beverage, and mix thoroughly. Enjoy before workouts, within 30 minutes after workouts, or anytime you desire a high-quality, high protein.",
+      "nutritional_info": null,
+      "description_summary": "Hydrolyzed NiHPRO\u00ae Protein is a complete protein that is easy to digest with an amino-acid composition and great taste that rival\u2019s dairy-based proteins but is 100% dairy-free. NiHPRO\u00ae is 100% free from all major allergens, lactose, sugar, and seed oils. NiHPRO\u00ae is made with the innovative and exclusive Molecular Protein Infusion (MPi\u00ae) natural, no",
+      "variants": [
+        {
+          "variant_id": 43161253412943,
+          "title": "900g / Natural Unflavoured",
+          "sku": "NGPI900U",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "Natural Unflavoured",
+          "flavour": "Natural Unflavoured"
+        },
+        {
+          "variant_id": 43161253904463,
+          "title": "900g / Vanilla Caramel Ice Cream",
+          "sku": "NGPI900VC",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "Vanilla Caramel Ice Cream",
+          "flavour": "Vanilla Caramel Ice Cream"
+        },
+        {
+          "variant_id": 43161253937231,
+          "title": "900g / Dutch Chocolate Ice Cream",
+          "sku": "NGPI900DC",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "Dutch Chocolate Ice Cream",
+          "flavour": "Dutch Chocolate Ice Cream"
+        },
+        {
+          "variant_id": 43161253969999,
+          "title": "900g / Choc Truffle Ice Cream",
+          "sku": "NGPI900CT",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "Choc Truffle Ice Cream",
+          "flavour": "Choc Truffle Ice Cream"
+        }
+      ]
+    },
+    {
+      "product_id": 7342109524047,
+      "title": "My Wellness Clean Diet Whey Protein",
+      "handle": "clean-diet-whey-800g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/clean-diet-whey-800g",
+      "canonical_url": "https://www.my-wellness.co.za/products/clean-diet-whey-800g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-weight-management",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "protein",
+        "Supplements",
+        "Vitamins & Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "800g",
+        "1.8kg"
+      ],
+      "available_flavours": [
+        "Chocolate Milk",
+        "Vanilla"
+      ],
+      "prices_by_size": {
+        "800g": {
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "formatted_price": "R367.00",
+          "in_stock": true
+        },
+        "1.8kg": {
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "formatted_price": "R787.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "My wellness clean diet whey protein combines protein like micellar casein which assist with satiation and ingredients that may assist fat burning such as cla, l-carnitine and green tea extract to assist you in achieving your lean body goals. We have put together the ultimate combination which is also lower in calories than typical diet shakes ensur",
+      "variants": [
+        {
+          "variant_id": 41437919903823,
+          "title": "Chocolate Milk / 800g",
+          "sku": "DWC800",
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "800g",
+          "flavour": "Chocolate Milk"
+        },
+        {
+          "variant_id": 43700753858639,
+          "title": "Chocolate Milk / 1.8kg",
+          "sku": "DWC1.8",
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Chocolate Milk"
+        },
+        {
+          "variant_id": 41437947396175,
+          "title": "Vanilla / 800g",
+          "sku": "DWV800",
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "800g",
+          "flavour": "Vanilla"
+        },
+        {
+          "variant_id": 43700753891407,
+          "title": "Vanilla / 1.8kg",
+          "sku": "DWV1.8",
+          "price_zar": 787,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.8kg",
+          "flavour": "Vanilla"
+        }
+      ]
+    },
+    {
+      "product_id": 7421089218639,
+      "title": "My Wellness Alpha Whey 2kg",
+      "handle": "my-wellness-alpha-whey-2kg",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/my-wellness-alpha-whey-2kg",
+      "canonical_url": "https://www.my-wellness.co.za/products/my-wellness-alpha-whey-2kg",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "protein",
+        "Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "2kg"
+      ],
+      "available_flavours": [
+        "Cookies & Cream",
+        "Chocolate"
+      ],
+      "prices_by_size": {
+        "2kg": {
+          "price_zar": 734,
+          "compare_at_price_zar": null,
+          "formatted_price": "R734.00",
+          "in_stock": false
+        }
+      },
+      "in_stock": false,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Alpha Whey is an all inclusive male protein shake that provides the best ingredients in:\n\nProtein quality\nMuscle supporting amino acids\nMale hormone and libido levels\n\nThe protein blend of Anabolic Alpha Protein has the best amino acid profile for both muscle building and muscle repair and the addition crucial amino acids assist that provide even m",
+      "variants": [
+        {
+          "variant_id": 41604836393039,
+          "title": "Cookies & Cream",
+          "sku": "AW2KGCC",
+          "price_zar": 734,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "2kg",
+          "flavour": "Cookies & Cream"
+        },
+        {
+          "variant_id": 41604884398159,
+          "title": "Chocolate",
+          "sku": "AW2KGC",
+          "price_zar": 734,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "2kg",
+          "flavour": "Chocolate"
+        }
+      ]
+    },
+    {
+      "product_id": 7040934412367,
+      "title": "My Wellness Hardcore Alpha Whey 900g",
+      "handle": "alpha-whey-900g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/alpha-whey-900g",
+      "canonical_url": "https://www.my-wellness.co.za/products/alpha-whey-900g",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "Body Building",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "protein",
+        "Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "900g"
+      ],
+      "available_flavours": [
+        "Double Chocolate",
+        "French Vanilla"
+      ],
+      "prices_by_size": {
+        "900g": {
+          "price_zar": 377,
+          "compare_at_price_zar": null,
+          "formatted_price": "R377.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": "MiIk. Made in a factory that uses nuts.",
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Alpha Whey 900g \nAlpha Whey is an all inclusive male protein shake that provides the best ingredients in:1. Protein quality2. Muscle supporting amino acids3. Male hormone and libido levels\nThe protein blend of Anabolic Alpha Protein has the best amino acid profile for both muscle building and muscle repair and the addition crucial amino acids assis",
+      "variants": [
+        {
+          "variant_id": 40679709048911,
+          "title": "Double Chocolate",
+          "sku": "MUAP900C",
+          "price_zar": 377,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Double Chocolate"
+        },
+        {
+          "variant_id": 40679709081679,
+          "title": "French Vanilla",
+          "sku": "MUAP900V",
+          "price_zar": 377,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "French Vanilla"
+        }
+      ]
+    },
+    {
+      "product_id": 7937650294863,
+      "title": "My Wellness Her Protein Hydrator 400g",
+      "handle": "protein-hydrator",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/protein-hydrator",
+      "canonical_url": "https://www.my-wellness.co.za/products/protein-hydrator",
+      "brand": "My Wellness",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "all",
+        "cat-beauty-collagen",
+        "cat-her",
+        "cat-whey-protein",
+        "Collagen",
+        "goal-glow",
+        "goal-muscle",
+        "her-build-recover",
+        "her-glow-beauty",
+        "her-protein",
+        "lifestyle-her",
+        "protein",
+        "Vitamins & Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "400g"
+      ],
+      "available_flavours": [
+        "Blueberry Blaze",
+        "Strawberry Lemonade",
+        "Tropical Punch"
+      ],
+      "prices_by_size": {
+        "400g": {
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "formatted_price": "R367.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Her Protein Hydrator is a refreshingly light way to achieve both your protein requirements as well as staying hydrated with electrolytes. Using both Collagen which is great for skin, hair and nails, in combination with Whey Isolate which is great for muscle recovery. You will be able to multi-task your way to glowing on the outside and keeping your",
+      "variants": [
+        {
+          "variant_id": 43926172926031,
+          "title": "Blueberry Blaze",
+          "sku": "MWHPH400BB",
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "400g",
+          "flavour": "Blueberry Blaze"
+        },
+        {
+          "variant_id": 43926172958799,
+          "title": "Strawberry Lemonade",
+          "sku": "MWHPH400SL",
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "400g",
+          "flavour": "Strawberry Lemonade"
+        },
+        {
+          "variant_id": 45052024520783,
+          "title": "Tropical Punch",
+          "sku": "MWHPH400T",
+          "price_zar": 367,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "400g",
+          "flavour": "Tropical Punch"
+        }
+      ]
+    },
+    {
+      "product_id": 7845860343887,
+      "title": "Alpha Power Pack",
+      "handle": "alpha-power-pack",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/alpha-power-pack",
+      "canonical_url": "https://www.my-wellness.co.za/products/alpha-power-pack",
+      "brand": "My Wellness",
+      "product_type": "Bundles & Stacks",
+      "tags": [
+        "Body Building",
+        "bundle",
+        "cat-bundles",
+        "cat-mens-health",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "Mens health",
+        "performance",
+        "protein",
+        "Supplements",
+        "Vitamins & Supplements",
+        "Whey"
+      ],
+      "available_sizes": [],
+      "available_flavours": [
+        "Chocolate",
+        "Cookies and Cream"
+      ],
+      "prices_by_size": {
+        "Standard": {
+          "price_zar": 787,
+          "compare_at_price_zar": 1017,
+          "formatted_price": "R787.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Take your training and performance to the next level with the Alpha Power Pack. This combo is designed for men who want to build lean muscle mass, support natural testosterone production, and boost overall vitality. Alpha Whey delivers premium protein for recovery and growth, while Test Boost and Libido Boost support hormonal health, stamina, and e",
+      "variants": [
+        {
+          "variant_id": 43603912458319,
+          "title": "Chocolate",
+          "sku": "APPC",
+          "price_zar": 787,
+          "compare_at_price_zar": 1017,
+          "available": true,
+          "size": null,
+          "flavour": "Chocolate"
+        },
+        {
+          "variant_id": 43603912491087,
+          "title": "Cookies and Cream",
+          "sku": "APPCC",
+          "price_zar": 787,
+          "compare_at_price_zar": 1017,
+          "available": true,
+          "size": null,
+          "flavour": "Cookies and Cream"
+        }
+      ]
+    },
+    {
+      "product_id": 8948197621839,
+      "title": "My Wellness Protein Water Plus + 780g",
+      "handle": "my-wellness-protein-water-plus-780g",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/my-wellness-protein-water-plus-780g",
+      "canonical_url": "https://www.my-wellness.co.za/products/my-wellness-protein-water-plus-780g",
+      "brand": "My Wellness",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-hydration-electrolytes",
+        "cat-whey-protein",
+        "performance",
+        "protein",
+        "Vitamins & Supplements"
+      ],
+      "available_sizes": [
+        "780g"
+      ],
+      "available_flavours": [
+        "Strawberry Lemonade",
+        "Blueberry Blaze",
+        "Tropical Punch"
+      ],
+      "prices_by_size": {
+        "780g": {
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "formatted_price": "R514.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": null,
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "Refresh your recovery with My Wellness Protein Water Plus +\nA light, fruity and refreshing alternative to traditional protein shakes. Made with 14g ofprotein per serving, collagen peptides, whey protein, creatine, amino acids andelectrolytes, this easy-to-drink formula helps support hydration, musclerecovery and active everyday wellness. The delici",
+      "variants": [
+        {
+          "variant_id": 46163925434447,
+          "title": "Strawberry Lemonade",
+          "sku": "PWP780SL",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "780g",
+          "flavour": "Strawberry Lemonade"
+        },
+        {
+          "variant_id": 46163925467215,
+          "title": "Blueberry Blaze",
+          "sku": "PWP780BB",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "780g",
+          "flavour": "Blueberry Blaze"
+        },
+        {
+          "variant_id": 46163925499983,
+          "title": "Tropical Punch",
+          "sku": "PWP780TP",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "780g",
+          "flavour": "Tropical Punch"
+        }
+      ]
+    },
+    {
+      "product_id": 7842939109455,
+      "title": "My Wellness Clear Whey ISO 600g",
+      "handle": "my-wellness-clear-whey-iso",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/my-wellness-clear-whey-iso",
+      "canonical_url": "https://www.my-wellness.co.za/products/my-wellness-clear-whey-iso",
+      "brand": "My Wellness",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-hydration-electrolytes",
+        "cat-whey-protein",
+        "goal-muscle",
+        "lifestyle-protein-performance",
+        "performance",
+        "protein",
+        "Supplements",
+        "Vitamins & Supplements",
+        "Whey"
+      ],
+      "available_sizes": [
+        "600g"
+      ],
+      "available_flavours": [
+        "Blueberry Blaze",
+        "Tropical Mango",
+        "Strawberry Lemonade"
+      ],
+      "prices_by_size": {
+        "600g": {
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "formatted_price": "R619.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": null,
+      "allergens": "Milk . Made in a factory that uses peanuts, nuts, soy, and gluten.",
+      "directions": null,
+      "nutritional_info": null,
+      "description_summary": "My Wellness Clear Whey Protein Isolate is an ultra-pure whey protein isolate that delivers clean, clear hydration and a refreshing taste. Designed to mix effortlessly with water, it provides a light, convenient protein option that\u2019s gentle on the stomach and perfect for active lifestyles. \nWe use real blueberries and tropical fruits to flavour this",
+      "variants": [
+        {
+          "variant_id": 43590122438735,
+          "title": "Blueberry Blaze",
+          "sku": "CW600BB",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": false,
+          "size": "600g",
+          "flavour": "Blueberry Blaze"
+        },
+        {
+          "variant_id": 43590122471503,
+          "title": "Tropical Mango",
+          "sku": "CW600TM",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "600g",
+          "flavour": "Tropical Mango"
+        },
+        {
+          "variant_id": 44463824863311,
+          "title": "Strawberry Lemonade",
+          "sku": "CW600SL",
+          "price_zar": 619,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "600g",
+          "flavour": "Strawberry Lemonade"
+        }
+      ]
+    },
+    {
+      "product_id": 8919939809359,
+      "title": "My Wellness Natures Milk Protein",
+      "handle": "my-wellness-natures-milk-protein-1-8kg",
+      "product_url": "https://www.my-wellness.co.za/collections/protein/products/my-wellness-natures-milk-protein-1-8kg",
+      "canonical_url": "https://www.my-wellness.co.za/products/my-wellness-natures-milk-protein-1-8kg",
+      "brand": "My Wellness SA",
+      "product_type": "Whey & Dairy Protein",
+      "tags": [
+        "cat-whey-protein",
+        "performance",
+        "protein",
+        "Supplements"
+      ],
+      "available_sizes": [
+        "900g",
+        "1.6kg"
+      ],
+      "available_flavours": [
+        "Chocolate Milkshake",
+        "Vanilla Milkshake",
+        "Unflavored"
+      ],
+      "prices_by_size": {
+        "900g": {
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "formatted_price": "R514.00",
+          "in_stock": true
+        },
+        "1.6kg": {
+          "price_zar": 689,
+          "compare_at_price_zar": null,
+          "formatted_price": "R689.00",
+          "in_stock": true
+        }
+      },
+      "in_stock": true,
+      "ingredients": "Native Milk Protein Isolate (20% Whey & 80% Casein), Whey Protein Concentrate,Cocoa powder(in chocolate variant only ), Flavouring, Fat-Free Milk Solids, Low GISweetener Blend(Xylitol, Fructose, Stevia), Inulin, Salt, Colostrum, Digezyme\u00ae, Probiotic(Lactospore\u00ae - Heyndrickxia coagulans)\nDigeZyme\u00ae is a registered trademark of SabinsaLactoSpore\u00ae is a registered trademark of Sabinsa",
+      "allergens": "MILK. Made in a factory that contains tree nuts, peanuts, and soy.",
+      "directions": "Add two level scoops (30 g) of Nature's Milk Protein Isolate to 250ml of water or milk.Great in oats, yoghurt, and baking.",
+      "nutritional_info": null,
+      "description_summary": "Nature's First Nutrition. Advanced Muscle Support.Experience the next generation of protein nutrition with our premium Nature's MilkProtein Isolate with Colostrum, a scientifically balanced formula designed to supportmuscle health, recovery, satiety, and overall wellness. Featuring a protein ratio of 51%whey protein and 49% micellar casein, this ad",
+      "variants": [
+        {
+          "variant_id": 46163582746703,
+          "title": "Chocolate Milkshake / 900g",
+          "sku": "NMP900C",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Chocolate Milkshake"
+        },
+        {
+          "variant_id": 46880001753167,
+          "title": "Chocolate Milkshake / 1.6kg",
+          "sku": "NMP1800C",
+          "price_zar": 689,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.6kg",
+          "flavour": "Chocolate Milkshake"
+        },
+        {
+          "variant_id": 46163582779471,
+          "title": "Vanilla Milkshake / 900g",
+          "sku": "NMP900V",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Vanilla Milkshake"
+        },
+        {
+          "variant_id": 46880001785935,
+          "title": "Vanilla Milkshake / 1.6kg",
+          "sku": "NMP1800V",
+          "price_zar": 689,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.6kg",
+          "flavour": "Vanilla Milkshake"
+        },
+        {
+          "variant_id": 46163582812239,
+          "title": "Unflavored / 900g",
+          "sku": "NMP900U",
+          "price_zar": 514,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "900g",
+          "flavour": "Unflavored"
+        },
+        {
+          "variant_id": 46880001818703,
+          "title": "Unflavored / 1.6kg",
+          "sku": "NMP1800U",
+          "price_zar": 689,
+          "compare_at_price_zar": null,
+          "available": true,
+          "size": "1.6kg",
+          "flavour": "Unflavored"
+        }
+      ]
+    }
+  ]
+}

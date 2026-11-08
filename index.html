@@ -316,11 +316,11 @@
         <!-- Shared Product Landing Banner -->
         <div id="sharedProductBanner" class="hidden mb-4 p-3 bg-gradient-to-r from-blue-950/60 via-blue-900/30 to-[#0b0f17] border border-blue-500/40 rounded-2xl flex items-center justify-between gap-3 text-xs shadow-lg shadow-blue-950/20">
           <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center shrink-0">
+            <span id="sharedBannerIcon" class="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center shrink-0">
               <i class="fa-solid fa-share-nodes text-xs"></i>
             </span>
             <div class="truncate">
-              <span class="text-gray-400 text-[11px]">Viewing shared deal:</span>
+              <span id="sharedBannerSubhead" class="text-gray-400 text-[11px]">Viewing shared deal:</span>
               <div class="font-bold text-white text-xs truncate" id="sharedBannerTitle"></div>
             </div>
           </div>
@@ -400,6 +400,17 @@
 
       <h3 id="modalTitle" class="text-base font-bold text-white leading-snug"></h3>
 
+      <!-- Unavailable / Delisted Notification Banner -->
+      <div id="modalUnavailableBanner" class="hidden p-3.5 rounded-xl border bg-amber-950/25 border-amber-500/40 text-xs">
+        <div class="flex items-start gap-2.5">
+          <i id="modalUnavailableIcon" class="fa-solid fa-circle-exclamation text-amber-400 text-sm mt-0.5 shrink-0"></i>
+          <div class="flex-1">
+            <div id="modalUnavailableHeading" class="font-bold text-amber-300 text-xs"></div>
+            <div id="modalUnavailableSubtext" class="text-gray-300 text-[11px] mt-0.5 leading-relaxed"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- Core Stats Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 bg-[#0b0f17] p-3 rounded-xl border border-gray-800/80 text-center">
         <div>
@@ -474,6 +485,19 @@
         </div>
       </div>
 
+      <!-- Similar Products & Closest Alternatives Section -->
+      <div id="modalSimilarSection" class="pt-3 border-t border-gray-800/80 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span id="modalSimilarTitle" class="text-xs font-bold text-gray-200 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-arrows-split-up-and-left text-blue-400"></i> Similar Products & Alternatives
+          </span>
+          <span id="modalSimilarSubhead" class="text-[10px] text-gray-400 font-medium"></span>
+        </div>
+        <div id="modalSimilarGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
       <div class="pt-3 border-t border-gray-800 flex justify-end items-center gap-2">
         <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs font-semibold transition">Close</button>
         <button id="modalShareBtn" onclick="shareCurrentModalProduct(event)" class="px-4 py-2 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/40 rounded-xl text-xs font-semibold transition flex items-center gap-1.5" title="Share this deal">
@@ -497,6 +521,7 @@
   <!-- Application Logic -->
   <script>
     let rawProducts = [];
+    let archivedProducts = {};
     let currentViewMode = 'grouped'; // 'grouped' | 'individual' | 'table'
     let currentSectionGrouping = 'none'; // 'none' | 'brand' | 'type' | 'size' | 'retailer'
     let activeSizeSelections = {}; // lineKey -> selectedSizeG
@@ -654,6 +679,9 @@
         const dateEl = document.getElementById('lastUpdatedDate');
         if (dateEl) dateEl.innerText = window.LAST_UPDATED;
       }
+      if (window.ARCHIVED_PRODUCTS && typeof window.ARCHIVED_PRODUCTS === 'object') {
+        archivedProducts = window.ARCHIVED_PRODUCTS;
+      }
       if (window.EMBEDDED_PROTEINS && Array.isArray(window.EMBEDDED_PROTEINS)) {
         rawProducts = window.EMBEDDED_PROTEINS;
         populateBrandFilter();
@@ -666,6 +694,12 @@
         if (res.ok) rawProducts = await res.json();
       } catch (e) {
         console.error("Error loading products via fetch:", e);
+      }
+      try {
+        const tRes = await fetch('data/tombstones.json');
+        if (tRes.ok) archivedProducts = await tRes.json();
+      } catch (e) {
+        console.warn("Could not load tombstones via fetch:", e);
       }
       populateBrandFilter();
       applyFilters();
@@ -1490,10 +1524,93 @@
       document.getElementById('comparisonModal').classList.add('hidden');
     }
 
+    function findClosestAlternatives(product, limit = 3) {
+      if (!product || !rawProducts || rawProducts.length === 0) return [];
+
+      const targetId = product.id;
+      const targetBrand = (product.brand || '').toLowerCase().trim();
+      const targetLine = (product.product_line || product.title || '').toLowerCase().trim();
+      const targetType = (product.type || '').toLowerCase().trim();
+      const targetSize = product.container_size_g || 1000;
+      const targetPricing = getProductPricing(product);
+      const targetCpg = targetPricing.costPerG || 0.50;
+      const targetDiaas = product.diaas_score || 1.15;
+      const targetRetailer = product.retailer;
+
+      const candidates = rawProducts.filter(p => p.id !== targetId);
+      const scored = [];
+
+      for (const p of candidates) {
+        let score = 0;
+        const pBrand = (p.brand || '').toLowerCase().trim();
+        const pLine = (p.product_line || p.title || '').toLowerCase().trim();
+        const pType = (p.type || '').toLowerCase().trim();
+        const pSize = p.container_size_g || 1000;
+        const pricing = getProductPricing(p);
+        const pCpg = pricing.costPerG || 0.50;
+        const pDiaas = p.diaas_score || 1.15;
+
+        const isSameBrand = (pBrand === targetBrand);
+        const isSameLine = isSameBrand && (pLine === targetLine || p.title.toLowerCase().includes(targetLine) || targetLine.includes(pLine));
+        const isSameType = (pType === targetType);
+        const isSameRetailer = (p.retailer === targetRetailer);
+        const isSameSize = Math.abs(pSize - targetSize) < 50;
+
+        let matchReason = '';
+        let isDifferentRetailer = false;
+
+        if (isSameLine && isSameSize && !isSameRetailer) {
+          score += 1000;
+          matchReason = `Same product at ${p.retailer}`;
+          isDifferentRetailer = true;
+        } else if (isSameLine) {
+          score += 600;
+          const sLbl = pSize >= 1000 ? `${(pSize / 1000).toFixed(pSize % 1000 === 0 ? 0 : 1)}kg` : `${pSize}g`;
+          matchReason = `Same line (${sLbl})`;
+        } else if (isSameBrand && isSameType) {
+          score += 350;
+          matchReason = `${p.brand} ${p.type}`;
+        } else if (isSameBrand) {
+          score += 200;
+          matchReason = `${p.brand} alternative`;
+        } else if (isSameType) {
+          score += 150;
+          matchReason = `Similar ${p.type}`;
+        } else {
+          score += 10;
+          matchReason = 'Value alternative';
+        }
+
+        const cpgDiffPct = Math.abs(pCpg - targetCpg) / Math.max(0.1, targetCpg);
+        score += Math.max(0, 100 - (cpgDiffPct * 100));
+
+        const sizeDiffPct = Math.abs(pSize - targetSize) / Math.max(100, targetSize);
+        score += Math.max(0, 50 - (sizeDiffPct * 50));
+
+        if (pDiaas >= targetDiaas) {
+          score += 30;
+        }
+
+        scored.push({
+          product: p,
+          score,
+          matchReason,
+          isDifferentRetailer
+        });
+      }
+
+      scored.sort((a, b) => b.score - a.score);
+      return scored.slice(0, limit);
+    }
+
     let currentModalProductId = null;
 
-    function openDetailModal(id) {
-      const p = rawProducts.find(item => item.id === id);
+    function openDetailModal(id, isDelisted = false) {
+      let p = rawProducts.find(item => item.id === id);
+      if (!p && archivedProducts[id]) {
+        p = archivedProducts[id];
+        isDelisted = true;
+      }
       if (!p) return;
 
       currentModalProductId = p.id;
@@ -1541,18 +1658,14 @@
         description: 'Buy any 3 qualifying products and get the cheapest free! (Effective 33.3% savings per tub).'
       } : null);
 
-      if (bulk && bulk.eligible) {
+      if (!isDelisted && bulk && bulk.eligible) {
         promoSec.classList.remove('hidden');
         const buyQty = bulk.buy_qty || 2;
         const bundlePrice = bulk.bundle_price_zar || round2((bulk.unit_price_zar || p.price_zar) * buyQty);
         const unitPrice = bulk.unit_price_zar || round2(bundlePrice / buyQty);
         const savings = bulk.savings_zar || round2(p.price_zar * buyQty - bundlePrice);
 
-        document.getElementById('modalPromoTitle').innerHTML = `<i class="fa-solid fa-boxes-stacked text-amber-400"></i> ${p.retailer} "${bulk.label}" Bulk Deal`;
-        document.getElementById('modalPromoCodeBadge').innerText = bulk.tag || bulk.label;
-        document.getElementById('modalPromoCodeBadge').className = 'px-2 py-0.5 rounded bg-amber-900/60 text-amber-200 font-mono text-xs font-bold border border-amber-500/40';
-
-        let desc = bulk.description;
+        let desc = `<b class="text-white">${bulk.description || 'Special multi-buy bundle promotion active.'}</b>`;
         desc += `<br><span class="text-gray-300">Bundle Price:</span> <b class="text-amber-300">R ${bundlePrice.toFixed(0)}</b> for ${buyQty} tubs (<b class="text-emerald-400">R ${unitPrice.toFixed(2)} / tub</b>, save R ${savings.toFixed(0)}).`;
 
         if (p.retailer === 'Clicks' && clicksDiscountEnabled) {
@@ -1567,7 +1680,7 @@
           desc += `<br><span class="text-[10px] text-amber-400/90 italic inline-flex items-center gap-1 mt-1"><i class="fa-solid fa-circle-info"></i> Tip: Turn on "Bulk Deals" toggle in header to apply this price to comparison and sorting.</span>`;
         }
         document.getElementById('modalPromoDesc').innerHTML = desc;
-      } else if (p.coupon_code === 'STAFF13') {
+      } else if (!isDelisted && p.coupon_code === 'STAFF13') {
         if (clicksDiscountEnabled) {
           promoSec.classList.remove('hidden');
           document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-id-card text-sky-400"></i> Active Discount & Promotions';
@@ -1577,7 +1690,7 @@
         } else {
           promoSec.classList.add('hidden');
         }
-      } else if (p.coupon_code === 'BETTER10') {
+      } else if (!isDelisted && p.coupon_code === 'BETTER10') {
         if (dischemRewardsEnabled) {
           promoSec.classList.remove('hidden');
           document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag text-emerald-400"></i> Active Discount & Promotions';
@@ -1587,7 +1700,7 @@
         } else {
           promoSec.classList.add('hidden');
         }
-      } else if (p.coupon_code && p.coupon_code !== 'DIRECT' && p.coupon_code !== 'STANDARD' && p.coupon_code !== 'NONE') {
+      } else if (!isDelisted && p.coupon_code && p.coupon_code !== 'DIRECT' && p.coupon_code !== 'STANDARD' && p.coupon_code !== 'NONE') {
         promoSec.classList.remove('hidden');
         document.getElementById('modalPromoTitle').innerHTML = '<i class="fa-solid fa-tag"></i> Active Discount & Promotions';
         document.getElementById('modalPromoCodeBadge').innerText = p.coupon_code;
@@ -1597,15 +1710,99 @@
         promoSec.classList.add('hidden');
       }
 
-      document.getElementById('modalFlavor').innerText = p.flavor;
-      document.getElementById('modalServingInfo').innerText = `${p.scoop_size_g}g scoop (${p.protein_per_serving_g}g prot) • ${p.servings_count} servings (${p.total_protein_g}g total protein)`;
-      document.getElementById('modalEnzymes').innerText = p.digestive_enzymes;
-      document.getElementById('modalSweetener').innerText = p.sweetener;
-      document.getElementById('modalIngredients').innerText = p.ingredients;
+      document.getElementById('modalFlavor').innerText = p.flavor || 'Unflavoured';
+      document.getElementById('modalServingInfo').innerText = `${p.scoop_size_g || 30}g scoop (${p.protein_per_serving_g || 24}g prot) • ${p.servings_count || 30} servings (${p.total_protein_g || 750}g total protein)`;
+      document.getElementById('modalEnzymes').innerText = p.digestive_enzymes || 'Standard digestive absorption';
+      document.getElementById('modalSweetener').innerText = p.sweetener || 'Sucralose';
+      document.getElementById('modalIngredients').innerText = p.ingredients || 'Manufacturer ingredients not specified.';
+
+      // Compute and render Similar Products / Closest Alternatives
+      const alts = findClosestAlternatives(p, 3);
+      const otherRetailers = alts.filter(a => a.isDifferentRetailer);
+      const similarGrid = document.getElementById('modalSimilarGrid');
+      const similarSubhead = document.getElementById('modalSimilarSubhead');
+      const unavailBanner = document.getElementById('modalUnavailableBanner');
+      const unavailHeading = document.getElementById('modalUnavailableHeading');
+      const unavailSubtext = document.getElementById('modalUnavailableSubtext');
+      const unavailIcon = document.getElementById('modalUnavailableIcon');
       const buyBtn = document.getElementById('modalBuyLink');
-      buyBtn.href = p.url;
-      const retName = (p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Official Store` : p.retailer;
-      buyBtn.innerHTML = `<span>View on ${retName}</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+
+      if (alts.length > 0) {
+        similarGrid.innerHTML = alts.map(alt => {
+          const altPricing = getProductPricing(alt.product);
+          let bClass = 'badge-retailer-takealot';
+          if (alt.product.retailer === 'Clicks') bClass = 'badge-retailer-clicks';
+          if (alt.product.retailer === 'Dis-Chem') bClass = 'badge-retailer-dischem';
+          if (alt.product.retailer === 'Amazon ZA') bClass = 'badge-retailer-amazon';
+          if (alt.product.retailer === 'Nutritech Direct' || alt.product.retailer === 'Brand Direct') bClass = 'badge-retailer-nutritech';
+          const sLbl = alt.product.container_size_g >= 1000 ? (alt.product.container_size_g / 1000) + 'kg' : alt.product.container_size_g + 'g';
+
+          return `
+            <div onclick="openDetailModal('${alt.product.id}')" class="p-2.5 rounded-xl bg-[#0b0f17] hover:bg-[#161d2a] border ${alt.isDifferentRetailer ? 'border-emerald-500/50 bg-emerald-950/20' : 'border-gray-800/80 hover:border-blue-500/40'} transition cursor-pointer flex flex-col justify-between group">
+              <div>
+                <div class="flex items-center justify-between gap-1 mb-1">
+                  <span class="text-[9px] font-bold uppercase tracking-wider text-blue-400 truncate">${alt.product.brand}</span>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded font-semibold ${bClass}">${alt.product.retailer}</span>
+                </div>
+                <div class="text-[11px] font-bold text-white line-clamp-2 leading-tight group-hover:text-blue-300 transition mb-1" title="${alt.product.title}">
+                  ${alt.product.title}
+                </div>
+                <div class="inline-block px-1.5 py-0.5 rounded text-[9px] font-semibold ${alt.isDifferentRetailer ? 'bg-emerald-900/70 text-emerald-200 border border-emerald-600/50' : 'bg-gray-800 text-gray-300'} mb-2">
+                  ${alt.matchReason}
+                </div>
+              </div>
+              <div class="pt-1.5 border-t border-gray-800/60 flex items-baseline justify-between">
+                <div>
+                  <span class="text-xs font-black text-emerald-400">R ${altPricing.finalPrice.toFixed(0)}</span>
+                  <span class="text-[10px] text-gray-400 font-mono ml-1">R${altPricing.costPerG.toFixed(2)}/g</span>
+                </div>
+                <span class="text-[10px] text-blue-300 font-mono font-bold">${sLbl}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        similarGrid.innerHTML = '<div class="col-span-3 text-center text-xs text-gray-500 py-3">No direct alternatives found.</div>';
+      }
+
+      if (isDelisted) {
+        unavailBanner.classList.remove('hidden');
+        if (otherRetailers.length > 0) {
+          const retNames = [...new Set(otherRetailers.map(a => a.product.retailer))].join(', ');
+          unavailHeading.innerText = `No longer available at ${p.retailer}`;
+          unavailSubtext.innerHTML = `This specific listing is no longer in stock at <b>${p.retailer}</b>. However, this product is in stock from other suppliers: <b class="text-emerald-400">${retNames}</b> (see options below).`;
+          unavailIcon.className = "fa-solid fa-circle-info text-sky-400 text-sm mt-0.5 shrink-0";
+          unavailBanner.className = "p-3.5 rounded-xl border bg-blue-950/30 border-blue-500/40 text-xs mb-3";
+
+          similarSubhead.innerText = `In stock from other retailers`;
+          buyBtn.href = otherRetailers[0].product.url;
+          buyBtn.innerHTML = `<span>View on ${otherRetailers[0].product.retailer}</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+          buyBtn.className = "px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-2";
+        } else {
+          unavailHeading.innerText = `Product no longer available at ${p.retailer}`;
+          unavailSubtext.innerHTML = `This deal has expired or been discontinued at <b>${p.retailer}</b>. Here are the closest active alternatives with comparable protein purity and DIAAS rating:`;
+          unavailIcon.className = "fa-solid fa-triangle-exclamation text-amber-400 text-sm mt-0.5 shrink-0";
+          unavailBanner.className = "p-3.5 rounded-xl border bg-amber-950/30 border-amber-500/40 text-xs mb-3";
+
+          similarSubhead.innerText = `Ranked by formula & value match`;
+          if (alts.length > 0) {
+            buyBtn.href = alts[0].product.url;
+            buyBtn.innerHTML = `<span>View Top Alternative (${alts[0].product.retailer})</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+            buyBtn.className = "px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-2";
+          } else {
+            buyBtn.href = '#';
+            buyBtn.innerHTML = `<span>Listing Discontinued</span>`;
+            buyBtn.className = "px-5 py-2 bg-gray-800 text-gray-500 cursor-not-allowed rounded-xl text-xs font-bold transition flex items-center gap-2";
+          }
+        }
+      } else {
+        unavailBanner.classList.add('hidden');
+        similarSubhead.innerText = `Ranked by formula & value match`;
+        buyBtn.href = p.url;
+        const retName = (p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Official Store` : p.retailer;
+        buyBtn.innerHTML = `<span>View on ${retName}</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
+        buyBtn.className = "px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-2";
+      }
 
       document.getElementById('detailModal').classList.remove('hidden');
     }
@@ -1697,44 +1894,85 @@
     function handleSharedProductLanding() {
       const params = new URLSearchParams(window.location.search);
       const targetId = params.get('p');
-      if (!targetId || !rawProducts || rawProducts.length === 0) return;
-
-      const product = rawProducts.find(item => item.id === targetId);
-      if (!product) return;
-
-      const priceSlider = document.getElementById('priceRange');
-      if (priceSlider && product.price_zar > parseFloat(priceSlider.value)) {
-        priceSlider.value = 4500;
-        document.getElementById('priceVal').innerText = 'R 4,500';
-      }
-
-      const groupKey = product.product_line || product.title;
-      activeSizeSelections[groupKey] = product.container_size_g;
-
-      applyFilters();
+      if (!targetId) return;
 
       const banner = document.getElementById('sharedProductBanner');
       const bannerTitle = document.getElementById('sharedBannerTitle');
-      const sLabel = product.container_size_g >= 1000 ? (product.container_size_g / 1000) + 'kg' : product.container_size_g + 'g';
-      if (banner && bannerTitle) {
-        bannerTitle.innerText = `${product.brand} - ${product.title} (${sLabel}) • R ${product.price_zar.toFixed(2)}`;
-        banner.classList.remove('hidden');
+      const bannerSubhead = document.getElementById('sharedBannerSubhead');
+      const bannerIcon = document.getElementById('sharedBannerIcon');
+
+      const product = rawProducts.find(item => item.id === targetId);
+
+      if (product) {
+        // Active product in catalog
+        const priceSlider = document.getElementById('priceRange');
+        if (priceSlider && product.price_zar > parseFloat(priceSlider.value)) {
+          priceSlider.value = 4500;
+          document.getElementById('priceVal').innerText = 'R 4,500';
+        }
+
+        const groupKey = product.product_line || product.title;
+        activeSizeSelections[groupKey] = product.container_size_g;
+        applyFilters();
+
+        const sLabel = product.container_size_g >= 1000 ? (product.container_size_g / 1000) + 'kg' : product.container_size_g + 'g';
+        if (banner && bannerTitle) {
+          if (bannerSubhead) bannerSubhead.innerText = "Viewing shared deal:";
+          if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-blue-600/30 text-blue-400 flex items-center justify-center shrink-0";
+          bannerTitle.innerText = `${product.brand} - ${product.title} (${sLabel}) • R ${product.price_zar.toFixed(2)}`;
+          banner.classList.remove('hidden');
+        }
+
+        setTimeout(() => {
+          let card = document.querySelector(`[data-prod-id="${product.id}"]`);
+          if (!card) {
+            card = document.querySelector(`[data-group-key="${escapeJs(groupKey)}"]`);
+          }
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
+            setTimeout(() => {
+              card.classList.remove('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
+            }, 4000);
+          }
+          openDetailModal(product.id);
+        }, 350);
+        return;
       }
 
-      setTimeout(() => {
-        let card = document.querySelector(`[data-prod-id="${product.id}"]`);
-        if (!card) {
-          card = document.querySelector(`[data-group-key="${escapeJs(groupKey)}"]`);
+      // Check tombstone archive
+      const archived = archivedProducts[targetId];
+      if (archived) {
+        const alts = findClosestAlternatives(archived, 3);
+        const otherRetailers = alts.filter(a => a.isDifferentRetailer);
+        const sLabel = archived.container_size_g >= 1000 ? (archived.container_size_g / 1000) + 'kg' : archived.container_size_g + 'g';
+
+        if (banner && bannerTitle) {
+          if (otherRetailers.length > 0) {
+            const retNames = [...new Set(otherRetailers.map(a => a.product.retailer))].join(', ');
+            if (bannerSubhead) bannerSubhead.innerHTML = `<span class="text-amber-400 font-semibold"><i class="fa-solid fa-circle-info"></i> Availability Notice:</span>`;
+            if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center shrink-0";
+            bannerTitle.innerHTML = `${archived.brand} ${archived.title} (${sLabel}) is no longer available at ${archived.retailer}, but in stock at <b class="text-emerald-400">${retNames}</b>!`;
+          } else {
+            if (bannerSubhead) bannerSubhead.innerHTML = `<span class="text-amber-400 font-semibold"><i class="fa-solid fa-triangle-exclamation"></i> Deal Expired:</span>`;
+            if (bannerIcon) bannerIcon.className = "w-7 h-7 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center shrink-0";
+            bannerTitle.innerHTML = `${archived.brand} ${archived.title} (${sLabel}) is no longer available at ${archived.retailer}. Viewing closest active alternatives below.`;
+          }
+          banner.classList.remove('hidden');
         }
-        if (card) {
-          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          card.classList.add('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
-          setTimeout(() => {
-            card.classList.remove('ring-2', 'ring-blue-500', 'shadow-xl', 'shadow-blue-500/30');
-          }, 4000);
-        }
-        openDetailModal(product.id);
-      }, 350);
+
+        setTimeout(() => {
+          openDetailModal(targetId, true);
+        }, 350);
+        return;
+      }
+
+      // If ID not found in active catalog or tombstone archive
+      if (banner && bannerTitle) {
+        if (bannerSubhead) bannerSubhead.innerText = "Notice:";
+        bannerTitle.innerHTML = `<span class="text-amber-300">Shared deal ID "${escapeJs(targetId)}" was not found. Showing all active deals.</span>`;
+        banner.classList.remove('hidden');
+      }
     }
 
     function clearSharedProductView() {

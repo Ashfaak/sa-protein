@@ -10,13 +10,67 @@ import re
 import sqlite3
 from datetime import datetime
 
-def save_products(master_products, db_path='data/proteins.db', json_path='data/proteins.json', js_path='data/products_data.js'):
+def save_products(master_products, db_path='data/proteins.db', json_path='data/proteins.json', js_path='data/products_data.js', tombstones_path='data/tombstones.json'):
     print(f"Total consolidated pure protein powders: {len(master_products)}")
     
-    # Save as JSON
     os.makedirs('data', exist_ok=True)
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(master_products, f, indent=2)
+
+    # Format current date (e.g. "8 Nov 2026")
+    today_str = datetime.now().strftime("%d %b %Y").lstrip("0")
+
+    # Load existing tombstones if present
+    tombstones = {}
+    if os.path.exists(tombstones_path):
+        try:
+            with open(tombstones_path, 'r', encoding='utf-8') as f:
+                tombstones = json.load(f)
+        except Exception as e:
+            print(f"Warning reading existing tombstones: {e}")
+            tombstones = {}
+
+    # Track products dropped from previous catalog into tombstone archive
+    incoming_ids = {p['id'] for p in master_products}
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, 'r', encoding='utf-8') as f:
+                prev_products = json.load(f)
+            for p in prev_products:
+                pid = p.get('id')
+                if pid and pid not in incoming_ids and pid not in tombstones:
+                    tombstones[pid] = {
+                        'id': pid,
+                        'retailer': p.get('retailer'),
+                        'brand': p.get('brand'),
+                        'title': p.get('title'),
+                        'product_line': p.get('product_line') or p.get('title'),
+                        'type': p.get('type', 'Whey Blend'),
+                        'flavor': p.get('flavor', 'Unflavoured'),
+                        'container_size_g': p.get('container_size_g', 1000.0),
+                        'serving_size_g': p.get('serving_size_g', 30.0),
+                        'scoop_size_g': p.get('scoop_size_g', 30.0),
+                        'protein_per_serving_g': p.get('protein_per_serving_g', 24.0),
+                        'protein_percentage': p.get('protein_percentage', 75.0),
+                        'carbs_g': p.get('carbs_g', 2.0),
+                        'fat_g': p.get('fat_g', 1.5),
+                        'price_zar': p.get('price_zar', 0.0),
+                        'cost_per_g_protein_zar': p.get('cost_per_g_protein_zar', 0.0),
+                        'diaas_score': p.get('diaas_score', 1.22),
+                        'diaas_rating': p.get('diaas_rating', 'Excellent'),
+                        'diaas_category': p.get('diaas_category', p.get('type')),
+                        'pdcaas_score': p.get('pdcaas_score', 1.00),
+                        'quality_summary': p.get('quality_summary', ''),
+                        'url': p.get('url', ''),
+                        'ingredients': p.get('ingredients', ''),
+                        'delisted_date': today_str,
+                        'in_stock': False,
+                        'status': 'delisted'
+                    }
+        except Exception as e:
+            print(f"Warning tracking previous products for tombstones: {e}")
+
+    # Save tombstones JSON
+    with open(tombstones_path, 'w', encoding='utf-8') as f:
+        json.dump(tombstones, f, indent=2)
 
     # Save to SQLite
     conn = sqlite3.connect(db_path)
@@ -136,9 +190,13 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(master_products, f, indent=2)
 
-    # Save as JS for direct browser loading with window.LAST_UPDATED timestamp
+    # Save as JS for direct browser loading with window.LAST_UPDATED timestamp and tombstone registry
     with open(js_path, 'w', encoding='utf-8') as f:
-        f.write(f"window.LAST_UPDATED = '{today_str}';\nwindow.EMBEDDED_PROTEINS = " + json.dumps(master_products, indent=2) + ";\n")
+        f.write(
+            f"window.LAST_UPDATED = '{today_str}';\n"
+            f"window.EMBEDDED_PROTEINS = " + json.dumps(master_products, indent=2) + ";\n"
+            f"window.ARCHIVED_PRODUCTS = " + json.dumps(tombstones, indent=2) + ";\n"
+        )
 
     print(f"Database successfully updated! {len(master_products)} pure whey protein powders stored.")
 

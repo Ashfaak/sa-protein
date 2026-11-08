@@ -57,6 +57,8 @@ def clean_brand(brand_raw, title, url=""):
         return 'Biyode'
     if 'weider' in t or 'weider' in b_raw_low:
         return 'Weider'
+    if "nature's nutrition" in b_raw_low or "natures nutrition" in b_raw_low or "nature's nutrition" in t or "natures nutrition" in t:
+        return "Nature's Nutrition"
 
     # Priority 1: Extract brand from Clicks URL slug if applicable
     if 'clicks.co.za/' in (url or ''):
@@ -215,7 +217,7 @@ def parse_weight_g(title, container_size_str=None):
     if '899' in s_low or '896' in s_low or '891' in s_low: return 900.0
     if '800' in s_low: return 800.0
     if '769' in s_low or '750' in s_low or '704' in s_low or '700' in s_low: return 750.0
-    if '500' in s_low: return 500.0
+    if '500' in s_low or "nature's nutrition" in s_low or "natures nutrition" in s_low: return 500.0
     if '454' in s_low or '1 lb' in s_low or '426' in s_low or '408' in s_low or '400' in s_low: return 454.0
     return 1000.0
 
@@ -300,6 +302,7 @@ FAMILY_TYPE_MAP = {
     'Lifegain': 'Multi-Source / Meal Blend',
     'Lifegain Junior': 'Multi-Source / Meal Blend',
     'Lifegain Advanced': 'Multi-Source / Meal Blend',
+    "Nature's Nutrition Plant Protein": 'Plant / Vegan Protein',
 }
 
 def determine_type(title, ing="", family_name=""):
@@ -417,6 +420,10 @@ def get_product_family_key(title, brand):
         if 'nitro-tech' in t or 'nitrotech' in t or 'nitro tech' in t: return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
         if 'phase8' in t: return ('MuscleTech', 'MuscleTech Phase8 Sustained Release')
         return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
+
+    # Nature's Nutrition Families
+    if "nature's nutrition" in b or "natures nutrition" in b or "nature's nutrition" in t or "natures nutrition" in t:
+        return ("Nature's Nutrition", "Nature's Nutrition Plant Protein")
         
     # 8. My Wellness Families
     if 'my wellness' in b or 'mywellness' in b or 'alpha whey' in t:

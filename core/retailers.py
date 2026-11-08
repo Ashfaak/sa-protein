@@ -567,7 +567,10 @@ def load_mywellness(seen_keys=None):
             if not is_valid_protein_powder(base_title, item.get('product_url')):
                 continue
 
-            brand = 'My Wellness'
+            raw_b = item.get('brand') or ''
+            brand = clean_brand(raw_b, base_title)
+            if not brand or brand.lower() in ['unknown', 'other', 'other brands']:
+                brand = 'My Wellness'
             base_url = item.get('product_url', 'https://www.my-wellness.co.za/')
             variants = item.get('variants', [])
             
@@ -696,17 +699,33 @@ def load_alternatives(seen_keys=None):
                 family = get_product_family_key(title, brand)
 
                 weight_g = float(item.get('size_g') or parse_weight_g(title))
-                serving_g = float(item.get('serving_g') or 32.0)
-                prot_g = float(item.get('protein_per_serving_g') or 22.0)
-                carbs_g = float(item.get('carbs_per_serving_g') if item.get('carbs_per_serving_g') is not None else 2.5)
-                fat_g = float(item.get('fat_per_serving_g') if item.get('fat_per_serving_g') is not None else 1.5)
-                servings_cnt = int(item.get('servings') or max(1, int(weight_g / serving_g)))
-                total_prot_g = round(servings_cnt * prot_g, 1)
-                prot_pct = float(item.get('protein_pct') or round((prot_g / serving_g) * 100, 1))
-
                 ptype = determine_type(title, item.get('protein_sources', ''), family[1])
                 flavor = determine_flavor(title)
-                ing_str = f"{item.get('protein_sources', '')}. {item.get('notes', '')}".strip()
+
+                nut = determine_nutrition(brand, ptype, weight_g, title, item.get('protein_sources'))
+                if nut:
+                    serving_g = nut['serving_size_g']
+                    prot_g = nut['protein_per_serving_g']
+                    carbs_g = nut['carbs_g']
+                    fat_g = nut['fat_g']
+                    servings_cnt = nut['servings_count']
+                    total_prot_g = nut['total_protein_g']
+                    prot_pct = nut['protein_percentage']
+                    ing_str = nut['ingredients']
+                    enzymes_val = nut['digestive_enzymes']
+                    sweetener_val = nut['sweetener']
+                else:
+                    serving_g = float(item.get('serving_g') or 32.0)
+                    prot_g = float(item.get('protein_per_serving_g') or 22.0)
+                    carbs_g = float(item.get('carbs_per_serving_g') if item.get('carbs_per_serving_g') is not None else 2.5)
+                    fat_g = float(item.get('fat_per_serving_g') if item.get('fat_per_serving_g') is not None else 1.5)
+                    servings_cnt = int(item.get('servings') or max(1, int(weight_g / serving_g)))
+                    total_prot_g = round(servings_cnt * prot_g, 1)
+                    prot_pct = float(item.get('protein_pct') or round((prot_g / serving_g) * 100, 1))
+                    ing_str = f"{item.get('protein_sources', '')}. {item.get('notes', '')}".strip()
+                    enzymes_val = item.get('digestive_enzymes') or 'None added'
+                    sweetener_val = item.get('sweeteners') or 'Sucralose'
+
                 quality = compute_protein_quality_scores(ptype, ing_str, title)
 
                 price = float(item.get('price_zar') or 449.0)
@@ -785,8 +804,8 @@ def load_alternatives(seen_keys=None):
                     'rating': 4.7,
                     'review_count': 42,
                     'ingredients': ing_str,
-                    'digestive_enzymes': item.get('digestive_enzymes') or 'None added',
-                    'sweetener': item.get('sweeteners') or 'Stevia',
+                    'digestive_enzymes': enzymes_val,
+                    'sweetener': sweetener_val,
                     'diaas_score': quality['diaas_score'],
                     'diaas_rating': quality['diaas_rating'],
                     'diaas_category': quality['diaas_category'],

@@ -262,13 +262,15 @@
       "brand": "Nature's Nutrition",
       "subcategory": "Plant & Vegan Protein",
       "shopify_product_type": "Plant Protein",
-      "available_sizes": [],
+      "available_sizes": [
+        "500g"
+      ],
       "available_flavours": [
         "Chocolate",
         "Vanilla Caramel"
       ],
       "prices_by_size": {
-        "Standard": {
+        "500g": {
           "price_zar": 369,
           "compare_at_price_zar": null,
           "formatted_price": "R369.00",
@@ -276,7 +278,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": null,
+      "ingredients": "Plant Protein Blend (Pea Protein, Rice Protein), Organic Dehydrated Coconut Flower Sap, Cocoa Powder (in Chocolate variant), Flavouring, Xanthan Gum, Acacia Gum, Sodium Chloride, Non-Nutritive Sweetener: Steviol Glycosides (from Organic Stevia Leaf).",
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
@@ -289,7 +291,7 @@
           "price_zar": 369,
           "compare_at_price_zar": null,
           "available": true,
-          "size": null,
+          "size": "500g",
           "flavour": "Chocolate"
         },
         {
@@ -299,7 +301,7 @@
           "price_zar": 369,
           "compare_at_price_zar": null,
           "available": true,
-          "size": null,
+          "size": "500g",
           "flavour": "Vanilla Caramel"
         }
       ]

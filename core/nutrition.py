@@ -71,6 +71,16 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'None added',
         'sweetener': 'Stevia & Erythritol'
     },
+    'mywellness_super_clean': {
+        'ingredients': 'Clean Non-GMO Protein Blend (Whey Protein Concentrate, Yellow Pea Protein Isolate, Whey Protein Isolate, Rice Protein Isolate, Hemp Protein Powder), Wheatgrass Powder, Cacao Powder (in Chocolate variant only), Coffee Granules (in Chocochino variant only), Vanilla Extract (in Vanilla Bean variant only), Low GI Natural Sweetener Blend (Erythritol, Fructose, Stevia Leaf).',
+        'digestive_enzymes': 'Wheatgrass Powder & 5-Stage Multi-Source Protein Complex',
+        'sweetener': 'Low GI Natural Sweetener Blend (Erythritol, Fructose, Stevia Leaf)'
+    },
+    'natures_nutrition_plant': {
+        'ingredients': 'Plant Protein Blend (Pea Protein, Rice Protein), Organic Dehydrated Coconut Flower Sap, Cocoa Powder (in Chocolate variant), Flavouring, Xanthan Gum, Acacia Gum, Sodium Chloride, Non-Nutritive Sweetener: Steviol Glycosides (from Organic Stevia Leaf).',
+        'digestive_enzymes': 'Organic Coconut Flower Sap & Acacia Prebiotic Fibre',
+        'sweetener': 'Organic Stevia Leaf (Steviol Glycosides)'
+    },
     'mywellness_collagen': {
         'ingredients': '100% Pure Hydrolysed Bovine Collagen Peptides (Type 1 & 3). Grass-fed, hormone-free, zero fillers or additives.',
         'digestive_enzymes': 'None added',
@@ -456,8 +466,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['mywellness_alpha_plant']
     elif 'alpha' in t and ('whey' in t or 'my wellness' in b or 'alpha' in b):
         matched = BRAND_FORMULATIONS['mywellness_alpha']
+    elif "nature's nutrition" in b or "natures nutrition" in b or "nature's nutrition" in t or "natures nutrition" in t:
+        matched = BRAND_FORMULATIONS['natures_nutrition_plant']
     elif 'my wellness' in b or 'mywellness' in b:
-        if 'vegainer' in t: matched = BRAND_FORMULATIONS['mywellness_vegainer']
+        if 'super clean' in t or ('clean protein' in t and 'x5' in t): matched = BRAND_FORMULATIONS['mywellness_super_clean']
+        elif 'vegainer' in t: matched = BRAND_FORMULATIONS['mywellness_vegainer']
         elif 'hard mass' in t: matched = BRAND_FORMULATIONS['mywellness_hard_mass']
         elif 'superior whey' in t: matched = BRAND_FORMULATIONS['mywellness_superior']
         elif 'isolate' in t: matched = BRAND_FORMULATIONS['mywellness_isolate']
@@ -624,6 +637,16 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 25.0
         carbs = 40.0
         fat = 3.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_super_clean') or ('super clean' in t and ('my wellness' in b or 'mywellness' in b or 'clean protein' in t)):
+        serving_size = 32.0
+        protein_per_serving = 23.0
+        carbs = 4.2
+        fat = 2.6
+    elif matched == BRAND_FORMULATIONS.get('natures_nutrition_plant') or "nature's nutrition" in t or "natures nutrition" in t or "nature's nutrition" in b or "natures nutrition" in b:
+        serving_size = 25.0
+        protein_per_serving = 15.2
+        carbs = 3.3
+        fat = 0.7
     elif matched == BRAND_FORMULATIONS.get('mywellness_vegainer') or 'vegainer' in t:
         serving_size = 120.0
         protein_per_serving = 36.0

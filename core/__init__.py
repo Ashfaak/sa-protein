@@ -34,6 +34,7 @@ from core.retailers import (
     load_dischem,
     load_nutritech,
     load_futurelife,
+    load_mywellness,
     load_alternatives
 )
 
@@ -61,6 +62,8 @@ __all__ = [
     'load_dischem',
     'load_nutritech',
     'load_futurelife',
+    'load_mywellness',
     'load_alternatives',
     'save_products'
 ]
+

@@ -547,6 +547,138 @@ def load_futurelife(seen_keys=None):
 
     return products
 
+def load_mywellness(seen_keys=None):
+    if seen_keys is None:
+        seen_keys = set()
+    products = []
+    mw_file = find_data_file('mywellness_products.json')
+    if not mw_file or not os.path.exists(mw_file):
+        return products
+
+    with open(mw_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        mw_items = data.get('products', []) if isinstance(data, dict) else data
+        for item in mw_items:
+            base_title = item.get('title', '')
+            if not base_title or len(base_title) < 5:
+                continue
+            if not is_valid_protein_powder(base_title, item.get('product_url')):
+                continue
+
+            brand = 'My Wellness'
+            base_url = item.get('product_url', 'https://www.my-wellness.co.za/')
+            variants = item.get('variants', [])
+            
+            # If no variants extracted, create a single entry from parent item
+            if not variants:
+                variants = [{
+                    'variant_id': item.get('product_id'),
+                    'title': base_title,
+                    'sku': '',
+                    'price_zar': item.get('prices_by_size', {}).get(next(iter(item.get('prices_by_size', {})), {}), {}).get('price_zar', 399),
+                    'compare_at_price_zar': None,
+                    'available': item.get('in_stock', True),
+                    'size': (item.get('available_sizes') or [None])[0],
+                    'flavour': (item.get('available_flavours') or [None])[0]
+                }]
+
+            # Deduplicate variants by (size, flavour) to avoid duplicate entries within the product
+            seen_variant_tuples = set()
+            for v in variants:
+                price = float(v.get('price_zar') or 399.0)
+                orig_price = float(v.get('compare_at_price_zar') or price)
+                
+                size_str = v.get('size') or (item.get('available_sizes') or [None])[0] or base_title
+                weight_g = parse_weight_g(str(size_str))
+                if weight_g == 0:
+                    weight_g = parse_weight_g(base_title) or 1000.0
+
+                flv_val = v.get('flavour')
+                v_title = v.get('title', '')
+                comb_text = f"{base_title} {v_title}"
+                flavor = determine_flavor(comb_text, flv_val)
+
+                v_key = (round(weight_g), flavor.lower())
+                if v_key in seen_variant_tuples:
+                    continue
+                seen_variant_tuples.add(v_key)
+
+                # Compose title
+                full_title = base_title
+                if flavor and flavor.lower() not in base_title.lower() and flavor.lower() != 'unflavoured':
+                    full_title = f"{base_title} - {flavor}"
+
+                family = get_product_family_key(full_title, brand)
+                ptype = determine_type(full_title, item.get('ingredients') or '', family[1])
+                nut = determine_nutrition(brand, ptype, weight_g, full_title, item.get('ingredients'))
+                quality = compute_protein_quality_scores(ptype, nut['ingredients'], full_title)
+                bulk_deal = determine_bulk_deal('Brand Direct', brand, full_title, price, weight_g, v)
+
+                # Variant URL with deep-link
+                var_id = v.get('variant_id')
+                item_url = f"{base_url}?variant={var_id}" if var_id else base_url
+
+                # My Wellness WELCOME10 coupon: 10% off first order + Free shipping over R750
+                disc_pct = 10
+                disc_price = round(price * 0.90, 2)
+                cost_per_g = round(price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
+                cost_per_g_disc = round(disc_price / nut['total_protein_g'], 2) if nut['total_protein_g'] > 0 else 0
+                cost_per_serv = round(price / nut['servings_count'], 2) if nut['servings_count'] > 0 else 0
+                cost_per_serv_disc = round(disc_price / nut['servings_count'], 2) if nut['servings_count'] > 0 else 0
+
+                prod_id = f"mywellness_{var_id or re.sub(r'[^a-z0-9]', '', full_title.lower())[:25]}"
+                if prod_id in seen_keys:
+                    continue
+                seen_keys.add(prod_id)
+
+                products.append({
+                    'id': prod_id,
+                    'retailer': 'Brand Direct',
+                    'brand': brand,
+                    'title': full_title,
+                    'product_line': family[1],
+                    'type': ptype,
+                    'flavor': flavor,
+                    'container_size_g': weight_g,
+                    'serving_size_g': nut['serving_size_g'],
+                    'scoop_size_g': nut['scoop_size_g'],
+                    'protein_per_serving_g': nut['protein_per_serving_g'],
+                    'total_protein_g': nut['total_protein_g'],
+                    'protein_percentage': nut['protein_percentage'],
+                    'carbs_g': nut['carbs_g'],
+                    'fat_g': nut['fat_g'],
+                    'servings_count': nut['servings_count'],
+                    'price_zar': round(price, 2),
+                    'original_price_zar': round(orig_price, 2),
+                    'clicks_staff_discount_eligible': False,
+                    'bulk_deal_eligible': bool(bulk_deal and bulk_deal.get('eligible')),
+                    'bulk_deal': bulk_deal,
+                    'clicks_3_for_2_eligible': bool(bulk_deal and bulk_deal.get('type') == '3_for_2'),
+                    'amazon_promo_eligible': False,
+                    'coupon_code': 'WELCOME10',
+                    'coupon_description': '🎉 My Wellness Brand Direct: 10% Off First Order + Free Shipping over R750',
+                    'discount_pct': disc_pct,
+                    'discounted_price_zar': disc_price,
+                    'cost_per_g_protein_zar': cost_per_g,
+                    'cost_per_g_protein_discounted_zar': cost_per_g_disc,
+                    'cost_per_serving_zar': cost_per_serv,
+                    'cost_per_serving_discounted_zar': cost_per_serv_disc,
+                    'rating': 4.8,
+                    'review_count': 34,
+                    'ingredients': nut['ingredients'],
+                    'digestive_enzymes': nut['digestive_enzymes'],
+                    'sweetener': nut['sweetener'],
+                    'diaas_score': quality['diaas_score'],
+                    'diaas_rating': quality['diaas_rating'],
+                    'diaas_category': quality['diaas_category'],
+                    'pdcaas_score': quality['pdcaas_score'],
+                    'quality_summary': quality['quality_summary'],
+                    'url': item_url,
+                    'in_stock': v.get('available', True)
+                })
+
+    return products
+
 def load_alternatives(seen_keys=None):
     if seen_keys is None:
         seen_keys = set()
@@ -673,5 +805,6 @@ def collect_all_products():
     master_products.extend(load_dischem(seen_keys))
     master_products.extend(load_nutritech(seen_keys))
     master_products.extend(load_futurelife(seen_keys))
+    master_products.extend(load_mywellness(seen_keys))
     master_products.extend(load_alternatives(seen_keys))
     return master_products

@@ -141,3 +141,4 @@ def save_products(master_products, db_path='data/proteins.db', json_path='data/p
         f.write(f"window.LAST_UPDATED = '{today_str}';\nwindow.EMBEDDED_PROTEINS = " + json.dumps(master_products, indent=2) + ";\n")
 
     print(f"Database successfully updated! {len(master_products)} pure whey protein powders stored.")
+

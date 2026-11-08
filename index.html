@@ -521,7 +521,7 @@
       'Takealot': 'Fast doorstep delivery via Takealot warehouse logistics across South Africa.',
       'Dis-Chem': 'Dis-Chem retail pharmacy and health store with Better Rewards.',
       'Amazon ZA': 'Amazon South Africa with Prime fast shipping and localized delivery.',
-      'Brand Direct': 'Direct from official manufacturer/brand online store.',
+      'Brand Direct': 'Direct from official manufacturer/brand online store (Nutritech, FutureLife, My Wellness). Free delivery options & manufacturer specials.',
       'Nutritech Direct': 'Direct from official manufacturer/brand online store.'
     };
 
@@ -1246,7 +1246,7 @@
 
               <div class="flex items-center gap-1.5">
                 <a href="${bestItem.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${bestItem.retailer}">
-                  <span>View on ${bestItem.retailer}</span>
+                  <span>View on ${(bestItem.retailer === 'Brand Direct' || bestItem.retailer === 'Nutritech Direct') ? `${bestItem.brand} Direct` : bestItem.retailer}</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
               </div>
@@ -1339,7 +1339,7 @@
 
               <div class="flex items-center gap-1.5">
                 <a href="${p.url}" target="_blank" class="py-1.5 px-3 bg-blue-600/20 hover:bg-blue-600 text-blue-400 hover:text-white border border-blue-500/30 rounded-lg text-xs font-medium transition inline-flex items-center gap-1.5" title="View on ${p.retailer}">
-                  <span>View on ${p.retailer}</span>
+                  <span>View on ${(p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Direct` : p.retailer}</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
               </div>
@@ -1560,7 +1560,10 @@
       document.getElementById('modalEnzymes').innerText = p.digestive_enzymes;
       document.getElementById('modalSweetener').innerText = p.sweetener;
       document.getElementById('modalIngredients').innerText = p.ingredients;
-      document.getElementById('modalBuyLink').href = p.url;
+      const buyBtn = document.getElementById('modalBuyLink');
+      buyBtn.href = p.url;
+      const retName = (p.retailer === 'Brand Direct' || p.retailer === 'Nutritech Direct') ? `${p.brand} Official Store` : p.retailer;
+      buyBtn.innerHTML = `<span>View on ${retName}</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>`;
 
       document.getElementById('detailModal').classList.remove('hidden');
     }

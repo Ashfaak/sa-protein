@@ -25,7 +25,7 @@ def clean_brand(brand_raw, title, url=""):
         return 'FutureLife'
     if 'biogen' in t or 'biogen' in b_raw_low:
         return 'Biogen'
-    if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in b_raw_low and 'whey' in t):
+    if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'alpha plant', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in t and any(w in t for w in ['whey', 'protein', 'plant'])) or ('alpha' in b_raw_low and any(w in t for w in ['whey', 'protein', 'plant'])) or ('my wellness' in b_raw_low or 'mywellness' in b_raw_low):
         return 'My Wellness'
     if 'grass fed whey' in t or 'grass-fed whey' in t:
         if 'primeself' in t or 'primeself' in b_raw_low:
@@ -147,8 +147,10 @@ def is_valid_protein_powder(title, url=""):
     if 'shake' in t and any(k in t for k in ['ml', 'drink', 'bottle', 'liquid', 'ready']):
         return False
 
-    # Exclude bars, snacks, biscuits, bites, chips, nougats, pouches, oils, pills
-    if re.search(r'\b(bar|bars|snack|nougat|chips|pasta|oil|drops|capsule|tablet|pill)\b', t):
+    # Exclude bars, snacks, biscuits, bites, chips, nougats (unless protein powder flavor), pouches, oils, pills
+    if re.search(r'\b(bar|bars|snack|chips|pasta|oil|drops|capsule|tablet|pill)\b', t):
+        return False
+    if 'nougat' in t and not any(k in t for k in ['whey', 'powder', 'shake', 'supreme', 'alpha', 'flavour', 'flavor']):
         return False
     if 'pouch meal' in t or 'cookie bite' in t or 'protein cookie' in t or 'baked cookie' in t or 'protein wafers' in t:
         return False
@@ -157,8 +159,8 @@ def is_valid_protein_powder(title, url=""):
     if any(k in t for k in ['shaker', 'bottle', 'gym bag', 'funnel']):
         return False
 
-    # Must be a protein powder (Whey, Casein, Plant/Vegan, NiHPRO, Collagen, Bone Broth, Beef, Hybrid Meal)
-    if not any(k in t for k in ['whey', 'protein', 'isolate', 'iso', 'casein', 'future', 'nitro-tech', 'nitrotech', 'nitro tech', 'halo pro', 'whey-bolic', 'wheybolic', 'vegan', 'plant', 'nihpro', 'collagen', 'bone broth', 'beef', 'phyto']):
+    # Must be a protein powder (Whey, Casein, Plant/Vegan, NiHPRO, Collagen, Bone Broth, Beef, Hybrid Meal, Gainer, Protein Shake)
+    if not any(k in t for k in ['whey', 'protein', 'isolate', 'iso', 'casein', 'future', 'nitro-tech', 'nitrotech', 'nitro tech', 'halo pro', 'whey-bolic', 'wheybolic', 'vegan', 'plant', 'nihpro', 'collagen', 'bone broth', 'beef', 'phyto', 'mass', 'gainer', 'vegainer', 'meal replacement', 'shake', 'smoothie', 'meal', 'matcha', 'keto']):
         return False
         
     return True
@@ -245,6 +247,34 @@ FAMILY_TYPE_MAP = {
     'Biogen Complete Blended Protein': 'Multi-Source / Meal Blend',
     'My Wellness Super Clean Protein x5': 'Multi-Source / Meal Blend',
     'My Wellness Alpha Whey': 'Hardcore / All-in-One',
+    'My Wellness Hardcore Alpha Plant': 'Hardcore / All-in-One',
+    'My Wellness Superior Whey': 'Whey Blend',
+    "My Wellness Super Nature's Whey": 'Whey Concentrate',
+    'My Wellness Clean Whey Isolate': 'Whey Isolate',
+    'My Wellness Grass-Fed Whey Concentrate': 'Whey Concentrate',
+    'My Wellness Grass-Fed Whey Isolate': 'Whey Isolate',
+    'My Wellness Clean Casein': 'Casein / Milk Protein',
+    "My Wellness Nature's Milk Protein": 'Casein / Milk Protein',
+    'My Wellness Peptide Hydro Protein': 'Whey Blend',
+    'My Wellness Clear Whey ISO': 'Clear Whey / Protein Water',
+    'My Wellness Protein Water & Hydrator': 'Clear Whey / Protein Water',
+    'My Wellness Super Vegan Protein': 'Plant / Vegan Protein',
+    'My Wellness Pure Pea Protein': 'Plant / Vegan Protein',
+    'My Wellness Soy Protein Isolate': 'Plant / Vegan Protein',
+    'My Wellness Yeast Protein': 'Plant / Vegan Protein',
+    'My Wellness Clean Diet Plant': 'Plant / Vegan Protein',
+    'My Wellness Wholefood Vegainer': 'Plant / Vegan Protein',
+    'My Wellness Clean Diet Whey': 'Diet / Lean Whey',
+    'My Wellness Clean Diet Shake': 'Diet / Lean Whey',
+    'My Wellness 100% Pure Collagen': 'Collagen / Beef / Broth',
+    'My Wellness Stay Golden Collagen': 'Collagen / Beef / Broth',
+    'My Wellness Her Collagen Whey': 'Collagen / Beef / Broth',
+    'My Wellness Her Skinny Collagen': 'Collagen / Beef / Broth',
+    'My Wellness Sport Collagen': 'Collagen / Beef / Broth',
+    'My Wellness Collagen': 'Collagen / Beef / Broth',
+    'My Wellness Game Changer Meal Replacement': 'Multi-Source / Meal Blend',
+    'My Wellness Protein Smoothie': 'Multi-Source / Meal Blend',
+    'My Wellness Super Stacked Hard Mass': 'Hardcore / All-in-One',
     'Gloot Vegan Protein Water': 'Plant / Vegan Protein',
     'FutureLife High Protein Smart Food': 'Multi-Source / Meal Blend',
     'FutureLife Repair Food Shake': 'Collagen / Beef / Broth',
@@ -365,20 +395,42 @@ def get_product_family_key(title, brand):
         
     # 8. My Wellness Families
     if 'my wellness' in b or 'mywellness' in b or 'alpha whey' in t:
+        if 'alpha plant' in t or ('alpha' in t and 'plant' in t): return ('My Wellness', 'My Wellness Hardcore Alpha Plant')
         if 'alpha' in t: return ('My Wellness', 'My Wellness Alpha Whey')
-        if 'vegan' in t: return ('My Wellness', 'My Wellness Super Vegan Protein')
+        if 'superior whey' in t: return ('My Wellness', 'My Wellness Superior Whey')
+        if 'nature' in t and 'whey' in t: return ('My Wellness', "My Wellness Super Nature's Whey")
         if 'milk protein' in t: return ('My Wellness', "My Wellness Nature's Milk Protein")
-        if 'clean diet whey' in t: return ('My Wellness', 'My Wellness Clean Diet Whey')
-        if 'clean whey' in t or 'clean protein' in t or 'super clean' in t:
-            if 'isolate' in t: return ('My Wellness', 'My Wellness Clean Whey Isolate')
-            return ('My Wellness', 'My Wellness Super Clean Protein x5')
+        if 'nihpro' in t: return ('My Wellness', 'My Wellness NiHPRO Protein Isolate')
+        if 'yeast' in t: return ('My Wellness', 'My Wellness Yeast Protein')
+        if 'pea protein' in t: return ('My Wellness', 'My Wellness Pure Pea Protein')
+        if 'soy' in t: return ('My Wellness', 'My Wellness Soy Protein Isolate')
+        if 'clean diet plant' in t: return ('My Wellness', 'My Wellness Clean Diet Plant')
+        if 'clean diet whey' in t or 'diet whey' in t: return ('My Wellness', 'My Wellness Clean Diet Whey')
+        if 'casein' in t: return ('My Wellness', 'My Wellness Clean Casein')
+        if 'peptide' in t or 'hydro protein' in t: return ('My Wellness', 'My Wellness Peptide Hydro Protein')
         if 'clear whey' in t: return ('My Wellness', 'My Wellness Clear Whey ISO')
         if 'grass fed' in t or 'grass-fed' in t:
             if 'isolate' in t: return ('My Wellness', 'My Wellness Grass-Fed Whey Isolate')
             return ('My Wellness', 'My Wellness Grass-Fed Whey Concentrate')
+        if 'super clean' in t or 'clean protein' in t or ('clean whey' in t and 'x5' in t):
+            return ('My Wellness', 'My Wellness Super Clean Protein x5')
+        if 'clean whey isolate' in t or ('clean whey' in t and 'isolate' in t) or ('naked whey' in t):
+            return ('My Wellness', 'My Wellness Clean Whey Isolate')
+        if 'game changer' in t: return ('My Wellness', 'My Wellness Game Changer Meal Replacement')
+        if 'vegainer' in t: return ('My Wellness', 'My Wellness Wholefood Vegainer')
+        if 'hard mass' in t: return ('My Wellness', 'My Wellness Super Stacked Hard Mass')
+        if 'stay golden' in t: return ('My Wellness', 'My Wellness Stay Golden Collagen')
+        if 'pure collagen' in t or '100% collagen' in t or 'collagen hot chocolate' in t or 'super collagen creamer' in t: return ('My Wellness', 'My Wellness 100% Pure Collagen')
+        if 'her collagen' in t or 'collagen whey' in t: return ('My Wellness', 'My Wellness Her Collagen Whey')
+        if 'skinny collagen' in t: return ('My Wellness', 'My Wellness Her Skinny Collagen')
+        if 'sport collagen' in t: return ('My Wellness', 'My Wellness Sport Collagen')
+        if 'collagen' in t: return ('My Wellness', 'My Wellness Collagen')
+        if 'protein water' in t or 'hydrator' in t: return ('My Wellness', 'My Wellness Protein Water & Hydrator')
+        if 'smoothie' in t: return ('My Wellness', 'My Wellness Protein Smoothie')
+        if 'diet shake' in t or 'diet matcha' in t or 'cheat meal' in t or 'keto' in t: return ('My Wellness', 'My Wellness Clean Diet Shake')
+        if 'vegan' in t or 'plant' in t: return ('My Wellness', 'My Wellness Super Vegan Protein')
         if 'isolate' in t: return ('My Wellness', 'My Wellness Clean Whey Isolate')
-        if 'superior whey' in t: return ('My Wellness', 'My Wellness Superior Whey')
-        return ('My Wellness', 'My Wellness Natures Whey')
+        return ('My Wellness', "My Wellness Super Nature's Whey")
         
     # 9. Myprotein Families
     if 'myprotein' in b or 'myprotein' in t:

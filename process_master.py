@@ -38,6 +38,7 @@ from core import (
     load_dischem,
     load_nutritech,
     load_futurelife,
+    load_mywellness,
     load_alternatives,
     save_products
 )

@@ -51,6 +51,46 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'Anabolic Muscle Complex (5,000mg per 36g serving: Creatine Monohydrate, Taurine, Glycine, Tongkat Ali 100:1 Extract, Tribulus Terrestris, Ashwagandha Powder)',
         'sweetener': 'Low-GI Blend (Fructose, Erythritol, Stevia Leaf)'
     },
+    'mywellness_alpha_plant': {
+        'ingredients': 'Hardcore Plant Protein Matrix (Fava Bean Protein, Pea Protein Isolate, Brown Rice Protein), Super Anabolic Herbs & Actives (Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris, Creatine Monohydrate, Taurine, Glycine), Raw Cacao, Stevia Leaf Extract.',
+        'digestive_enzymes': 'Hardcore Male Anabolic Complex (Tongkat Ali, Ashwagandha, Tribulus, Creatine, Taurine, Glycine)',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'mywellness_superior': {
+        'ingredients': 'Pasture-Raised Whey Protein Matrix (Whey Protein Isolate, Whey Protein Concentrate), Superfood Blend, Raw Organic Cacao (in choc), Natural Flavouring, Stevia Leaf Extract, Erythritol.',
+        'digestive_enzymes': 'Superfood Enzymes',
+        'sweetener': 'Stevia & Erythritol'
+    },
+    'mywellness_isolate': {
+        'ingredients': '100% Pure Cross-Flow Microfiltered Whey Protein Isolate, Colostrum Powder (2,000mg), Cocoa (in choc variants), Stevia Leaf Extract.',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Stevia'
+    },
+    'mywellness_natures': {
+        'ingredients': 'Grass-Fed Whey Protein Concentrate, Organic Raw Cacao (chocolate), Creamy Chai Spices (in chai), Stevia Leaf Extract, Erythritol, Fructose.',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Stevia & Erythritol'
+    },
+    'mywellness_collagen': {
+        'ingredients': '100% Pure Hydrolysed Bovine Collagen Peptides (Type 1 & 3). Grass-fed, hormone-free, zero fillers or additives.',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Unsweetened (Natural)'
+    },
+    'mywellness_vegan': {
+        'ingredients': 'Plant Protein Matrix (Yellow Pea Protein Isolate, Hemp Seed Protein), Organic Raw Cacao, Wheatgrass Powder, Stevia Leaf, Erythritol.',
+        'digestive_enzymes': 'None added',
+        'sweetener': 'Stevia & Erythritol'
+    },
+    'mywellness_casein': {
+        'ingredients': 'Pure Micellar Casein, Raw Organic Cacao, Natural Flavouring, Stevia Leaf Extract.',
+        'digestive_enzymes': 'Slow-release micellar matrix',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'mywellness_game_changer': {
+        'ingredients': 'Wholefood Plant Protein & Carbohydrate Blend (Pea Protein, Oat Flour, Sweet Potato Powder), Superfood Greens, Healthy Fats (MCT Oil), Stevia.',
+        'digestive_enzymes': 'Digestive Superfood Blend',
+        'sweetener': 'Stevia'
+    },
     'usn_bluelab': {
         'ingredients': '100% Whey Protein Blend [Whey Protein Isolate (Milk), Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk)], Cocoa Powder (4.1% in choc), Flavouring, Sodium Chloride, Stabilisers (Guar Gum, Xanthan Gum), Non-Nutritive Sweetener Blend (Sucralose, Acesulfame-K), Tolerase™ L (pH-Stable Lactase Enzyme). Zero wheat or plant fillers [2.5g Leucine & 5.3g BCAAs per 32g scoop].',
         'digestive_enzymes': 'Tolerase™ L (pH-Stable Lactase)',
@@ -286,7 +326,7 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         matched = BRAND_FORMULATIONS['usn_isozero']
     elif 'protein water' in t and 'usn' in t:
         matched = BRAND_FORMULATIONS['usn_protein_water']
-    elif 'hardcore' in t or 'whey gh' in t:
+    elif ('hardcore' in t or 'whey gh' in t) and 'my wellness' not in b and 'mywellness' not in b and 'alpha' not in t:
         if 'ripped' in t:
             matched = BRAND_FORMULATIONS['usn_hardcore_ripped']
         else:
@@ -355,9 +395,19 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         else: matched = BRAND_FORMULATIONS['gloot_whey']
     elif 'primeself' in b or 'primeself' in t:
         matched = BRAND_FORMULATIONS['primeself_grassfed']
-    elif 'alpha' in t and ('whey' in t or 'my wellness' in b):
+    elif 'alpha plant' in t or ('alpha' in t and 'plant' in t):
+        matched = BRAND_FORMULATIONS['mywellness_alpha_plant']
+    elif 'alpha' in t and ('whey' in t or 'my wellness' in b or 'alpha' in b):
         matched = BRAND_FORMULATIONS['mywellness_alpha']
-    elif 'my wellness' in b or 'mywellness' in b or 'nature' in t:
+    elif 'my wellness' in b or 'mywellness' in b:
+        if 'superior whey' in t: matched = BRAND_FORMULATIONS['mywellness_superior']
+        elif 'isolate' in t: matched = BRAND_FORMULATIONS['mywellness_isolate']
+        elif 'collagen' in t: matched = BRAND_FORMULATIONS['mywellness_collagen']
+        elif any(k in t for k in ['vegan', 'plant', 'pea', 'vegainer', 'yeast', 'soy']): matched = BRAND_FORMULATIONS['mywellness_vegan']
+        elif 'casein' in t or 'milk protein' in t: matched = BRAND_FORMULATIONS['mywellness_casein']
+        elif 'game changer' in t or 'hard mass' in t: matched = BRAND_FORMULATIONS['mywellness_game_changer']
+        else: matched = BRAND_FORMULATIONS['mywellness_nature']
+    elif 'nature' in t and ('whey' in t or 'protein' in t):
         matched = BRAND_FORMULATIONS['mywellness_nature']
     elif 'black bull' in b or 'blackbull' in b or ('supreme' in t and 'usn' not in b and 'usn' not in t):
         matched = BRAND_FORMULATIONS['blackbull_whey']
@@ -487,6 +537,31 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 27.0
         carbs = 4.0
         fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_alpha_plant'):
+        serving_size = 36.0
+        protein_per_serving = 25.0
+        carbs = 4.5
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_superior'):
+        serving_size = 30.0
+        protein_per_serving = 23.0
+        carbs = 2.5
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_isolate'):
+        serving_size = 25.0
+        protein_per_serving = 22.5
+        carbs = 0.5
+        fat = 0.2
+    elif matched == BRAND_FORMULATIONS.get('mywellness_collagen'):
+        serving_size = 10.0
+        protein_per_serving = 9.0
+        carbs = 0.0
+        fat = 0.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_game_changer'):
+        serving_size = 75.0
+        protein_per_serving = 25.0
+        carbs = 40.0
+        fat = 3.0
     elif matched == BRAND_FORMULATIONS.get('nutritech_proven'):
         serving_size = 32.0
         protein_per_serving = 22.0

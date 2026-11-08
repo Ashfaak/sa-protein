@@ -27,7 +27,9 @@ def clean_brand(brand_raw, title, url=""):
         return 'Rogue Legion'
     if 'future' in t or 'futurelife' in b_raw_low or 'future life' in b_raw_low:
         return 'FutureLife'
-    if any(k in t for k in ['my wellness', 'mywellness', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']):
+    if 'biogen' in t or 'biogen' in b_raw_low:
+        return 'Biogen'
+    if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in b_raw_low and 'whey' in t):
         return 'My Wellness'
     if 'grass fed whey' in t or 'grass-fed whey' in t:
         if 'primeself' in t or 'primeself' in b_raw_low:
@@ -246,6 +248,7 @@ FAMILY_TYPE_MAP = {
     'Biogen Pro Series 100% Whey': 'Whey Blend',
     'Biogen Complete Blended Protein': 'Multi-Source / Meal Blend',
     'My Wellness Super Clean Protein x5': 'Multi-Source / Meal Blend',
+    'My Wellness Alpha Whey': 'Hardcore / All-in-One',
     'Gloot Vegan Protein Water': 'Plant / Vegan Protein',
     'FutureLife High Protein Smart Food': 'Multi-Source / Meal Blend',
     'FutureLife Repair Food Shake': 'Collagen / Beef / Broth',
@@ -365,7 +368,8 @@ def get_product_family_key(title, brand):
         return ('MuscleTech', 'MuscleTech Nitro-Tech 100% Whey Gold')
         
     # 8. My Wellness Families
-    if 'my wellness' in b or 'mywellness' in b:
+    if 'my wellness' in b or 'mywellness' in b or 'alpha whey' in t:
+        if 'alpha' in t: return ('My Wellness', 'My Wellness Alpha Whey')
         if 'vegan' in t: return ('My Wellness', 'My Wellness Super Vegan Protein')
         if 'milk protein' in t: return ('My Wellness', "My Wellness Nature's Milk Protein")
         if 'clean diet whey' in t: return ('My Wellness', 'My Wellness Clean Diet Whey')
@@ -482,9 +486,9 @@ def get_product_family_key(title, brand):
         if 'isolate' in t: return ('Just Protein', 'Just Protein Pure Whey Isolate')
         return ('Just Protein', 'Just Protein Premium Whey Protein')
 
-    # 25. Alpha
-    if 'alpha' in b:
-        return ('Alpha', 'Alpha Whey Protein')
+    # 25. Alpha Whey (My Wellness)
+    if 'alpha whey' in t or ('alpha' in b and 'whey' in t):
+        return ('My Wellness', 'My Wellness Alpha Whey')
 
     # 26. Nature's Whey (standalone brand, distinct from My Wellness Nature's Whey)
     if ('nature\'s whey' in b or 'natures whey' in b) and 'my wellness' not in b:
@@ -564,6 +568,11 @@ BRAND_FORMULATIONS = {
         'ingredients': 'Whole Soy Bean Flour (Soy), Xylitol, Skim Milk Powder (Cow\'s Milk), White Maize Flour, Hydrolyzed Collagen Peptides (10%) (Bovine), Soy Isolate (Soy), Maltodextrin, Oats Bran, Inulin, Sucralose, Vitamins & Minerals.',
         'digestive_enzymes': '5,000mg Hydrolyzed Collagen Peptides + Inulin Prebiotic Fiber',
         'sweetener': 'Xylitol & Sucralose'
+    },
+    'mywellness_alpha': {
+        'ingredients': 'Anabolic Protein Complex (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate), Cocoa Powder (in Chocolate flavour only), Flavouring, Low-GI Blend (Fructose, Erythritol, Stevia Leaf), Creatine Monohydrate, Taurine, Glycine, Xanthan Gum, Tongkat Ali 100:1 Extract, Ashwagandha Powder, Tribulus Terrestris.',
+        'digestive_enzymes': 'Anabolic Muscle Complex (5,000mg per 36g serving: Creatine Monohydrate, Taurine, Glycine, Tongkat Ali 100:1 Extract, Tribulus Terrestris, Ashwagandha Powder)',
+        'sweetener': 'Low-GI Blend (Fructose, Erythritol, Stevia Leaf)'
     },
     'usn_bluelab': {
         'ingredients': '100% Whey Protein Blend [Whey Protein Isolate (Milk), Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk)], Cocoa Powder (4.1% in choc), Flavouring, Sodium Chloride, Stabilisers (Guar Gum, Xanthan Gum), Non-Nutritive Sweetener Blend (Sucralose, Acesulfame-K), Tolerase™ L (pH-Stable Lactase Enzyme). Zero wheat or plant fillers [2.5g Leucine & 5.3g BCAAs per 32g scoop].',
@@ -869,6 +878,8 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         else: matched = BRAND_FORMULATIONS['gloot_whey']
     elif 'primeself' in b or 'primeself' in t:
         matched = BRAND_FORMULATIONS['primeself_grassfed']
+    elif 'alpha' in t and ('whey' in t or 'my wellness' in b):
+        matched = BRAND_FORMULATIONS['mywellness_alpha']
     elif 'my wellness' in b or 'mywellness' in b or 'nature' in t:
         matched = BRAND_FORMULATIONS['mywellness_nature']
     elif 'black bull' in b or 'blackbull' in b or ('supreme' in t and 'usn' not in b and 'usn' not in t):
@@ -993,6 +1004,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         serving_size = 30.0
         protein_per_serving = 21.0
         carbs = 3.0
+        fat = 1.5
+    elif matched == BRAND_FORMULATIONS.get('mywellness_alpha'):
+        serving_size = 36.0
+        protein_per_serving = 27.0
+        carbs = 4.0
         fat = 1.5
     elif matched == BRAND_FORMULATIONS.get('nutritech_proven'):
         serving_size = 32.0
@@ -1286,6 +1302,14 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
         }
         
     # 4. Hardcore / All-in-One (Creatine, Glycine, Taurine)
+    if 'alpha whey' in t or ('alpha' in t and 'anabolic' in text):
+        return {
+            'diaas_score': 1.05,
+            'diaas_rating': '💪 Anabolic All-in-One (105%)',
+            'diaas_category': 'Anabolic Multi-Stage & Adaptogen Complex',
+            'pdcaas_score': 0.98,
+            'quality_summary': 'Anabolic multi-stage protein matrix (Whey Concentrate, Micellar Casein, Pea Protein, Whey Isolate) providing 27g protein (75% purity) fortified with 5,000mg Anabolic Muscle Complex (Creatine, Taurine, Glycine, Tongkat Ali 100:1, Ashwagandha, Tribulus Terrestris).'
+        }
     if ptype == 'Hardcore / All-in-One' or 'creatine' in text or 'anabolic' in text:
         return {
             'diaas_score': 1.05,
@@ -1343,6 +1367,8 @@ def determine_flavor(title, flavor_raw=None):
         ('Chocolate Peanut Butter', 'Choc Peanut Butter'),
         ('Chocolate Cookie Dough', 'Choc Cookie Dough'),
         ('Vanilla Cookie Dough', 'Vanilla Cookie Dough'),
+        ('Double Chocolate', 'Double Chocolate'),
+        ('Chocolate Nougat', 'Chocolate Nougat'),
         ('Double Rich Chocolate', 'Double Rich Chocolate'),
         ('Chocolate Supreme', 'Chocolate Supreme'),
         ('Chocolate Wafer', 'Chocolate Wafer'),

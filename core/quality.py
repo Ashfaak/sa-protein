@@ -148,6 +148,16 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
             'quality_summary': 'Exceeds FAO reference standard (130% DIAAS) for all indispensable amino acids, high leucine (~11-12%), ultra-low lactose.'
         }
         
+    # 3.9 Mass Gainer (High Carbohydrate to Protein Ratio)
+    if ptype == 'Mass Gainer' or any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer']):
+        return {
+            'diaas_score': 1.00,
+            'diaas_rating': '⚖️ High-Carb Gainer (100%)',
+            'diaas_category': 'High-Calorie Mass Gainer (Carb-Dominant)',
+            'pdcaas_score': 0.95,
+            'quality_summary': 'Calorie-dense mass gainer formula with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for weight gain and bulking.'
+        }
+
     # 4. Hardcore / All-in-One (Creatine, Glycine, Taurine)
     if 'alpha whey' in t or ('alpha' in t and 'anabolic' in text):
         return {

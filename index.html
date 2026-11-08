@@ -126,6 +126,9 @@
         <button onclick="selectQuickCategory('Diet / Lean Whey')" data-cat="Diet / Lean Whey" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss.">
           Diet / Lean
         </button>
+        <button onclick="selectQuickCategory('Mass Gainer')" data-cat="Mass Gainer" class="cat-pill px-2.5 py-1 rounded-lg text-xs font-medium whitespace-nowrap transition bg-[#161d2a] text-gray-300 hover:text-white border border-gray-800" title="High-calorie weight gainer formulas with high carbohydrates (55-75% carbs) for bulking and hardgainers.">
+          Mass Gainer
+        </button>
       </div>
     </div>
   </header>
@@ -258,6 +261,7 @@
           <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Timed-release matrix blending fast, medium, and slow proteins for prolonged satiety and meal replacement."><input type="checkbox" value="Multi-Source / Meal Blend" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Multi-Source / Timed Blend</label>
           <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="High-potency formulation spiked with performance actives like Creatine, Taurine, Glycine, and BCAAs for strength and mass recovery."><input type="checkbox" value="Hardcore / All-in-One" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Hardcore / Anabolic (+Creatine)</label>
           <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss."><input type="checkbox" value="Diet / Lean Whey" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Diet / Lean Whey</label>
+          <label class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white" title="High-calorie weight gainer formulas with high carbohydrates (55-75% carbs) for bulking and hardgainers."><input type="checkbox" value="Mass Gainer" checked onchange="syncQuickPills(); applyFilters()" class="accent-purple-500 rounded"> Mass Gainer (High-Carb)</label>
         </div>
       </details>
 
@@ -496,6 +500,7 @@
       'Multi-Source / Meal Blend': 'Timed-release matrix blending fast, medium, and slow proteins for prolonged satiety and meal replacement.',
       'Hardcore / All-in-One': 'High-potency formulation spiked with performance actives like Creatine, Taurine, Glycine, and BCAAs for strength and mass recovery.',
       'Diet / Lean Whey': 'Calorie-controlled whey fortified with thermogenic/metabolic compounds (L-Carnitine, CLA, Green Tea) for fat loss.',
+      'Mass Gainer': 'High-calorie weight gainer formulas with a high carbohydrate-to-protein ratio (55-75% carbs, 15-30% protein) designed for bulking and caloric surplus.',
 
       // Bioavailability & Amino Acid Scores
       'DIAAS Elite': 'Elite protein bioavailability (DIAAS ≥ 1.28): Maximum essential amino acids with fastest muscle protein synthesis.',

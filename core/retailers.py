@@ -315,8 +315,10 @@ def load_dischem(seen_keys=None):
                 # STRICT POWDER CHECK
                 if not is_valid_protein_powder(title, item.get('url')): continue
                 
-                price = float(item.get('price') or 699.0)
-                if price < 100: continue
+                raw_p = item.get('price')
+                if raw_p is None or float(raw_p) < 100:
+                    continue
+                price = float(raw_p)
                 brand = clean_brand(item.get('brand'), title, item.get('url'))
                 if brand == 'Muscle Works' and not title.lower().startswith('muscle works'):
                     title = f"Muscle Works {title}"

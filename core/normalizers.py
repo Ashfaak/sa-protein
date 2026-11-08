@@ -25,7 +25,7 @@ def clean_brand(brand_raw, title, url=""):
         return 'FutureLife'
     if 'biogen' in t or 'biogen' in b_raw_low:
         return 'Biogen'
-    if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'alpha plant', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in t and any(w in t for w in ['whey', 'protein', 'plant'])) or ('alpha' in b_raw_low and any(w in t for w in ['whey', 'protein', 'plant'])) or ('my wellness' in b_raw_low or 'mywellness' in b_raw_low):
+    if any(k in t for k in ['my wellness', 'mywellness', 'alpha whey', 'clean diet whey', 'natures whey', 'clear whey iso', 'super clean protein']) or ('alpha' in b_raw_low and 'whey' in t):
         return 'My Wellness'
     if 'grass fed whey' in t or 'grass-fed whey' in t:
         if 'primeself' in t or 'primeself' in b_raw_low:
@@ -55,6 +55,8 @@ def clean_brand(brand_raw, title, url=""):
         return 'Lifeworth'
     if 'biyode' in t or 'biyode' in b_raw_low or 'b0f9twj4hq' in (url or '').lower():
         return 'Biyode'
+    if 'weider' in t or 'weider' in b_raw_low:
+        return 'Weider'
 
     # Priority 1: Extract brand from Clicks URL slug if applicable
     if 'clicks.co.za/' in (url or ''):
@@ -139,6 +141,13 @@ def is_valid_protein_powder(title, url=""):
 
     # Exclude single-serving 32g sachets
     if re.search(r'\b(32g|30g|25g|sachet)\b', t) and not any(k in t for k in ['per serving', 'serving', '20 x', 'box']):
+        return False
+
+    # Exclude category URLs and generic category names
+    u = (url or '').lower()
+    if '/catalog/category/' in u or '/category/' in u or '/collections/' in u:
+        return False
+    if t.strip() in ['mass gainers', 'protein powders', 'whey protein', 'supplements', 'vitamins']:
         return False
 
     # Exclude liquid RTD drinks, ready-to-drink bottled shakes (e.g. 414ml, 330ml, ready to drink, rtd)
@@ -263,7 +272,7 @@ FAMILY_TYPE_MAP = {
     'My Wellness Soy Protein Isolate': 'Plant / Vegan Protein',
     'My Wellness Yeast Protein': 'Plant / Vegan Protein',
     'My Wellness Clean Diet Plant': 'Plant / Vegan Protein',
-    'My Wellness Wholefood Vegainer': 'Plant / Vegan Protein',
+    'My Wellness Wholefood Vegainer': 'Mass Gainer',
     'My Wellness Clean Diet Whey': 'Diet / Lean Whey',
     'My Wellness Clean Diet Shake': 'Diet / Lean Whey',
     'My Wellness 100% Pure Collagen': 'Collagen / Beef / Broth',
@@ -274,7 +283,14 @@ FAMILY_TYPE_MAP = {
     'My Wellness Collagen': 'Collagen / Beef / Broth',
     'My Wellness Game Changer Meal Replacement': 'Multi-Source / Meal Blend',
     'My Wellness Protein Smoothie': 'Multi-Source / Meal Blend',
-    'My Wellness Super Stacked Hard Mass': 'Hardcore / All-in-One',
+    'My Wellness Super Stacked Hard Mass': 'Mass Gainer',
+    'Weider Mega Mass 4000': 'Mass Gainer',
+    'Primal Mass Gain': 'Mass Gainer',
+    'Primal Skinny Whey': 'Diet / Lean Whey',
+    'Primal Diet Shake': 'Diet / Lean Whey',
+    'Primal 100% Whey Protein': 'Whey Blend',
+    'Primal 100% Whey Isolate': 'Whey Isolate',
+    'Primal Micellar Casein': 'Casein / Milk Protein',
     'Gloot Vegan Protein Water': 'Plant / Vegan Protein',
     'FutureLife High Protein Smart Food': 'Multi-Source / Meal Blend',
     'FutureLife Repair Food Shake': 'Collagen / Beef / Broth',
@@ -285,7 +301,9 @@ def determine_type(title, ing="", family_name=""):
     if family_name and family_name in FAMILY_TYPE_MAP:
         return FAMILY_TYPE_MAP[family_name]
     t = (title or "").lower()
-    if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro']):
+    if any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer']) or ('mass' in t and any(m in t for m in ['gainer', '4000', 'gain', 'stacked'])):
+        return 'Mass Gainer'
+    if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro', 'vegainer']):
         return 'Plant / Vegan Protein'
     if 'casein' in t or 'milk protein' in t or "nature's milk" in t:
         return 'Casein / Milk Protein'
@@ -510,9 +528,15 @@ def get_product_family_key(title, brand):
         if 'bone broth' in t: return ('Lifestyle Food', 'Lifestyle Food Pure Bone Broth')
         return ('Lifestyle Food', 'Lifestyle Food Whey Protein')
     if 'primal' in b or 'primal' in t:
+        if 'mass' in t or 'gain' in t: return ('Primal', 'Primal Mass Gain')
+        if 'skinny' in t: return ('Primal', 'Primal Skinny Whey')
+        if 'diet' in t: return ('Primal', 'Primal Diet Shake')
         if 'casein' in t: return ('Primal', 'Primal Micellar Casein')
         if 'isolate' in t: return ('Primal', 'Primal 100% Whey Isolate')
         return ('Primal', 'Primal 100% Whey Protein')
+    if 'weider' in b or 'weider' in t:
+        if 'mega mass' in t or 'mass' in t: return ('Weider', 'Weider Mega Mass 4000')
+        return ('Weider', 'Weider Protein')
     if 'youthful living' in b or 'youthful living' in t:
         return ('Youthful Living', 'Youthful Living Vegan Protein')
     if '32gi' in b or '32gi' in t:

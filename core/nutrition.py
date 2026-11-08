@@ -91,6 +91,36 @@ BRAND_FORMULATIONS = {
         'digestive_enzymes': 'Digestive Superfood Blend',
         'sweetener': 'Stevia'
     },
+    'mywellness_vegainer': {
+        'ingredients': 'Wholefood Carbohydrate Blend (Potato Starch, Oat Flour, Rice Flour, Barley Malt Extract), Protein Blend (Pea Protein, Hemp Protein, Whole Chia Seeds, Spirulina Powder), Cocoa Powder (in Chocolate version only), Maltodextrin, Natural Sweetener blend (Erythritol, Fructose, Stevia).',
+        'digestive_enzymes': 'Hyper Grow Stack (6,000mg per 120g serving: Creatine Monohydrate, Taurine)',
+        'sweetener': 'Natural Sweetener Blend (Erythritol, Fructose, Stevia)'
+    },
+    'mywellness_hard_mass': {
+        'ingredients': 'Multi-Stage Carbohydrate Matrix (Maltodextrin, Waxy Maize Starch), Anabolic Protein Complex (Whey Concentrate, Micellar Casein, Pea Protein), Creatine Monohydrate, Taurine, L-Glycine, Cocoa Powder, Stevia Leaf.',
+        'digestive_enzymes': 'Hyper Anabolic Stack (Creatine, Taurine, L-Glycine)',
+        'sweetener': 'Stevia Leaf Extract'
+    },
+    'weider_mega_mass': {
+        'ingredients': 'Carbohydrate Blend (Maltodextrin, Native Wheat Starch, Oat Flour), Protein Blend (Milk Protein Isolate, Whey Protein Concentrate, Dried Egg Albumin), Cocoa Powder, Creatine Monohydrate, Vitamin & Mineral Complex (Vitamin E, C, B1, B2, B6, B12, Niacin, Folic Acid, Biotin, Pantothenic Acid, Calcium, Iron, Zinc, Iodine), Sweetener (Sucralose).',
+        'digestive_enzymes': 'Creatine Monohydrate (3,400mg per serving) & Complete Vitamin-Mineral Stack',
+        'sweetener': 'Maltodextrin, Dextrose, Fructose & Sucralose'
+    },
+    'primal_mass_gain': {
+        'ingredients': 'Triple-Action Carbohydrate Blend (73% Maltodextrin, 2% Ground Oatmeal Powder, 2% Brown Rice Powder), Protein Blend (Whey Protein Concentrate, Soy Protein Isolate, Skim Milk Powder), Tolerase™ L (pH-Stable Lactase Enzyme), Cocoa Powder, Flavouring, Sweetener (Sucralose).',
+        'digestive_enzymes': 'Tolerase™ L (Lactase)',
+        'sweetener': 'Sucralose'
+    },
+    'primal_skinny_whey': {
+        'ingredients': 'Whey Protein Blend (Whey Protein Isolate, Whey Protein Concentrate, Whey Protein Hydrolysate), DigeZyme® Multi-Enzyme Complex, Inulin Prebiotic Fibre, Cocoa Powder, Flavouring, Stevia.',
+        'digestive_enzymes': 'DigeZyme® Multi-Enzyme Complex & Inulin Prebiotic Fibre',
+        'sweetener': 'Stevia'
+    },
+    'primal_diet_shake': {
+        'ingredients': 'Whey Protein Matrix (Whey Protein Isolate, Whey Protein Concentrate, Whey Protein Hydrolysate), L-Carnitine Tartrate, Inulin Fibre, DigeZyme® Multi-Enzyme Complex, Probiotics, Vitamins & Minerals, Sweeteners (Sucralose, Stevia).',
+        'digestive_enzymes': 'L-Carnitine, DigeZyme® & Probiotics',
+        'sweetener': 'Sucralose & Stevia'
+    },
     'usn_bluelab': {
         'ingredients': '100% Whey Protein Blend [Whey Protein Isolate (Milk), Whey Protein Hydrolysate (Milk), Whey Protein Concentrate (Milk)], Cocoa Powder (4.1% in choc), Flavouring, Sodium Chloride, Stabilisers (Guar Gum, Xanthan Gum), Non-Nutritive Sweetener Blend (Sucralose, Acesulfame-K), Tolerase™ L (pH-Stable Lactase Enzyme). Zero wheat or plant fillers [2.5g Leucine & 5.3g BCAAs per 32g scoop].',
         'digestive_enzymes': 'Tolerase™ L (pH-Stable Lactase)',
@@ -395,17 +425,21 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         else: matched = BRAND_FORMULATIONS['gloot_whey']
     elif 'primeself' in b or 'primeself' in t:
         matched = BRAND_FORMULATIONS['primeself_grassfed']
+    elif 'weider' in b or 'mega mass' in t:
+        matched = BRAND_FORMULATIONS['weider_mega_mass']
     elif 'alpha plant' in t or ('alpha' in t and 'plant' in t):
         matched = BRAND_FORMULATIONS['mywellness_alpha_plant']
     elif 'alpha' in t and ('whey' in t or 'my wellness' in b or 'alpha' in b):
         matched = BRAND_FORMULATIONS['mywellness_alpha']
     elif 'my wellness' in b or 'mywellness' in b:
-        if 'superior whey' in t: matched = BRAND_FORMULATIONS['mywellness_superior']
+        if 'vegainer' in t: matched = BRAND_FORMULATIONS['mywellness_vegainer']
+        elif 'hard mass' in t: matched = BRAND_FORMULATIONS['mywellness_hard_mass']
+        elif 'superior whey' in t: matched = BRAND_FORMULATIONS['mywellness_superior']
         elif 'isolate' in t: matched = BRAND_FORMULATIONS['mywellness_isolate']
         elif 'collagen' in t: matched = BRAND_FORMULATIONS['mywellness_collagen']
-        elif any(k in t for k in ['vegan', 'plant', 'pea', 'vegainer', 'yeast', 'soy']): matched = BRAND_FORMULATIONS['mywellness_vegan']
+        elif any(k in t for k in ['vegan', 'plant', 'pea', 'yeast', 'soy']): matched = BRAND_FORMULATIONS['mywellness_vegan']
         elif 'casein' in t or 'milk protein' in t: matched = BRAND_FORMULATIONS['mywellness_casein']
-        elif 'game changer' in t or 'hard mass' in t: matched = BRAND_FORMULATIONS['mywellness_game_changer']
+        elif 'game changer' in t: matched = BRAND_FORMULATIONS['mywellness_game_changer']
         else: matched = BRAND_FORMULATIONS['mywellness_nature']
     elif 'nature' in t and ('whey' in t or 'protein' in t):
         matched = BRAND_FORMULATIONS['mywellness_nature']
@@ -416,7 +450,10 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
     elif 'sci-core' in b or 'scicore' in b:
         matched = BRAND_FORMULATIONS['scicore_whey']
     elif 'primal' in b or 'primal' in t:
-        matched = BRAND_FORMULATIONS['primal_whey']
+        if 'mass' in t or 'gain' in t: matched = BRAND_FORMULATIONS['primal_mass_gain']
+        elif 'skinny' in t: matched = BRAND_FORMULATIONS['primal_skinny_whey']
+        elif 'diet' in t: matched = BRAND_FORMULATIONS['primal_diet_shake']
+        else: matched = BRAND_FORMULATIONS['primal_whey']
     elif 'tnt' in b or 'tnt' in t:
         matched = BRAND_FORMULATIONS['tnt_whey']
     elif 'psnlifestyle' in b or 'psnlifestyle' in t or 'psn' in t or 'psn' in b:
@@ -562,6 +599,41 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 25.0
         carbs = 40.0
         fat = 3.0
+    elif matched == BRAND_FORMULATIONS.get('mywellness_vegainer') or 'vegainer' in t:
+        serving_size = 120.0
+        protein_per_serving = 36.0
+        carbs = 66.0
+        fat = 4.8
+    elif matched == BRAND_FORMULATIONS.get('mywellness_hard_mass') or 'hard mass' in t:
+        serving_size = 150.0
+        protein_per_serving = 50.0
+        carbs = 85.0
+        fat = 3.0
+    elif matched == BRAND_FORMULATIONS.get('weider_mega_mass') or 'mega mass' in t:
+        serving_size = 150.0
+        protein_per_serving = 30.0
+        carbs = 103.0
+        fat = 2.5
+    elif matched == BRAND_FORMULATIONS.get('primal_mass_gain') or ('primal' in t and 'mass' in t):
+        serving_size = 167.0
+        protein_per_serving = 25.0
+        carbs = 122.5
+        fat = 2.0
+    elif matched == BRAND_FORMULATIONS.get('primal_skinny_whey'):
+        serving_size = 30.0
+        protein_per_serving = 20.6
+        carbs = 0.5
+        fat = 1.0
+    elif matched == BRAND_FORMULATIONS.get('primal_diet_shake'):
+        serving_size = 35.0
+        protein_per_serving = 21.0
+        carbs = 4.5
+        fat = 1.2
+    elif matched == BRAND_FORMULATIONS.get('primal_whey'):
+        serving_size = 30.0
+        protein_per_serving = 21.0
+        carbs = 1.4
+        fat = 2.4
     elif matched == BRAND_FORMULATIONS.get('nutritech_proven'):
         serving_size = 32.0
         protein_per_serving = 22.0
@@ -662,6 +734,11 @@ def determine_nutrition(brand, ptype, weight_g, title, existing_ing=None):
         protein_per_serving = 22.0
         carbs = 0.5
         fat = 0.3
+    elif ptype == 'Mass Gainer' or (matched and 'mass' in str(matched)) or any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer']):
+        serving_size = 150.0
+        protein_per_serving = 30.0
+        carbs = 95.0
+        fat = 3.0
     elif ptype == 'Hardcore / All-in-One' or (matched and ('hardcore' in str(matched) or 'anabolic' in str(matched) or 'heavy_duty' in str(matched))):
         serving_size = 60.0
         protein_per_serving = 41.0

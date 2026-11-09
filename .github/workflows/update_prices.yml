@@ -68,3 +68,4 @@ jobs:
               title: `⚠️ Automated Price Update Failed (${new Date().toLocaleDateString('en-ZA')})`,
               body: `### Automated Workflow Run Failed\n\nThe price updater encountered an error.\n\n- **Trigger:** \`${context.eventName}\`\n- **Run Details & Logs:** [View Run #${context.runId}](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})\n\nCheck the log output of the failing step to diagnose the issue.`
             });
+

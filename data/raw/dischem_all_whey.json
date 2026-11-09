@@ -396,6 +396,17 @@
     "in_stock": true
   },
   {
+    "name": "Primal Whey Protein 2kg / Assorted",
+    "brand": null,
+    "price": 0.0,
+    "original_price": 0.0,
+    "url": "https://www.dischem.co.za/catalog/category/view/id/17198",
+    "sku": null,
+    "image": "",
+    "weight": "",
+    "in_stock": true
+  },
+  {
     "name": "Biogen Grass Fed Whey Protein 750g Assorted",
     "brand": null,
     "price": 0.0,
@@ -413,17 +424,6 @@
     "original_price": 0.0,
     "url": "https://www.dischem.co.za/catalog/category/view/id/14901",
     "sku": "",
-    "image": "",
-    "weight": "",
-    "in_stock": true
-  },
-  {
-    "name": "Primal Whey Protein 2kg / Assorted",
-    "brand": null,
-    "price": 0.0,
-    "original_price": 0.0,
-    "url": "https://www.dischem.co.za/catalog/category/view/id/17198",
-    "sku": null,
     "image": "",
     "weight": "",
     "in_stock": true
@@ -665,8 +665,8 @@
     "price": 1199.99,
     "original_price": 1199.99,
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
-    "sku": "211792;;;;000000000211792002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/65043779ec8e4_631656710472.jpg",
+    "sku": "211792;;;;000000000211792001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/6504367e652c2_631656710465.jpg",
     "weight": "1.270000",
     "in_stock": true
   },
@@ -1738,6 +1738,17 @@
     "in_stock": false
   },
   {
+    "name": "Myprotein Whey 1kg Strawberry",
+    "brand": "myprotein",
+    "price": 434.95,
+    "original_price": 434.95,
+    "url": "https://www.dischem.co.za/myprotein-whey-1kg-strawberry",
+    "sku": "000000000166933001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534302835.jpg",
+    "weight": "",
+    "in_stock": false
+  },
+  {
     "name": "Myprotein Whey 1kg Vanilla",
     "brand": "myprotein",
     "price": 434.95,
@@ -1756,17 +1767,6 @@
     "url": "https://www.dischem.co.za/myprotein-impact-whey-1kg-chocolate-peanut-butter",
     "sku": "000000000166933003",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534326121.jpg",
-    "weight": "",
-    "in_stock": false
-  },
-  {
-    "name": "Myprotein Whey 1kg Strawberry",
-    "brand": "myprotein",
-    "price": 434.95,
-    "original_price": 434.95,
-    "url": "https://www.dischem.co.za/myprotein-whey-1kg-strawberry",
-    "sku": "000000000166933001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534302835.jpg",
     "weight": "",
     "in_stock": false
   },

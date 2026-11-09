@@ -1,21 +1,5 @@
 [
   {
-    "title": "Hardcore Whey gH Vanilla 1.8kg",
-    "brand": "USN",
-    "price": 775.0,
-    "url": "https://clicks.co.za/usn_hardcore-whey-gh-vanilla-1-8kg/p/211820",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
-    "title": "Hardcore Whey gH Chocolate 1.8kg",
-    "brand": "USN",
-    "price": 775.0,
-    "url": "https://clicks.co.za/usn_hardcore-whey-gh-chocolate-1-8kg/p/211819",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
     "title": "Pure Whey Protein Chocolate 1kg",
     "brand": "Nutritech",
     "price": 550.0,
@@ -24,10 +8,18 @@
     "clicks_3_for_2_eligible": false
   },
   {
-    "title": "Hydrotech Whey Chocolate Wafer 900g",
+    "title": "Premium Whey Protein Vanilla 1kg",
+    "brand": "Nutritech",
+    "price": 550.0,
+    "url": "https://clicks.co.za/nutritech_premium-whey-protein-vanilla-1kg/p/316647",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Hardcore Whey gH Vanilla 1.8kg",
     "brand": "USN",
-    "price": 418.0,
-    "url": "https://clicks.co.za/usn_hydrotech-whey-chocolate-wafer-900g/p/362203",
+    "price": 775.0,
+    "url": "https://clicks.co.za/usn_hardcore-whey-gh-vanilla-1-8kg/p/211820",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
@@ -40,10 +32,18 @@
     "clicks_3_for_2_eligible": false
   },
   {
-    "title": "Premium Whey Protein Vanilla 1kg",
-    "brand": "Nutritech",
-    "price": 550.0,
-    "url": "https://clicks.co.za/nutritech_premium-whey-protein-vanilla-1kg/p/316647",
+    "title": "Hardcore Whey gH Chocolate 1.8kg",
+    "brand": "USN",
+    "price": 775.0,
+    "url": "https://clicks.co.za/usn_hardcore-whey-gh-chocolate-1-8kg/p/211819",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Hydrotech Whey Chocolate Wafer 900g",
+    "brand": "USN",
+    "price": 418.0,
+    "url": "https://clicks.co.za/usn_hydrotech-whey-chocolate-wafer-900g/p/362203",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
@@ -220,6 +220,22 @@
     "brand": "Clicks Smartlife",
     "price": 320.0,
     "url": "https://clicks.co.za/clicks_purified-protein-chocolate-500g/p/327871",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Purified Protein Vanilla 1Kg",
+    "brand": "Clicks Smartlife",
+    "price": 380.0,
+    "url": "https://clicks.co.za/clicks_purified-protein-vanilla-1kg/p/327869",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Purified Protein Vanilla 500g",
+    "brand": "Clicks Smartlife",
+    "price": 320.0,
+    "url": "https://clicks.co.za/clicks_purified-protein-vanilla-500g/p/327872",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },

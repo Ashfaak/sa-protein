@@ -218,5 +218,40 @@
     "delisted_date": "9 Nov 2026",
     "in_stock": false,
     "status": "delisted"
+  },
+  "dischem_211792;;;;000000000211792002": {
+    "id": "dischem_211792;;;;000000000211792002",
+    "retailer": "Dis-Chem",
+    "brand": "MuscleTech",
+    "title": "Muscletech Nitro-tech 100% Whey Gold",
+    "product_line": "MuscleTech Nitro-Tech 100% Whey Gold",
+    "type": "Whey Blend",
+    "flavor": "Classic (Vanilla / Chocolate)",
+    "container_size_g": 1000.0,
+    "serving_size_g": 33.0,
+    "scoop_size_g": 33.0,
+    "protein_per_serving_g": 24.0,
+    "protein_percentage": 72.7,
+    "carbs_g": 2.0,
+    "fat_g": 2.0,
+    "price_zar": 1199.99,
+    "cost_per_g_protein_zar": 1.67,
+    "diaas_score": 1.22,
+    "diaas_rating": "\u2b50 Excellent (122%)",
+    "diaas_category": "100% Native Whey Matrix (WPC + WPI)",
+    "pdcaas_score": 1.0,
+    "quality_summary": "100% dairy native whey sourced from pasture-fed cows. High biological value with complete essential amino acid profile (122% DIAAS).",
+    "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
+    "ingredients": "Isolate Protein & Peptide Blend (Whey Peptides, Whey Protein Isolate, Whey Protein Isolate 97%), Whey Protein Concentrate, Cocoa (Processed with Alkali), Soy or Sunflower Lecithin, Salt, Natural & Artificial Flavours, Gum Blend (Cellulose, Xanthan, Carrageenan), Papain, Amylase, Silicon Dioxide, Acesulfame-Potassium, Sucralose.",
+    "internal_archetype": "community_favorite",
+    "standout_metric": {
+      "label": "Top Rated",
+      "value": "\u2605 4.7 (25 reviews)",
+      "icon": "fa-solid fa-star",
+      "badge_class": "badge-archetype-favorite"
+    },
+    "delisted_date": "9 Nov 2026",
+    "in_stock": false,
+    "status": "delisted"
   }
 }

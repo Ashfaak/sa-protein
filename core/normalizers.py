@@ -372,7 +372,7 @@ def determine_type(title, ing="", family_name=""):
     t = (title or "").lower()
     if any(k in t for k in ['mega mass', 'vegainer', 'hard mass', 'mass gain', 'weight gainer', 'mass gainer', 'pro gains', 'bulk 45', 'hyperbolic']) or (any(m in t for m in ['mass', 'gainer', 'gain', 'gains']) and not any(p in t for p in ['lean muscle', 'muscle gain', 'gain lean', 'muscle growth', 'lifegain'])):
         return 'Mass Gainer'
-    if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro', 'vegainer']):
+    if any(k in t for k in ['vegan', 'plant', 'nihpro', 'phyto pro', 'pea protein', 'pea isolate', 'soy', 'yeast', 'fava']) and not any(k in t for k in ['proven', 'complete whey', 'blended protein', 'super clean', 'diet fuel', 'diet pro', 'vegainer']):
         return 'Plant / Vegan Protein'
     if 'casein' in t or 'milk protein' in t or "nature's milk" in t:
         return 'Casein / Milk Protein'
@@ -382,7 +382,7 @@ def determine_type(title, ing="", family_name=""):
         return 'Multi-Source / Meal Blend'
     if 'clear whey' in t or 'protein water' in t or 'collagen pro' in t:
         return 'Clear Whey / Protein Water'
-    if ('isolate' in t or 'iso-tech' in t or 'iso gold' in t or 'isopro' in t or 'iso pro' in t or 'isozero' in t or 'iso zero' in t or 'iso-whey' in t) and not any(k in t for k in ['blend', 'matrix', 'proven', 'heavy duty', 'heavy-duty', 'premium whey', 'beef', 'plant', 'vegan', 'bluelab', 'blue lab']):
+    if ('isolate' in t or 'iso-tech' in t or 'iso gold' in t or 'isopro' in t or 'iso pro' in t or 'isozero' in t or 'iso zero' in t or 'iso-whey' in t) and not any(k in t for k in ['blend', 'matrix', 'proven', 'heavy duty', 'heavy-duty', 'premium whey', 'beef', 'plant', 'vegan', 'soy', 'yeast', 'pea', 'fava', 'bluelab', 'blue lab']):
         return 'Whey Isolate'
     if 'hardcore' in t or 'whey gh' in t or 'anabolic' in t or 'heavy duty' in t or 'heavy-duty' in t or 'whey-bolic' in t or 'wheybolic' in t:
         return 'Hardcore / All-in-One'

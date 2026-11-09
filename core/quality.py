@@ -43,7 +43,23 @@ def compute_protein_quality_scores(ptype, ingredients="", title=""):
         }
 
     # 0.4. Plant / Vegan Protein Powders
-    if ptype == 'Plant / Vegan Protein' or any(k in t for k in ['vegan', 'plant', 'phyto pro', '32gi']):
+    if ptype == 'Plant / Vegan Protein' or any(k in t for k in ['vegan', 'plant', 'phyto pro', '32gi', 'soy', 'yeast']):
+        if 'yeast' in text or 'yeast' in t:
+            return {
+                'diaas_score': 0.96,
+                'diaas_rating': '🌱 Fermented Yeast Isolate (96%)',
+                'diaas_category': 'Fermentation-Derived Yeast Protein Isolate',
+                'pdcaas_score': 1.00,
+                'quality_summary': 'Fermentation-derived complete protein isolate paired with fava bean, fortified with DigeZyme® multi-enzyme complex and LactoSpore® probiotics (0.96 DIAAS, 1.00 PDCAAS).'
+            }
+        if 'soy' in text or 'soy' in t:
+            return {
+                'diaas_score': 0.88,
+                'diaas_rating': '🌱 Pure Soy Isolate (88%)',
+                'diaas_category': '100% Soy Protein Isolate',
+                'pdcaas_score': 0.98,
+                'quality_summary': '100% non-GMO Soy Protein Isolate delivering a complete essential amino acid profile with high ileal digestibility (~88% DIAAS, 0.98 PDCAAS) and zero dairy.'
+            }
         if any(k in text for k in ['rice', 'hemp', 'pumpkin', 'faba', 'fava', 'chickpea', 'quinoa']):
             return {
                 'diaas_score': 0.91,

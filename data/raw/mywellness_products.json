@@ -148,7 +148,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": null,
+      "ingredients": "Yeast protein isolate, Fava Bean Protein, Cocoa powder, Low GI Sweetener blend (Xylitol, Fructose, Stevia), Inulin (Prebiotic Fibre), Nature Identical Flavour, Himalayan Salt, Xanthan Gum, DigeZyme® (Amylolytic, Neutral Protease, Cellulase, Lactase, Lipase), LactoSpore® (Heyndrickxia coagulans - 6 Billion CFU).",
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
@@ -240,7 +240,7 @@
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
-      "description_summary": "Remedy Greens Collagen Mobility contains a blend of type II and type I Peptan\u00ae collagen.\nThis supplement is designed to combat the progression of rheumatoid and osteoarthritis.\nThe combined power of undenatured and hydrolysed collagen helps to redirect the immune response which targets cartilage breakdown, supports cartilage regeneration, and impro",
+      "description_summary": "Remedy Greens Collagen Mobility contains a blend of type II and type I Peptan® collagen.\nThis supplement is designed to combat the progression of rheumatoid and osteoarthritis.\nThe combined power of undenatured and hydrolysed collagen helps to redirect the immune response which targets cartilage breakdown, supports cartilage regeneration, and impro",
       "variants": [
         {
           "variant_id": 46328785109071,
@@ -401,7 +401,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": "Native Milk Protein Isolate (20% Whey & 80% Casein), Whey Protein Concentrate,Cocoa powder(in chocolate variant only ), Flavouring, Fat-Free Milk Solids, Low GISweetener Blend(Xylitol, Fructose, Stevia), Inulin, Salt, Colostrum, Digezyme\u00ae, Probiotic(Lactospore\u00ae - Heyndrickxia coagulans)\nDigeZyme\u00ae is a registered trademark of SabinsaLactoSpore\u00ae is a registered trademark of Sabinsa",
+      "ingredients": "Native Milk Protein Isolate (20% Whey & 80% Casein), Whey Protein Concentrate,Cocoa powder(in chocolate variant only ), Flavouring, Fat-Free Milk Solids, Low GISweetener Blend(Xylitol, Fructose, Stevia), Inulin, Salt, Colostrum, Digezyme®, Probiotic(Lactospore® - Heyndrickxia coagulans)\nDigeZyme® is a registered trademark of SabinsaLactoSpore® is a registered trademark of Sabinsa",
       "allergens": "MILK. Made in a factory that contains tree nuts, peanuts, and soy.",
       "directions": "Add two level scoops (30 g) of Nature's Milk Protein Isolate to 250ml of water or milk.Great in oats, yoghurt, and baking.",
       "nutritional_info": null,
@@ -567,7 +567,7 @@
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
-      "description_summary": "Hardcore Alpha Plant is a powerful plant-based all-in-one performance powder engineered for men who want serious results \u2014 strength, stamina, muscle support, and hormonal balance \u2014 without compromising on clean nutrition. This advanced formula combines high-quality plant proteins from fava bean, pea, and rice to deliver a complete amino acid profil",
+      "description_summary": "Hardcore Alpha Plant is a powerful plant-based all-in-one performance powder engineered for men who want serious results — strength, stamina, muscle support, and hormonal balance — without compromising on clean nutrition. This advanced formula combines high-quality plant proteins from fava bean, pea, and rice to deliver a complete amino acid profil",
       "variants": [
         {
           "variant_id": 44487382106191,
@@ -772,7 +772,7 @@
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
-      "description_summary": "Instant Whole Food Smoothies \u2013 Freeze-Dried Goodness, Anytime, Anywhere.Introducing Whole Food Smoothies by My Wellness \u2013 a revolutionary way to enjoy the goodness of real fruit and whole food nutrition in seconds. Made with premium freeze-dried ingredients, these smoothies lock in all the natural flavor, vitamins, minerals, and fiber of fresh prod",
+      "description_summary": "Instant Whole Food Smoothies – Freeze-Dried Goodness, Anytime, Anywhere.Introducing Whole Food Smoothies by My Wellness – a revolutionary way to enjoy the goodness of real fruit and whole food nutrition in seconds. Made with premium freeze-dried ingredients, these smoothies lock in all the natural flavor, vitamins, minerals, and fiber of fresh prod",
       "variants": [
         {
           "variant_id": 43688067956815,
@@ -845,7 +845,7 @@
       "allergens": "Milk . Made in a factory that uses peanuts, nuts, soy, and gluten.",
       "directions": null,
       "nutritional_info": null,
-      "description_summary": "My Wellness Clear Whey Protein Isolate is an ultra-pure whey protein isolate that delivers clean, clear hydration and a refreshing taste. Designed to mix effortlessly with water, it provides a light, convenient protein option that\u2019s gentle on the stomach and perfect for active lifestyles. \nWe use real blueberries and tropical fruits to flavour this",
+      "description_summary": "My Wellness Clear Whey Protein Isolate is an ultra-pure whey protein isolate that delivers clean, clear hydration and a refreshing taste. Designed to mix effortlessly with water, it provides a light, convenient protein option that’s gentle on the stomach and perfect for active lifestyles. \nWe use real blueberries and tropical fruits to flavour this",
       "variants": [
         {
           "variant_id": 43590122438735,
@@ -881,7 +881,7 @@
     },
     {
       "product_id": 7772967796815,
-      "title": "My Wellness NiHPRO\u00ae Gourmet Protein Isolate 900g",
+      "title": "My Wellness NiHPRO® Gourmet Protein Isolate 900g",
       "handle": "nihpro-hydrolysed-protein-isolate-900g",
       "product_url": "https://www.my-wellness.co.za/products/nihpro-hydrolysed-protein-isolate-900g",
       "brand": "My Wellness SA",
@@ -905,11 +905,11 @@
         }
       },
       "in_stock": true,
-      "ingredients": "Hydrolyzed NiHPRO\u00ae Protein Isolate (Pea Protein Isolate, Rice Protein Isolate, L-Leucine, L-Lysine, L-Valine, L-Methionine, L-Isoleucine, L-Threonine) L-Glutamine, Cocoa Powder (in Chocolate flavour only ) Flavouring, Salt, Stevia.\nCONTAINS: Pea, Rice.\n*Values calculated on dry matter bases.",
+      "ingredients": "Hydrolyzed NiHPRO® Protein Isolate (Pea Protein Isolate, Rice Protein Isolate, L-Leucine, L-Lysine, L-Valine, L-Methionine, L-Isoleucine, L-Threonine) L-Glutamine, Cocoa Powder (in Chocolate flavour only ) Flavouring, Salt, Stevia.\nCONTAINS: Pea, Rice.\n*Values calculated on dry matter bases.",
       "allergens": null,
       "directions": "Formulated for easy mixing. Add one scoop (included) to 150-180ml of water, make your favourite beverage, and mix thoroughly. Enjoy before workouts, within 30 minutes after workouts, or anytime you desire a high-quality, high protein.",
       "nutritional_info": null,
-      "description_summary": "Hydrolyzed NiHPRO\u00ae Protein is a complete protein that is easy to digest with an amino-acid composition and great taste that rival\u2019s dairy-based proteins but is 100% dairy-free. NiHPRO\u00ae is 100% free from all major allergens, lactose, sugar, and seed oils. NiHPRO\u00ae is made with the innovative and exclusive Molecular Protein Infusion (MPi\u00ae) natural, no",
+      "description_summary": "Hydrolyzed NiHPRO® Protein is a complete protein that is easy to digest with an amino-acid composition and great taste that rival’s dairy-based proteins but is 100% dairy-free. NiHPRO® is 100% free from all major allergens, lactose, sugar, and seed oils. NiHPRO® is made with the innovative and exclusive Molecular Protein Infusion (MPi®) natural, no",
       "variants": [
         {
           "variant_id": 43161253412943,
@@ -1344,7 +1344,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": null,
+      "ingredients": "Soy Protein Isolate.",
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
@@ -1534,7 +1534,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": "Protein Blend, Cocoa Powder (Chocolate flavor only), Low GI Sweetener Blend, Vanilla Extract (In Vanilla only), Chai Blend (In Chai Flavor only), CLA Powder, Inulin Fibre, Baobab Flavor, Maca Powder, Flaxseed Powder, Xanthan Gum, L-Carnite, Garcinia Cambogia Extract.",
+      "ingredients": "Protein Blend (Pea Protein, Hemp Seed Protein), Cocoa Powder (Chocolate Flavour Only), Low GI Sweetener Blend (Fructose, Erythritol, Stevia), Vanilla Extract (in Vanilla flavour only), Chai Blend in Chai flavour only (Cloves, Cinnamon, Nutmeg), CLA Powder, Inulin Fibre, Vitamin Premix, Baobab Powder, Maca Powder, Flaxseed Powder, Xanthan Gum, L-Carnitine, Garcinia Cambogia Extract.",
       "allergens": null,
       "directions": null,
       "nutritional_info": null,
@@ -2033,7 +2033,7 @@
         }
       },
       "in_stock": true,
-      "ingredients": "Pea Protein Isolate",
+      "ingredients": "Pea Protein Isolate.",
       "allergens": "Made in a factory that uses nuts",
       "directions": null,
       "nutritional_info": "PER 100g\nEnergy                                                                              1509KJProtein                                                                                   85gGlycaemic Carbohydrates                                                       2gOf which Total Sugar                                                            1.2gTotal Fat                                                                                   3gOf which Saturated Fat                                                         0.0gCholesterol                                                                           0mgDietary Fibre                                                                      0.5mg",

@@ -55,17 +55,6 @@
     "in_stock": true
   },
   {
-    "name": "Evox Whey Protein 454g Advance",
-    "brand": "evox",
-    "price": 499.99,
-    "original_price": 499.99,
-    "url": "https://www.dischem.co.za/evox-whey-protein-454g-advance-699",
-    "sku": "153699;;;;000000000153699001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/d/5dbc2da67b148_6008997000830.jpg",
-    "weight": "0.600000",
-    "in_stock": true
-  },
-  {
     "name": "Lifestyle Food Whey Protein 500g Unflavoured",
     "brand": "lifestyle food",
     "price": 449.99,
@@ -74,6 +63,17 @@
     "sku": "000000000000437907",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009551991885_7726288a01353a6c2fd6e5221efb9ccd.jpg",
     "weight": "0.520000",
+    "in_stock": true
+  },
+  {
+    "name": "Evox Whey Protein 454g Advance",
+    "brand": "evox",
+    "price": 499.99,
+    "original_price": 499.99,
+    "url": "https://www.dischem.co.za/evox-whey-protein-454g-advance-699",
+    "sku": "153699;;;;000000000153699001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/d/5dbc2da67b148_6008997000830.jpg",
+    "weight": "0.600000",
     "in_stock": true
   },
   {
@@ -110,17 +110,6 @@
     "in_stock": true
   },
   {
-    "name": "Tony Ferguson Whey Protein 840g Van",
-    "brand": "tony ferguson",
-    "price": 699.99,
-    "original_price": 699.99,
-    "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-van-099",
-    "sku": "000000000000470099",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557142014_5ce19250cf134e8c6493fcd0a268340a.jpg",
-    "weight": "0.540000",
-    "in_stock": true
-  },
-  {
     "name": "USN Blue Lab 100% Whey Premium Protein 32g",
     "brand": "usn",
     "price": 47.99,
@@ -150,6 +139,17 @@
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-straw-097",
     "sku": "000000000000470097",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557142007_619d9e1c9c73e610a96c1034ca5db48d.jpg",
+    "weight": "0.540000",
+    "in_stock": true
+  },
+  {
+    "name": "Tony Ferguson Whey Protein 840g Van",
+    "brand": "tony ferguson",
+    "price": 699.99,
+    "original_price": 699.99,
+    "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-840g-van-099",
+    "sku": "000000000000470099",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557142014_5ce19250cf134e8c6493fcd0a268340a.jpg",
     "weight": "0.540000",
     "in_stock": true
   },
@@ -192,8 +192,8 @@
     "price": 859.99,
     "original_price": 859.99,
     "url": "https://www.dischem.co.za/usn-hardcore-whey-gh-1-8kg-934",
-    "sku": "207934;;;;000000000207934001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62a3431929587_6009702504209.jpg",
+    "sku": "207934;;;;000000000207934002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62a34318b6f6a_6009702504193.jpg",
     "weight": "2.370000",
     "in_stock": true
   },
@@ -209,17 +209,6 @@
     "in_stock": true
   },
   {
-    "name": "Optimum 100% Whey 900g",
-    "brand": "optimum nutrition",
-    "price": 1149.99,
-    "original_price": 1149.99,
-    "url": "https://www.dischem.co.za/optimum-100-whey-900g-851",
-    "sku": "153851;;;;000000000153851006",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028652.jpg",
-    "weight": "1.080000",
-    "in_stock": true
-  },
-  {
     "name": "NPL Anabolic Whey 1.8kg",
     "brand": "npl",
     "price": 755.99,
@@ -228,6 +217,17 @@
     "sku": "289407;;;;000000000289407001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708881755_1_20f28e353ba860bfa333bfc6b700e5fb.jpg",
     "weight": "3.120000",
+    "in_stock": true
+  },
+  {
+    "name": "Optimum 100% Whey 900g",
+    "brand": "optimum nutrition",
+    "price": 1149.99,
+    "original_price": 1149.99,
+    "url": "https://www.dischem.co.za/optimum-100-whey-900g-851",
+    "sku": "153851;;;;000000000153851006",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028652.jpg",
+    "weight": "1.080000",
     "in_stock": true
   },
   {
@@ -258,8 +258,8 @@
     "price": 836.99,
     "original_price": 929.99,
     "url": "https://www.dischem.co.za/biogen-rage-impact-whey-1-6kg-107",
-    "sku": "425107;;;;000000000425107002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009551990246.jpg",
+    "sku": "425107;;;;000000000425107001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009551990239.jpg",
     "weight": "1.860000",
     "in_stock": true
   },
@@ -272,17 +272,6 @@
     "sku": "440397;;;;000000000440397001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708883483_1_90c7821bddc2c9535a90f0b662d89e52.jpg",
     "weight": "0.860000",
-    "in_stock": true
-  },
-  {
-    "name": "USN Blue Lab 100% Premium Whey 2kg",
-    "brand": "usn",
-    "price": 1699.99,
-    "original_price": 1699.99,
-    "url": "https://www.dischem.co.za/usn-blue-lab-100-premium-whey-2kg-096",
-    "sku": "178096;;;;000000000178096002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009705668779_1b52c2f2a10db3028ea31f660cb90b2b.jpg",
-    "weight": "2.450000",
     "in_stock": true
   },
   {
@@ -308,6 +297,17 @@
     "in_stock": true
   },
   {
+    "name": "USN Blue Lab 100% Premium Whey 2kg",
+    "brand": "usn",
+    "price": 1699.99,
+    "original_price": 1699.99,
+    "url": "https://www.dischem.co.za/usn-blue-lab-100-premium-whey-2kg-096",
+    "sku": "178096;;;;000000000178096002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009705668779_1b52c2f2a10db3028ea31f660cb90b2b.jpg",
+    "weight": "2.450000",
+    "in_stock": true
+  },
+  {
     "name": "Primal Whey Isolate 750g",
     "brand": "primal",
     "price": 899.99,
@@ -316,17 +316,6 @@
     "sku": "417047;;;;000000000417047001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009551936374.jpg",
     "weight": "0.930000",
-    "in_stock": true
-  },
-  {
-    "name": "NPL Platinum Whey 2kg",
-    "brand": "npl",
-    "price": 1304.99,
-    "original_price": 1449.99,
-    "url": "https://www.dischem.co.za/npl-platinum-whey-2kg-245",
-    "sku": "204245;;;;000000000204245002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708880635_1_2020b0005310ae023beb5d3c29d24d3e.jpg",
-    "weight": "2.740000",
     "in_stock": true
   },
   {
@@ -352,14 +341,14 @@
     "in_stock": true
   },
   {
-    "name": "NPL Platinum Whey Plus 1kg",
+    "name": "NPL Platinum Whey 2kg",
     "brand": "npl",
-    "price": 440.99,
-    "original_price": 489.99,
-    "url": "https://www.dischem.co.za/npl-platinum-whey-plus-1kg-423",
-    "sku": "390423;;;;000000000390423001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708882721_1_6ca21686f0b468f2fd5e84d905ed33d7.jpg",
-    "weight": "1.180000",
+    "price": 1304.99,
+    "original_price": 1449.99,
+    "url": "https://www.dischem.co.za/npl-platinum-whey-2kg-245",
+    "sku": "204245;;;;000000000204245002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708880635_1_2020b0005310ae023beb5d3c29d24d3e.jpg",
+    "weight": "2.740000",
     "in_stock": true
   },
   {
@@ -396,17 +385,6 @@
     "in_stock": true
   },
   {
-    "name": "Primal Whey Protein 2kg / Assorted",
-    "brand": null,
-    "price": 0.0,
-    "original_price": 0.0,
-    "url": "https://www.dischem.co.za/catalog/category/view/id/17198",
-    "sku": null,
-    "image": "",
-    "weight": "",
-    "in_stock": true
-  },
-  {
     "name": "Biogen Grass Fed Whey Protein 750g Assorted",
     "brand": null,
     "price": 0.0,
@@ -429,6 +407,28 @@
     "in_stock": true
   },
   {
+    "name": "Primal Whey Protein 2kg / Assorted",
+    "brand": null,
+    "price": 0.0,
+    "original_price": 0.0,
+    "url": "https://www.dischem.co.za/catalog/category/view/id/17198",
+    "sku": null,
+    "image": "",
+    "weight": "",
+    "in_stock": true
+  },
+  {
+    "name": "NPL Platinum Whey Plus 1kg",
+    "brand": "npl",
+    "price": 440.99,
+    "original_price": 489.99,
+    "url": "https://www.dischem.co.za/npl-platinum-whey-plus-1kg-423",
+    "sku": "390423;;;;000000000390423001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708882721_1_6ca21686f0b468f2fd5e84d905ed33d7.jpg",
+    "weight": "1.180000",
+    "in_stock": true
+  },
+  {
     "name": "Optimum 100% Whey 900g Choc Mint",
     "brand": "optimum nutrition",
     "price": 1149.99,
@@ -437,39 +437,6 @@
     "sku": "000000000000054707",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028621.jpg",
     "weight": "1.080000",
-    "in_stock": true
-  },
-  {
-    "name": "NPL Supreme Anabolic Whey 908g",
-    "brand": "npl",
-    "price": 431.99,
-    "original_price": 479.99,
-    "url": "https://www.dischem.co.za/npl-supreme-anabolic-whey-908g-967",
-    "sku": "185967;;;;000000000185967001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009879963397_1_fd9b84c5363e0eb8771551acaf54f450.jpg",
-    "weight": "1.130000",
-    "in_stock": true
-  },
-  {
-    "name": "USN Hydro Tech Whey Supreme Protein Blend 1.8kg",
-    "brand": null,
-    "price": 0.0,
-    "original_price": 0.0,
-    "url": "https://www.dischem.co.za/group/usn-hydro-tech-whey-supreme-protein-blend-1-8kg",
-    "sku": null,
-    "image": "",
-    "weight": "",
-    "in_stock": true
-  },
-  {
-    "name": "USN Blue Lab 100% Whey 900g",
-    "brand": "usn",
-    "price": 775.99,
-    "original_price": 969.99,
-    "url": "https://www.dischem.co.za/usn-blue-lab-100-whey-900g-675",
-    "sku": "210675;;;;000000000210675001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009544919780_182a1c9a9991d50831ab3fdc8ccd6efa.jpg",
-    "weight": "1.110000",
     "in_stock": true
   },
   {
@@ -484,25 +451,36 @@
     "in_stock": true
   },
   {
-    "name": "USN Hydrotec Whey 900g",
-    "brand": "usn",
-    "price": 449.99,
-    "original_price": 449.99,
-    "url": "https://www.dischem.co.za/usn-hydrotec-whey-900g-922",
-    "sku": "382922;;;;000000000382922001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62a34288e4902_6009544946526.jpg",
-    "weight": "0.440000",
+    "name": "USN Hydro Tech Whey Supreme Protein Blend 1.8kg",
+    "brand": null,
+    "price": 0.0,
+    "original_price": 0.0,
+    "url": "https://www.dischem.co.za/group/usn-hydro-tech-whey-supreme-protein-blend-1-8kg",
+    "sku": null,
+    "image": "",
+    "weight": "",
     "in_stock": true
   },
   {
-    "name": "Optimum 100% Whey 2.27kg",
-    "brand": "optimum nutrition",
-    "price": 2499.99,
-    "original_price": 2499.99,
-    "url": "https://www.dischem.co.za/optimum-100-whey-2-27kg-942",
-    "sku": "153942;;;;000000000153942005",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028706.jpg",
-    "weight": "2.540000",
+    "name": "NPL Supreme Anabolic Whey 908g",
+    "brand": "npl",
+    "price": 431.99,
+    "original_price": 479.99,
+    "url": "https://www.dischem.co.za/npl-supreme-anabolic-whey-908g-967",
+    "sku": "185967;;;;000000000185967001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009879963397_1_fd9b84c5363e0eb8771551acaf54f450.jpg",
+    "weight": "1.130000",
+    "in_stock": true
+  },
+  {
+    "name": "USN Hardcore Whey Gh 908g",
+    "brand": "usn",
+    "price": 499.99,
+    "original_price": 499.99,
+    "url": "https://www.dischem.co.za/usn-hardcore-whey-gh-908g-936",
+    "sku": "207936;;;;000000000207936001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62a34314496e0_6009701192568.jpg",
+    "weight": "1.010000",
     "in_stock": true
   },
   {
@@ -517,14 +495,25 @@
     "in_stock": true
   },
   {
-    "name": "USN Hardcore Whey Gh 908g",
+    "name": "USN Hydrotec Whey 900g",
     "brand": "usn",
-    "price": 499.99,
-    "original_price": 499.99,
-    "url": "https://www.dischem.co.za/usn-hardcore-whey-gh-908g-936",
-    "sku": "207936;;;;000000000207936003",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62a34313e79b4_6009701192551.jpg",
-    "weight": "1.010000",
+    "price": 449.99,
+    "original_price": 449.99,
+    "url": "https://www.dischem.co.za/usn-hydrotec-whey-900g-922",
+    "sku": "382922;;;;000000000382922003",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009544948735.jpg",
+    "weight": "2.400000",
+    "in_stock": true
+  },
+  {
+    "name": "Optimum 100% Whey 2.27kg",
+    "brand": "optimum nutrition",
+    "price": 2499.99,
+    "original_price": 2499.99,
+    "url": "https://www.dischem.co.za/optimum-100-whey-2-27kg-942",
+    "sku": "153942;;;;000000000153942005",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028706.jpg",
+    "weight": "2.540000",
     "in_stock": true
   },
   {
@@ -539,17 +528,6 @@
     "in_stock": true
   },
   {
-    "name": "Biogen Whey Isolate 700g",
-    "brand": "biogen pro series",
-    "price": 1169.99,
-    "original_price": 1299.99,
-    "url": "https://www.dischem.co.za/biogen-whey-isolate-700g-455",
-    "sku": "390455;;;;000000000390455001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6336c1c0b4073_6009544950417.jpg",
-    "weight": "0.860000",
-    "in_stock": true
-  },
-  {
     "name": "Biogen Collagen & Whey 725g",
     "brand": "biogen pro series",
     "price": 719.99,
@@ -561,6 +539,17 @@
     "in_stock": true
   },
   {
+    "name": "Biogen Whey Isolate 700g",
+    "brand": "biogen pro series",
+    "price": 1169.99,
+    "original_price": 1299.99,
+    "url": "https://www.dischem.co.za/biogen-whey-isolate-700g-455",
+    "sku": "390455;;;;000000000390455001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6336c1c0b4073_6009544950417.jpg",
+    "weight": "0.860000",
+    "in_stock": true
+  },
+  {
     "name": "Biogen Clear Whey Collagen 504 G Raspberry Lemonade.",
     "brand": "biogen pro series",
     "price": 629.99,
@@ -569,17 +558,6 @@
     "sku": "000000000000475575",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557143073_1_3796ce8f650794ae2698498d54df41fd.jpg",
     "weight": "0.640000",
-    "in_stock": true
-  },
-  {
-    "name": "NPL Anabolic Whey 908g",
-    "brand": "npl",
-    "price": 431.99,
-    "original_price": 479.99,
-    "url": "https://www.dischem.co.za/npl-anabolic-whey-908g-468",
-    "sku": "289468;;;;000000000289468001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708881748_1_40e8834ca7ac7213824603a41b1fc0c6.jpg",
-    "weight": "1.140000",
     "in_stock": true
   },
   {
@@ -627,14 +605,14 @@
     "in_stock": true
   },
   {
-    "name": "NPL Anabolic Whey 1.8 Tin Roof",
-    "brand": "npl",
-    "price": 755.99,
-    "original_price": 839.99,
-    "url": "https://www.dischem.co.za/npl-anabolic-whey-1-8-tin-roof-005",
-    "sku": "000000000289407005",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708883469_1_1a4d9d06b6ed65d624a32effa80d8dbc.jpg",
-    "weight": "3.120000",
+    "name": "Muscletech Nitro-tech 100% Whey Gold",
+    "brand": "muscle tech",
+    "price": 1199.99,
+    "original_price": 1199.99,
+    "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
+    "sku": "211792;;;;000000000211792001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/6504367e652c2_631656710465.jpg",
+    "weight": "1.270000",
     "in_stock": true
   },
   {
@@ -660,14 +638,14 @@
     "in_stock": true
   },
   {
-    "name": "Muscletech Nitro-tech 100% Whey Gold",
-    "brand": "muscle tech",
-    "price": 1199.99,
-    "original_price": 1199.99,
-    "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
-    "sku": "211792;;;;000000000211792001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/6504367e652c2_631656710465.jpg",
-    "weight": "1.270000",
+    "name": "NPL Anabolic Whey 908g",
+    "brand": "npl",
+    "price": 431.99,
+    "original_price": 479.99,
+    "url": "https://www.dischem.co.za/npl-anabolic-whey-908g-468",
+    "sku": "289468;;;;000000000289468001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708881748_1_40e8834ca7ac7213824603a41b1fc0c6.jpg",
+    "weight": "1.140000",
     "in_stock": true
   },
   {
@@ -679,6 +657,17 @@
     "sku": "335916;;;;000000000335916002",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009544946618.jpg",
     "weight": "0.930000",
+    "in_stock": true
+  },
+  {
+    "name": "NPL Anabolic Whey 1.8 Tin Roof",
+    "brand": "npl",
+    "price": 755.99,
+    "original_price": 839.99,
+    "url": "https://www.dischem.co.za/npl-anabolic-whey-1-8-tin-roof-005",
+    "sku": "000000000289407005",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708883469_1_1a4d9d06b6ed65d624a32effa80d8dbc.jpg",
+    "weight": "3.120000",
     "in_stock": true
   },
   {
@@ -726,17 +715,6 @@
     "in_stock": true
   },
   {
-    "name": "Future Life High Protein Lite Bar 4x40g",
-    "brand": "futurelife",
-    "price": 77.39,
-    "original_price": 85.99,
-    "url": "https://www.dischem.co.za/future-life-high-protein-lite-bar-4x40g-302",
-    "sku": "186302;;;;000000000186302001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009879924077_a4251432c3b7f113e7f97c9dcb620613.jpg",
-    "weight": "0.160000",
-    "in_stock": true
-  },
-  {
     "name": "Future Life High Protein 1kg",
     "brand": "futurelife",
     "price": 170.09,
@@ -745,6 +723,17 @@
     "sku": "197706;;;;000000000197706001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009879924268_58beb132775d85e256b36c315d620a0a.jpg",
     "weight": "1.160000",
+    "in_stock": true
+  },
+  {
+    "name": "Future Life High Protein Lite Bar 4x40g",
+    "brand": "futurelife",
+    "price": 77.39,
+    "original_price": 85.99,
+    "url": "https://www.dischem.co.za/future-life-high-protein-lite-bar-4x40g-302",
+    "sku": "186302;;;;000000000186302001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009879924077_a4251432c3b7f113e7f97c9dcb620613.jpg",
+    "weight": "0.160000",
     "in_stock": true
   },
   {
@@ -770,6 +759,17 @@
     "in_stock": true
   },
   {
+    "name": "Biogen Blended Protein 1.75kg",
+    "brand": "biogen pro series",
+    "price": 710.99,
+    "original_price": 789.99,
+    "url": "https://www.dischem.co.za/biogen-blended-protein-1-75kg-051",
+    "sku": "410051;;;;000000000410051002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6311c52f7007b_6009544952046.jpg",
+    "weight": "2.000000",
+    "in_stock": true
+  },
+  {
     "name": "USN Iso Pro Zero Carb 690g",
     "brand": "usn",
     "price": 1099.99,
@@ -781,14 +781,14 @@
     "in_stock": true
   },
   {
-    "name": "Biogen Blended Protein 1.75kg",
+    "name": "Biogen Blended Protein 875g",
     "brand": "biogen pro series",
-    "price": 710.99,
-    "original_price": 789.99,
-    "url": "https://www.dischem.co.za/biogen-blended-protein-1-75kg-051",
-    "sku": "410051;;;;000000000410051001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6311c4cfe9584_6009544952022.jpg",
-    "weight": "2.000000",
+    "price": 422.99,
+    "original_price": 469.99,
+    "url": "https://www.dischem.co.za/biogen-blended-protein-875g-053",
+    "sku": "410053;;;;000000000410053001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6311c6d49964d_6009544951988.png",
+    "weight": "1.040000",
     "in_stock": true
   },
   {
@@ -800,17 +800,6 @@
     "sku": "206422;;;;000000000206422002",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009801741680_f25c25dbe74125297146b36b634609d6.jpg",
     "weight": "0.610000",
-    "in_stock": true
-  },
-  {
-    "name": "Biogen Blended Protein 875g",
-    "brand": "biogen pro series",
-    "price": 422.99,
-    "original_price": 469.99,
-    "url": "https://www.dischem.co.za/biogen-blended-protein-875g-053",
-    "sku": "410053;;;;000000000410053001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/6311c6d49964d_6009544951988.png",
-    "weight": "1.040000",
     "in_stock": true
   },
   {
@@ -891,6 +880,17 @@
     "in_stock": true
   },
   {
+    "name": "Albumax Nutritional Supplement 250g",
+    "brand": "albumax",
+    "price": 349.99,
+    "original_price": 349.99,
+    "url": "https://www.dischem.co.za/albumax-nutritional-supplement-250g-147",
+    "sku": "000000000000069147",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/d/5d6cca90bc52a_6009828580125_front.jpg",
+    "weight": "0.320000",
+    "in_stock": true
+  },
+  {
     "name": "Muscletech Nitro Tech Ripped 1.81kg",
     "brand": "muscle tech",
     "price": 2149.99,
@@ -935,17 +935,6 @@
     "in_stock": true
   },
   {
-    "name": "Albumax Nutritional Supplement 250g",
-    "brand": "albumax",
-    "price": 349.99,
-    "original_price": 349.99,
-    "url": "https://www.dischem.co.za/albumax-nutritional-supplement-250g-147",
-    "sku": "000000000000069147",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/d/5d6cca90bc52a_6009828580125_front.jpg",
-    "weight": "0.320000",
-    "in_stock": true
-  },
-  {
     "name": "Biogen Peckish Protein Pretzels 60g Chocolate",
     "brand": "biogen pro series",
     "price": 47.69,
@@ -957,17 +946,6 @@
     "in_stock": true
   },
   {
-    "name": "Pronutro High Protein Bar (4x50g) Chocolate Cream",
-    "brand": "pronutro",
-    "price": 97.99,
-    "original_price": 97.99,
-    "url": "https://www.dischem.co.za/pronutro-high-protein-bar-4x50g-chocolate-cream-002",
-    "sku": "000000000225759002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/60782d5452722_6001052012281.jpg",
-    "weight": "0.500000",
-    "in_stock": true
-  },
-  {
     "name": "Muscle Tech Nitro Tech Ripped",
     "brand": "muscle tech",
     "price": 1299.99,
@@ -976,6 +954,17 @@
     "sku": "384470;;;;000000000384470001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/6512c7e872965_631656709445.jpg",
     "weight": "1.080000",
+    "in_stock": true
+  },
+  {
+    "name": "Pronutro High Protein Bar (4x50g) Chocolate Cream",
+    "brand": "pronutro",
+    "price": 97.99,
+    "original_price": 97.99,
+    "url": "https://www.dischem.co.za/pronutro-high-protein-bar-4x50g-chocolate-cream-002",
+    "sku": "000000000225759002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/60782d5452722_6001052012281.jpg",
+    "weight": "0.500000",
     "in_stock": true
   },
   {
@@ -1144,6 +1133,17 @@
     "in_stock": true
   },
   {
+    "name": "Nestle Nan Specialpro Extra Comfort 0-12 800g",
+    "brand": "nan",
+    "price": 394.99,
+    "original_price": 394.99,
+    "url": "https://www.dischem.co.za/nestle-nan-specialpro-extra-comfort-0-12-800g-175",
+    "sku": "000000000000467175",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/8/4/8445291528413_5392bcf52721d62619adf8c5b4e0ab76.jpg",
+    "weight": "0.993000",
+    "in_stock": true
+  },
+  {
     "name": "Tony Ferguson Go Shake 500g",
     "brand": "tony ferguson",
     "price": 219.99,
@@ -1166,17 +1166,6 @@
     "in_stock": true
   },
   {
-    "name": "Nestle Nan Specialpro Extra Comfort 0-12 800g",
-    "brand": "nan",
-    "price": 394.99,
-    "original_price": 394.99,
-    "url": "https://www.dischem.co.za/nestle-nan-specialpro-extra-comfort-0-12-800g-175",
-    "sku": "000000000000467175",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/8/4/8445291528413_5392bcf52721d62619adf8c5b4e0ab76.jpg",
-    "weight": "0.993000",
-    "in_stock": true
-  },
-  {
     "name": "Nestle Lactogen 2 Bag-in-box 1.8kg",
     "brand": "lactogen",
     "price": 289.99,
@@ -1184,6 +1173,17 @@
     "url": "https://www.dischem.co.za/nestle-lactogen-2-bag-in-box-1-8kg-306",
     "sku": "000000000000465306",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/8/6847cdc669e6b_6009188008291_front.jpg",
+    "weight": "0.000000",
+    "in_stock": true
+  },
+  {
+    "name": "Nestle Lactogen 3 Bag-in-box 1.8kg",
+    "brand": "lactogen",
+    "price": 289.99,
+    "original_price": 289.99,
+    "url": "https://www.dischem.co.za/nestle-lactogen-3-bag-in-box-1-8kg-307",
+    "sku": "000000000000465307",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009188008307_5ad152b6326bf123c6303d03829ef830.jpg",
     "weight": "0.000000",
     "in_stock": true
   },
@@ -1196,17 +1196,6 @@
     "sku": "000000000000043821",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/6/7613036064552_b905f64ea091d56ade64b18ee7c7dac9.jpg",
     "weight": "0.513000",
-    "in_stock": true
-  },
-  {
-    "name": "Nestle Lactogen 3 Bag-in-box 1.8kg",
-    "brand": "lactogen",
-    "price": 289.99,
-    "original_price": 289.99,
-    "url": "https://www.dischem.co.za/nestle-lactogen-3-bag-in-box-1-8kg-307",
-    "sku": "000000000000465307",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009188008307_5ad152b6326bf123c6303d03829ef830.jpg",
-    "weight": "0.000000",
     "in_stock": true
   },
   {
@@ -1331,17 +1320,6 @@
     "in_stock": true
   },
   {
-    "name": "Nestle Nan Optipro Infant Formula Stage 3, 1.8kg",
-    "brand": "nan",
-    "price": 499.99,
-    "original_price": 499.99,
-    "url": "https://www.dischem.co.za/nestle-nan-optipro-infant-formula-stage-3-1-8kg-207",
-    "sku": "000000000000076207",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/4/8/4800361367493_deef5b2c8c5e4a0b5530b4e179c7ee75.jpg",
-    "weight": "2.080000",
-    "in_stock": true
-  },
-  {
     "name": "Nestle Nan Special Pro Extra Comfort 3 800g",
     "brand": "nan",
     "price": 409.99,
@@ -1350,6 +1328,17 @@
     "sku": "000000000000417741",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/8/4/8445290272539_d2d41fbc94925d9a681c7e74c91fb402.jpg",
     "weight": "2.200000",
+    "in_stock": true
+  },
+  {
+    "name": "Nestle Nan Optipro Infant Formula Stage 3, 1.8kg",
+    "brand": "nan",
+    "price": 499.99,
+    "original_price": 499.99,
+    "url": "https://www.dischem.co.za/nestle-nan-optipro-infant-formula-stage-3-1-8kg-207",
+    "sku": "000000000000076207",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/4/8/4800361367493_deef5b2c8c5e4a0b5530b4e179c7ee75.jpg",
+    "weight": "2.080000",
     "in_stock": true
   },
   {
@@ -1364,17 +1353,6 @@
     "in_stock": true
   },
   {
-    "name": "Nestle Lactogen 1 Bag-in-box 400g",
-    "brand": "lactogen",
-    "price": 64.99,
-    "original_price": 64.99,
-    "url": "https://www.dischem.co.za/nestle-lactogen-1-bag-in-box-400g-308",
-    "sku": "000000000000465308",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009188008840_a10ef8f2b0d390345a72bc88ba94062d.jpg",
-    "weight": "0.000000",
-    "in_stock": true
-  },
-  {
     "name": "Nestle Nan Protect Start Infant Formula Stage 1, 1.8kg",
     "brand": "nan",
     "price": 509.99,
@@ -1386,17 +1364,6 @@
     "in_stock": true
   },
   {
-    "name": "Lifestyle Food Nutrisure 850g",
-    "brand": "lifestyle food",
-    "price": 287.96,
-    "original_price": 319.96,
-    "url": "https://www.dischem.co.za/lifestyle-food-nutrisure-850g-132",
-    "sku": "211132;;;;000000000211132001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62e7c79eddeb3_6009543777022.png",
-    "weight": "1.040000",
-    "in_stock": true
-  },
-  {
     "name": "Nestle Lactogen Infant Formula Stage 1, 900g",
     "brand": "lactogen",
     "price": 194.99,
@@ -1405,6 +1372,28 @@
     "sku": "000000000000080221",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6001068579709_5c5664a93f9e331ed7f0bb94f6db2e0e.jpg",
     "weight": "1.120000",
+    "in_stock": true
+  },
+  {
+    "name": "Nestle Lactogen 1 Bag-in-box 400g",
+    "brand": "lactogen",
+    "price": 64.99,
+    "original_price": 64.99,
+    "url": "https://www.dischem.co.za/nestle-lactogen-1-bag-in-box-400g-308",
+    "sku": "000000000000465308",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009188008840_a10ef8f2b0d390345a72bc88ba94062d.jpg",
+    "weight": "0.000000",
+    "in_stock": true
+  },
+  {
+    "name": "Lifestyle Food Nutrisure 850g",
+    "brand": "lifestyle food",
+    "price": 287.96,
+    "original_price": 319.96,
+    "url": "https://www.dischem.co.za/lifestyle-food-nutrisure-850g-132",
+    "sku": "211132;;;;000000000211132001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/2/62e7c79eddeb3_6009543777022.png",
+    "weight": "1.040000",
     "in_stock": true
   },
   {
@@ -1474,17 +1463,6 @@
     "in_stock": true
   },
   {
-    "name": "Nestle Nan Lactose-free Infant Formula, 400g",
-    "brand": "nan",
-    "price": 274.99,
-    "original_price": 274.99,
-    "url": "https://www.dischem.co.za/nestle-nan-lactose-free-infant-formula-400g-760",
-    "sku": "000000000000043760",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/6/7613034967183_709accfa4716215e04060c4abc018dcb.jpg",
-    "weight": "0.520000",
-    "in_stock": true
-  },
-  {
     "name": "Nestle Lactogen 900g No.2",
     "brand": "lactogen",
     "price": 194.99,
@@ -1518,14 +1496,14 @@
     "in_stock": true
   },
   {
-    "name": "PVM Energy Bar Bite Size 200g",
-    "brand": "pvm",
-    "price": 89.99,
-    "original_price": 89.99,
-    "url": "https://www.dischem.co.za/pvm-energy-bar-bite-size-200g-210",
-    "sku": "148210;;;;000000000148210001",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/1/613f1d124f908_6001197010159.jpg",
-    "weight": "0.200000",
+    "name": "Clinique All About Eyes Rich 15ml",
+    "brand": "clinique",
+    "price": 660.0,
+    "original_price": 660.0,
+    "url": "https://www.dischem.co.za/clinique-all-about-eyes-rich-15ml-900",
+    "sku": "000000000000191900",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/f/5fd87d208f1cc_020714287047.jpg",
+    "weight": "0.160000",
     "in_stock": true
   },
   {
@@ -1540,14 +1518,25 @@
     "in_stock": true
   },
   {
-    "name": "Nestle Nan Optipro Infant Formula Stage 3, 900g",
+    "name": "PVM Energy Bar Bite Size 200g",
+    "brand": "pvm",
+    "price": 89.99,
+    "original_price": 89.99,
+    "url": "https://www.dischem.co.za/pvm-energy-bar-bite-size-200g-210",
+    "sku": "148210;;;;000000000148210001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/1/613f1d124f908_6001197010159.jpg",
+    "weight": "0.200000",
+    "in_stock": true
+  },
+  {
+    "name": "Nestle Nan Lactose-free Infant Formula, 400g",
     "brand": "nan",
-    "price": 269.99,
-    "original_price": 269.99,
-    "url": "https://www.dischem.co.za/nestle-nan-optipro-infant-formula-stage-3-900g-209",
-    "sku": "000000000000076209",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/4/8/4800361367974_f3c1763fba654d3f001617d8896d08fb.jpg",
-    "weight": "1.120000",
+    "price": 274.99,
+    "original_price": 274.99,
+    "url": "https://www.dischem.co.za/nestle-nan-lactose-free-infant-formula-400g-760",
+    "sku": "000000000000043760",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/6/7613034967183_709accfa4716215e04060c4abc018dcb.jpg",
+    "weight": "0.520000",
     "in_stock": true
   },
   {
@@ -1562,14 +1551,14 @@
     "in_stock": true
   },
   {
-    "name": "Clinique All About Eyes Rich 15ml",
-    "brand": "clinique",
-    "price": 660.0,
-    "original_price": 660.0,
-    "url": "https://www.dischem.co.za/clinique-all-about-eyes-rich-15ml-900",
-    "sku": "000000000000191900",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/f/5fd87d208f1cc_020714287047.jpg",
-    "weight": "0.160000",
+    "name": "Nestle Nan Optipro Infant Formula Stage 3, 900g",
+    "brand": "nan",
+    "price": 269.99,
+    "original_price": 269.99,
+    "url": "https://www.dischem.co.za/nestle-nan-optipro-infant-formula-stage-3-900g-209",
+    "sku": "000000000000076209",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/4/8/4800361367974_f3c1763fba654d3f001617d8896d08fb.jpg",
+    "weight": "1.120000",
     "in_stock": true
   },
   {
@@ -1727,17 +1716,6 @@
     "in_stock": false
   },
   {
-    "name": "Myprotein Whey Isolate 1kg Strawberry",
-    "brand": "myprotein",
-    "price": 599.95,
-    "original_price": 599.95,
-    "url": "https://www.dischem.co.za/myprotein-whey-isolate-1kg-strawberry",
-    "sku": "000000000166932002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534303061.jpg",
-    "weight": "",
-    "in_stock": false
-  },
-  {
     "name": "Myprotein Whey 1kg Strawberry",
     "brand": "myprotein",
     "price": 434.95,
@@ -1745,6 +1723,17 @@
     "url": "https://www.dischem.co.za/myprotein-whey-1kg-strawberry",
     "sku": "000000000166933001",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534302835.jpg",
+    "weight": "",
+    "in_stock": false
+  },
+  {
+    "name": "Myprotein Whey Isolate 1kg Strawberry",
+    "brand": "myprotein",
+    "price": 599.95,
+    "original_price": 599.95,
+    "url": "https://www.dischem.co.za/myprotein-whey-isolate-1kg-strawberry",
+    "sku": "000000000166932002",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/0/5055534303061.jpg",
     "weight": "",
     "in_stock": false
   },
@@ -1914,17 +1903,6 @@
     "in_stock": false
   },
   {
-    "name": "Medidrink Pulmo Chocolate 200ml",
-    "brand": "medidrink",
-    "price": 92.99,
-    "original_price": 92.99,
-    "url": "https://www.dischem.co.za/medidrink-pulmo-chocolate-200ml-488",
-    "sku": "000000000000464488",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/9/5999565112684_e5c80974a65ed88ad977be82211559f3.jpg",
-    "weight": "0.220000",
-    "in_stock": false
-  },
-  {
     "name": "Medidrink Platinum Strawberry 200ml",
     "brand": "medidrink",
     "price": 92.99,
@@ -1954,6 +1932,17 @@
     "url": "https://www.dischem.co.za/medidrink-platinum-coffee-200ml-486",
     "sku": "000000000000464486",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/9/5999565112967_0c76770eae0edc95eb75071c6061086d.jpg",
+    "weight": "0.220000",
+    "in_stock": false
+  },
+  {
+    "name": "Medidrink Pulmo Chocolate 200ml",
+    "brand": "medidrink",
+    "price": 92.99,
+    "original_price": 92.99,
+    "url": "https://www.dischem.co.za/medidrink-pulmo-chocolate-200ml-488",
+    "sku": "000000000000464488",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/5/9/5999565112684_e5c80974a65ed88ad977be82211559f3.jpg",
     "weight": "0.220000",
     "in_stock": false
   }

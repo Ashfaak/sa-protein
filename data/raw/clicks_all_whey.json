@@ -1,5 +1,13 @@
 [
   {
+    "title": "Pure Whey Protein Strawberry 1kg",
+    "brand": "Nutritech",
+    "price": 550.0,
+    "url": "https://clicks.co.za/nutritech_pure-whey-protein-strawberry-1kg/p/257056",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
     "title": "Pure Whey Protein Chocolate 1kg",
     "brand": "Nutritech",
     "price": 550.0,
@@ -88,14 +96,6 @@
     "clicks_3_for_2_eligible": false
   },
   {
-    "title": "Bluelab 100% Premium Whey Strawberry 908g",
-    "brand": "USN",
-    "price": 692.0,
-    "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-strawberry-908g/p/278846",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
     "title": "Hydrotech Whey Chocolate Cookie Dough 900g",
     "brand": "USN",
     "price": 418.0,
@@ -124,6 +124,14 @@
     "brand": "USN",
     "price": 549.0,
     "url": "https://clicks.co.za/usn_bluelab-100-whey-plato-caribbean-mocha-704g/p/402507",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Bluelab 100% Premium Whey Strawberry 908g",
+    "brand": "USN",
+    "price": 692.0,
+    "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-strawberry-908g/p/278846",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
@@ -236,6 +244,30 @@
     "brand": "Clicks Smartlife",
     "price": 320.0,
     "url": "https://clicks.co.za/clicks_purified-protein-vanilla-500g/p/327872",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Protein Bar Strawberry 40g",
+    "brand": "Clicks Smartlife",
+    "price": 13.99,
+    "url": "https://clicks.co.za/clicks_protein-bar-strawberry-40g/p/342727",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Protein Bar Chocolate 40g",
+    "brand": "Clicks Smartlife",
+    "price": 13.99,
+    "url": "https://clicks.co.za/clicks_protein-bar-chocolate-40g/p/342726",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Protein Bar Milkt Tart 40g",
+    "brand": "Clicks Smartlife",
+    "price": 13.99,
+    "url": "https://clicks.co.za/clicks_protein-bar-milkt-tart-40g/p/342728",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },

@@ -121,17 +121,6 @@
     "in_stock": true
   },
   {
-    "name": "Tony Ferguson Whey Protein 420g Van",
-    "brand": "tony ferguson",
-    "price": 399.99,
-    "original_price": 399.99,
-    "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-420g-van-098",
-    "sku": "000000000000470098",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557141963_5b263d675f4e03008b83c64f8707fb4b.jpg",
-    "weight": "0.540000",
-    "in_stock": true
-  },
-  {
     "name": "Tony Ferguson Whey Protein 840g Choc",
     "brand": "tony ferguson",
     "price": 699.99,
@@ -183,6 +172,17 @@
     "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-420g-straw-096",
     "sku": "000000000000470096",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557141956_f6e8c3159b961ff4a4d16126d09bddf4.jpg",
+    "weight": "0.540000",
+    "in_stock": true
+  },
+  {
+    "name": "Tony Ferguson Whey Protein 420g Van",
+    "brand": "tony ferguson",
+    "price": 399.99,
+    "original_price": 399.99,
+    "url": "https://www.dischem.co.za/tony-ferguson-whey-protein-420g-van-098",
+    "sku": "000000000000470098",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009557141963_5b263d675f4e03008b83c64f8707fb4b.jpg",
     "weight": "0.540000",
     "in_stock": true
   },
@@ -407,17 +407,6 @@
     "in_stock": true
   },
   {
-    "name": "Optimum 100% Whey 900g Choc Mint",
-    "brand": "optimum nutrition",
-    "price": 1149.99,
-    "original_price": 1149.99,
-    "url": "https://www.dischem.co.za/optimum-100-whey-900g-choc-mint-707",
-    "sku": "000000000000054707",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028621.jpg",
-    "weight": "1.080000",
-    "in_stock": true
-  },
-  {
     "name": "NPL Platinum Whey 2kg",
     "brand": "npl",
     "price": 1304.99,
@@ -426,6 +415,17 @@
     "sku": "204245;;;;000000000204245002",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/0/6009708880635_1_2020b0005310ae023beb5d3c29d24d3e.jpg",
     "weight": "2.740000",
+    "in_stock": true
+  },
+  {
+    "name": "Optimum 100% Whey 900g Choc Mint",
+    "brand": "optimum nutrition",
+    "price": 1149.99,
+    "original_price": 1149.99,
+    "url": "https://www.dischem.co.za/optimum-100-whey-900g-choc-mint-707",
+    "sku": "000000000000054707",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/7/4/748927028621.jpg",
+    "weight": "1.080000",
     "in_stock": true
   },
   {
@@ -627,17 +627,6 @@
     "in_stock": true
   },
   {
-    "name": "Muscletech Nitro-tech 100% Whey Gold",
-    "brand": "muscle tech",
-    "price": 1199.99,
-    "original_price": 1199.99,
-    "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
-    "sku": "211792;;;;000000000211792002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/65043779ec8e4_631656710472.jpg",
-    "weight": "1.270000",
-    "in_stock": true
-  },
-  {
     "name": "Muscletech Nitro-tech Whey Gold",
     "brand": "muscle tech",
     "price": 1199.99,
@@ -646,6 +635,17 @@
     "sku": "181477;;;;000000000181477002",
     "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/65043326a3d98_631656710458.jpg",
     "weight": "1.400000",
+    "in_stock": true
+  },
+  {
+    "name": "Muscletech Nitro-tech 100% Whey Gold",
+    "brand": "muscle tech",
+    "price": 1199.99,
+    "original_price": 1199.99,
+    "url": "https://www.dischem.co.za/muscletech-nitro-tech-100-whey-gold-792",
+    "sku": "211792;;;;000000000211792001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/6504367e652c2_631656710465.jpg",
+    "weight": "1.270000",
     "in_stock": true
   },
   {
@@ -896,8 +896,8 @@
     "price": 1199.99,
     "original_price": 1199.99,
     "url": "https://www.dischem.co.za/muscletech-nitro-tech-performance-856",
-    "sku": "153856;;;;000000000153856002",
-    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/3/631656703269.jpg",
+    "sku": "153856;;;;000000000153856001",
+    "image": "https://www.dischem.co.za/api/klevu_images/200X200/6/5/65097804b8ed2_631656703245.jpg",
     "weight": "1.160000",
     "in_stock": true
   },

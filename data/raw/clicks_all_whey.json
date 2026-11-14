@@ -1,21 +1,5 @@
 [
   {
-    "title": "Pure Whey Protein Strawberry 1kg",
-    "brand": "Nutritech",
-    "price": 550.0,
-    "url": "https://clicks.co.za/nutritech_pure-whey-protein-strawberry-1kg/p/257056",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
-    "title": "Pure Whey Protein Chocolate 1kg",
-    "brand": "Nutritech",
-    "price": 550.0,
-    "url": "https://clicks.co.za/nutritech_pure-whey-protein-chocolate-1kg/p/257054",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
     "title": "Premium Whey Protein Vanilla 1kg",
     "brand": "Nutritech",
     "price": 550.0,
@@ -48,6 +32,22 @@
     "clicks_3_for_2_eligible": false
   },
   {
+    "title": "Pure Whey Protein Strawberry 1kg",
+    "brand": "Nutritech",
+    "price": 550.0,
+    "url": "https://clicks.co.za/nutritech_pure-whey-protein-strawberry-1kg/p/257056",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Pure Whey Protein Chocolate 1kg",
+    "brand": "Nutritech",
+    "price": 550.0,
+    "url": "https://clicks.co.za/nutritech_pure-whey-protein-chocolate-1kg/p/257054",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
     "title": "Hydrotech Whey Chocolate Wafer 900g",
     "brand": "USN",
     "price": 418.0,
@@ -72,14 +72,6 @@
     "clicks_3_for_2_eligible": false
   },
   {
-    "title": "Pure Whey Protein Lite Chocolate 1kg",
-    "brand": "Nutritech",
-    "price": 550.0,
-    "url": "https://clicks.co.za/nutritech_pure-whey-protein-lite-chocolate-1kg/p/257057",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
     "title": "Premium Whey Protein Peanut Butter 1Kg",
     "brand": "Nutritech",
     "price": 550.0,
@@ -92,6 +84,14 @@
     "brand": "USN",
     "price": 692.0,
     "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-chocolate-908g/p/278845",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Bluelab 100% Premium Whey Strawberry 908g",
+    "brand": "USN",
+    "price": 692.0,
+    "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-strawberry-908g/p/278846",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
@@ -128,14 +128,6 @@
     "clicks_3_for_2_eligible": false
   },
   {
-    "title": "Bluelab 100% Premium Whey Strawberry 908g",
-    "brand": "USN",
-    "price": 692.0,
-    "url": "https://clicks.co.za/usn_bluelab-100-premium-whey-strawberry-908g/p/278846",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
     "title": "Bluelab 100% Premium Whey Vanilla 908g",
     "brand": "USN",
     "price": 692.0,
@@ -148,6 +140,14 @@
     "brand": "USN",
     "price": 399.0,
     "url": "https://clicks.co.za/usn_blue-lab-premium-whey-chocolate-454g/p/286200",
+    "retailer": "Clicks",
+    "clicks_3_for_2_eligible": false
+  },
+  {
+    "title": "Pure Whey Protein Lite Chocolate 1kg",
+    "brand": "Nutritech",
+    "price": 550.0,
+    "url": "https://clicks.co.za/nutritech_pure-whey-protein-lite-chocolate-1kg/p/257057",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
@@ -252,14 +252,6 @@
     "brand": "Clicks Smartlife",
     "price": 13.99,
     "url": "https://clicks.co.za/clicks_protein-bar-strawberry-40g/p/342727",
-    "retailer": "Clicks",
-    "clicks_3_for_2_eligible": false
-  },
-  {
-    "title": "Protein Bar Chocolate 40g",
-    "brand": "Clicks Smartlife",
-    "price": 13.99,
-    "url": "https://clicks.co.za/clicks_protein-bar-chocolate-40g/p/342726",
     "retailer": "Clicks",
     "clicks_3_for_2_eligible": false
   },
